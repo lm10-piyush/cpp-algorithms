@@ -24,24 +24,8 @@ void sieve(bool A[],int n){
 }
  
 int main(){
-	int x=1000000000;
-	int n=x;
-	long long int data = 999999937;
-	long long int max = data*data,max2 = (data-1)*(data-1);
-	bool *A = new bool[x+1];
-	sieve(A,x);
-	for(long long int i=2;i<n;i++){
-		if(A[i]==true){
-		long long int mod=  max%i;
-		max2 = (data-mod*mod)*(data-mod*mod);
-		for(long long int j=2;j<n;j++){
-			if(A[j]==true){
-				if(max2%j==mod){
-					cout<<"("<<i<<","<<j<<")"<<mod<<"  ";
-				}
-			}
-		}
-	}
-}
-cout<<"Hola";
+	int n=100000;
+	bool *A = new bool[n+1];
+	sieve(A,n);
+	
 }
