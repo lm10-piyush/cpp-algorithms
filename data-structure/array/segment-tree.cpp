@@ -1,160 +1,95 @@
 /******************* segment tree***********/
 /*
-*Segment tree is a binary tree of an array ranges, and we bulid this segment tree in another array.
+*Segment tree is a binary tree, each node stores the information of a particular segment of the original array
+	 of an array ranges, and we bulid this segment tree in another array, like we use heap to represent a tree.
 *Complexity to bulid and search is O(n) and O(log n) respectively.
 *Here I take starting index as 1 for segment tree.
+ques: cicular Rmq on codeforces
+solution: LM10_Piyush
+
 */
-
 #include<bits/stdc++.h>
+#define ll long long
+#define endl '\n'
+#define watch(x) cout<<(#x)<<" = "<<x<<endl
+#define arr_watch(arr, n) for(int i=0;i<n;++i) cout<<arr[i]<<" \n"[i==n-1]
 using namespace std;
+const int maxn  = 2e5;
 
-void buildSumTree(int A[],int tree[],int start,int end,int treeNode){
-	if(start==end){
-		tree[treeNode]=A[start];
-		return;
-	}
-	int mid=(start+end)/2;
-	buildSumTree(A,tree,start,mid,2*treeNode);
-	buildSumTree(A,tree,mid+1,end,2*treeNode+1);
-	tree[treeNode]=tree[2*treeNode]+tree[2*treeNode+1];
-	return;
 
-}
+struct segTree{
+	ll tree[4*maxn + 4];
+	ll lazy[4*maxn + 4];
 
-int sumQuery(int A[],int tree[],int start,int end,int treeNode,int l,int r){
-	if(l<=start && end<=r)
-		return tree[treeNode];
-	else if((start<l && end<l) || (start>r && end>r))
-		return 0;
-	int mid = (start+end)/2;
-	int sum=0;
-	sum = sum+ sumQuery(A,tree,start,mid,2*treeNode,l,r);
-	sum=sum+ sumQuery(A,tree,mid+1,end,2*treeNode+1,l,r);
-	return sum;
-}
+	void build(int A[], int lo, int hi, int node=1){
+		if(lo == hi){
+			tree[node] = A[lo];
+			return;
+		}
 
-//change the value at ith index by ele
-void sumUpdate(int A[],int tree[],int start,int end,int treeNode,int i,int ele){
-	if(start==end && end==i){
-		tree[treeNode]=ele;
-		return;
+		int mid = (lo + hi) / 2;
+		build(A, lo, mid, 2*node);
+		build(A, mid+1, hi, 2*node+1);
+		tree[node] = min(tree[2*node], tree[2*node + 1]);
 	}
 
-	if(start<=i && i<=end){
-		int mid=(start+end)/2;
-		sumUpdate(A,tree,start,mid,2*treeNode,i,ele);
-		sumUpdate(A,tree,mid+1,end,2*treeNode+1,i,ele);
-		tree[treeNode]=tree[2*treeNode] + tree[2*treeNode+1];
-		return;
+
+	ll query(int lo, int hi, int l, int r, int node=1){
+		//propogate the value
+		if(lazy[node]){
+			tree[node] += lazy[node];
+			if(lo != hi){
+				lazy[2*node] += lazy[node];
+				lazy[2*node+1] += lazy[node];
+			}
+			lazy[node] = 0;
+		}
+		//no overlapp
+		if(hi < l or lo > r) 
+			return 1e18;
+
+		//total overlapp
+		if(l <= lo and hi <= r){
+			return tree[node];
+		}
+
+		int mid = (lo + hi)/2;
+		return min(query(lo, mid, l, r, 2*node), query(mid+1, hi, l, r, 2*node+1));
 	}
-}
 
+	void update(int lo, int hi, int l, int r, ll delta, int node=1){
+		//propogate the value
+		if(lazy[node]){
+			tree[node] += lazy[node];  //update the value
+			if(lo != hi){
+				lazy[2*node] += lazy[node];
+				lazy[2*node+1] += lazy[node];
+			}
+			lazy[node] = 0; //reset lazy
+		}
+		
+		// no overlapp
+		if(hi < l or lo > r)
+			return;
 
-void buildMinTree(int A[],int tree[],int start,int end,int treeNode){
-	if(start==end){
-		tree[treeNode]=A[start];
-		return;
+		//total overlapp
+		if(l <= lo and hi <= r){
+			tree[node] += delta;
+			//to the child
+			if(lo != hi){
+				lazy[2*node] += delta;
+				lazy[2*node + 1] += delta;
+			}
+			return;
+		}
+
+		int mid = (lo + hi)/2;
+		update(lo, mid, l, r, delta, 2*node);
+		update(mid+1, hi, l, r, delta, 2*node+1);
+		tree[node] = min(tree[2*node], tree[2*node+1]);
 	}
-	int mid = (start+end)/2;
-	buildMinTree(A,tree,start,mid,2*treeNode);
-	buildMinTree(A,tree,mid+1,end,2*treeNode+1);
-	if(tree[2*treeNode]<tree[2*treeNode+1])
-		tree[treeNode]=tree[2*treeNode];
-	else
-		tree[treeNode]=tree[2*treeNode+1];
-	return;
-}
 
-int minQuery(int A[],int tree[],int start,int end,int treeNode,int l,int r){
-	if(l<=start && end<=r){
-		return tree[treeNode];
-	}
-	else if((start<l && end<l) || (start>r && end>r))
-		return INT_MAX;
-	int mid = (start+end)/2;
-	int min1 = minQuery(A,tree,start,mid,2*treeNode,l,r);
-	int min2 = minQuery(A,tree,mid+1,end,2*treeNode+1,l,r);
-	if(min1<min2)
-		return min1;
-	else
-		return min2;
-}
-
-//change the value at ith index by ele
-void minUpdate(int A[],int tree[],int start,int end,int treeNode,int i,int ele){
-	if(start==end && end==i){
-		tree[treeNode] = ele;
-		return;
-	}
-	else if(start<=i && i<=end){
-		int mid = (start+end)/2;
-		minUpdate(A,tree,start,mid,2*treeNode,i,ele);
-		minUpdate(A,tree,mid+1,end,2*treeNode+1,i,ele);
-		int min1 = tree[2*treeNode];
-		int min2 =tree[2*treeNode+1];
-		if(min1<min2)
-			tree[treeNode]=min1;
-		else
-			tree[treeNode]= min2;
-		return; 
-	}
-}
-
-
-
-void buildMaxTree(int A[],int tree[],int start,int end,int treeNode){
-	if(start==end){
-		tree[treeNode]=A[start];
-		return;
-	}
-	int mid = (start+end)/2;
-	buildMaxTree(A,tree,start,mid,2*treeNode);
-	buildMaxTree(A,tree,mid+1,end,2*treeNode+1);
-	int max1 = tree[2*treeNode];
-	int max2=tree[2*treeNode+1];
-	if(max1>max2)
-		tree[treeNode]=max1;
-	else
-		tree[treeNode]=max2;
-
-	return;
-}
-
-//partial, complete, no overlap
-int maxQuery(int A[],int tree[],int start,int end,int treeNode,int l,int r){
-	if(l<=start && end<=r){
-		return tree[treeNode];
-	}
-	//more optimize could be: if(end<l || start>r)
-	else if((start<l && end<l) || (start>r && end >r) )
-		return INT_MIN;
-	int mid = (start+end)/2;
-	int max1=maxQuery(A,tree,start,mid,2*treeNode,l,r);
-	int max2 =maxQuery(A,tree,mid+1,end,2*treeNode+1,l,r);
-	if(max1>max2)
-		return max1;
-	else
-		return max2;
-}
-
-void maxUpdate(int A[],int tree[],int start,int end,int treeNode,int i,int ele){
-	if(start==end && end ==i){
-		tree[treeNode]=ele;
-		return;
-	}
-	else if(start<=i && i<=end){
-		int mid =(start+end)/2;
-		maxUpdate(A,tree,start,mid,2*treeNode,i,ele);
-		maxUpdate(A,tree,mid+1,end,2*treeNode+1,i,ele);
-		int max1= tree[2*treeNode];
-		int max2 = tree[2*treeNode+1];
-		if(max1>max2)
-			tree[treeNode]=max1;
-		else
-			tree[treeNode]=max2;
-		return;
-	}
-}
+} s;
 
 
 
@@ -163,29 +98,13 @@ int main(){
 	// cin>>n;
 	int A[]={1,2,3,4,5,6,7,8,9,10};
 	n=sizeof(A)/sizeof(int);
-	int n1=1;
 
-	//to find number n1 which is nearest + greater than n, n1 is in power of 2 
-	while(n1<n)
-		n1=n1<<1;
-	n1=2*n1;
-
-	int tree[n1];
-	for(int i=0;i<n1;i++)
-		tree[i]=-1;
 	
-	buildMaxTree(A,tree,0,n-1,1);
-	maxUpdate(A,tree,0,n-1,1,5,0);
-	maxUpdate(A,tree,0,n-1,1,4,0);
-	maxUpdate(A,tree,0,n-1,1,3,0);
-
-	for(int i=1;i<n1;i++)
-		if(tree[i]!=-1)
-			cout<<tree[i]<<" ";
+	s.build(A, 0, n-1);
 	
-	
-	cout<<endl<<maxQuery(A,tree,0,n-1,1,0,5);
-
+	s.query(0, n-1, 1, 4);
+	s.update(0, n-1, 1, 4, 30);
+	s.query(0, n-1, 1, 4);
 	 
 
 	cout<<endl;

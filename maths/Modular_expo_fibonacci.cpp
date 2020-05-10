@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+const int mod = 1e9 + 7;
 
 
 long long fibonacci(long long int n)
@@ -12,20 +13,20 @@ long long fibonacci(long long int n)
         {
             memset(tmp,0,sizeof tmp);
             for(i=0; i<2; i++) for(j=0; j<2; j++) for(k=0; k<2; k++)
-                        tmp[i][j]=tmp[i][j]+(ret[i][k])*(fib[k][j]);
+                        tmp[i][j]=(tmp[i][j]+(ret[i][k])*(fib[k][j]) ) % mod;
             for(i=0; i<2; i++) for(j=0; j<2; j++) ret[i][j]=tmp[i][j];
         }
         memset(tmp,0,sizeof tmp);
         for(i=0; i<2; i++) for(j=0; j<2; j++) for(k=0; k<2; k++)
-                    tmp[i][j]=tmp[i][j]+(fib[i][k])*(fib[k][j]);
+                    tmp[i][j]=(tmp[i][j]+(fib[i][k])*(fib[k][j]) )% mod;
         for(i=0; i<2; i++) for(j=0; j<2; j++) fib[i][j]=tmp[i][j];
         n/=2;
     }
-    return (ret[0][1])%10;
+    return (ret[0][1]);
 }
 
 int main()
 {
-    cout<<fibonacci(5);
+    cout<<fibonacci(999999998);
 
 }

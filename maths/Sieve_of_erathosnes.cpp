@@ -1,31 +1,52 @@
 #include<bits/stdc++.h>
 using namespace std;
-//using namespace std::chrono;
+#define ll long long
+#define endl '\n'
+#define sz(v) (int)v.size() 
+#define all(v) v.begin(), v.end()
+void dbg_out() { cerr << "\b\b]\n"; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+#define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
-/**********Sieve of Eratosthenes **********/
-//largest 10^9 prime ->999999937,999999929,(999999937,999999936)
-//bool A[n+1];  initialize like this, because loop is untill n(inclusive);
-//use as sieve(A,n)
-void sieve(bool A[],int n){
-	//n=[1,n]
-	//initalize all true
-	for(int i=0;i<=n;i++)
-		A[i]=true;  
-	
-	A[0]=A[1]=false;
+/****************************** CODE IS HERE ***********************************/
+//https://codeforces.com/contest/546/problem/D
+//https://www.spoj.com/problems/FACTCG2/
 
-	for(int i=2;i*i<=n;i++){
-		if(A[i]==true){
-			for(int j=i*i;j<=n;j+=i)
-				A[j]=false;
-		}
-	}
+const int N = 1e7;
+vector <int> factors(N+1);  //it will store smallest prime divisior of 'i'
+bitset<N+10> primes;
+
+void sieve(){
+  primes.set();
+  primes.reset(0);
+  primes.reset(1);
+  
+  for (ll i = 2; i < N; ++i){
+    if(primes[i]){
+      factors[i] = i;
+      for (ll j = i*i; j < N; j+=i){
+        if(primes[j]){
+          primes.reset(j);
+          factors[j] = i;
+        }
+      }
+    }
+  }
+
+  //factoriazation in O(log(n))
+  int n; cin >> n;
+  while(n > 1){
+    cout << factors[n] << ' ';
+    n /= factors[n];
+  }
 }
- 
+
+
 int main(){
-	int n=100000;
-	bool *A = new bool[n+1];
-	sieve(A,n);
-	
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+
+    sieve();
+
+  return 0;
 }

@@ -1,24 +1,21 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define mod 1000000007
-#define mp make_pair
-#define endl "\n"
-#define tab " "
-#define pb push_back
-#define ff first
-#define ss second
-#define watch(x) cout<<(#x)<<" = "<<x<<endl
-#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define pll pair<ll,ll>
-#define pi 3.141592653589793238460
-
 using namespace std;
+#define ll long long
+#define endl '\n'
+#define sz(v) (int)v.size() 
+#define all(v) v.begin(), v.end()
+void dbg_out() { cerr << "\b\b]\n"; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+#define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
+
+
+/****************************** CODE IS HERE ***********************************/
 
 
 int main(){
-	fast;
-	freopen("file name","r",stdin);
-	freopen("file name","w",stdout);
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+
+
 
 	return 0;
 }
