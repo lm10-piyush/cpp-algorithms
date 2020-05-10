@@ -6,7 +6,8 @@
 *Here I take starting index as 1 for segment tree.
 ques: cicular Rmq on codeforces
 solution: LM10_Piyush
-
+blogs : https://codeforces.com/blog/entry/22616 (Problems) 
+		https://codeforces.com/blog/entry/15890  (Some theory)
 */
 #include<bits/stdc++.h>
 #define ll long long

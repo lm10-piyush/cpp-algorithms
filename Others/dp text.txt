@@ -1,0 +1,53 @@
+In dp: try every possiblity and pick the best.
+
+In dp, you have to build the solution from smaller problem to bigger problem.
+During building the solution, at every moment, I have a choice, should I use the
+current option or should I use the best result I got till previous option. And
+then, I compare for best result for that problem. This is called building the solution.
+You can reach to the solution of larger problem without using smaller problem.
+
+So, the process is like this:
+	1) Identify the  states.
+	2) Build for the base case.
+	3) After base case, at every moment, you have use the current option
+	or you don't use the current option and use till the previous option, 
+	and in this way you pick the best result.
+In top-down dp, we don't need to do extra stuff, all things will be done by recursion
+and memoization. But in bottom-up, you have to run expilcitly and carefully using loops.
+
+There could be two Push dp and Pull dp. In push-dp we fill the next state from current state,
+in pull dp, we fill the current state using previous state.  
+
+In dp, one of the most important thing is to DEFINE THE DP, what is representing what
+like the states, how you you gonna move.
+
+Problems for dp:
+https://codeforces.com/problemset/problem/894/A
+https://codeforces.com/contest/490/problem/C (Hacking Cypher)
+https://codeforces.com/contest/550/problem/C (divisiblity by eight)
+https://codeforces.com/contest/1140/problem/D (Mininum Triangulation)
+https://codeforces.com/problemset/problem/414/B (B. Mashmokh and ACM) complexity: O(nklog(n))
+https://codeforces.com/contest/166/problem/E (Tetrahedron)
+https://www.codechef.com/problems/DELISH  (Delish, dp)
+https://codeforces.com/contest/1221/problem/D (Make that fence great again)
+https://codeforces.com/contest/120/problem/F (spiders) {in-out tree dp}
+https://codeforces.com/contest/44/problem/E (Ansifa the monkey)
+https://codeforces.com/contest/1257/problem/D  (yet another monster killing problem)
+https://codeforces.com/contest/1130/problem/C (Div2: C Connect)
+https://codeforces.com/contest/920/problem/E (connected components)
+https://codeforces.com/contest/220/problem/B (Little elephant and array, MO, sqrt)
+https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise)
+https://cses.fi/problemset/ for problems  (problem set)
+https://codeforces.com/contest/1081/problem/C (combinators with dp)
+https://www.codechef.com/LTIME60A/problems/SHIFTPAL (hashing like rabin karp, Important ques, with its editorial){https://www.codechef.com/submit/complete/32359239}
+https://codeforces.com/contest/264/problem/B (Good sequences DP)
+https://www.codechef.com/problems/KANYASAI (digit dp)
+https://www.hackerearth.com/problem/algorithm/playing-with-digits-4e25844f/ (digit dp)
+https://codeforces.com/contest/817/problem/C (binary search, Really big numbers)
+https://codeforces.com/contest/888/problem/D (maths, derangements)
+https://www.hackerearth.com/problem/algorithm/happy-segments-e290faa6/description/  (Happy segments, MO)
+https://atcoder.jp/contests/abc165/submissions/12734276 (dp, LIS, graph)
+https://codeforces.com/contest/1208/problem/D  (segtree with dp)
+https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
+
+
