@@ -1,71 +1,58 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define mod 1000000007
-#define mp make_pair
-#define endl "\n"
-#define tab " "
-#define pb push_back
-#define eb emplace_back
-#define ff first
-#define ss second
-#define watch(x) cout<<(#x)<<" = "<<x<<endl
-#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define pll pair<ll,ll>
-#define pi 3.141592653589793238460
-#define F(i,a,b) for(int i=(int)a;i<=(int)b;i++)
-#define RF(i,a,b) for(int i=(int)a;i>=(int)b;i--)
 using namespace std;
+#define ll long long
+#define endl '\n'
+#define sz(v) (int)v.size() 
+#define all(v) v.begin(), v.end()
+void dbg_out() { cerr << "\b\b]\n"; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+#define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
-void make_set(int A[],int n, int size[])
-{
-    for(int i=0;i<n;i++)
-    {
-        A[i]=i;
-        size[i]=1; // size == number of nodes
+
+/****************************** CODE IS HERE ***********************************/
+
+const int N = 1e5 + 5;
+vector <int> parent(N), size(N, 1);
+int components;
+
+void init(int n){
+  iota(all(parent), 0);
+  components = n;
+}
+
+//get leader
+int find(int a){
+  if(parent[a] == a) return a;
+  return parent[a] =  find(parent[a]);
+}
+
+void dsu_union(int a, int b){
+  int x = find(a);
+  int y = find(b);
+  if(x == y) return;
+  if(size[x] < size[y])
+    swap(x, y);
+  components--; //components decreases with union
+  parent[y] = x;
+  size[x] += size[y];
+}
+
+
+int main(){
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+    int n, m; cin >> n >> m;
+    init(n);
+
+    for (int i = 0, x, y; i < m; ++i){
+      cin >> x >> y;
+      dsu_union(x, y);
     }
 
+    cout << components;
+
+  return 0;
 }
 
 
-int find_set(int A[],int a)
-{
-    if(A[a]==a) return a;
-    //go for the parent
-    return A[a] = find_set(A,A[a]);
-}
-
-
-
-
-void union_set(int A[], int a,int b, int size[])
-{
-    int x = find_set(A, a);
-    int y = find_set(A, b);
-
-    if(x==y) return;
-    if(size[x] < size[y])
-        swap(x, y);
-
-    A[y] = x;
-    size[x] += size[y];
-
-
-}
-
-int main()
-{
-    int n,m,e1,e2;
-    cin>>n>>m;
-
-    int A[n+1],size[n+1];
-    make_set(A,n+1,size);
-
-    F(i,1,m)
-    {
-        cin>>e1>>e2;
-        union_set(A,e1,e2,size);
-
-    }
-
-
-}
+//problem: https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/city-and-flood-1/submissions/
+//solution: exactly same code

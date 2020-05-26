@@ -17,6 +17,10 @@
 using namespace std;
 using namespace std::chrono;
 
+//problem
+//https://www.codechef.com/viewsolution/32359239
+
+
 struct HASH{
   size_t operator()(const pair<int,int>&x)const{
     size_t ans=0;

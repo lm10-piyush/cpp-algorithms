@@ -62,3 +62,8 @@ int main(){
     cout << LIS(A, n) << endl;
     cout << LIS_bi(A, n);
 }
+
+//https://codeforces.com/contest/977/problem/F
+//https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
+//https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
+//https://codeforces.com/problemset/problem/264/B

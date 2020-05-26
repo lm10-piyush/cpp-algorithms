@@ -11,15 +11,13 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 //don't use unorederd_map for trie
 
-//********STANDARD TRIE**************
+//********STANDARD TRIE using Unordered Map**************
 struct Trie{
   unordered_map <char, Trie*> ch;  
-  char
   bool isEnd;
 
   Trie(){
-    this->isEnd = false;
-    //isEnd = false;
+    isEnd = false;
   }
   //~~~~~~~~~~~~~~INSERT~~~~~~~~~~~~~~~~~~~
   void insert(string s){
@@ -41,8 +39,6 @@ struct Trie{
     }
     return curr->isEnd;
   }
-
-  //~~~~~~~~~~~~~~~~DELETE~~~~~~~~~~~~~~~~~~~~
  
 };
 
@@ -125,6 +121,7 @@ struct XOR_Trie{
     curr->isEnd = true;
   }
  
+ //finding the pair whose xor is min
   int MIN(int x){
     XOR_Trie *curr = this;
     int res = 0;
@@ -139,42 +136,8 @@ struct XOR_Trie{
       }
     }
     return res;
-  }
- 
- 
+  } 
 };
-//******************************************************************
-
-//another Implementation of Trie, this is more SEXY
-//this is good for strings with low bases, like binary string(base=2)
-//but if you try it with base= 26, you will get memory limit exceeded
-const int bits = 30, N = 5e5 * bits;
-int trie[N][2], pos = 1;
-
-
-void insert(int x){
-    int p = 0;
-    for (int i = bits-1; i >= 0; --i){
-      if(!trie[p][x >> i & 1])
-        trie[p][x >> i & 1] = pos++;
-      p = trie[p][x >> i & 1];  
-    }
-}
-
-int get(int x){
-    int ans = 0, p = 0;
-    for (int i = bits-1; i >= 0; --i){
-      if(trie[p][x >> i & 1])
-        p = trie[p][x >> i & 1];
-      else{
-        ans |= 1 << i;
-        p = trie[p][!(x >> i & 1)];
-      }
-    }
-    return ans;
-}
-
-//*********************************************************
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);

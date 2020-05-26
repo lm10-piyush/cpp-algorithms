@@ -11,8 +11,52 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 /****************************** CODE IS HERE ****************************************/
 const int N = 2e5 + 7;
 vector <int> tree[N];
+vector<int> g[N];
 vector <int> seq;
 bitset<N> used;
+
+void bfs2(){
+      int n, m, a, b; cin >> n >> m >> a >> b;
+    for (int i = 0,x,y; i < m; ++i){
+      cin >> x >> y;
+      g[x].push_back(y);
+      g[y].push_back(x);
+    }
+
+    vector <int> dist(n+1, INF);
+    vector <int> path(n+1);
+    path[a] = a;
+    queue<int> q;
+    q.push(a);
+    dist[a] = 0;
+    while(!q.empty()){
+      int u = q.front(); q.pop();
+      for (int v: g[u]){
+        if(dist[v] == INF){
+          dist[v] = dist[u] + 1;
+          q.push(v);
+          path[v] = u;
+        }
+      }
+    }
+    if(dist[b] == INF) {
+      cout << -1;
+      return 0;
+    }
+    cout << dist[b] << endl;
+    //for the path
+    vector <int> ans;
+    int curr = b;
+    while(curr != a){
+      ans.push_back(curr);
+      curr = path[curr];
+    }
+    ans.push_back(curr);
+    reverse(all(ans));
+    for (int i: ans)
+      cout << i << ' ';
+
+}
 
 void bfs(){
   queue<int> q;

@@ -11,6 +11,28 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
+void another_way_to_compress(){
+    int n; cin >> n;
+    vector <int> A(n), extra(n);
+    for (int i = 0; i < n; ++i){
+      cin >> A[i];
+      extra[i] = A[i];
+    }
+
+    sort(all(extra));  //2 2 2 4 4 4 4 7 7 7 7 
+    unordered_map<int,int> mp;
+    for (int i = 0; i < n; ++i){
+      mp[extra[i]] = i;
+    }
+    for (int i = 0; i < n; ++i){
+      A[i] = mp[A[i]];
+    }
+
+    for (int i: A)
+      cout << i << ' ';
+    //in case if we want to find the correspoding real element we do: extra[A[i]]=> original element
+}
+
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -24,8 +46,8 @@ int main(){
     }
 
     sort(all(compress));
-    int tot = unique(all(compress)) - compress.begin(); //it returns the after the last iterator when duplicacy removed.
-    compress.resize(tot);
+    //unique returns the iterator after the last iterator when duplicacy removed.
+    compress.resize(unique(all(compress)) - compress.begin());
     for (int i = 0; i < n; ++i){
     	A[i] = lower_bound(all(compress), A[i]) - compress.begin();
     }
