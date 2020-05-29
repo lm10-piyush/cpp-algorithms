@@ -4,12 +4,16 @@
 	 of an array ranges, and we bulid this segment tree in another array, like we use heap to represent a tree.
 *Complexity to bulid and search is O(n) and O(log n) respectively.
 *Here I take starting index as 1 for segment tree.
-ques: cicular Rmq on codeforces
-solution: LM10_Piyush
+
+
 blogs : https://codeforces.com/blog/entry/22616 (Problems) 
 		https://codeforces.com/blog/entry/15890  (Some theory)
+    
 Problem: https://codeforces.com/contest/1208/problem/D (Restore permutation)
        :https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
+        
+      https://codeforces.com/contest/52/submission/72788292  (circular RMq)
+      https://codeforces.com/contest/52/submission/72788292
 
 steps:
 1) progate the lazy
