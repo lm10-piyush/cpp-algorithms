@@ -83,3 +83,12 @@ int main()
   return 0;
 }
 
+//https://www.spoj.com/problems/INVCNT/ (number of inversions)
+//same repo: others/tricks/inversions
+
+//https://www.spoj.com/problems/DQUERY/  (DQUERY USING BIT)
+//https://pastebin.com/5QkP5KkC
+
+//https://codeforces.com/problemset/problem/61/E
+//https://codeforces.com/contest/61/submission/80213191
+

@@ -12,10 +12,12 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 /****************************** CODE IS HERE ***********************************/
 
 const int N = 1e5 + 5;
-vector <int> parent(N), size(N, 1);
+vector <int> parent, size;
 int components;
 
 void init(int n){
+  parent.resize(n+1);
+  size.assign(n+1, 1);
   iota(all(parent), 0);
   components = n;
 }

@@ -43,10 +43,9 @@ struct Trie{
     return curr->cnt; //if exists then return number of times
   }
 
-  //assuming the x-integer must exists
-  //first make search, if exists then remove
   void remove(int x){
     Trie *curr = this;
+    if(!search(x)) return; //number doesn't exits
     for (int i = 30; i >= 0; --i){
       bool b = (x >> i) & 1;
       assert(curr->bit[b] != nullptr);
@@ -102,3 +101,19 @@ int main(){
 //https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/xor-and-insert-92b9b529/description/
 // https://pastebin.com/CEh0miYW
 
+
+//https://www.spoj.com/problems/SUBXOR/
+//sol: https://pastebin.com/nBcXKkqy
+
+//https://codeforces.com/contest/706/problem/D (Max xor)
+// https://codeforces.com/contest/706/submission/81589035
+
+//https://codeforces.com/contest/665/problem/E
+//sol1: https://codeforces.com/contest/665/submission/81592094
+//sol2 : https://codeforces.com/contest/665/submission/81592891
+
+//https://www.codechef.com/AFZ2019/problems/CAFE
+//soln: https://www.codechef.com/viewsolution/33384947
+
+//https://codeforces.com/contest/282/problem/E
+//https://codeforces.com/contest/282/submission/81691155

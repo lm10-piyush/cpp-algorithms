@@ -34,7 +34,7 @@ ll prims(int u)
     pq.pop();
     int ele = p.ss;
 
-    if(visited[ele]==true) continue;
+    if(visited[ele]) continue;
 
     visited[ele]=true;
     mincost += p.ff;

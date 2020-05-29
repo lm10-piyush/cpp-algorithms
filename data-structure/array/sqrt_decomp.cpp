@@ -37,7 +37,7 @@ public:
 	//for a given index (idx), the block number is blk = idx/size_each_block
 	//the starting index of that block in array A[] is = blk * (size_each_block)
 	// last index of that block in array A[] is (blk + 1)*(size_each_block) - 1
-	// so the range is => [blk * (size_each_block), (blk + 1)*(size_each_block) - 1]
+	// so the range of block is => [blk * (size_each_block), (blk + 1)*(size_each_block) - 1]
 	int query(int l, int r){
 		// l and r positions bcuz of standard ques, so first convert into indecies..
 		l--;
@@ -52,17 +52,15 @@ public:
 				sum += A[i];
 		}
 		
-		else{
+		else {
+			for(int i = l, last = (b_l+1)*b_size; i < last ; ++i)
+				sum += A[i];
 
-		for(int i = l, last = (b_l+1)*b_size; i < last ; ++i)
-			sum += A[i];
+			for (int i = (b_l + 1); i < b_r; ++i)
+				sum += blocks[i];
 
-		for (int i = (b_l + 1); i < b_r; ++i)
-			sum += blocks[i];
-
-		for (int i = b_r*b_size; i <= r; ++i)
-			sum += A[i];
-			
+			for (int i = b_r*b_size; i <= r; ++i)
+				sum += A[i];			
 		}
 
 		return sum;
