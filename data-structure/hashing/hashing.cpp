@@ -17,8 +17,38 @@
 using namespace std;
 using namespace std::chrono;
 
-//problem
+//problem : https://www.codechef.com/LTIME60A/problems/SHIFTPAL
 //https://www.codechef.com/viewsolution/32359239
+
+bool rolling_hash(string &s, string &pattern) {
+    ll hash1 = 0;
+    ll p = 31;
+    ll power = 1;
+    int len = pattern.size(), n = s.size();
+    for (int i = 0; i < len; ++i) {
+        hash1 = (hash1 + power*(pattern[i]-'a')) % mod;
+        power = (power*p) % mod;
+    }
+
+    ll curr = 0;
+    power = 1;
+    //just a sliding window for rolling hashes
+    for (int i = 0, j = 0; i < n; ++i) {
+        if (i - j + 1 <= len) {
+            curr = (curr + power*(s[i] - 'a')) % mod;
+            if (i - j + 1 < len) power = (power * p) % mod;
+            else if (curr == hash1) return true;
+            continue;
+        }
+
+        curr = (((curr - (s[i]-'a')) / p) + (s[i]-'a')*power) % mod;
+        j++;
+        if (curr == hash1) return true;
+    }
+
+    return false;
+}
+
 
 
 struct HASH{
@@ -62,3 +92,11 @@ int main()
     for(auto i: mp)
         cout<<i.first<<tab;
 }
+
+
+//https://codeforces.com/blog/entry/60442  rolling hashes
+//https://codeforces.com/blog/entry/60445 rolling hashes
+
+//problem
+//https://codeforces.com/contest/126/problem/B
+//https://codeforces.com/contest/126/submission/1308932

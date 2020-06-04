@@ -5,19 +5,18 @@
 #define arr_watch(arr, n) for(int i=0;i<n;++i) cout<<arr[i]<<" \n"[i==n-1]
 using namespace std;
 
+/*********************** CODE IS HERE *****************************************/
+
 int piTable[100002];
 
-void kmpPreProcess(string pattern){
+void kmpPreProcess(string &pattern){
 	piTable[0] = 0;
 	for (int i = 1, j = 0; i < (int)pattern.size(); ++i){
 		while(j > 0 and pattern[j] != pattern[i])
 			j = piTable[j-1];
 		
-		if(pattern[i] == pattern[j]){
-			piTable[i] = ++j;
-		} else{
-			piTable[i] = j;
-		}
+		if(pattern[j] == pattern[i])  j ++;
+        piTable[i] = j;
 	}
 }
 
@@ -41,15 +40,9 @@ vector<int> kmpMatch(string text, string pattern){
 }
 
 
-
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-	#ifndef ONLINE_JUDGE
-    
-    // freopen("D:/TestFiles/input.txt","r",stdin);
 	
-	#endif
-	/*********************** CODE IS HERE *****************************************/
 
     int t; cin >> t;
     while(t--){
@@ -69,3 +62,10 @@ int main(){
 	}
 	return 0;
 }
+
+//problem: https://codeforces.com/contest/625/problem/B
+//sol: https://codeforces.com/contest/625/submission/82346364
+
+//https://codeforces.com/contest/126/problem/B
+//https://codeforces.com/contest/126/submission/82435794
+

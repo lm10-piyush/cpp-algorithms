@@ -89,6 +89,9 @@ int main()
 //https://www.spoj.com/problems/DQUERY/  (DQUERY USING BIT)
 //https://pastebin.com/5QkP5KkC
 
-//https://codeforces.com/problemset/problem/61/E
+//https://codeforces.com/problemset/problem/61/E  (Enemy is weak)
 //https://codeforces.com/contest/61/submission/80213191
+
+//https://www.spoj.com/problems/KQUERY/
+//https://pastebin.com/jNap9hvZ
 

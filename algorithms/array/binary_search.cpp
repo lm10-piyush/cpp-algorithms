@@ -38,3 +38,10 @@ int main(){
 
   return 0;
 }
+
+
+//https://www.spoj.com/problems/AGGRCOW/
+//https://pastebin.com/X1an8ztv
+
+//https://codeforces.com/contest/913/problem/D
+//https://codeforces.com/contest/913/submission/82218543

@@ -10,11 +10,9 @@ bool visited[maxn + 5];
 vector<int> topo_sort;
 
 
-void dfs(int u)
-{
+void dfs(int u) {
   visited[u] = true;
-  for(auto i: graph[u])
-  {
+  for(auto i: graph[u]){
     if(!visited[i])
       dfs(i);
   }

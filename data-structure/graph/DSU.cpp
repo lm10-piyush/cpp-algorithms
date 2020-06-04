@@ -58,3 +58,6 @@ int main(){
 
 //problem: https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/city-and-flood-1/submissions/
 //solution: exactly same code
+
+//https://codeforces.com/contest/1213/problem/G
+// https://codeforces.com/contest/1213/submission/82253510

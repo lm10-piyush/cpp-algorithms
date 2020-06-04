@@ -24,6 +24,15 @@ int main(){
     	sum += A[i];
     	if (i - j + 1 > k)
     		sum -= A[j++];
+
+        /*
+        while (curr > mx && i <= j) {
+            if (s[i] != ch) curr--;
+            j++;
+        }
+        */
+
+
     	if((i-j+1 == k) && sum == target)
     		ans++;
     }
@@ -33,3 +42,11 @@ int main(){
 
 	return 0;
 }
+
+/*
+1) One of the famous question could be, you have a binary string, also given a number 'm' which tells you that atmost 'm'bits 
+    you could flip. Find the longest length of the continuous sequence of 1's.
+    This can be done by Two pointers. 
+
+
+*/
