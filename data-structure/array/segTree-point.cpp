@@ -93,3 +93,11 @@ int main(){
 
 //problem: https://codeforces.com/contest/339/problem/D
 //soln: https://codeforces.com/contest/339/submission/78825205
+
+//https://cses.fi/problemset/task/1649
+
+//https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/0000000000337b4d (Seg Tree with arithmetics)
+//https://pastebin.com/2ZafVfJ6
+
+//https://cses.fi/problemset/task/1143  (hotels),(quering the left most and right most index)
+//https://pastebin.com/g7UUTynJ

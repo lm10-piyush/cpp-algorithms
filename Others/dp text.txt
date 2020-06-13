@@ -1,10 +1,34 @@
-In dp: try every possiblity and pick the best.
+***************************** BASICS********************************************
+In dp: try every possiblity and pick the best *OR* If you want the best solution for 'i', can you
+get it using j such that (j < i). Formally, calculating bigger states using smaller ones.
+
+Finding the bigger state, you have to compute for smaller state.
+## EX: For Matrix: Thus to find the best solution for that cell(i, j), we have to have already found the 
+ best solutions for all of the cells from which we can arrive to the current cell.
+EX: e Min[i][j] , which represents the length of the shortest path found to vertex i, with j money being left.
+
+
+##When have read the description of a problem and started to solve it, first look at its restrictions. 
+If a polynomial-time algorithm should be developed, then it’s possible that the solution may be of DP type. 
+In this case try to see if there exist such states (sub-solutions) with the help of which the next states (sub-solutions) may be found. 
+Having found that – think about how to pass from one state to another. If it seems to be a DP problem, 
+but you can’t define such states, then try to reduce the problem to another one
+
+##3Points:
+1) Optimal Substructure.
+2) Overlapping sub-problem (sub-solutions).
+3) How to pass from one state to another.
+
 
 In dp, you have to build the solution from smaller problem to bigger problem.
 During building the solution, at every moment, I have a choice, should I use the
 current option or should I use the best result I got till previous option. And
 then, I compare for best result for that problem. This is called building the solution.
 You can reach to the solution of larger problem without using smaller problem.
+SOME examples: https://codeforces.com/blog/entry/43256
+		https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/
+		https://www.youtube.com/watch?v=4T2wQ5LGmWg&list=PLcBc1Yp8mZQdFzQ0H2bvyiJ35fwVX0pl4&index=2
+*For finding a state i, we need to first find all smaller states j (j<i). 
 
 So, the process is like this:
 	1) Identify the  states.
@@ -12,19 +36,39 @@ So, the process is like this:
 	3) After base case, at every moment, you have use the current option
 	or you don't use the current option and use till the previous option, 
 	and in this way you pick the best result.
+	4) In dp, it does not depend how deep an state repeats, because if it depends then it must
+	be included in the state. EX: In fibonacci state tree, it does not depend on the depth of the same
+	function call, it only depends on the recursive call.
+
+*************************************TOP down & Bottm Up *********************************************
 In top-down dp, we don't need to do extra stuff, all things will be done by recursion
-and memoization. But in bottom-up, you have to run expilcitly and carefully using loops.
+and memoization. But in bottom-up, you have to run expilcitly and carefully using loops. In both recurrence relation
+is approx same, but the movement from on state to another will vary little bit.
 
-There could be two Push dp and Pull dp. In push-dp we fill the next state from current state,
-in pull dp, we fill the current state using previous state.  
+** f(i, ...) = f(i+1, ...) // top down recurrence, in this we first hit the base case, 
+Here we are driving the CURRENT STATE using the NEXT STATE, it method known as topdown. EX: https://pastebin.com/JYBcxbzu
 
-In dp, one of the most important thing is to DEFINE THE DP, what is representing what
-like the states, how you you gonna move.
+There could be two Push dp and Pull dp. In push-dp we fill the next state from current state via only valid move(s),
+in pull dp, we fill the current state using previous state via only valid moves(s).  
+
+**In dp, one of the most important thing is to DEFINE THE DP STATE, what is representing what
+in the states, how you you gonna move. You have to DEFINE THE DP[i][j]... correctly.
+
+In dp, we have a condition and then find the best solution according to the condition.
+We have 2-ways to do this:
+1) Build the solution by considering the condition, then find the best solution,
+   eg: https://codeforces.com/contest/1353/problem/E
+2) Build the solution by not considering the condition then, find the best solution
+   by considering the considering. https://codeforces.com/contest/1077/problem/F1
+Above two ways, depends on question to question.
+
 
 Problems for dp:
 https://codeforces.com/problemset/problem/894/A
 https://codeforces.com/contest/490/problem/C (Hacking Cypher)
 https://codeforces.com/contest/550/problem/C (divisiblity by eight)
+https://codeforces.com/contest/877/problem/B
+https://codeforces.com/contest/327/problem/A (Flipping game, dP)
 https://codeforces.com/contest/1140/problem/D (Mininum Triangulation)
 https://codeforces.com/problemset/problem/414/B (B. Mashmokh and ACM) complexity: O(nklog(n))
 https://codeforces.com/contest/166/problem/E (Tetrahedron)
@@ -37,7 +81,7 @@ https://codeforces.com/contest/1130/problem/C (Div2: C Connect)
 https://codeforces.com/contest/920/problem/E (connected components)
 https://codeforces.com/contest/220/problem/B (Little elephant and array, MO, sqrt)
 https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise)
-https://cses.fi/problemset/ for problems  (problem set)
+https://cses.fi/problemset/ for problems  (problem set, DP soln: https://codeforces.com/blog/entry/70018 )
 https://codeforces.com/contest/1081/problem/C (combinators with dp)
 https://www.codechef.com/LTIME60A/problems/SHIFTPAL (hashing like rabin karp, Important ques, with its editorial){https://www.codechef.com/submit/complete/32359239}
 https://codeforces.com/contest/264/problem/B (Good sequences DP)
@@ -49,5 +93,39 @@ https://www.hackerearth.com/problem/algorithm/happy-segments-e290faa6/descriptio
 https://atcoder.jp/contests/abc165/submissions/12734276 (dp, LIS, graph)
 https://codeforces.com/contest/1208/problem/D  (segtree with dp)
 https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
+https://codeforces.com/contest/977/problem/F (dp, LIS, Maths)
+https://codeforces.com/contest/1353/problem/E (dp + good implementation)
+https://codeforces.com/contest/1077/problem/F1 (dp)
+https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
+https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
+https://codeforces.com/contest/264/problem/B (DP, LIS, Maths, Sieve, O(nlogn), becuz, n < 1e6, max_element <= 1e7)
+https://leetcode.com/problems/largest-divisible-subset/  (DP, LIS, O(n2) solution needed becuz, max_element <= 2e9, n < 6e3) 
+https://codeforces.com/contest/562/problem/E (convex hull)
+https://codeforces.com/contest/660/problem/C (dp + binary search)
+https://codeforces.com/contest/768/problem/B (divide n Conquer)
+https://codeforces.com/problemset/problem/1111/C (divide n conquer)
+FIND LARGEST SUM SUBARRAY IN ARRAY USING DnC
+https://codeforces.com/problemset/problem/835/C
+https://www.hackerrank.com/contests/all-india-contest-by-coding-club-india-30-may-2020/challenges/ritesh-first-love/problem (Maths, difference Formula)
+https://atcoder.jp/contests/agc044/tasks/agc044_a (Divisors DP, soln : https://atcoder.jp/contests/agc044/submissions/14012427)
+https://cses.fi/problemset/task/1633  (DP, dice, soln: https://pastebin.com/J5JrqnC7)
+https://cses.fi/problemset/task/1634   (DP, coin change, https://pastebin.com/vFKgWicG)
+https://cses.fi/problemset/task/1633 (DP, https://pastebin.com/rLsLFTpC)
+https://codeforces.com/contest/1056/problem/D (tree dp)
+https://www.codechef.com/problems/CHEFZRON (dp, sol: https://www.codechef.com/viewsolution/34059249)
+https://cses.fi/problemset/task/1652  (DP, 2D matrix Prefix sum, soln: https://pastebin.com/DUnJcQ4P)
+https://codeforces.com/contest/835/problem/C  (DP, 2D matrix Prefix sum, soln: https://codeforces.com/contest/835/submission/82290525)
+https://arena.topcoder.com/#/u/practiceCode/1239/1209/1259/1/1239  (Zig-zag, soln; https://pastebin.com/AhQ5ApTF)
+https://leetcode.com/problems/maximal-square/ (Maximum squares of 1's)
+https://leetcode.com/problems/partition-equal-subset-sum/ (DP, looks like 3D, but must done in 2D, Soln: https://pastebin.com/JYBcxbzu)
+
+
+
+
+
+
+
+
+
 
 

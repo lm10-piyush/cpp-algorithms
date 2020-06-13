@@ -63,3 +63,7 @@ int main(){
 
   return 0;
 }
+
+
+//https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2683&mosmsg=Submission+received+with+ID+2636226
+//https://pastebin.com/mJqWZzf3

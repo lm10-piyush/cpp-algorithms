@@ -12,7 +12,6 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 /****************************** CODE IS HERE ***********************************/
 
 //Pending: to implement the number of string having certain prefi
-x
 const int alpha = 26;
 struct Trie{
     Trie *ch[26];

@@ -16,7 +16,7 @@ vector <int> seq;
 bitset<N> used;
 
 void bfs2(){
-      int n, m, a, b; cin >> n >> m >> a >> b;
+    int n, m, a, b; cin >> n >> m >> a >> b;
     for (int i = 0,x,y; i < m; ++i){
       cin >> x >> y;
       g[x].push_back(y);
@@ -87,3 +87,7 @@ int main(){
 
   return 0;
 }
+
+
+//https://codeforces.com/contest/1106/problem/D
+//sol: https://codeforces.com/contest/1106/submission/82663168

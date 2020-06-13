@@ -68,3 +68,10 @@ int main(){
 
     return 0;
 }
+
+// https://codeforces.com/problemset/problem/337/D
+//https://codeforces.com/contest/337/submission/73440952
+
+
+//https://codeforces.com/contest/120/problem/F
+//https://codeforces.com/contest/120/submission/76465143

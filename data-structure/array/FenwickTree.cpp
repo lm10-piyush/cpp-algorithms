@@ -13,16 +13,18 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 struct BIT{
   int n;
   vector <int> bit;
-  BIT(int n){
-    this->n = n;
+  BIT(int _n){
+    n = _n
     bit.assign(n+1, 0);
   }
   //~~~~~~~~~~~~~update~~~~~~~~~~~~~
+  //if given i is zero based, then ++i
   void upd(int i, int val){
     for (++i; i <= n; i+= i&-i)
       bit[i] += val;
   }
   //~~~~~~~~~~~~~~query~~~~~~~~~~~~~~
+  //if given i is zero based, then ++i
   int qry(int i){
     int res = 0;
     for (++i; i > 0; i -= i&-i)
@@ -95,3 +97,12 @@ int main()
 //https://www.spoj.com/problems/KQUERY/
 //https://pastebin.com/jNap9hvZ
 
+//https://cses.fi/problemset/task/1646
+
+//https://codeforces.com/contest/1208/problem/D (restore permutations, BIT, binary serach)
+//https://codeforces.com/contest/1208/submission/83283233 
+
+//https://cses.fi/problemset/task/1749 (Binary search with fenwick tree for find the number of elements Dynamically)
+//https://pastebin.com/MzmUMHR6 (this is same as implementing the std::multiset or gnu_pbds, but in this ques, sorting is not allowed)
+// https://codeforces.com/problemset/problem/1354/D  (same ques, but here sorted order is compulsory)
+// https://codeforces.com/contest/1354/submission/83517596

@@ -41,7 +41,7 @@ bool rolling_hash(string &s, string &pattern) {
             continue;
         }
 
-        curr = (((curr - (s[i]-'a')) / p) + (s[i]-'a')*power) % mod;
+        curr = (((curr - (s[j]-'a')) / p) + (s[i]-'a')*power) % mod;
         j++;
         if (curr == hash1) return true;
     }

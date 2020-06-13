@@ -69,6 +69,25 @@ struct Trie{
     return ans;
   }
 
+  //MEX using Trie
+  //NOTE: elements must be distinct, or frequecny of each element will be 1 in trie
+  // otherwise it does not work properly, So mess this Trie with others
+  int mex() {
+        Trie *curr = this;
+        int ans = 0;
+        for (int i = 29; i >= 0; --i) {
+            if(curr->bit[0] == nullptr) return ans;
+            if (curr->bit[0]->cnt < (1 << i)) {
+                curr = curr->bit[0]; 
+            } else {
+                ans |= 1 << i;
+                if (curr->bit[1] == nullptr) return ans;
+                curr = curr->bit[1];
+            }
+        }
+        return ans;
+    }
+
 
 };
 
@@ -117,3 +136,12 @@ int main(){
 
 //https://codeforces.com/contest/282/problem/E
 //https://codeforces.com/contest/282/submission/81691155
+
+//https://codeforces.com/contest/842/problem/D  (Xor, MEX, Trie)
+//https://codeforces.com/contest/842/submission/83123978
+/*
+Trick for MEX, is number of distince values in [0, i] => i+1, then that means, MEX does not lie in that range
+so go for larger. So we can use Binary search.
+Similarly in Trie, if size of subtree of  node is of complete tree, so, MEX doesn't lie in that part.
+In this way try, both [0, 1] check size of subtree.
+*/

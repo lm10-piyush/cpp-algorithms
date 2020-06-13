@@ -12,9 +12,10 @@ blogs : https://codeforces.com/blog/entry/22616 (Problems)
 Problem: https://codeforces.com/contest/1208/problem/D (Restore permutation)
        :https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
         
-      https://codeforces.com/contest/52/submission/72788292  (circular RMq)
+      https://codeforces.com/contest/52/problem/C  (circular RMq)
       https://codeforces.com/contest/52/submission/72788292
 
+****************************************
 steps:
 1) progate the lazy
 2) check for no overlap
@@ -25,9 +26,11 @@ segtree for
 1) min/max
 2) sum of elements
 3) count of elements (2D segtree, eg. letters, count the number of letters between [l, r])
-	https://codeforces.com/contest/558/problem/E
+	   https://codeforces.com/contest/558/problem/
+     https://codeforces.com/contest/558/submission/79979941
 4) xor
 5) number of inversions, https://codeforces.com/contest/61/problem/E
+6) Polynomial queries
 
 
 */
@@ -43,7 +46,8 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 
 /****************************** CODE IS HERE ***********************************/
-
+//range sum - query
+//range update=> increase [l, r] by value 'val'
 struct segTree{
   vector <int> tree;
   vector <int> lazy;
@@ -140,3 +144,8 @@ int main(){
 
   return 0;
 }
+
+
+// https://cses.fi/problemset/task/1651
+//https://codeforces.com/contest/877/problem/E (seg tree on tree with euler tour)
+//solution: https://codeforces.com/contest/877/submission/82785039

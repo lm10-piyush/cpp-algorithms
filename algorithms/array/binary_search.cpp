@@ -45,3 +45,10 @@ int main(){
 
 //https://codeforces.com/contest/913/problem/D
 //https://codeforces.com/contest/913/submission/82218543
+
+//https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/practice-problems/algorithm/monster-gouketsu/description/?filter=all&sort=recent-comments
+//https://pastebin.com/Yvqu8dfp
+
+
+//https://codeforces.com/contest/1359/problem/C
+//https://codeforces.com/contest/1359/submission/81821635
