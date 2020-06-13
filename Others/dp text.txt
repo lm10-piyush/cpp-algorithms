@@ -47,9 +47,14 @@ is approx same, but the movement from on state to another will vary little bit.
 
 ** f(i, ...) = f(i+1, ...) // top down recurrence, in this we first hit the base case, 
 Here we are driving the CURRENT STATE using the NEXT STATE, it method known as topdown. EX: https://pastebin.com/JYBcxbzu
+** f(i, ...) = f(i-1, ...) // bottom up, find the current state using previous state.
+
 
 There could be two Push dp and Pull dp. In push-dp we fill the next state from current state via only valid move(s),
 in pull dp, we fill the current state using previous state via only valid moves(s).  
+Bottom up Pull dp: f(i, ...) = f(i-1, ...) // finding the current state using the previous state.
+Bottom up Push dp: f(i+1, ...) = f(i, ...) // finding the next state using the current state.
+
 
 **In dp, one of the most important thing is to DEFINE THE DP STATE, what is representing what
 in the states, how you you gonna move. You have to DEFINE THE DP[i][j]... correctly.
