@@ -1,6 +1,25 @@
 ***************************** BASICS********************************************
-In dp: try every possiblity and pick the best *OR* If you want the best solution for 'i', can you
-get it using j such that (j < i). Formally, calculating bigger states using smaller ones.
+IN DP: Dp is all about caching the data(function calls), or you can say, when I can build the bigger solution 
+using smaller solution such that subproblem "overlapp" and also holds the "optimal substructure". It doesn't matter, problem involves
+trying all possiblity or not, you can do it using dp, if above condition holds then you can do it using DP. But mostly you see
+that people are solving those questions in which we have to try all possiblity and greedy fails, then we feels, it is the time to try all 
+possibilites. Dp needs only above mentioned conditions.
+Thats why the important part of the dp is recurrence relation. To learn the dp, you have to think, 
+does it hold "optimal substructure" and "overlapping subproblem" then DEFINE DP using states, then think
+how you are going to pass states from one to another one(transitions), then make the recurrence relation.
+
+0) What do you need to find (clear in mind).
+1) optimal substructure.
+2) overlapping subproblem.
+3) DEFINE DP using states.
+4) how you are going to pass states from one to another one(transitions)
+5) make the recurrence relation (final and most important stage).
+6) Code it using TOP down or bottom up.
+
+NOTE: when subproblems doesn't overlapp then, it comes under into the divide and conqure paradigm. 
+
+In dp: If you want the best solution for 'i', can you get it using j such that (j < i). 
+Formally, calculating bigger states using smaller ones.
 
 Finding the bigger state, you have to compute for smaller state.
 ## EX: For Matrix: Thus to find the best solution for that cell(i, j), we have to have already found the 
@@ -45,17 +64,17 @@ In top-down dp, we don't need to do extra stuff, all things will be done by recu
 and memoization. But in bottom-up, you have to run expilcitly and carefully using loops. In both recurrence relation
 is approx same, but the movement from on state to another will vary little bit.
 
-** f(i, ...) = f(i+1, ...) // top down recurrence, in this we first hit the base case, 
+** f(current state) = f(next state) // top down recurrence, in this we first hit the base case becuz "next state" is not known yet, 
 Here we are driving the CURRENT STATE using the NEXT STATE, it method known as topdown. EX: https://pastebin.com/JYBcxbzu
-** f(i, ...) = f(i-1, ...) // bottom up, find the current state using previous state.
-
+** f(current state) = f(previous state) // bottom up, find the current state using previous state.
 
 There could be two Push dp and Pull dp. In push-dp we fill the next state from current state via only valid move(s),
 in pull dp, we fill the current state using previous state via only valid moves(s).  
-Bottom up Pull dp: f(i, ...) = f(i-1, ...) // finding the current state using the previous state.
-Bottom up Push dp: f(i+1, ...) = f(i, ...) // finding the next state using the current state.
+Bottom up Pull dp: f(current state) = f(previous state) // finding the current state using the previous state.
+Bottom up Push dp: f(next state) = f(current state) // finding the next state using the current state(already known).
 
 
+************************************* DEFINE DP *******************************************************
 **In dp, one of the most important thing is to DEFINE THE DP STATE, what is representing what
 in the states, how you you gonna move. You have to DEFINE THE DP[i][j]... correctly.
 
@@ -68,7 +87,73 @@ We have 2-ways to do this:
 Above two ways, depends on question to question.
 
 
-Problems for dp:
+*********************************************** EXample****************************************
+Ex: In knapsack, dp[i][j] => using elements from [1...i], the maximum value I can get if I have weight 'j',
+				to do this job correctly, I have create recurrence relation, based on "use it" or "not" current one
+				on the basis of this, we can try all the possiblity and get the max value.
+				dp[i][j] = max(dp[i-1][j], value[i] + dp[i-1][j-weigh[i]]), or max(don't include, include current)
+
+
+
+**************************************** Game Theory **********************************************
+Mostly in game theory we start builiding the solution from the end of the game to start of the game (bottom up),
+So that, one should choose the best option.
+
+
+************************************* NOTE******************************************************
+#If you are not able to come up with recurrence relation, then try brute force and see what it does, it helps in two ways
+   a) Answer will be correct. 
+   b) The same recurrence relation which is used in brute force can be used in the recurrence relation for dp
+	because they are same(begginners are little bit good in brute force :).
+   Then, then define/meaning to the states, Ex: f(i, j) => will give the best result for subarray [i...j] by observing the 
+	recursion.
+	HENCE, donot underestimate the brute force, it will give you recurrence relation if you are not able to come up with it directly.
+	Once you become pro in dp, then you can it easily.
+
+# Another Most important Tip to come up with *BOTTOM UP* solution: Please prefer to write the recurrence relation in this way 
+	1st method => f(i...) = f(i-1....) instead of 2nd method => f(i..) = f(i+1...)
+	because in the first method, you can easily come up with the bottom up solution, I'm not saying that you cannot come up with the 
+	bottom up solution with the second method, you can do, but for begginers it is little bit hard to see the bases case for large values
+	of states. To do this, think the about the brute force solution(recursive) starts from [N...1], or f(N)=> f(N-1)... f(base). In this
+	way you get the base where all the calculations begins and value of states are less becuz states are decreasing. 
+	I mentioned this, becuz most people applies the recursion in this way f(1) => f(2) => f(N) (base case), and you hit a base case, 
+	at this point the value of the state is high, and it is hard to see it for beginners. Thats why, you can bottom up solution of fibonacci,
+	lines of wines etc problems etc, because you can see their recurrence relation in 1st type easily.
+	Ex: for knapsack, 1st method => f(i, w) = max(f(i-1, w), f(i-1, value[i] + w - weight[i])  [moving up 1.....N]
+			  2nd method => f(i, w) = max(f(i+1, w), f(i+1, value[i] + w-weight[i])) //this is more intitutive for begginer but try
+				the above one, this makes bottom up easy to see.
+	As you noticed that, both methods are same only the movement is changed, Ex: for LCS if you try to build using 1st method then you get 
+	your ans at dp[n][m] becuze for base case will be at (0, 0)(when both strings are empty), but for 2nd method, your ans will be at dp[1][1](just reversed of previous method),
+ 	becuz base case will be at (n+1, m+1)(both will be empty).
+	
+	Here donot confuse with the which one should be use for top down up and which one for bottom up both are compatible with both method, 
+        becuz top down and bottom depend how you start to construct the soluion, top down if f(current state) => f(next state) (which not calculated yet).
+	Bottom up f(current state) = f(previous state). Bottom up is moving from already calculated to next state.
+	now current state could be i & previous could i+1, or current could be i  and next could be i-1, it only depends on how you approches the problem,
+	both the methods can do top down and bottom up, But here we are discussing the bottom up as you can see the heading. 
+	And to come up easily(as begginner) you should create the recurrence in 1st way.
+
+************************************* So Mind you technique and habits to solve problems *************************************
+##Quick same thing: most people: try to do recurrence like this fun(0) and base  if(i >=n ) { }, 
+	so recurrene will be like this fun(i..) = fun(i+1...),
+ 	so here it is easy to see top down but hard to see bottom up, becuz base case is i == n, then it little bit hard to see and build from 
+	that base case to build the whole soon. So try to make recurrence like this: f(n), if(i == 0) {base} , now recurrence will be 
+	like this f(i...) = f(i-1...) now it is easy to see the bottom up here. We just need to change the point of view to change the recurrence.
+	So make the recurrence such that you are moving from high state to low state, then bottom up leads you to make solution from lower state to
+	higher state.
+	OR we can say, instead of moving from source to destination in the mentioned path(eg, right, down), prefer  to move from destination 
+	to source to reverse path(left, up). Ex: https://atcoder.jp/contests/dp/submissions/14411476
+						https://atcoder.jp/contests/dp/submissions/14399464 
+	Here I used the 2nd method(f(i..)=f(i+1...)) of recurrence, becz, for that question it is easy to implement, so I have to go from last and 
+	then go up, As I told you, using both method of recurrence you can come up with bottom up and top down. topdown is little simpler because
+	you have to move as ques said, but in bottom up, you have to just opposite of it. 
+	EX: using 2nd method of reccurence: https://pastebin.com/v9FkC6Y5 
+	Ex: LCS using both recurrences: https://atcoder.jp/contests/dp/submissions/14428752 | https://atcoder.jp/contests/dp/submissions/14399464
+
+**TIP**: I will choose that recurrence method for bottom up on which I can iterate easily and imagine easily.
+
+
+Problems for DP:
 https://codeforces.com/problemset/problem/894/A
 https://codeforces.com/contest/490/problem/C (Hacking Cypher)
 https://codeforces.com/contest/550/problem/C (divisiblity by eight)
@@ -122,7 +207,8 @@ https://cses.fi/problemset/task/1652  (DP, 2D matrix Prefix sum, soln: https://p
 https://codeforces.com/contest/835/problem/C  (DP, 2D matrix Prefix sum, soln: https://codeforces.com/contest/835/submission/82290525)
 https://arena.topcoder.com/#/u/practiceCode/1239/1209/1259/1/1239  (Zig-zag, soln; https://pastebin.com/AhQ5ApTF)
 https://leetcode.com/problems/maximal-square/ (Maximum squares of 1's)
-https://leetcode.com/problems/partition-equal-subset-sum/ (DP, looks like 3D, but must done in 2D, Soln: https://pastebin.com/JYBcxbzu)
+https://leetcode.com/problems/partition-equal-subset-sum/ (DP, looks like 3D, but must done in 2D, Soln(TOP DOWN): https://pastebin.com/JYBcxbzu, BOTTOM UP: https://pastebin.com/tVn0DR83)
+https://codeforces.com/problemset/problem/859/C  (DP, Game theory)
 
 
 

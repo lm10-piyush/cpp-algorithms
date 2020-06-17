@@ -60,13 +60,16 @@ void bfs2(){
 
 void bfs(){
   queue<int> q;
-  q.push(1);
+  q.push(1); //source
+  used[1] = true;
   while(!q.empty()){
     int u = q.front(); q.pop();
-    used[u] = true;
     seq.push_back(u);
     for (int v: tree[u]){
-      if(!used[v]) q.push(v);
+      if(!used[v]) {
+        used[v] = true;
+        q.push(v);
+      }
     }
   }
 }

@@ -22,6 +22,9 @@ int main(){
     for (int i = 1; i <= n; ++i) 
         cin >> pages[i];  //value..
 
+    //dp[i][j] => using elements [1..i], maximum value I can get if current weight is 'j'
+    //to do the above job correctly, here is the recurrence relation, which is based on "use it" or "not"
+    //dp[i][j] = max(dp[i-1][j], pages[i] + dp[i-1][j-price[i]]); //max(dont use current one, use the current one)
     vector <vector <int>> dp(n+1, vector <int> (x+1, 0));
 
     for (int i = 1; i <= n; ++i) {
@@ -47,3 +50,7 @@ int main(){
 
 //https://atcoder.jp/contests/dp/tasks/dp_d
 //sol: https://atcoder.jp/contests/dp/submissions/14115284
+
+//https://atcoder.jp/contests/dp/tasks/dp_e  (knapsack with W <= 1e9)
+//https://atcoder.jp/contests/dp/submissions/14384195
+
