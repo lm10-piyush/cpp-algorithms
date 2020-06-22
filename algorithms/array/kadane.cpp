@@ -4,6 +4,7 @@ using namespace std;
 //divide-n-conquer to calculate the max sum subarray.
 //maxSubarraySum(A, 0, n-1);
 //idea is to take max of (left part, right part, the segment which includes the middle part)
+// this technique helps in segment trees
 int maxSubarraySum(int A[], int l , int r){
     if (l == r)
         return A[l];
@@ -11,12 +12,12 @@ int maxSubarraySum(int A[], int l , int r){
     int ans = max(maxSubarraySum(l, mid), maxSubarraySum(mid+1, r));
     
     int res = -1e9, curr = 0;
-    for (int i = mid+1; i <= r; ++i){
+    for (int i = mid+1; i <= r; ++i){ //right sum from mid
         curr += A[i];
         res = max(res, curr);
     }
     curr = res;
-    for (int i = mid; i >= l; --i){
+    for (int i = mid; i >= l; --i){  //left sum from mid
         curr += A[i];
         res = max(res, curr);
     }

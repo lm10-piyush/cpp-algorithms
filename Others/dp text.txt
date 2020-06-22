@@ -150,7 +150,23 @@ So that, one should choose the best option.
 	EX: using 2nd method of reccurence: https://pastebin.com/v9FkC6Y5 
 	Ex: LCS using both recurrences: https://atcoder.jp/contests/dp/submissions/14428752 | https://atcoder.jp/contests/dp/submissions/14399464
 
-**TIP**: I will choose that recurrence method for bottom up on which I can iterate easily and imagine easily.
+**TIP**: I will choose that recurrence method for bottom up on which I can iterate easily and imagine easily. You get the bottom up solution when made 
+	the recurrence relation and you are able to think how recursion goes how base case hits and how it comes back from recursion, or we can say
+	our recursion is well organised and you can predict how things goes, but there is many cases when you are not able to do imagine that:
+	Ex; dp with bitmask, here you cannot predict how thing goes, because there is no fixed mannner of recursion. 
+	Ex: http://lightoj.com/volume_showproblem.php?problem=1005 | soln(https://pastebin.com/tGNAVSUp) (here is the only way to do it is topdown, 
+	becz it is hard to imagine how thing goes becz there every time we have to check that configuration is right or not, we have no such technique to get always right configuration).
+	
+	So, mostly in such situations when you don't imagine or predict how recursion goes in a fixed way, then there is only way to do it is by top-down.
+
+Forms of DP:
+1) Normal some contribution technique.
+2) Standard DP 1D/2D on array or strings
+3) Digit DP
+4) DP with bitmask
+5) DP on trees / graphs
+6) Sum over subsets DP(SOS)
+7) Matrix exponentiation
 
 
 Problems for DP:
@@ -163,6 +179,7 @@ https://codeforces.com/contest/1140/problem/D (Mininum Triangulation)
 https://codeforces.com/problemset/problem/414/B (B. Mashmokh and ACM) complexity: O(nklog(n))
 https://codeforces.com/contest/166/problem/E (Tetrahedron)
 https://www.codechef.com/problems/DELISH  (Delish, dp)
+https://codeforces.com/contest/1005/problem/D (Polycarp and div3)
 https://codeforces.com/contest/1221/problem/D (Make that fence great again)
 https://codeforces.com/contest/120/problem/F (spiders) {in-out tree dp}
 https://codeforces.com/contest/44/problem/E (Ansifa the monkey)
@@ -175,7 +192,8 @@ https://cses.fi/problemset/ for problems  (problem set, DP soln: https://codefor
 https://codeforces.com/contest/1081/problem/C (combinators with dp)
 https://www.codechef.com/LTIME60A/problems/SHIFTPAL (hashing like rabin karp, Important ques, with its editorial){https://www.codechef.com/submit/complete/32359239}
 https://codeforces.com/contest/264/problem/B (Good sequences DP)
-https://www.codechef.com/problems/KANYASAI (digit dp)
+https://www.codechef.com/problems/KANYASAI ( digit dp, soln: https://www.codechef.com/viewsolution/29212253)
+https://atcoder.jp/contests/dp/tasks/dp_s (digit dp, soln: https://atcoder.jp/contests/dp/submissions/14598857)
 https://www.hackerearth.com/problem/algorithm/playing-with-digits-4e25844f/ (digit dp)
 https://codeforces.com/contest/817/problem/C (binary search, Really big numbers)
 https://codeforces.com/contest/888/problem/D (maths, derangements)
@@ -208,8 +226,18 @@ https://codeforces.com/contest/835/problem/C  (DP, 2D matrix Prefix sum, soln: h
 https://arena.topcoder.com/#/u/practiceCode/1239/1209/1259/1/1239  (Zig-zag, soln; https://pastebin.com/AhQ5ApTF)
 https://leetcode.com/problems/maximal-square/ (Maximum squares of 1's)
 https://leetcode.com/problems/partition-equal-subset-sum/ (DP, looks like 3D, but must done in 2D, Soln(TOP DOWN): https://pastebin.com/JYBcxbzu, BOTTOM UP: https://pastebin.com/tVn0DR83)
+https://cses.fi/problemset/task/1745  (Same problem as above(partition-equal-subset-sum) we have to check which sums I can make using the coins)
+https://cses.fi/problemset/task/1093  (Same as above problem with fermat little theorem)
 https://codeforces.com/problemset/problem/859/C  (DP, Game theory)
-
+http://lightoj.com/volume_showproblem.php?problem=1011 (DP with bitmask, solN: https://pastebin.com/j1v4eTZ9)
+https://www.spoj.com/problems/EPALIN/ (DP, edit distance)
+https://cses.fi/problemset/task/1097  (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ)
+http://lightoj.com/volume_showproblem.php?problem=1031    (DP, Game theory, https://pastebin.com/xUEjseJ6, SAME AS ABOVE PROBLEM)
+https://www.hackerrank.com/challenges/sherlock-and-cost/problem  (Important DP, with some greedyness to avoid overcalculation, sol: https://pastebin.com/7yk2CHDp) 
+https://cses.fi/problemset/task/1746  (Must Do DP, Combinatorics ques, Learn how to push the number of ways)
+https://www.hackerrank.com/challenges/construct-the-array/problem (DP, combo)
+https://atcoder.jp/contests/dp/tasks/dp_i  (DP, Probability, Binomial Coeff, https://atcoder.jp/contests/dp/submissions/14509284)
+https://www.hackerrank.com/challenges/sam-and-substrings/problem  (DP, Contribution Technique, Implemetation, SOL: https://pastebin.com/bth2PuZZ)
 
 
 

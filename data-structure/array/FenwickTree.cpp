@@ -85,24 +85,32 @@ int main()
   return 0;
 }
 
-//https://www.spoj.com/problems/INVCNT/ (number of inversions)
-//same repo: others/tricks/inversions
+/*
+https://www.spoj.com/problems/INVCNT/ (number of inversions)
+same repo: others/tricks/inversions
 
-//https://www.spoj.com/problems/DQUERY/  (DQUERY USING BIT)
-//https://pastebin.com/5QkP5KkC
+https://www.spoj.com/problems/DQUERY/  (DQUERY USING BIT)
+https://pastebin.com/5QkP5KkC
 
-//https://codeforces.com/problemset/problem/61/E  (Enemy is weak)
-//https://codeforces.com/contest/61/submission/80213191
+https://codeforces.com/problemset/problem/61/E  (Enemy is weak)
+https://codeforces.com/contest/61/submission/80213191
 
-//https://www.spoj.com/problems/KQUERY/
-//https://pastebin.com/jNap9hvZ
+https://www.spoj.com/problems/KQUERY/
+https://pastebin.com/jNap9hvZ
 
-//https://cses.fi/problemset/task/1646
+https://cses.fi/problemset/task/1646
 
-//https://codeforces.com/contest/1208/problem/D (restore permutations, BIT, binary serach)
-//https://codeforces.com/contest/1208/submission/83283233 
+https://codeforces.com/contest/1208/problem/D (restore permutations, BIT, binary serach)
+https://codeforces.com/contest/1208/submission/83283233 
 
-//https://cses.fi/problemset/task/1749 (Binary search with fenwick tree for find the number of elements Dynamically)
-//https://pastebin.com/MzmUMHR6 (this is same as implementing the std::multiset or gnu_pbds, but in this ques, sorting is not allowed)
-// https://codeforces.com/problemset/problem/1354/D  (same ques, but here sorted order is compulsory)
-// https://codeforces.com/contest/1354/submission/83517596
+https://cses.fi/problemset/task/1749 (Binary search with fenwick tree for find the number of elements Dynamically)
+https://pastebin.com/MzmUMHR6 (this is same as implementing the std::multiset or gnu_pbds, but in this ques, sorting is not allowed)
+https://codeforces.com/problemset/problem/1354/D  (same ques, but here sorted order is compulsory)
+https://codeforces.com/contest/1354/submission/83517596
+
+http://lightoj.com/volume_showproblem.php?problem=1085
+
+https://www.codechef.com/MARCH20B/problems/LAZER  (sweep line with fenwick)
+soln: https://www.codechef.com/MARCH20B/problems/LAZER
+
+*/

@@ -52,3 +52,6 @@ int main(){
 
 //https://codeforces.com/contest/1359/problem/C
 //https://codeforces.com/contest/1359/submission/81821635
+
+//https://codeforces.com/contest/1077/problem/D
+// https://codeforces.com/contest/1077/submission/80058854

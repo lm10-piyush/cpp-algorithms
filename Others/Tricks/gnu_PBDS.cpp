@@ -15,7 +15,11 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 #include <ext/pb_ds/tree_policy.hpp> 
 using namespace __gnu_pbds; 
   
-#define ordered_set tree<int>, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
+#define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
+
+//NOTE: To implement the multiset you should pair<int,int>(val, index), don't use less_equal, otherwise it causes problems
+//https://cses.fi/problemset/task/1144  try this problem using less_equal<int>, then there would be unexpected behaviours.
+//SOLN: https://pastebin.com/1fV5c4RS 
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -35,9 +39,7 @@ int main(){
     }
 
     int k; cin >> k;
-    cout << order_of_key(k); //returns numbers of elements less than k; 
-
-
+    cout << oset.order_of_key(k); //returns numbers of elements less than k; 
 
     return 0;
 }
