@@ -8,6 +8,7 @@
 
 blogs : https://codeforces.com/blog/entry/22616 (Problems) 
 		https://codeforces.com/blog/entry/15890  (Some theory)
+Resource: https://cp-algorithms.com/data_structures/segment_tree.html
     
 Problem: https://codeforces.com/contest/1208/problem/D (Restore permutation)
        :https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
@@ -145,7 +146,9 @@ int main(){
   return 0;
 }
 
+/*
+https://cses.fi/problemset/task/1651
+https://codeforces.com/contest/877/problem/E (seg tree on tree with euler tour)
+solution: https://codeforces.com/contest/877/submission/82785039
 
-// https://cses.fi/problemset/task/1651
-//https://codeforces.com/contest/877/problem/E (seg tree on tree with euler tour)
-//solution: https://codeforces.com/contest/877/submission/82785039
+*/

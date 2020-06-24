@@ -41,7 +41,7 @@ int lca(int u, int v) {
 
 void build(int n) {
     dfs(1, 0);
-    for (int i = 1; i < Log; ++i) {
+    for (int i = 1; i <= Log; ++i) {
         for (int j = 1; j <= n; ++j) {
             if (parent[j][i-1] != -1)
             parent[j][i] = parent[parent[j][i-1]][i-1];
@@ -76,7 +76,7 @@ int main(){
     return 0;
 }
 
-/* Recurrence: 
+/* Recurrence: Based on sparse table
  * x = parent[u][i]
  * parent[u][i+1] = parent[x][i]
  * parent[u][i] => parent of u which is 2^i distance far from u. 
@@ -84,4 +84,13 @@ int main(){
  * One more place where LCA helps, suppose you want to traverse the path from a to b, then DFS will lead you even a long path 
  * becuz it tries all possiblites, but moving via parent[][] tables helps to move correctly, along the path.
  * ex: https://www.codechef.com/LTIME84B/problems/TREDIFF
+
+https://www.spoj.com/problems/LCA/
+https://pastebin.com/85jTDXy5
+
+https://www.spoj.com/problems/QTREE2/
+soln: https://pastebin.com/GZVk5GVg
+
+
+
 */

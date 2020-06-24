@@ -1,79 +1,55 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define mod 1000000007
-#define mp make_pair
-#define endl "\n"
-#define tab " "
-#define pb push_back
-#define ff first
-#define ss second
-#define watch(x) cout<<(#x)<<" = "<<x<<endl
-#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define pll pair<ll,ll>
-#define pi 3.141592653589793238460
-
 using namespace std;
+#define ll long long
+#define endl '\n'
+#define sz(v) (int)v.size() 
+#define all(v) v.begin(), v.end()
+void dbg_out() { cerr << "\b\b]\n"; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+#define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
-vector<pair<int,int> > graph[10000+5];     //graph of <weight, node number>
+/****************************** CODE IS HERE ***********************************/
 
-bool visited[10000+5];
+const int N = 1e4 + 4;
+vector <pair<int, int>> graph[N];
+bitset<N> used;
 
+ll prims(int s) {
+    priority_queue <pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
+    ll cost = 0;
+    pq.push({0, s});
 
-ll prims(int u)
-{
-  priority_queue<pll, vector<pll>, greater<pll> > pq;
-
-  ll mincost=0;
-  pq.push({0,u});
-  pll p;
-
-  while(!pq.empty())
-  {
-    p = pq.top();
-    pq.pop();
-    int ele = p.ss;
-
-    if(visited[ele]) continue;
-
-    visited[ele]=true;
-    mincost += p.ff;
-
-    //to check all its adjacent
-
-    for(int i=0;i<graph[ele].size();++i)
-    {
-      int x = graph[ele][i].ss;
-      if(visited[x]==false)        //if not visited then insert in priority queue
-        pq.push(graph[ele][i]);
-
+    while (!pq.empty()) {
+        pair<int, int> u = pq.top(); pq.pop();
+        if (used[u.second]) continue;
+        used.set(u.second);
+        cost += u.first;
+        for (auto i: graph[u.second]) {
+            if (!used[i.second])
+                pq.push(i);
+        }
     }
-  }
-
-  return mincost;
-
-
+    return cost;
 }
 
-
-int main()
-{
-  int n,e;
-  cin>>n>>e;
-
-  int e1,e2,w;
-
-  for(int i=1;i<=e;i++)
-  {
-    cin>>e1>>e2>>w;        // e1-->e2 with weight w
-    graph[e1].push_back({w,e2});
-
-     graph[e2].push_back({w,e1});  //in case of undirected graph
+int main(){
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
     
-  }
+    int n, m; cin >> n >> m;
+    for (int i = 0, v, u, w; i < m; ++i) {
+        cin >> u >> v >> w;
+        graph[u].push_back({w, v});
+        graph[v].push_back({w, u});
+    }
 
-  ll mincost=prims(1);
-  cout<<"minimum cost: "<<mincost;
+    ll cost = prims(1);
+    cout << cost;
 
-  return 0;
+    return 0;
 }
+
+/*
+https://www.spoj.com/problems/MST/
+
+*/

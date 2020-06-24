@@ -90,6 +90,7 @@ int main(){
   return 0;
 }
 
+//https://www.spoj.com/problems/RMQSQ/
 
 //problem: https://codeforces.com/contest/339/problem/D
 //soln: https://codeforces.com/contest/339/submission/78825205

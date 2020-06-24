@@ -87,7 +87,7 @@ int main(){
 }
 
 //https://www.spoj.com/problems/DQUERY/
-//same solution
+//same solution, given above
 //another solution by BIT, https://www.quora.com/What-is-an-approach-to-solve-the-problem-DQUERY-of-SPOJ-using-BIT-Segment-Tree
 
 //https://www.hackerearth.com/problem/algorithm/happy-segments-e290faa6/

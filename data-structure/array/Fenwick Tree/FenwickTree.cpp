@@ -113,4 +113,7 @@ http://lightoj.com/volume_showproblem.php?problem=1085
 https://www.codechef.com/MARCH20B/problems/LAZER  (sweep line with fenwick)
 soln: https://www.codechef.com/MARCH20B/problems/LAZER
 
+https://www.spoj.com/problems/RANGESUM/
+SOL: https://pastebin.com/vqBY30V6
+
 */
