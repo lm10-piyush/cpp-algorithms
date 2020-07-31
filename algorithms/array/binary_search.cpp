@@ -13,6 +13,9 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 /*
   it gives: if exactly found: return index.
   otherwise: that index (lo), such that A[lo] < x; 
+
+  NOTE: Mainly we apply binary search the ans for finding Max or Min or Exact ans by assumptions and then verify it then move 
+        accordingly.
 */
 int bi_search(vector<int> &v, int x){
     int lo = 0, hi = sz(v)-1;
@@ -55,3 +58,21 @@ int main(){
 
 //https://codeforces.com/contest/1077/problem/D
 // https://codeforces.com/contest/1077/submission/80058854
+
+//https://leetcode.com/problems/longest-palindromic-substring/  (Longest Pallindrom using Binary search)
+//https://pastebin.com/5iSP1HWv
+
+// https://codeforces.com/contest/1370/problem/D
+//https://codeforces.com/contest/1370/submission/84926060
+
+// https://www.codechef.com/AFZQ2019/problems/SCAP   (Given sample is wrong, ans is 2)
+//https://www.codechef.com/viewsolution/34908502
+
+//https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/people-carrying-6dd467ed/description/
+//https://pastebin.com/WcF3v3M8 
+
+// https://codeforces.com/problemset/problem/1181/D
+//https://codeforces.com/contest/1181/submission/86457494
+
+//https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+//try binary search in this way: while (hi - lo > 1){}, in this way you will the range [lo, lo+1]

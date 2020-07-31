@@ -15,14 +15,17 @@ vector<int> g[N];
 vector <int> seq;
 bitset<N> used;
 
+//BFS2 for finding shortest distance with that path
 void bfs2(){
+  //input graph
     int n, m, a, b; cin >> n >> m >> a >> b;
-    for (int i = 0,x,y; i < m; ++i){
+    for (int i = 0, x, y; i < m; ++i){
       cin >> x >> y;
       g[x].push_back(y);
       g[y].push_back(x);
     }
 
+    //bfs starts here
     vector <int> dist(n+1, INF);
     vector <int> path(n+1);
     path[a] = a;
@@ -39,10 +42,12 @@ void bfs2(){
         }
       }
     }
+    //not reachable
     if(dist[b] == INF) {
       cout << -1;
       return 0;
     }
+    //distance between a to b
     cout << dist[b] << endl;
     //for the path
     vector <int> ans;
@@ -59,12 +64,12 @@ void bfs2(){
 }
 
 void bfs(){
-  queue<int> q;
+  queue <int> q;
   q.push(1); //source
   used[1] = true;
   while(!q.empty()){
     int u = q.front(); q.pop();
-    seq.push_back(u);
+    seq.push_back(u);  //bfs order
     for (int v: tree[u]){
       if(!used[v]) {
         used[v] = true;
@@ -92,5 +97,14 @@ int main(){
 }
 
 
-//https://codeforces.com/contest/1106/problem/D
-//sol: https://codeforces.com/contest/1106/submission/82663168
+/*
+Basic problems: https://www.e-olymp.com/en/contests/16661
+problem for bfs2: https://www.e-olymp.com/en/problems/4853
+
+https://codeforces.com/contest/1106/problem/D
+sol: https://codeforces.com/contest/1106/submission/82663168
+
+https://www.codechef.com/ENJU2020/problems/ECJN205
+https://www.codechef.com/viewsolution/34844619
+
+*/

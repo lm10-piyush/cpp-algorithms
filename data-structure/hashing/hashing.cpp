@@ -20,36 +20,8 @@ using namespace std::chrono;
 //problem : https://www.codechef.com/LTIME60A/problems/SHIFTPAL
 //https://www.codechef.com/viewsolution/32359239
 
-bool rolling_hash(string &s, string &pattern) {
-    ll hash1 = 0;
-    ll p = 31;
-    ll power = 1;
-    int len = pattern.size(), n = s.size();
-    for (int i = 0; i < len; ++i) {
-        hash1 = (hash1 + power*(pattern[i]-'a')) % mod;
-        power = (power*p) % mod;
-    }
 
-    ll curr = 0;
-    power = 1;
-    //just a sliding window for rolling hashes
-    for (int i = 0, j = 0; i < n; ++i) {
-        if (i - j + 1 <= len) {
-            curr = (curr + power*(s[i] - 'a')) % mod;
-            if (i - j + 1 < len) power = (power * p) % mod;
-            else if (curr == hash1) return true;
-            continue;
-        }
-
-        curr = (((curr - (s[j++]-'a')) / p) + (s[i]-'a')*power) % mod;
-        if (curr == hash1) return true;
-    }
-
-    return false;
-}
-
-
-
+//Sample custom hash for pair<int,int>.............
 struct HASH{
   size_t operator()(const pair<int,int>&x)const{
     size_t ans=0;
@@ -59,6 +31,7 @@ struct HASH{
   }
 };
 
+//Custom Safe hash................
 struct custom_hash {
     static uint64_t splitmix64(uint64_t x) {
         // http://xorshift.di.unimi.it/splitmix64.c

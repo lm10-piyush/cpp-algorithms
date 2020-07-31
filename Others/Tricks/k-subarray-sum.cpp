@@ -29,3 +29,6 @@ int main(){
     Solution s;
     cout << s.subarraySum(v, k);  
 }
+
+//https://www.codechef.com/COCA2020/problems/COCA2001
+//https://www.codechef.com/viewsolution/34733651

@@ -61,3 +61,9 @@ int main(){
 
 //https://codeforces.com/contest/1213/problem/G
 // https://codeforces.com/contest/1213/submission/82253510
+
+//https://www.codechef.com/ENJU2020/problems/ECJN206
+//https://www.codechef.com/viewsolution/34856044
+
+//https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/still-maximum/
+//solution: start you solution from very end ie., when every node is detached, then one by one add the edge and ans the query.

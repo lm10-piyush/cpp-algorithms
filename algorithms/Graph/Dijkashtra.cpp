@@ -28,7 +28,7 @@ void dijsktra(int s) {
             ll v = i.second;
             ll w = i.first;
             if (!used[i.second]) {
-                if (u.first + w < dist[v]) {
+                if (u.first + w < dist[v]) {  //dist[u.second] is same as u.first
                     dist[v] = w + u.first;
                     pq.push({dist[v], v});
                 }
@@ -68,4 +68,6 @@ int main(){
 /*
 https://www.spoj.com/problems/EZDIJKST/
 
+https://drive.google.com/file/d/13B-hxGLizYhJcndlJReAN7xGBPLKfb6B/view?usp=sharing  (On matrix, with struct Node)
+https://pastebin.com/2Zk9QLMq
 */

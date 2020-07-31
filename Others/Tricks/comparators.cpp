@@ -16,8 +16,9 @@ struct Node {
     Node() {}
     Node(int a, int b): x(a), y(b){}
     friend bool operator<(Node l, Node k) {
-        return make_tuple(l.x, l.y) < make_tuple(k.x, k.y);
+        return make_tuple(l.x, l.y) < make_tuple(k.x, k.y);  
     }
+    //for priority queue, in non-decreasing order use '>' this sign in return, make_tuple() > make_tuple()
 };
 
     
@@ -33,7 +34,7 @@ int main(){
     mp[{5, 10}] = 30;
     mp[{12, 5}] = 30;
     cout << endl << "map: \n";
-    for (pair<Node, int> i i: mp) {   //auto keyword also works
+    for (pair<Node, int> i: mp) {   //auto keyword also works
         cout << i.first.x << " : " << i.first.y << " " << i.second << endl;
     }
 

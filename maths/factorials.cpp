@@ -9,7 +9,7 @@ using namespace std;
 //reFac[i] => 1/(i!) % mod => inverse(i!) % mod => power(i!, mod-2) (by fermat-little theorem) 
 
 /*********************************** CODE IS HERE *******************************************/
-const int N = 1e5 + 5;
+const int N = 2e5 + 5;
 const int mod = 998244353;
 ll fac[N+3], reFac[N+3];
 
@@ -17,11 +17,9 @@ ll power(ll a, ll b){
     ll res = 1;
     while(b){
         if(b & 1){
-            res *= a;
-            res %= mod;
+            (res *= a) %= mod;
         }
-        a *= a;
-        a %= mod;
+        (a *= a) %= mod;
         b >>= 1;
     }
     return res;
@@ -37,6 +35,7 @@ void calc() {
         reFac[i-1] = (reFac[i] * i) % mod;
     }
 }
+
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);

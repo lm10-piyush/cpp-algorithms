@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define endl '\n'
@@ -15,7 +15,7 @@ struct BIT{
   vector <int> bit;
   BIT(int _n){
     n = _n
-    bit.assign(n+1, 0);
+    bit.assign(n+2, 0);
   }
   //~~~~~~~~~~~~~update~~~~~~~~~~~~~
   //if given i is zero based, then ++i
@@ -40,7 +40,7 @@ struct BITmin{
   vector <int> bit;
   BITmin(int n){
     this->n = n;
-    bit.assign(n+1, 1e9);
+    bit.assign(n+2, 1e9);
   }
   //~~~~~~~~~~~~~~~~~update~~~~~~~~~~~~~~~~
   void upd(int i, int val){
@@ -86,6 +86,9 @@ int main()
 }
 
 /*
+https://www.codechef.com/COCA2020/problems/TWOARM
+https://www.codechef.com/viewsolution/34707170
+
 https://www.spoj.com/problems/INVCNT/ (number of inversions)
 same repo: others/tricks/inversions
 

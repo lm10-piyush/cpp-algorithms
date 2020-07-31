@@ -18,16 +18,15 @@ int n,k,p;
 ll ans=0;
 
 vector<long long> factors(long long n){
-
     vector<long long> v;
     
-    for(int i=2;i*i<=n;i++){
-        while(n%i==0){
+    for(int i = 2; i*i <= n; i++){
+        while(n % i ==0){
             v.push_back(i);
-            n/=i;
+            n /= i;
         }
     }
-    if(n>1) v.push_back(n);
+    if(n > 1) v.push_back(n);
 
     return v;
 }

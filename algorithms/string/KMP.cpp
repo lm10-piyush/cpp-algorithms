@@ -7,60 +7,60 @@ using namespace std;
 
 /*********************** CODE IS HERE *****************************************/
 
-int piTable[100002];
+vector<int> piTable;
 
 void kmpPreProcess(string &pattern){
-	piTable[0] = 0;
-	for (int i = 1, j = 0; i < (int)pattern.size(); ++i){
-		while(j > 0 and pattern[j] != pattern[i])
-			j = piTable[j-1];
-		
-		if(pattern[j] == pattern[i])  j ++;
+    piTable.assign((int)pattern.size(), 0);
+    for (int i = 1, j = 0; i < (int)pattern.size(); ++i){
+        while(j > 0 and pattern[j] != pattern[i])
+            j = piTable[j-1];
+        
+        if(pattern[j] == pattern[i]) j++;
         piTable[i] = j;
-	}
+    }
 }
 
 vector<int> kmpMatch(string text, string pattern){
-	vector<int> idx;
-	for (int i = 0, j = 0; i < (int)text.size(); ++i){
-		while(j > 0 and pattern[j] != text[i])
-			j = piTable[j-1];
-		
-		if (pattern[j] == text[i]){
-			if(j+1 == pattern.size()){
-				idx.push_back(i-j);
-				j = piTable[j];
-			}
-			else j++;			
-		}
+    vector<int> idx;
+    for (int i = 0, j = 0; i < (int)text.size(); ++i){
+        while(j > 0 and pattern[j] != text[i])
+            j = piTable[j-1];
+        
+        if (pattern[j] == text[i]){
+            if(j+1 == (int)pattern.size()){
+                idx.push_back(i-j);
+                j = piTable[j];
+            }
+            else j++;           
+        }
 
-	}
+    }
 
-	return idx;
+    return idx;
 }
 
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-	
+    
 
     int t; cin >> t;
     while(t--){
-	    string pattern = "AABA";
-	   	string text = "AABAACAADAABAABA";
-	   	
-	   	// string pattern, text; cin >> pattern >> text;
-	   	kmpPreProcess(pattern);
+        string pattern = "AABA";
+        string text = "AABAACAADAABAABA";
+        
+        // string pattern, text; cin >> pattern >> text;
+        kmpPreProcess(pattern);
 
-	   	//for (int i = 0; i < pattern.size(); ++i)
-	   	//	cout << piTable[i] << " ";
-	   	//cout << endl;
+        //for (int i = 0; i < pattern.size(); ++i)
+        //  cout << piTable[i] << " ";
+        //cout << endl;
 
-	   	vector<int> idx = kmpMatch(text, pattern);
-	   	for (int i: idx)
-	   		cout << i << ' ';
-	}
-	return 0;
+        vector<int> idx = kmpMatch(text, pattern);
+        for (int i: idx)
+            cout << i << ' ';
+    }
+    return 0;
 }
 
 //problem: https://codeforces.com/contest/625/problem/B
@@ -69,3 +69,7 @@ int main(){
 //https://codeforces.com/contest/126/problem/B
 //https://codeforces.com/contest/126/submission/82435794
 
+//https://acmp.ru/index.asp?main=task&id_task=202
+
+//https://www.hackerearth.com/practice/algorithms/string-algorithm/string-searching/practice-problems/algorithm/first-one-6fc38abd-229bcc5f/description/
+//https://pastebin.com/rvd9CMgm

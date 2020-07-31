@@ -87,4 +87,6 @@ http://lightoj.com/volume_showproblem.php?problem=1266
 https://www.spoj.com/problems/MATSUM/
 soln: https://pastebin.com/dPL5E84z
 
+https://cses.fi/problemset/task/1739
+
 */

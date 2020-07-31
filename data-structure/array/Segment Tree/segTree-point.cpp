@@ -89,6 +89,7 @@ int main(){
 
   return 0;
 }
+//https://codeforces.com/blog/entry/57319 (Some trick)
 
 //https://www.spoj.com/problems/RMQSQ/
 
@@ -102,3 +103,13 @@ int main(){
 
 //https://cses.fi/problemset/task/1143  (hotels),(quering the left most and right most index)
 //https://pastebin.com/g7UUTynJ
+
+//https://www.codechef.com/ENJU2020/problems/ECJN208
+//https://www.codechef.com/viewsolution/34856026
+
+//https://www.hackerearth.com/problem/algorithm/subtree-queries/description/  (Euler tour)
+//https://pastebin.com/iMV9xNPx
+
+//https://codeforces.com/problemset/problem/332/B
+//https://codeforces.com/contest/332/submission/88007883
+//easy solutin without seg tree just suffix: https://codeforces.com/contest/332/submission/88016080

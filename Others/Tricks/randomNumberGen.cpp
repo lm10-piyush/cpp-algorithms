@@ -11,23 +11,29 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
+struct Random {
+    mt19937 rng;
+    uniform_int_distribution<int> num;
+    Random(int a, int b) {
+        auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
+        rng = mt19937(seed);
+        num = uniform_int_distribution <int> (a, b);
+    }
+    int operator()() {
+        return num(rng);
+    }
+};
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    //cin.get() //to avoid the whitespaces
-    string s;
-    getline(cin, s);
-    stringstream ss(s);
-    vector <string> words;
-    while (ss >> s) {
-        words.push_back(s);
+    int t; cin >> t;
+    int a, b; cin >> a >> b;
+    Random rdx(a, b);  //To generate the number between [a, b] (int) otherwise change into long long to bigger range
+    while (t--) {
+        cout << rdx() << endl;
     }
 
-    for (string i: words)
-        cout << i << " ";
-
-    //now, you can covert string number to int using stoi(std::string)
 
     return 0;
 }
