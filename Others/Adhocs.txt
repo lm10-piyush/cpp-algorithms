@@ -1,0 +1,31 @@
+https://www.codechef.com/LTIME85B/problems/GOLMINE  (Maths, fractions, Observation, https://www.codechef.com/viewsolution/34827200)
+https://www.codechef.com/LTIME85B/problems/MAXAND18  (Greedy, contribution, Bits, https://www.codechef.com/viewsolution/34826469)
+https://codeforces.com/contest/1360/problem/G  (Matrix filling, https://codeforces.com/contest/1360/submission/81320879)
+https://codeforces.com/contest/1371/problem/D  (Evenly distribute the numbers, https://codeforces.com/contest/1371/submission/85712056)
+https://codeforces.com/contest/1353/problem/E  (K-Gaps, dp, https://codeforces.com/contest/1353/submission/80232986)
+https://codeforces.com/contest/999/problem/D (K-gaps, https://codeforces.com/contest/999/submission/71860059)
+https://codeforces.com/contest/1282/problem/B2 (K-gaps, mod traversal, soln: https://codeforces.com/contest/1282/submission/75436172)
+https://www.codechef.com/COCA2020/problems/COCA2001 (Prefix sum trick to find ways, https://www.codechef.com/viewsolution/34733651)
+https://leetcode.com/problems/subarray-sum-equals-k/
+https://codeforces.com/problemset/problem/1215/B  (Similar prefix, https://codeforces.com/contest/1215/submission/85720559)
+https://leetcode.com/problems/binary-tree-level-order-traversal-ii/  (DFS with stable_sort(), https://pastebin.com/hXEtJcWN)
+https://leetcode.com/problems/binary-tree-level-order-traversal/ (Similar DFS with stable_sort())
+https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/  (Using BFS sol: https://pastebin.com/m2ikvuZ1, it can be done using DFS then apply stable sort)
+https://leetcode.com/problems/validate-stack-sequences/
+https://www.hackerrank.com/challenges/non-divisible-subset/problem
+https://codeforces.com/contest/1325/problem/D  (Bits, https://codeforces.com/contest/1325/submission/73434657)
+https://codeforces.com/contest/1366/problem/C  (Palindrom Paths, moving diagonal wise in matrix, https://codeforces.com/contest/1366/submission/87430347)
+https://codeforces.com/problemset/problem/558/C  (Amr and Chemistry, converting the problem into trees then solve, https://codeforces.com/contest/558/submission/81884163)
+https://leetcode.com/problems/word-search/  (DFS, brute force on matrix)
+https://codeforces.com/contest/1382/problem/C2  (greedy, soln: https://codeforces.com/contest/1382/submission/87668770)
+https://codeforces.com/contest/234/problem/E (STL, implementation https://codeforces.com/contest/234/submission/88442585)
+https://codeforces.com/problemset/problem/1176/E  (Trees, greedy, Bfs, trick, https://codeforces.com/contest/1176/submission/88618605)
+https://leetcode.com/problems/subarray-product-less-than-k/  (Sliding window, or binary Search both ways solve this, sliding window soln: https://pastebin.com/Kx8xgWEB)
+
+
+
+
+
+
+
+

@@ -76,3 +76,8 @@ int main(){
 
 //https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 //try binary search in this way: while (hi - lo > 1){}, in this way you will the range [lo, lo+1]
+
+/*
+https://codeforces.com/contest/1117/problem/C (Tip, displacement is order Indpendent)
+solN: https://codeforces.com/contest/1117/submission/88736716
+*/

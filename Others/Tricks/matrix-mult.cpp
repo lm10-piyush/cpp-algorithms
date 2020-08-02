@@ -14,7 +14,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 vector<vector<int>> mult(vector<vector<int>> A, vector<vector<int>> B) {
     int a = sz(A), b = sz(A[0]), c = sz(B[0]);
 
-    vector<vector<int>> ans(a, vector<int> (c, 0));
+    vector<vector<int>> ans(a, vector<int> (c, 0)); //order:  a x c
     for (int i = 0; i < a; ++i) {
         for (int j = 0; j < c; ++j) {
             int res = 0;

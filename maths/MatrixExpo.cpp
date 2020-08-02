@@ -11,7 +11,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-const int mod = 1e9 + 7;
+const int mod = 1e9;
 
 //matrix multiplication
 vector<vector<ll>> mult(vector<vector<ll>> A, vector<vector<ll>> B) {
@@ -31,6 +31,7 @@ vector<vector<ll>> mult(vector<vector<ll>> A, vector<vector<ll>> B) {
     return ans;
 }
 
+//Matrix Exponentiation
 vector<vector<ll>> powerMatrix(vector<vector<ll>>A, ll n) {
     int a = sz(A);
     vector <vector<ll>> res(a, vector<ll>(a, 0));
@@ -44,38 +45,44 @@ vector<vector<ll>> powerMatrix(vector<vector<ll>>A, ll n) {
     return res;
 }
 
-//fibonacci(n)
-ll fibo(ll n) {
-    if (n <= 1) return n;
-    vector<vector<ll>> A = {{1, 1}, {1, 0}};
-    vector<vector<ll>> B = {{1}, {0}};
-
-    A = powerMatrix(A, n-1);  //matrix to the power zero is Identity matrix
-    A = mult(A, B);
-    return A[0][0];
-}
-
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int t; cin >> t;
     while (t--) {
-        int n, m; cin >> n >> m;
-        if (n > m) swap(n, m);
+        int k; cin >> k;
+        vector <vector<ll>> A(k, vector<ll>(k, 0)); // K x K
+        vector <vector<ll>> B(k, vector<ll>(1, 0));  // K x 1
+        //Enter in Column wise
+        for (int i = 0; i < k; ++i)
+            cin >> B[k-i-1][0];
 
-        ll f1 = fibo(n+1); //fibonacci(n+1)
-        ll f2 = fibo(m+2); //fibonacci(m+2)
+        //Enter in row
+        for (int i = 0; i < k; ++i)
+            cin >> A[0][i];
+        
+        int n; cin >> n;
 
-        ll ans = (f2 - f1 + mod) % mod;
-        cout << ans << endl;
+        //first case
+        if (n <= k) {
+            cout << B[k - n][0] << endl;
+            continue;
+        }
+        //Apply 1, in this fashion
+        for (int i = 1; i < k; ++i) {
+            A[i][i-1] = 1;
+        }
+
+        A = powerMatrix(A, n - k); //not to use n-k+1, becuz here the base starts from i = 1, not from i = 0
+        A = mult(A, B);
+
+        cout << A[0][0] << endl;  //ans found at A[0][0]
+
     }
 
     return 0;
 }
 
-/*
- * Above one is solution of : https://www.spoj.com/problems/FIBOSUM/
-
- * https://www.spoj.com/problems/SEQ/
-*/
+// https://www.spoj.com/problems/SEQ/
+//lm10_piyush

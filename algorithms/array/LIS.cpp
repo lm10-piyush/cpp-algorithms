@@ -67,3 +67,16 @@ int main(){
 //https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
 //https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
 //https://codeforces.com/problemset/problem/264/B
+
+/*
+converting the LCS(longest common subsequence)problem to LIS when atleast one of the array has distinct elements only.
+algorithm: 
+given array A: [], B: [], B has distinct elements.
+now create another array C[] of same size as A, it stores the index of the A[i] in B, i.e., mapped index of A[i] in B.
+ex: A = [10, 2, 40, 50, 12], B = [3, 50, 12, 2, 10], now C = [4, 3, null, 1, 2], so C[i] represents the index of A[i] in 
+B array.
+Now, LCS of A and B would be LIS in A.
+same problem asked in Codenation: https://www.youtube.com/watch?v=56B0HkJfx38
+
+
+*/

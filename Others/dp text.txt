@@ -73,6 +73,12 @@ in pull dp, we fill the current state using previous state via only valid moves(
 Bottom up Pull dp: f(current state) = f(previous state) // finding the current state using the previous state.
 Bottom up Push dp: f(next state) = f(current state) // finding the next state using the current state(already known).
 
+*************************************Memory efficient and time efficient*****************************************
+* Bottom up helps to optimize the dp solution because it is our responsiblity to run it itertively, like ye can apply segment tree, stacks to update
+the states efficiently. We can use less memory also, via excluding one of the state. Ex: IN knapsack probably you have to done knapsack without including
+the index the current element, becuz we only need the previous state to update the current state, so no need to store whole 'n'states data, just use
+dp[2][W] in 0/1 knapsack. This type of memory trick helps you to solve many problems, it is quite common we just need previous state so no need to store 
+the data of whole 'n' elements
 
 ************************************* DEFINE DP *******************************************************
 **In dp, one of the most important thing is to DEFINE THE DP STATE, what is representing what
@@ -159,6 +165,10 @@ So that, one should choose the best option.
 	
 	So, mostly in such situations when you don't imagine or predict how recursion goes in a fixed way, then there is only way to do it is by top-down.
 
+Quick Tip for DP for how to think the transition: suppose you are at dp[i][j], now you have to go to the dp[i+1][j], dp[i][j] => dp[i+1][j] then think how you will go,
+	similarly, if you are dp[i][j], now you have to go the dp[i+1][j+1] then how you go... dp[i][j] => dp[i+1][j+1].
+
+
 Forms of DP:
 1) Normal some contribution technique.
 2) Standard DP 1D/2D on array or strings
@@ -168,12 +178,15 @@ Forms of DP:
 6) Sum over subsets DP(SOS)
 7) Matrix exponentiation
 
+User: LM10_Piyush on Codeforces/ Hackerrank
+DP optimizations: https://codeforces.com/blog/entry/8219
 
 Problems for DP:
 https://codeforces.com/problemset/problem/894/A
 https://codeforces.com/contest/490/problem/C (Hacking Cypher)
 https://codeforces.com/contest/550/problem/C (divisiblity by eight)
 https://codeforces.com/contest/877/problem/B
+https://leetcode.com/problems/product-of-array-except-self/ (DP, basic prefix-suffix product problem)
 https://codeforces.com/contest/327/problem/A (Flipping game, dP)
 https://codeforces.com/contest/1140/problem/D (Mininum Triangulation)
 https://codeforces.com/problemset/problem/414/B (B. Mashmokh and ACM) complexity: O(nklog(n))
@@ -189,7 +202,7 @@ https://codeforces.com/contest/920/problem/E (connected components)
 https://codeforces.com/contest/220/problem/B (Little elephant and array, MO, sqrt)
 https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise)
 https://cses.fi/problemset/ for problems  (problem set, DP soln: https://codeforces.com/blog/entry/70018 )
-https://codeforces.com/contest/1081/problem/C (combinators with dp)
+https://codeforces.com/contest/1081/problem/C (combinators with dp, https://codeforces.com/contest/1081/submission/78104503)
 https://www.codechef.com/LTIME60A/problems/SHIFTPAL (hashing like rabin karp, Important ques, with its editorial){https://www.codechef.com/submit/complete/32359239}
 https://codeforces.com/contest/264/problem/B (Good sequences DP)
 https://www.codechef.com/problems/KANYASAI ( digit dp, soln: https://www.codechef.com/viewsolution/29212253)
@@ -202,7 +215,8 @@ https://atcoder.jp/contests/abc165/submissions/12734276 (dp, LIS, graph)
 https://codeforces.com/contest/1208/problem/D  (segtree with dp)
 https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https://pastebin.com/q9jip5X0)
 https://codeforces.com/contest/977/problem/F (dp, LIS, Maths)
-https://codeforces.com/contest/1353/problem/E (dp + good implementation)
+https://codeforces.com/contest/1353/problem/E (dp + good implementation, K-Gaps)
+https://codeforces.com/contest/1282/problem/B2 (Dp, K-gaps (mod traversal), soln: https://codeforces.com/contest/1282/submission/75436172)
 https://codeforces.com/contest/1077/problem/F1 (dp)
 https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
 https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
@@ -213,6 +227,10 @@ https://codeforces.com/contest/660/problem/C (dp + binary search)
 https://codeforces.com/contest/768/problem/B (divide n Conquer)
 https://codeforces.com/problemset/problem/1111/C (divide n conquer)
 FIND LARGEST SUM SUBARRAY IN ARRAY USING DnC
+https://leetcode.com/problems/climbing-stairs/  (Basic DP, fibonacci)
+https://leetcode.com/problems/min-cost-climbing-stairs/ (DP, fibo, https://pastebin.com/mLjsZ6Yz)
+https://leetcode.com/problems/divisor-game/  (DP, factors, https://pastebin.com/5E8c3cvE)
+https://leetcode.com/problems/unique-paths/  (Dp, matrix)
 https://codeforces.com/problemset/problem/835/C
 https://www.hackerrank.com/contests/all-india-contest-by-coding-club-india-30-may-2020/challenges/ritesh-first-love/problem (Maths, difference Formula)
 https://atcoder.jp/contests/agc044/tasks/agc044_a (Divisors DP, soln : https://atcoder.jp/contests/agc044/submissions/14012427)
@@ -234,11 +252,63 @@ https://www.spoj.com/problems/EPALIN/ (DP, edit distance)
 https://cses.fi/problemset/task/1097  (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ)
 http://lightoj.com/volume_showproblem.php?problem=1031    (DP, Game theory, https://pastebin.com/xUEjseJ6, SAME AS ABOVE PROBLEM)
 https://www.hackerrank.com/challenges/sherlock-and-cost/problem  (Important DP, with some greedyness to avoid overcalculation, sol: https://pastebin.com/7yk2CHDp) 
-https://cses.fi/problemset/task/1746  (Must Do DP, Combinatorics ques, Learn how to push the number of ways)
+https://cses.fi/problemset/task/1746  (Must Do DP, Combinatorics ques, Learn how to push the number of ways, and we fill the number of ways in level wise i = 1,2,3..N)
 https://www.hackerrank.com/challenges/construct-the-array/problem (DP, combo)
 https://atcoder.jp/contests/dp/tasks/dp_i  (DP, Probability, Binomial Coeff, https://atcoder.jp/contests/dp/submissions/14509284)
 https://www.hackerrank.com/challenges/sam-and-substrings/problem  (DP, Contribution Technique, Implemetation, SOL: https://pastebin.com/bth2PuZZ)
 https://practice.geeksforgeeks.org/contest-problem/tie-the-poles-in-pairs/0/  (DP, Catalan Number)
+https://leetcode.com/problems/perfect-squares/  (Dp, same as coins)
+https://www.codechef.com/COCA2020/problems/COCA2006  (DP, similar as stars and bars, Simple TLE idea: https://pastebin.com/epFrZCdE, Now same idea with optimization:https://pastebin.com/QRTK24B4)
+                                          NOTE: To do these type of combinatorics problems move in level wise i.e., i=>[1...N]
+https://codeforces.com/problemset/problem/1081/C  (DP, combinatorics, soln: https://codeforces.com/contest/1081/submission/85494616)
+https://www.codechef.com/AFZQ2019/problems/REVT  (DP, Combo, https://www.codechef.com/viewsolution/34902660)
+https://codeforces.com/problemset/problem/891/A  (DP, soln: https://codeforces.com/contest/891/submission/88044487)
+https://codeforces.com/problemset/problem/1215/B  (Similar prefix, https://codeforces.com/contest/1215/submission/85720559)
+https://www.hackerrank.com/challenges/fair-cut/problem (DP, Contribution,state reduction, modulus, https://pastebin.com/tG1r9kJf) 
+https://www.hackerrank.com/challenges/summing-pieces/problem (Contribution, DP, see Discussion section, sol: https://pastebin.com/xkiZGmLh)
+https://pastebin.com/henHgJzw  (Problem statment written in it, Bitmask)
+https://codeforces.com/problemset/problem/1196/D2  (Dp, prefix sum colors, https://codeforces.com/contest/1196/submission/87753164)
+https://codeforces.com/contest/455/problem/A  (DP, Boredom, https://codeforces.com/contest/455/submission/86103014)
+https://www.geeksforgeeks.org/ways-to-arrange-balls-such-that-adjacent-balls-are-of-different-types/
+https://cses.fi/problemset/task/1744      (DP, rectangles, sol: https://pastebin.com/qWSMUsEj)
+https://codeforces.com/contest/474/problem/D (DP, Combonatorics Pruning, soln: https://codeforces.com/contest/474/submission/86503889)
+https://codeforces.com/contest/466/problem/C  (DP, counts)
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387174 (DP, soln:  https://pastebin.com/xSYptKBu)
+https://codeforces.com/contest/1324/problem/E (Dp, push DP, bottom up: sol: https://codeforces.com/contest/1324/submission/86696444)
+https://codeforces.com/problemset/problem/1077/F1  (DP, IMPortant, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851, bottom up; https://codeforces.com/contest/1077/submission/87681349)
+https://codeforces.com/contest/118/problem/D (Dp, IMportant, soln with 5-states https://codeforces.com/contest/118/submission/88017341, soln with 4-states, no need of previous pointer https://codeforces.com/contest/118/submission/88039429, solution with 3-states: https://codeforces.com/contest/118/submission/88041215)
+https://codeforces.com/problemset/problem/71/C (DP, factors, soln: https://codeforces.com/contest/71/submission/88047862)
+https://codeforces.com/problemset/problem/1288/C  (DP, Stars and bars, Combinatorial, https://codeforces.com/contest/1288/submission/88074818)
+https://codeforces.com/problemset/problem/339/C  (Dp or DFS, normal problem 3-states, Top-down solN : https://codeforces.com/contest/339/submission/88120178)
+https://codeforces.com/contest/176/problem/B  (DP, IMP, LOOKs like O(K*N) space, but done it in O(k), one point to NOte, we can run in O(K*N), but that much memory is not possible, we use trick to store less(O(k)) and run O(N*K).
+					see how Shifting/ cutting, Long long gives TLE, thats why you need bottom up- soln: https://codeforces.com/contest/176/submission/88136469)
+https://codeforces.com/contest/279/problem/C  (DP, observation increasing decreasing https://codeforces.com/contest/279/submission/88157238)
+https://codeforces.com/problemset/problem/294/B (dp greedy,soln https://codeforces.com/contest/294/submission/88221749)
+https://codeforces.com/problemset/problem/909/C (DP, Top-down but TLE https://codeforces.com/contest/909/submission/88226865, bottom-up but TLE https://codeforces.com/contest/909/submission/88229565
+                                       no top-down possible(I guess)(bottom-up efficient : https://codeforces.com/contest/909/submission/88232558, bottom-up clean cod with suffix sum : https://codeforces.com/contest/909/submission/88232849)
+
+https://leetcode.com/problems/minimum-path-sum/ (simple dp on matrix problem, min of up & right)
+https://codeforces.com/problemset/problem/519/D  (DP, map+prefix sum, https://codeforces.com/contest/519/submission/88265231)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ (DP, top-down, https://pastebin.com/v2sndhee)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/  (DP, stocks with cooldown, top-down, https://pastebin.com/r7iyur9J)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ (DP, top-down, https://pastebin.com/k0xYCkHk)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/ (DP, top-down, https://pastebin.com/h4Zs9UWF)
+https://codeforces.com/problemset/problem/1286/A (DP, greedy, greedy soln: https://codeforces.com/contest/1286/submission/88371451)
+https://leetcode.com/problems/word-break/ (DP, top-down soln: https://pastebin.com/b90ppyvQ)
+https://leetcode.com/problems/word-break-ii/  (DP, top-down, backtracking, https://pastebin.com/wRNB3zFW)
+https://leetcode.com/problems/dungeon-game/  (DP + greedy)
+https://leetcode.com/problems/concatenated-words/  (Dp, similar to word break, top-down https://pastebin.com/M8wa2gDu)
+https://codeforces.com/problemset/problem/1327/E  (DP, contribution, combinatorics, https://codeforces.com/contest/1327/submission/88621589)
+https://leetcode.com/problems/maximum-product-subarray/  (DP, like Kadane in products, https://pastebin.com/yXr2z80y)
+
+Sometimes you are not able apply TOP-down solution because of memory issue ie., we not able to create such large array, if we implement that problem in
+bottom up then, we can element one state which is the index of current element, becuz it obvious by the loop which element we are currently on, and to
+update the dp state we just need the previous state ie., dp[i-1] mostly. Same concept used in memory efficent 0/1 knapsack and then state becomes dp[2][W].
+You might see some problem like Pascal triangle where loop run O(n2) and space O(n2), but after reducing the space becuz we only need the nth binomial coeff
+O(n2) run time and O(n) memory space.
+
+https://codeforces.com/problemset/problem/543/A (DP, important, Combanatorics, top-down TLE, bottom up runs good, memory efficient by skipping the current element state, https://codeforces.com/contest/543/submission/88694641)
+
 
 
 

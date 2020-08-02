@@ -29,7 +29,7 @@ void dfs2(int u, int p){
         if(in[v] >= mx1) mx2 = mx1, mx1 = in[v];
         else if(in[v] > mx2) mx2 = in[v];
     }
-
+    //being at 'u' set the value of 'out' of the vertx 'v' which is child of u
     for (int v: graph[u]){
         if(v == p) continue;
         int use = mx1;
@@ -63,7 +63,7 @@ int main(){
 
     for (int i = 1; i <= n; ++i){
         ans[i] = max(in[i], out[i]);
-        cout << ans[i] << ' ';
+        cout << ans[i] << ' '; //height of the ith node
     }
 
     return 0;
@@ -75,3 +75,9 @@ int main(){
 
 //https://codeforces.com/contest/120/problem/F
 //https://codeforces.com/contest/120/submission/76465143
+
+/*
+https://www.spoj.com/problems/PT07Z/
+solution: is ans = max(ans, in[i] + out[i])
+
+*/
