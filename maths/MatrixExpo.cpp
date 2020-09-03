@@ -23,7 +23,7 @@ vector<vector<ll>> mult(vector<vector<ll>> A, vector<vector<ll>> B) {
             int res = 0;
             for (int k = 0; k < b; ++k) {
                 res += (A[i][k] * B[k][j]) % mod;
-                res %= mod;
+                if (res >= mod) res %= mod;
             }
             ans[i][j] = res;
         }
@@ -75,7 +75,7 @@ int main(){
         }
 
         A = powerMatrix(A, n - k); //not to use n-k+1, becuz here the base starts from i = 1, not from i = 0
-        A = mult(A, B);
+        A = mult(A, B);  //multiply the exponented matrix with the 'B'base condition matrix.
 
         cout << A[0][0] << endl;  //ans found at A[0][0]
 

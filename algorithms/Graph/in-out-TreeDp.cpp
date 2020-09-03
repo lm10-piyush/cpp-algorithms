@@ -8,6 +8,8 @@ using namespace std;
 //IN-OUT dp for height of each node when that node is root.
 //similarly in-out dp is apply at many occasions like score at each node when that node is root.
 
+//problem: find the diameter of the given tree when ith node is root node.
+
 const int maxn = 1e5;
 vector<int> graph[maxn + 5];
 int in[maxn + 5], out[maxn + 5];
@@ -18,7 +20,7 @@ void dfs1(int u, int p){
     for (int v: graph[u]){
         if(v == p) continue;
         dfs1(v, u);
-        in[u] = max(in[u], 1+in[v]);
+        in[u] = max(in[u], 1+in[v]); //height of the node in the subtree of u
     }
 }
 
@@ -69,6 +71,8 @@ int main(){
     return 0;
 }
 
+// https://cses.fi/problemset/task/1132
+
 // https://codeforces.com/problemset/problem/337/D
 //https://codeforces.com/contest/337/submission/73440952
 
@@ -77,7 +81,14 @@ int main(){
 //https://codeforces.com/contest/120/submission/76465143
 
 /*
+
+https://codeforces.com/contest/1324/problem/F
+https://codeforces.com/contest/1324/submission/73482716
+
 https://www.spoj.com/problems/PT07Z/
 solution: is ans = max(ans, in[i] + out[i])
+
+https://codeforces.com/contest/1401/problem/D  (dp contributiion techniq)
+https://codeforces.com/contest/1401/submission/90882209
 
 */

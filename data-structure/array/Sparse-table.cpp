@@ -24,7 +24,7 @@ struct STable {
 
     void build(vector <int>& A) {
         for (int i = 0; i < n; ++i) sparse[i][0] = A[i];
-        for (int j = 1; j <= Log; ++j) {
+        for (int j = 1; j <= Log; ++j) {   
             for (int i = 0; i + (1 << j) <= n; ++i) {
                 sparse[i][j] = min(sparse[i][j-1], sparse[i+(1 << (j-1))][j-1]);
             }
@@ -40,7 +40,16 @@ struct STable {
             }
         }
         return ans;
-    }    
+    }  
+
+    //fast qry O(1) only in Idempotent operation
+    int qry1(int l, int r) {
+        int len = r - l + 1;
+        int k = log2(len);
+        int x = len - (1 << k); //remaining
+        int ans = min(sparse[l][k], sparse[l+x][k]);
+        return ans;
+    }  
 
 };
 
@@ -55,18 +64,28 @@ int main(){
     STable st(A);
 
     int q; cin >> q;
-    while (q--) {
-        int l, r; cin >> l >> r;
+    while (q--) {  
+        int l, r; cin >> l >> r; //l, r => indices
         cout << st.qry(l, r) << endl;
+        cout << st.qry1(l, r) << endl;
     }
 
     return 0;
 }
 
+
 /*
-sparse[i][j] => f(i, i + 2^i - 1) or it contains the min() from i next 2^i elements including self so [i, i+2^i - 1]
+sparse[i][j] => f(i, i + 2ʲ - 1) or it contains the min() from i next 2ʲ elements including self so [i, i+2ʲ - 1]
+f(i, i + 2ʲ - 1) => min(f(i, i + 2ʲ⁻¹-1), f(i+2ʲ⁻¹, i+2ʲ⁻¹ + 2ʲ⁻¹-1));
 
 https://www.spoj.com/problems/RMQSQ/
 
 
+https://codeforces.com/contest/91/problem/B
+https://codeforces.com/contest/91/submission/90313176 (with binary search)
+http://algoshots.herokuapp.com/problems/queue-91B/  (greedy solution also)
+
+
+https://codeforces.com/contest/846/problem/D  O(1) query
+https://codeforces.com/contest/846/submission/91562490
 */

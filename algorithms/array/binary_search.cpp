@@ -78,6 +78,22 @@ int main(){
 //try binary search in this way: while (hi - lo > 1){}, in this way you will the range [lo, lo+1]
 
 /*
-https://codeforces.com/contest/1117/problem/C (Tip, displacement is order Indpendent)
+https://codeforces.com/contest/1117/problem/C (Tip, displacement is order Independent)
 solN: https://codeforces.com/contest/1117/submission/88736716
+
+https://codeforces.com/contest/812/problem/C
+https://codeforces.com/contest/812/submission/91554317
+
+https://codeforces.com/contest/1393/problem/C
+https://codeforces.com/contest/1393/submission/89554852
+
+https://codeforces.com/contest/91/problem/B
+https://codeforces.com/contest/91/submission/90313176
+http://algoshots.herokuapp.com/problems/queue-91B/  (greedy solution also)
+
+https://codeforces.com/contest/231/problem/C       (relative difference)
+https://codeforces.com/contest/231/submission/90343783
+
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-25th-july/challenges/irritating-queries
+https://pastebin.com/5J165eFz
 */

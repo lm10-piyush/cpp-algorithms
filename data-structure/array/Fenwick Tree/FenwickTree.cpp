@@ -108,6 +108,7 @@ https://codeforces.com/contest/1208/submission/83283233
 
 https://cses.fi/problemset/task/1749 (Binary search with fenwick tree for find the number of elements Dynamically)
 https://pastebin.com/MzmUMHR6 (this is same as implementing the std::multiset or gnu_pbds, but in this ques, sorting is not allowed)
+
 https://codeforces.com/problemset/problem/1354/D  (same ques, but here sorted order is compulsory)
 https://codeforces.com/contest/1354/submission/83517596
 
@@ -118,5 +119,18 @@ soln: https://www.codechef.com/MARCH20B/problems/LAZER
 
 https://www.spoj.com/problems/RANGESUM/
 SOL: https://pastebin.com/vqBY30V6
+
+Euler tour + array to tree conversion
+https://www.codechef.com/JULY20B/problems/DRGNDEN or https://www.codechef.com/problems/DRGNDEN/
+https://www.codechef.com/viewsolution/37019647
+
+https://codeforces.com/contest/1311/problem/F  (moving points)
+https://codeforces.com/contest/1311/submission/71993217
+
+https://cses.fi/problemset/task/1137  (Euler tour, trees)
+https://pastebin.com/XCc6Hq8X
+
+ * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
+ * https://pastebin.com/Kdb74mwu   (using fenwick tree)
 
 */

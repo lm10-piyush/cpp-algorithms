@@ -11,23 +11,25 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-const ll inf = 1e12;
-vector <vector<pair<int,int>>> graph;
+
+const ll inf = 1e18;
+vector <vector<pair<int,int>>> graph;  //{weight, node}
 vector<bool> used;
 vector <ll> dist;
 
 void dijsktra(int s) {
+    //{weight, node}
     priority_queue <pair<ll,ll>, vector<pair<ll,ll>>, greater<pair<ll,ll>>> pq;
     pq.push({0, s});
     dist[s] = 0;
     while (!pq.empty()) {
         pair <ll, ll> u = pq.top(); pq.pop();
-        if (used[u.second]) continue;
+        if (used[u.second]) continue;  //we dont need this becuz in line-31 we are doing same if we don't insert visited node.
         used[u.second] = true;
         for (auto i: graph[u.second]) {
             ll v = i.second;
             ll w = i.first;
-            if (!used[i.second]) {
+            if (!used[v]) {
                 if (u.first + w < dist[v]) {  //dist[u.second] is same as u.first
                     dist[v] = w + u.first;
                     pq.push({dist[v], v});
@@ -45,7 +47,7 @@ void solve() {
 
     for (int i = 0, u, v, w; i < m; ++i) {
         cin >> u >> v >> w;
-        graph[u].push_back({w, v});
+        graph[u].push_back({w, v});  //directed-edge
     }
     int s, d; cin >> s >> d;
     dijsktra(s);
@@ -66,6 +68,9 @@ int main(){
 }
 
 /*
+ * Graph could be directed or undirected and only for +ve weight.
+
+
 https://www.spoj.com/problems/EZDIJKST/
 
 https://drive.google.com/file/d/13B-hxGLizYhJcndlJReAN7xGBPLKfb6B/view?usp=sharing  (On matrix, with struct Node)

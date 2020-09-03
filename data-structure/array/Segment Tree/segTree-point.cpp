@@ -113,3 +113,15 @@ int main(){
 //https://codeforces.com/problemset/problem/332/B
 //https://codeforces.com/contest/332/submission/88007883
 //easy solutin without seg tree just suffix: https://codeforces.com/contest/332/submission/88016080
+
+//Euler tour + array to tree conversion + path sum query
+//https://www.codechef.com/JULY20B/problems/DRGNDEN or https://www.codechef.com/problems/DRGNDEN/
+//https://www.codechef.com/viewsolution/37019198
+
+/*
+ * For path sum query in euler tour: just all values in the range of start of root and start of 's' node, and 
+   all the others will be cancelled out automatically.
+ * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
+ * https://pastebin.com/Kdb74mwu   (using fenwick tree)
+
+*/

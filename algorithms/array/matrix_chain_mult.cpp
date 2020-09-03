@@ -47,3 +47,7 @@ int main(){
     int n = sizeof(p)/sizeof(p[0]);
     cout << MCM(p, n);
 }
+
+//https://www.codechef.com/PRACTICE/problems/CIRMERGE   (Circular Merge, Same as Matrix chain Multiplication, 
+//(by doubling the array) https://www.codechef.com/viewsolution/37386387
+// (by just using mod) https://www.codechef.com/viewsolution/37387318)

@@ -16,6 +16,7 @@ vector <vector<int>> tree;
 vector<int> level;
 vector <vector<int>> parent;
 
+//zero is dummy node here only
 void dfs(int u, int p) {
     level[u] = level[p] + 1;
     parent[u][0] = p;
@@ -85,6 +86,10 @@ int main(){
  * becuz it tries all possiblites, but moving via parent[][] tables helps to move correctly, along the path.
  * ex: https://www.codechef.com/LTIME84B/problems/TREDIFF
 
+https://cses.fi/problemset/task/1688  (simple LCA problem)
+
+https://cses.fi/problemset/task/1135  (distance between two nodes)
+
 https://www.spoj.com/problems/LCA/
 https://pastebin.com/85jTDXy5
 
@@ -92,5 +97,8 @@ https://www.spoj.com/problems/QTREE2/
 soln: https://pastebin.com/GZVk5GVg
 
 
+
+https://cses.fi/problemset/task/1687  (climbing up the tree in power of 2's)
+https://pastebin.com/kb3gJTJb
 
 */

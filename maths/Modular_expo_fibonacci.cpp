@@ -78,4 +78,6 @@ int main(){
  * Above one is solution of : https://www.spoj.com/problems/FIBOSUM/
 
  * https://www.spoj.com/problems/SEQ/
+
+ * https://cses.fi/problemset/task/1722  (fibonacci simple problem)
 */

@@ -38,3 +38,6 @@ int main()
     for(long long i: v) cout << i << " ";
     return 0;
 }
+
+//https://codeforces.com/contest/1025/problem/B
+//https://codeforces.com/contest/1025/submission/90256368

@@ -15,7 +15,7 @@ vector<int> g[N];
 vector <int> seq;
 bitset<N> used;
 
-//BFS2 for finding shortest distance with that path
+//BFS2 for finding shortest distance + path
 void bfs2(){
   //input graph
     int n, m, a, b; cin >> n >> m >> a >> b;
@@ -28,10 +28,12 @@ void bfs2(){
     //bfs starts here
     vector <int> dist(n+1, INF);
     vector <int> path(n+1);
+    //initialize
     path[a] = a;
     queue<int> q;
     q.push(a);
     dist[a] = 0;
+    //run loop queue is not empty
     while(!q.empty()){
       int u = q.front(); q.pop();
       for (int v: g[u]){
@@ -63,10 +65,13 @@ void bfs2(){
 
 }
 
+//bfs
 void bfs(){
+  //initialize
   queue <int> q;
   q.push(1); //source
-  used[1] = true;
+  used[1] = true;  //we can use distance instead to calcuate distance or previous(parent) of current node
+  //run loop till queue is not empty
   while(!q.empty()){
     int u = q.front(); q.pop();
     seq.push_back(u);  //bfs order
@@ -107,4 +112,15 @@ sol: https://codeforces.com/contest/1106/submission/82663168
 https://www.codechef.com/ENJU2020/problems/ECJN205
 https://www.codechef.com/viewsolution/34844619
 
+https://leetcode.com/problems/rotting-oranges/  (Bfs on matrix)
+soln: https://pastebin.com/UL22GYhW
+
+https://codeforces.com/contest/986/problem/A
+https://codeforces.com/contest/986/submission/89774954
+
+https://codeforces.com/contest/1307/problem/D  (bfs with trick from 1 and from n)
+https://codeforces.com/contest/1307/submission/91081205 
+
+https://pastebin.com/YP9JFmVm  (bfs on matrx, problem is in the link)
+  
 */

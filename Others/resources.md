@@ -20,7 +20,7 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 
 
 8. Sites for competitive programming https://blog.codingblocks.com/2019/sites-and-tools-for-competitive-programming/
- and setting an enviroment for c++ with some tricks  https://blog.codingblocks.com/2019/setting-up-a-c-competitive-programming-environment/
+ and setting an enviroment for c++ with some tricks  https://blog.codingblocks.com/2019/setting-up-a-c-competitive-programming-environment/ , https://codeforces.com/blog/entry/53909
 
 9.  https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise)
 	https://cses.fi/problemset/ for problems  (problem set)

@@ -24,14 +24,33 @@ struct Random {
     }
 };
 
+struct Randoom {
+    mt19937 rng;
+    Random() {
+        auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
+        rng = mt19937(seed);
+    }
+    int operator ()(int a, int b) {
+        return uniform_int_distribution<int> (a, b)(rng);
+    }
+};
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
+    //*******************************
     int t; cin >> t;
     int a, b; cin >> a >> b;
     Random rdx(a, b);  //To generate the number between [a, b] (int) otherwise change into long long to bigger range
     while (t--) {
         cout << rdx() << endl;
+    }
+
+    //******************* another ways, it think it is simple
+    Randoom rox;
+    t = 10;
+    while (t--) {
+        cout << rox(1, 10) << endl;
     }
 
 

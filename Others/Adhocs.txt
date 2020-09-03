@@ -1,3 +1,4 @@
+
 https://www.codechef.com/LTIME85B/problems/GOLMINE  (Maths, fractions, Observation, https://www.codechef.com/viewsolution/34827200)
 https://www.codechef.com/LTIME85B/problems/MAXAND18  (Greedy, contribution, Bits, https://www.codechef.com/viewsolution/34826469)
 https://codeforces.com/contest/1360/problem/G  (Matrix filling, https://codeforces.com/contest/1360/submission/81320879)
@@ -21,6 +22,108 @@ https://codeforces.com/contest/1382/problem/C2  (greedy, soln: https://codeforce
 https://codeforces.com/contest/234/problem/E (STL, implementation https://codeforces.com/contest/234/submission/88442585)
 https://codeforces.com/problemset/problem/1176/E  (Trees, greedy, Bfs, trick, https://codeforces.com/contest/1176/submission/88618605)
 https://leetcode.com/problems/subarray-product-less-than-k/  (Sliding window, or binary Search both ways solve this, sliding window soln: https://pastebin.com/Kx8xgWEB)
+https://codeforces.com/problemset/problem/940/A  (Greedy, https://codeforces.com/contest/940/submission/88811675)
+https://codeforces.com/contest/1379/problem/B    (Greedy, Maths, also could be solved by Binary search, soln: https://codeforces.com/contest/1379/submission/88890091)
+https://codeforces.com/contest/1249/problem/C2  (Greedy, maths, https://codeforces.com/contest/1249/submission/88897638)
+https://codeforces.com/problemset/problem/1364/B  (greedy, https://codeforces.com/contest/1364/submission/83682216)
+https://codeforces.com/contest/509/problem/B (Greedy, https://codeforces.com/contest/509/submission/88942555)
+https://codeforces.com/problemset/problem/1113/B  (Greedy, number thoery, https://codeforces.com/contest/1113/submission/88947663)
+https://codeforces.com/contest/1220/problem/C  (greedy, gametheory, string, https://codeforces.com/contest/1220/submission/88951700)
+https://codeforces.com/contest/486/problem/A   (Greedy, maths, Overflow could be possible, https://codeforces.com/contest/486/submission/89071268)
+https://leetcode.com/problems/find-all-duplicates-in-an-array/  (try to it in O(n) time and O(1) space)
+https://codeforces.com/contest/1102/problem/B  (greedy, constructive, https://codeforces.com/contest/1102/submission/89108762) 
+https://codeforces.com/contest/1144/problem/D   (Greedy, https://codeforces.com/contest/1144/submission/89112575)
+https://codeforces.com/contest/805/problem/D  (Maths, greedy, https://codeforces.com/contest/805/submission/89118451) 
+https://codeforces.com/contest/797/problem/B (greedy, odd-even (0/1), https://codeforces.com/contest/797/submission/75649893, http://algoshots.herokuapp.com/problems/odd-sum-797b/)
+https://codeforces.com/contest/1009/problem/B  (Greedy, Construction, tricky a bit, https://codeforces.com/contest/1009/submission/89145067)
+https://codeforces.com/contest/1131/problem/B  (Greeey, score board, https://codeforces.com/contest/1131/submission/89148693)
+
+************************************** Comparator sorting ***************************************************
+
+https://codeforces.com/contest/203/problem/C  (Greedy, Comparator, Sorting, Important, https://codeforces.com/contest/203/submission/89156746)
+https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/  (Greedy, sorting, comparators, https://pastebin.com/yJFjLAzJ)
+https://codeforces.com/contest/436/problem/A   (Greedy, comparator sorting, https://codeforces.com/contest/436/submission/89198173)
+https://codeforces.com/contest/1165/problem/E   (Greedy, Contribution, sorting, https://codeforces.com/contest/1165/submission/89827636)
+https://codeforces.com/contest/1399/problem/E1   (Weights Division (easy version), Greedy trees, https://codeforces.com/contest/1399/submission/91700622)
+
+********************************************************************************************
+
+https://codeforces.com/problemset/problem/1178/D (greedy, maths, Trick, number theory, https://codeforces.com/contest/1178/submission/89284779)
+https://codeforces.com/problemset/problem/274/A  (greedy, counting, https://codeforces.com/contest/274/submission/89290815)
+https://codeforces.com/contest/1070/problem/E  (greedy, sorting, https://codeforces.com/contest/1070/submission/89292178)
+https://codeforces.com/contest/1256/problem/D (greedy, prefix, lexico min, https://codeforces.com/contest/1256/submission/89292704)
+https://leetcode.com/problems/path-sum-iii/  (Greedy, prefix sum, map, https://pastebin.com/8Y5cJEz4)
+https://codeforces.com/problemset/problem/329/A (Greey, implementation, nice trick, https://codeforces.com/contest/329/submission/89340252)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-08-aug/challenges/arrange-as-said   (Implementation, Map, https://pastebin.com/D9BMmr6Z)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-08-aug/challenges/chics-like-to-hangout-together  (Maths, combanatorics, https://pastebin.com/JKQrpS9B)
+https://codeforces.com/contest/246/problem/B (Greedy, to equalize, https://codeforces.com/contest/246/submission/89361857)
+https://codeforces.com/contest/1037/problem/C  (Greedy dp, to equalize, https://codeforces.com/contest/1037/submission/69925262)
+https://codeforces.com/contest/709/problem/B  (greedy, maths, https://codeforces.com/contest/709/submission/89363892)
+https://leetcode.com/problems/max-points-on-a-line/  (No number of points in straight line, https://pastebin.com/uvMUnffN)
+https://codeforces.com/contest/91/problem/A  (implementation, dp, binary search, https://codeforces.com/contest/91/submission/89604978)
+https://codeforces.com/contest/293/problem/A  (Greedy, game theory, https://codeforces.com/contest/293/submission/89610155)
+https://codeforces.com/contest/494/problem/A  (greedy, brackets balancing, https://codeforces.com/contest/494/submission/89610886)
+https://codeforces.com/contest/520/problem/B  (Greedy, divide, https://codeforces.com/contest/520/submission/89652072)
+https://codeforces.com/contest/1095/problem/C  (Greedy, https://codeforces.com/contest/1095/submission/89653975)
+https://codeforces.com/contest/1397/problem/B   (Greedy, maths, https://codeforces.com/contest/1397/submission/91674081)
+https://codeforces.com/contest/986/problem/A    (Greedy, BFS, https://codeforces.com/contest/986/submission/89774954)
+https://leetcode.com/problems/iterator-for-combination/  (Implementation, Combinations, bitmasks, https://leetcode.com/problems/iterator-for-combination/)
+
+************************************************** These problems are based on modulus and counting *************************************
+
+https://codeforces.com/contest/1294/problem/D  (Important, Mex-maximizing, Modulus, Counts, greedy-dp, https://codeforces.com/contest/1294/submission/89787447)
+https://codeforces.com/contest/1365/problem/C   (Rotation Matching, Counts, https://codeforces.com/contest/1365/submission/82891327) 
+https://codeforces.com/contest/214/problem/B     (Hometask, Modulus, counts, https://codeforces.com/contest/214/submission/89819291)
+https://codeforces.com/contest/1374/problem/D   (Zero Remainder Array, https://codeforces.com/contest/1374/submission/90497043)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-29th-august/challenges/pre-corona-meetings   (Pre-Corona Meetings, modulus, counting, https://pastebin.com/pDzeNxPs)
+https://codeforces.com/contest/1397/problem/C   (Multiples of Length, https://codeforces.com/contest/846/submission/91525432)
+
+****************************************************************************************************************
+
+
+https://codeforces.com/contest/305/problem/C  (C. Ivan and Powers of Two, Greedy, power of 2s, https://codeforces.com/contest/305/submission/89802094)
+https://codeforces.com/contest/712/problem/C   (Memory and De-Evolution , triangles, min to max,https://codeforces.com/contest/712/submission/89869365) 
+https://codeforces.com/contest/605/problem/A  ( Sorting Railway Cars, Swaps, Longest chain, https://codeforces.com/contest/605/submission/90213239)
+https://codeforces.com/contest/1003/problem/D  (Coins and Queries, greedy breaking the number.https://codeforces.com/contest/1003/submission/90216527)
+
+https://codeforces.com/contest/1392/problem/C   (Omkar and Waterslide, Equation, Relative difference, https://codeforces.com/contest/1392/submission/90176407)
+https://codeforces.com/contest/1151/problem/D   (Stas and the Queue at the Buffet, RElative differnce https://codeforces.com/contest/1151/submission/90224154)
+https://codeforces.com/contest/231/problem/C    (To Add or Not to Add, relative difference, binary search, https://codeforces.com/contest/231/submission/90343783)
+
+
+https://codeforces.com/contest/1082/problem/B   (Vova and Trophies, Greedy like kadane, https://codeforces.com/contest/1082/submission/90226840)
+https://codeforces.com/contest/1025/problem/B   ( Weakened Common Divisor, Factorization, https://codeforces.com/contest/1025/submission/90256368)
+https://codeforces.com/contest/1082/problem/C  ( Multi-Subject Competition, Rearrangement of data, greedy, https://codeforces.com/contest/1082/submission/90304916) 
+
+https://codeforces.com/contest/986/problem/B   ( Petr and Permutations , Maths, inversions, permutation, https://codeforces.com/contest/986/submission/90389784)
+https://codeforces.com/contest/1372/problem/C  ( Omkar and Baseball, maths, permutation concepts, observation, https://codeforces.com/contest/1372/submission/90467239)
+https://codeforces.com/contest/1362/problem/D   (Johnny and Contribution, greedy, graphs, https://codeforces.com/contest/1362/submission/90533306)
+https://codeforces.com/contest/1037/problem/D    (Valid BFS?, Check bfs order is correct or not, https://codeforces.com/contest/1037/submission/90683257)
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bef73#problem   (High Buildings, https://pastebin.com/3xip2Qbs)
+
+https://atcoder.jp/contests/abc176/tasks/abc176_e  (E - Bomber, tradeoff between row/columns, constraint dependent problem, https://atcoder.jp/contests/abc176/submissions/16251172)
+https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/practice-problems/approximate/graph-by-number-of-paths-157e40fd/  (	Paths in graphs, maths, https://pastebin.com/S1j0SRWC)
+https://codeforces.com/contest/1311/problem/E  (Construct the Binary Tree, tree, constructive algo, https://codeforces.com/contest/1311/submission/79447885)
+
+/********************* Smart brute force, something like knapsack, becuz we don't know the order much *********************************************************
+
+https://codeforces.com/contest/1400/problem/B  (RPG Protagonist, Smart brute force, Kind of knapsack, becuz there is no greedy way, but have some greedyness, https://codeforces.com/contest/1400/submission/91162502)
+https://codeforces.com/contest/1395/problem/D   (Boboniu Chats with Du, Greedy, Trick, smart brute force, https://codeforces.com/contest/1395/submission/90383122)
+https://codeforces.com/contest/846/problem/B    (Math Show, Greedy smart brute force, https://codeforces.com/contest/846/submission/91701107)
+
+********************************************************************************************************************************
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-25th-july/challenges/irritating-queries  (Binary search, https://pastebin.com/5J165eFz)
+https://leetcode.com/problems/partition-to-k-equal-sum-subsets/  (Brute force solution, https://pastebin.com/a6yYD0VG)
+https://cses.fi/problemset/task/1081                 (Common Divisors, maths, Gcd, factors, https://pastebin.com/L3fnagCG)
+https://codeforces.com/contest/812/problem/C     (Sagheer and Nubian Market, Binary search, https://codeforces.com/contest/812/submission/91554317)
+https://codeforces.com/contest/884/problem/D     (Boxes And Balls, greedy, Huffmann coding, https://codeforces.com/contest/884/submission/91721985)
+https://codeforces.com/contest/884/problem/C    (Bertown Subway, Graphs, permutation, cycles, https://codeforces.com/contest/884/submission/91714240)
+https://cses.fi/problemset/task/1716             (Distributing Apples, stars and bars, https://pastebin.com/Y9NBBszs)
+
+
+
+
+
 
 
 

@@ -54,4 +54,7 @@ https://atcoder.jp/contests/dp/submissions/14598857
 
 https://www.codechef.com/problems/KANYASAI
 soln: https://www.codechef.com/viewsolution/29212253
+
+https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/
+https://pastebin.com/jAiqXvns
 */

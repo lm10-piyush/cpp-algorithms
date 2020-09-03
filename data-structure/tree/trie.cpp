@@ -62,7 +62,7 @@ struct XOR_Trie{
     curr->isEnd = true;
   }
 
-  //xor will all the elements, to get the max_xor
+  //xor all the elements, to get the max_xor
   int XOR(int x){
     XOR_Trie *curr = this;
     int ans = 0;
@@ -158,8 +158,8 @@ int main(){
 
     int ans = 0;
     for (int i = 1; i < n; ++i){
-      ans = max(ans, triee.XOR(A[i]));
-      triee.insert(A[i]);
+      ans = max(ans, triee.XOR(A[i])); //find max-xor
+      triee.insert(A[i]);  //insert
     }
     cout << ans << endl;
 
@@ -172,7 +172,9 @@ int main(){
 
 //https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/cost-of-data-11/
 //soln: https://pastebin.com/NRtWqUki
+
 //https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/xor-and-insert-92b9b529/
+//https://pastebin.com/rwzwJG4p
 
 //https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2683&mosmsg=Submission+received+with+ID+2636226
-//https://pastebin.com/mJqWZzf3
+//https://pastebin.com/mJqWZzf3   (find subarray with max-xor)

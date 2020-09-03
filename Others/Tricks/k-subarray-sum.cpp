@@ -32,3 +32,9 @@ int main(){
 
 //https://www.codechef.com/COCA2020/problems/COCA2001
 //https://www.codechef.com/viewsolution/34733651
+
+//https://leetcode.com/problems/path-sum-iii/
+// https://pastebin.com/8Y5cJEz4
+
+//https://codeforces.com/contest/1398/problem/C
+//https://codeforces.com/contest/1398/submission/89965926

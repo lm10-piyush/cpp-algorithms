@@ -24,14 +24,14 @@ void bfs01(int s) {
     dist[s] = 0;
     while (!dq.empty()) {
         int u = dq.front(); dq.pop_front();
-        if (used[u]) continue;
+        if (used[u]) continue; //we dont need this becuz in line-31 we are doing same if we don't insert visited node.
         used[u] = true;
         for (auto v: g[u]) {
             if (used[v.first]) continue;
             if (dist[v.first] > dist[u] + v.second) {
                 dist[v.first] = dist[u] + v.second;
-                if (v.second) dq.push_back(v.first);
-                else dq.push_front(v.first);
+                if (v.second) dq.push_back(v.first); //weight-1
+                else dq.push_front(v.first);  //weight-0
             }
         }   
     }
@@ -74,4 +74,8 @@ https://pastebin.com/FeBMbW6U
 
 https://www.e-olymp.com/en/contests/16775/problems/173743
 https://pastebin.com/8Cja2FvD
+
+https://atcoder.jp/contests/abc176/tasks/abc176_d  (0-1 BFS on matrix)
+https://atcoder.jp/contests/abc176/submissions/16211169
+
 */

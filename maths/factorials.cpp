@@ -39,7 +39,8 @@ void calc() {
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    calc();
+    
+    calc();  //build
 
     ll n, m, k; cin >> n >> m >> k;
     
@@ -55,5 +56,10 @@ int main(){
 }
 
 
+//https://cses.fi/problemset/task/1079
+
 //https://www.hackerrank.com/contests/all-india-contest-by-coding-club-india-13-june/challenges/easy-counting-problem
 // https://pastebin.com/PUjG17KD
+
+//https://cses.fi/problemset/task/1716  (stars and bars)
+//https://pastebin.com/Y9NBBszs

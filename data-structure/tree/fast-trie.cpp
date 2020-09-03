@@ -89,3 +89,6 @@ int main(){
 
 //https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/xor-and-insert-92b9b529/description/
 //https://pastebin.com/1cszDyUq
+
+//https://leetcode.com/problems/add-and-search-word-data-structure-design/
+//https://pastebin.com/jpLNVN9A

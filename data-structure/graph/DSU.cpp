@@ -55,6 +55,14 @@ int main(){
   return 0;
 }
 
+/*
+ * Problem: Find the minimum number of edges that should be removed so that there should be no cycle in the 
+            given undirected graph.
+  soln: By Dsu, same as Kruksal algo for spanning tree. Keep adding edges when cycle found do ans++, and don't
+  add that edge to your Dsu.
+
+
+*/
 
 //problem: https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/city-and-flood-1/submissions/
 //solution: exactly same code

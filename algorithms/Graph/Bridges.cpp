@@ -25,7 +25,7 @@ void dfs(int u, int p) {
     lo[u] = tin[u] = id++;
     for (int v: g[u]) {
         if (v == p) continue;
-        if (used[v]) lo[u] = min(lo[u], tin[v]); //visiting already visited node then update the low link value.
+        if (used[v]) lo[u] = min(lo[u], tin[v]); //visiting already visited node(via back edge) then update the low link value.
         else {
             dfs(v, u);
             lo[u] = min(lo[u], lo[v]);   //coming back from the recursion then update the low link value.
@@ -69,7 +69,8 @@ int main(){
  * In most of the problems we need to sort the bridges array and u < v order maitained.
  * Observation: Each component apart by bridges have same low link value.  
  * lo[u] => minimum time reachable by the descendants of 'u' in the DFS spanning tree.
-
+ * We conver the graph into the tree such that each node in the tree will be whole component of original graph whose
+   lo[] value is same.
 
  https://onlinejudge.org/external/7/796.pdf
  https://pastebin.com/urXutKaZ
@@ -82,4 +83,7 @@ int main(){
  https://www.hackerearth.com/practice/algorithms/graphs/articulation-points-and-bridges/practice-problems/algorithm/rhezo-and-hackerearth-3/description/
  https://pastebin.com/wqmpJtrW    (Graphs gets restored after each operation)
 
+
+ https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/  (convert the graph into the tree using lo value.)
+ https://pastebin.com/99c5t4eg
 */

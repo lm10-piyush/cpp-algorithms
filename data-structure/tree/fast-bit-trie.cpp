@@ -53,7 +53,7 @@ struct Trie{
       curr->cnt--;
     }
   }
-
+  //pair of elements whose xor is minimum
   int minxor(int x){
     int ans = 0;
     Trie *curr = this;
@@ -121,6 +121,10 @@ int main(){
 // https://pastebin.com/CEh0miYW
 
 
+//tip: xor of [l...r] => xor of [1...r] ^ xor of [1...l-1]
+//https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2683&mosmsg=Submission+received+with+ID+2636226
+//https://pastebin.com/mJqWZzf3   (find subarray with max-xor)
+
 //https://www.spoj.com/problems/SUBXOR/
 //sol: https://pastebin.com/nBcXKkqy
 
@@ -139,6 +143,9 @@ int main(){
 
 //https://codeforces.com/contest/842/problem/D  (Xor, MEX, Trie)
 //https://codeforces.com/contest/842/submission/83123978
+
+
+
 /*
 Trick for MEX, is number of distince values in [0, i] => i+1, then that means, MEX does not lie in that range
 so go for larger. So we can use Binary search.

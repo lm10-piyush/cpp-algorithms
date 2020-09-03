@@ -24,16 +24,13 @@ int main(){
         }
     }
  
-    vector <vector<int>> dp(n, vector<int>(n));
+    vector <vector<int>> dp(n, vector<int>(n, 0));
     dp = A;
-    for (int i = 1; i < n; ++i)
-        dp[0][i] += dp[0][i-1];
-    for (int i = 1; i < n; ++i)
-        dp[i][0] += dp[i-1][0];
- 
-    for (int i = 1; i < n; ++i) {
-        for (int j = 1; j < n; ++j) {
-            dp[i][j] += dp[i-1][j] + dp[i][j-1] - dp[i-1][j-1];
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (i) dp[i][j] += dp[i-1][j];
+            if (j) dp[i][j] += dp[i][j-1];
+            if (i and j) dp[i][j] -= dp[i-1][j-1];
         }
     }
  
@@ -52,3 +49,9 @@ int main(){
 }
 
 //https://cses.fi/problemset/task/1652
+
+/*
+https://codeforces.com/contest/846/problem/D  O(1) query
+https://codeforces.com/contest/846/submission/91562490
+
+*/

@@ -139,7 +139,7 @@ So that, one should choose the best option.
 	both the methods can do top down and bottom up, But here we are discussing the bottom up as you can see the heading. 
 	And to come up easily(as begginner) you should create the recurrence in 1st way.
 
-************************************* So Mind you technique and habits to solve problems *************************************
+************************************* So Mind your technique and habits to solve problems *************************************
 ##Quick same thing: most people: try to do recurrence like this fun(0) and base  if(i >=n ) { }, 
 	so recurrene will be like this fun(i..) = fun(i+1...),
  	so here it is easy to see top down but hard to see bottom up, becuz base case is i == n, then it little bit hard to see and build from 
@@ -170,13 +170,16 @@ Quick Tip for DP for how to think the transition: suppose you are at dp[i][j], n
 
 
 Forms of DP:
-1) Normal some contribution technique.
+1) Normal some contribution technique, it may also include dp on expected number.
 2) Standard DP 1D/2D on array or strings
 3) Digit DP
 4) DP with bitmask
 5) DP on trees / graphs
 6) Sum over subsets DP(SOS)
 7) Matrix exponentiation
+8) Dp in some order (exchange arguments or sorting) when problem depends on the order of them items, becuz in DP, we include the item to the solution or not, so this
+   forms a subsequence of the items and as we know subsequence is order dependent. Normally if problem doesn't require the order then we don't need to do 
+   sorting with some comparator  https://codeforces.com/blog/entry/63533.
 
 User: LM10_Piyush on Codeforces/ Hackerrank
 DP optimizations: https://codeforces.com/blog/entry/8219
@@ -273,6 +276,7 @@ https://www.geeksforgeeks.org/ways-to-arrange-balls-such-that-adjacent-balls-are
 https://cses.fi/problemset/task/1744      (DP, rectangles, sol: https://pastebin.com/qWSMUsEj)
 https://codeforces.com/contest/474/problem/D (DP, Combonatorics Pruning, soln: https://codeforces.com/contest/474/submission/86503889)
 https://codeforces.com/contest/466/problem/C  (DP, counts)
+https://codeforces.com/contest/1095/problem/C  (dp, greedy, factors, https://codeforces.com/contest/1095/submission/89653975)
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387174 (DP, soln:  https://pastebin.com/xSYptKBu)
 https://codeforces.com/contest/1324/problem/E (Dp, push DP, bottom up: sol: https://codeforces.com/contest/1324/submission/86696444)
 https://codeforces.com/problemset/problem/1077/F1  (DP, IMPortant, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851, bottom up; https://codeforces.com/contest/1077/submission/87681349)
@@ -307,14 +311,29 @@ update the dp state we just need the previous state ie., dp[i-1] mostly. Same co
 You might see some problem like Pascal triangle where loop run O(n2) and space O(n2), but after reducing the space becuz we only need the nth binomial coeff
 O(n2) run time and O(n) memory space.
 
-https://codeforces.com/problemset/problem/543/A (DP, important, Combanatorics, top-down TLE, bottom up runs good, memory efficient by skipping the current element state, https://codeforces.com/contest/543/submission/88694641)
+https://codeforces.com/problemset/problem/543/A (DP, important, Combinatorics, top-down TLE, bottom up runs good, memory efficient by skipping the current element state, https://codeforces.com/contest/543/submission/88694641)
+https://codeforces.com/contest/1117/problem/D  (DP, Matrix Expo, https://codeforces.com/contest/1117/submission/88867254)
+https://codeforces.com/contest/1391/problem/D    (Dp with bitmask, https://codeforces.com/contest/1391/submission/89592858)
+https://leetcode.com/problems/pascals-triangle-ii/  (Pascal triangle, https://pastebin.com/9EsVcqyd , in O(n2) and O(n) extra space, this trick helps  in dp problems when we just need few previous rows to calculate
+           the data of the current row, so no need to store the whole data, just use the columns alternatively.
+https://codeforces.com/contest/1294/problem/D  (Important, Mex-maximizing, greedy-dp, Modulus, https://codeforces.com/contest/1294/submission/89787447)
+https://codeforces.com/contest/1165/problem/E   (Greedy-dp, Contribution, Sorting, https://codeforces.com/contest/1165/submission/89827636)
+https://codeforces.com/contest/1398/problem/C  (Good subarray, Trick: subarray could be written as prefix sum, count the subarrays, https://codeforces.com/contest/1398/submission/89965926)
+https://codeforces.com/contest/1398/problem/D   ( Colored Rectangles, Dp, top-down: https://codeforces.com/contest/1398/submission/89994904, bottom-up: https://codeforces.com/contest/1398/submission/89997174)
 
+************************************** DP with exchange arguments *********************************
+https://ki.staszic.waw.pl/task.php?name=bombki    (Christmas balls, actually boxes, problem is in polish (activate the Google translate), I hope the solution is correct, Top down with map: https://pastebin.com/dhnaZucG)
+https://codeforces.com/contest/1401/problem/D    (Maximum Distributed Tree, DP, contribution techniq, greedy, soln: https://codeforces.com/contest/1401/submission/90882209)
 
+**********************************************************************************************
+https://leetcode.com/problems/minimum-cost-for-tickets/    (Dp, top-down https://pastebin.com/ZrDUftBf)
+https://codeforces.com/contest/1400/problem/D  (Dp, counting, Contribution, https://codeforces.com/contest/1400/submission/91001206)
+https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/   (Digit-dp, https://pastebin.com/jAiqXvns)
+https://codeforces.com/contest/1400/problem/B  (RPG Protagonist, Smart brute force, becuz there is no greedy way, but have some greedyness, https://codeforces.com/contest/1400/submission/91162502)
 
-
-
-
-
+https://leetcode.com/problems/partition-to-k-equal-sum-subsets/  (dp: https://pastebin.com/HJ3XsXaD, constraints are low, Brute force solution, https://pastebin.com/a6yYD0VG)
+https://www.codechef.com/PRACTICE/problems/CIRMERGE       (Circular Merge, Same as Matrix chain Multiplication, (by doubling the array) https://www.codechef.com/viewsolution/37386387, (by just using mod) https://www.codechef.com/viewsolution/37387318)
+https://codeforces.com/contest/846/problem/C   (Four Segments, dp, smart bruteforce, https://codeforces.com/contest/846/submission/91525432)
 
 
 

@@ -11,7 +11,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-int blk;
+int blk, roll;
 
 struct Node {
     int i, l, r;
@@ -25,9 +25,8 @@ struct Node {
 
 };
 
-int roll;
 const int N = 1e6 + 5;
-vector <int> frq(N);
+vector <int> frq(N); //we can use unordered_map(hash Map) to store keys when they are very large 
 
 void add(int x) {
     if(frq[x] == 0) roll++;
@@ -95,3 +94,10 @@ int main(){
 
 //https://codeforces.com/contest/220/problem/B
 //https://codeforces.com/contest/220/submission/77406583
+
+/*
+ Note: if you solve set(dfs and return the set) here to solve this problem, it will give TLE
+ https://cses.fi/problemset/task/1139  (Mo on trees, using Euler tour) 
+ https://pastebin.com/HWjZyVhk  
+
+*/
