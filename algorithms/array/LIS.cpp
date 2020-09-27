@@ -67,7 +67,7 @@ int main(){
 //https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
 //https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
 //https://codeforces.com/problemset/problem/264/B
-
+//https://cses.fi/problemset/task/1141
 /*
 converting the LCS(longest common subsequence)problem to LIS when atleast one of the array has distinct elements only.
 algorithm: 

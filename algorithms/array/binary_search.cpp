@@ -36,8 +36,7 @@ int main(){
     int x; cin >> x;
     cout << bi_search(v, x);
 
-      
-
+    
 
   return 0;
 }
@@ -45,6 +44,9 @@ int main(){
 
 //https://www.spoj.com/problems/AGGRCOW/
 //https://pastebin.com/X1an8ztv
+
+// https://cses.fi/problemset/task/1620
+//https://pastebin.com/53j3E4H7
 
 //https://codeforces.com/contest/913/problem/D
 //https://codeforces.com/contest/913/submission/82218543
@@ -96,4 +98,12 @@ https://codeforces.com/contest/231/submission/90343783
 
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-25th-july/challenges/irritating-queries
 https://pastebin.com/5J165eFz
+
+* https://codeforces.com/edu/course/2/lesson/2/3/practice/contest/269118/problem/A
+ * https://pastebin.com/gMgch3U1       (substring search, suffix array) (recommended method)
+
+ https://codeforces.com/edu/course/2/lesson/2/3/practice/contest/269118/problem/B  (occurence count, suffix array)
+ https://pastebin.com/u7ETqb75
+
+https://pastebin.com/tWQNM2Nj   (binary search on the matrix)
 */

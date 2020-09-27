@@ -144,6 +144,9 @@ int main(){
 //https://codeforces.com/contest/842/problem/D  (Xor, MEX, Trie)
 //https://codeforces.com/contest/842/submission/83123978
 
+// https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+//https://pastebin.com/XB1j89Fw
+
 
 
 /*

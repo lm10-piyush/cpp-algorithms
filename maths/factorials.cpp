@@ -35,6 +35,14 @@ void calc() {
         reFac[i-1] = (reFac[i] * i) % mod;
     }
 }
+ll modMul(ll a, ll b) {
+    return (a * b) % mod;
+}
+
+ll nCr(ll a, ll b) {
+    return modMul(fac[a], modMul(reFac[b], reFac[a - b]));
+}
+
 
 
 int main(){
@@ -63,3 +71,6 @@ int main(){
 
 //https://cses.fi/problemset/task/1716  (stars and bars)
 //https://pastebin.com/Y9NBBszs
+
+//https://atcoder.jp/contests/abc178/tasks/abc178_c
+//https://atcoder.jp/contests/abc178/submissions/16733179

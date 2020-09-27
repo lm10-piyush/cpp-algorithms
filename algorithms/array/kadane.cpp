@@ -41,7 +41,7 @@ int main(){
 		curr += A[i];
 
 		ans = max(ans, curr);
-
+		//keep continue the sum untill it is negative
 		if(curr < 0)
 			curr = 0;
 	}

@@ -14,6 +14,7 @@ void kmpPreProcess(string &pattern){
     for (int i = 1, j = 0; i < (int)pattern.size(); ++i){
         while(j > 0 and pattern[j] != pattern[i])
             j = piTable[j-1];
+        assert(0 <= j and j <= (int)pattern.size());
         
         if(pattern[j] == pattern[i]) j++;
         piTable[i] = j;
@@ -22,10 +23,12 @@ void kmpPreProcess(string &pattern){
 
 vector<int> kmpMatch(string text, string pattern){
     vector<int> idx;
+    kmpPreProcess(pattern);
+
     for (int i = 0, j = 0; i < (int)text.size(); ++i){
         while(j > 0 and pattern[j] != text[i])
             j = piTable[j-1];
-        
+        assert(0 <= j and j <= (int)text.size());
         if (pattern[j] == text[i]){
             if(j+1 == (int)pattern.size()){
                 idx.push_back(i-j);
@@ -50,7 +53,6 @@ int main(){
         string text = "AABAACAADAABAABA";
         
         // string pattern, text; cin >> pattern >> text;
-        kmpPreProcess(pattern);
 
         //for (int i = 0; i < pattern.size(); ++i)
         //  cout << piTable[i] << " ";

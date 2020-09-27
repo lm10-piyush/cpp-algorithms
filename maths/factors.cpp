@@ -41,3 +41,6 @@ int main()
 
 //https://codeforces.com/contest/1025/problem/B
 //https://codeforces.com/contest/1025/submission/90256368
+
+//https://codeforces.com/contest/1285/problem/C
+//https://codeforces.com/contest/1285/submission/69926022

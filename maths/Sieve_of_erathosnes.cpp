@@ -51,6 +51,12 @@ int main(){
   return 0;
 }
 
+/*
+ Note:
+ * If two numbers have same lowest divisors( > 1) then that means they are not coprime. But if those two have not same
+   lowest divisor then it is not sure that both are coprime, they might or might not be coprime. Ex: (5, 10)
+   Lowest divisor of 5 => 5, lowest divisor of 10 => 2, but still those are not coprime. 
+*/
 
 /*
  * https://codeforces.com/contest/546/problem/D
@@ -61,4 +67,8 @@ int main(){
  * solution: https://codeforces.com/contest/222/submission/80800916
  * https://codeforces.com/contest/1366/problem/D
  * sol: https://codeforces.com/contest/1366/submission/87461823
+ * https://atcoder.jp/contests/abc177/tasks/abc177_e
+ * https://atcoder.jp/contests/abc177/submissions/16637688
+
+ *https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/easy-10-cc/problem
 */

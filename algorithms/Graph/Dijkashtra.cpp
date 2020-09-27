@@ -73,6 +73,12 @@ int main(){
 
 https://www.spoj.com/problems/EZDIJKST/
 
+(on Matrix)
 https://drive.google.com/file/d/13B-hxGLizYhJcndlJReAN7xGBPLKfb6B/view?usp=sharing  (On matrix, with struct Node)
 https://pastebin.com/2Zk9QLMq
+
+(on Matrix)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/noise-control
+https://pastebin.com/CWadhYFW
+
 */

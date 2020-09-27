@@ -73,5 +73,8 @@ int main(){
 //https://www.codechef.com/ENJU2020/problems/ECJN206
 //https://www.codechef.com/viewsolution/34856044
 
+//https://atcoder.jp/contests/abc177/tasks/abc177_d
+//https://atcoder.jp/contests/abc177/submissions/16636646  (soln: size of largest size group)
+
 //https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/still-maximum/
 //solution: start you solution from very end ie., when every node is detached, then one by one add the edge and ans the query.

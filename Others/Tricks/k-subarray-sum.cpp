@@ -38,3 +38,6 @@ int main(){
 
 //https://codeforces.com/contest/1398/problem/C
 //https://codeforces.com/contest/1398/submission/89965926
+
+//https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003381cb#problem 
+//(Perfect subarray, Don't use Map it will give TLE, use vector, https://pastebin.com/nvWVgJ3T)

@@ -11,15 +11,11 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-
-int main(){
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
-    
-    int n; cin >> n;
-    vector <int> A(n), res(n);
-    for (int &i: A) cin >> i;
+//not stable, just simple implementation
+vector <int> countingSort1(vector <int> A) {
+    int n = sz(A);
+    vector <int> res(n);
     vector <int> cnts(*max_element(all(A))+1, 0);
-
     for (int i : A){
       cnts[i]++;
     }
@@ -30,8 +26,47 @@ int main(){
       res[i] = pos;
       cnts[pos]--;
     }
+    return res;
+}
+
+//stable sort
+vector <int> countingSort2(vector <int> A) {
+    int n = sz(A);
+    vector <int> res(n);
+    vector <int> cnts(*max_element(all(A))+1, 0);
+    for (int i: A) {
+        cnts[i]++;
+    }
+    for (int i = 1; i < sz(cnts); ++i) {
+        cnts[i] += cnts[i-1];  //to set the base for each item 'i' 
+    }
+    for (int i = n-1; i >= 0; --i) {
+        res[cnts[A[i]]-1] = A[i];
+        cnts[A[i]]--;
+    }
+    return res;
+}
+
+
+int main(){
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+    
+    int n; cin >> n;
+    vector <int> A(n);
+    for (int &i: A) cin >> i;
+
+    vector <int> res = countingSort1(A);
     for (int i: res)
-      cout << i << ' ';
+      cout << i << ' '; cout << endl;
+    res = countingSort2(A);
+    for (int i: res) cout << i << ' ';
+
 
   return 0;
 }
+
+/*
+ * To apply radix sort, you should apply the counting sort each time from right most to left most.
+
+
+*/

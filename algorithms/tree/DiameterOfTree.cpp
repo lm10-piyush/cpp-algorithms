@@ -47,5 +47,6 @@ int main(){
 
 /*
  * https://cses.fi/problemset/task/1131
-
+ * https://codeforces.com/contest/1405/problem/D
+ solN: https://codeforces.com/contest/1405/submission/92066680
 */
