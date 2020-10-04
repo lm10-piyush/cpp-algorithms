@@ -1,6 +1,3 @@
-//https://leetcode.com/problems/subarray-sum-equals-k/
-//count the total number of subarray-whose sum is k;
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -30,6 +27,9 @@ int main(){
     cout << s.subarraySum(v, k);  
 }
 
+//https://leetcode.com/problems/subarray-sum-equals-k/
+//count the total number of subarray-whose sum is k;
+
 //https://www.codechef.com/COCA2020/problems/COCA2001
 //https://www.codechef.com/viewsolution/34733651
 
@@ -41,3 +41,9 @@ int main(){
 
 //https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003381cb#problem 
 //(Perfect subarray, Don't use Map it will give TLE, use vector, https://pastebin.com/nvWVgJ3T)
+
+//https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/   ((a + b) % k = 0) => b = (k - a) % k (NOTE: caution about negative)
+//https://pastebin.com/dzaUHSUP
+
+//https://cses.fi/problemset/task/1662   (pref[r] - pref[l]) % n = 0
+//https://pastebin.com/C4LxG7H5

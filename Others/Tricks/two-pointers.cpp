@@ -48,5 +48,6 @@ int main(){
     you could flip. Find the longest length of the continuous sequence of 1's.
     This can be done by Two pointers. 
 
-
+https://leetcode.com/problems/subarray-product-less-than-k/
+https://pastebin.com/wWR4ESDW
 */

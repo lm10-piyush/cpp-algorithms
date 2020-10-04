@@ -184,6 +184,7 @@ Forms of DP:
 User: LM10_Piyush on Codeforces/ Hackerrank
 DP optimizations: https://codeforces.com/blog/entry/8219
 
+https://codeforces.com/blog/entry/67679
 Problems for DP:
 https://codeforces.com/problemset/problem/894/A
 https://codeforces.com/contest/490/problem/C (Hacking Cypher)
@@ -222,6 +223,7 @@ https://codeforces.com/contest/1353/problem/E (dp + good implementation, K-Gaps)
 https://codeforces.com/contest/1282/problem/B2 (Dp, K-gaps (mod traversal), soln: https://codeforces.com/contest/1282/submission/75436172)
 https://codeforces.com/contest/1077/problem/F1 (dp)
 https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
+https://atcoder.jp/contests/abc177/tasks/abc177_e  (Dp, sieve, think like graphs, https://atcoder.jp/contests/abc177/submissions/16637688)
 https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
 https://codeforces.com/contest/264/problem/B (DP, LIS, Maths, Sieve, O(nlogn), becuz, n < 1e6, max_element <= 1e7)
 https://leetcode.com/problems/largest-divisible-subset/  (DP, LIS, O(n2) solution needed becuz, max_element <= 2e9, n < 6e3) 
@@ -334,6 +336,7 @@ https://codeforces.com/contest/1400/problem/B  (RPG Protagonist, Smart brute for
 https://leetcode.com/problems/partition-to-k-equal-sum-subsets/  (dp: https://pastebin.com/HJ3XsXaD, constraints are low, Brute force solution, https://pastebin.com/a6yYD0VG)
 https://www.codechef.com/PRACTICE/problems/CIRMERGE       (Circular Merge, Same as Matrix chain Multiplication, (by doubling the array) https://www.codechef.com/viewsolution/37386387, (by just using mod) https://www.codechef.com/viewsolution/37387318)
 https://codeforces.com/contest/846/problem/C   (Four Segments, dp, smart bruteforce, https://codeforces.com/contest/846/submission/91525432)
+https://codeforces.com/contest/1409/problem/F  (Subsequences of Length Two, dp, top-down, https://codeforces.com/contest/1409/submission/91890655)
 
-
-
+https://codeforces.com/contest/1197/problem/D (Yet Another Subarray Problem, Yet Another Subarray Problem, https://codeforces.com/contest/1197/submission/93055691)
+https://www.codechef.com/problems/BULBS   (greedy,  like knapsack, smart bruteforce, https://www.codechef.com/viewsolution/38080854)

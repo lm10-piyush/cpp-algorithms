@@ -52,4 +52,7 @@ int main(){
 /*
 https://www.spoj.com/problems/MST/
 
+https://codeforces.com/contest/1243/problem/D   
+(0-1 MSTm set trick, https://codeforces.com/contest/1243/submission/94438372)
+
 */

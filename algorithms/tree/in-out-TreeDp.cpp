@@ -70,6 +70,8 @@ int main(){
 
     return 0;
 }
+23280703616545
+23280704411563
 
 // https://cses.fi/problemset/task/1132
 

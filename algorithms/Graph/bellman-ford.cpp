@@ -28,7 +28,7 @@ void bellmanFord(int s, int n, int m) {
     dist[s] = 0;
     for (int k = 0; k < n-1; k++) {
         for (int i = 0; i < m; ++i) {
-            watch(edges[i].a, edges[i].b);
+            // watch(edges[i].a, edges[i].b);
             if (dist[edges[i].a] < inf)
                 dist[edges[i].b] = min(dist[edges[i].b], dist[edges[i].a] + edges[i].w);
         }

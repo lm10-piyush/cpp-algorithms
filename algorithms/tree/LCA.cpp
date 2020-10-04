@@ -101,4 +101,7 @@ soln: https://pastebin.com/GZVk5GVg
 https://cses.fi/problemset/task/1687  (climbing up the tree in power of 2's)
 https://pastebin.com/kb3gJTJb
 
+https://codeforces.com/contest/208/problem/E  (E. Blood Cousins, climbing, DSU on trees)
+https://codeforces.com/contest/208/submission/94405990
+
 */

@@ -1,5 +1,3 @@
- //https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication/0
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -48,6 +46,9 @@ int main(){
     cout << MCM(p, n);
 }
 
+//practice Problems:
+
+ //https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication/0
 //https://www.codechef.com/PRACTICE/problems/CIRMERGE   (Circular Merge, Same as Matrix chain Multiplication, 
 //(by doubling the array) https://www.codechef.com/viewsolution/37386387
 // (by just using mod) https://www.codechef.com/viewsolution/37387318)
