@@ -21,7 +21,7 @@ void sieve(){
   primes.reset(1);
   
   //if we have to check only primes then, it is better to do: i*i < N, in first loop,
-  //no need to go to i < N
+  //So, no need to go to i < N
   for (ll i = 2; i < N; ++i){  
     if(primes[i]){
       factors[i] = i;
@@ -33,7 +33,6 @@ void sieve(){
       }
     }
   }
-
 }
 
 
@@ -71,4 +70,9 @@ int main(){
  * https://atcoder.jp/contests/abc177/submissions/16637688
 
  *https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/easy-10-cc/problem
+ * https://codeforces.com/contest/1034/problem/A         (Nice problem, strick time limit)
+ * https://codeforces.com/contest/1034/submission/96812902
+
+ * https://www.codechef.com/problems/COPAR
+ * https://www.codechef.com/viewsolution/39257263
 */

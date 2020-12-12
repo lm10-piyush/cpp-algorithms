@@ -54,4 +54,7 @@ int main(){
 
 https://cses.fi/problemset/task/1672
 
+https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/algorithm/pilgrims-and-portals/description/
+https://pastebin.com/rZJZf4Fd   (with MST (kruskal or Prims))
+
 */

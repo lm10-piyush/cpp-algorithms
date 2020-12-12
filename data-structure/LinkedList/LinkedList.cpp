@@ -71,15 +71,25 @@ void deleteEnd(Node * &head) {
 
 void reverseList(Node * &head) {
     if (head == NULL) return;
-    Node *prev = NULL, *curr = head, *next = head->next;
+    Node *prev = NULL, *curr = head;
     while (curr != NULL) {
+        Node *nxt = curr->next;
         curr->next = prev;
-        head = curr;
         prev = curr;
-        curr = next;
-        if (next != NULL)
-            next = next->next;
+        curr = nxt;
     }
+    head = prev; //prev will point the last end
+}
+
+//middle node of the linked list
+Node *middle(Node *head) {
+    if (head == nullptr) return head;
+    Node *slow = head, *fast = head;
+    while (fast != nullptr and fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
 }
 
 
@@ -126,3 +136,21 @@ int main(){
 
     return 0;
 }
+
+//https://leetcode.com/problems/linked-list-cycle/  (Cycle finding by Floywarshall tortoise, hare)
+//https://leetcode.com/problems/reverse-linked-list/  (reverse the linked list)
+//https://leetcode.com/problems/reverse-linked-list-ii/  (https://pastebin.com/Ddu1hKAL)
+//https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/  (Divide and conquer)
+//https://leetcode.com/problems/sort-list/          (Sort the linked list in O(n.logn), O(1) space, divide and conquer, merge sort, https://pastebin.com/BFQRwCJF)
+//https://leetcode.com/problems/intersection-of-two-linked-lists/
+//https://leetcode.com/problems/odd-even-linked-list/
+//https://leetcode.com/problemset/all/?search=Linked%20list
+// https://leetcode.com/problems/palindrome-linked-list/  (solution is combined with reverse at the midle, https://pastebin.com/6YW48eJN)
+//https://www.interviewbit.com/problems/add-two-numbers-as-lists/  (soln: https://pastebin.com/5yVDc7Yb)
+//https://leetcode.com/problems/add-two-numbers-ii/  (soln: https://pastebin.com/i7wTkuJP)
+//https://leetcode.com/problems/middle-of-the-linked-list/
+//https://leetcode.com/problems/reorder-list/     (middle find and reverse, https://pastebin.com/m3K4vNxG)
+//https://leetcode.com/problems/reverse-linked-list-ii/  (https://pastebin.com/27ftfb6Z)
+// https://leetcode.com/problems/reverse-nodes-in-k-group/  (reverse and some corner casesoln: https://pastebin.com/uXdR0DHa)
+//https://www.interviewbit.com/problems/reverse-alternate-k-nodes/   (reverse, https://pastebin.com/Jw1e0pzZ)
+//https://www.interviewbit.com/problems/kth-node-from-middle/    (reverse, https://pastebin.com/Dm4GsCE6)

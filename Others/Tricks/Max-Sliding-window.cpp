@@ -14,6 +14,8 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 //same as monotonic queue
 //https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/
 //https://practice.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k/0
+//https://cses.fi/problemset/task/1660
+//https://leetcode.com/problems/sliding-window-maximum/
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);

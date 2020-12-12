@@ -21,11 +21,8 @@ int gcd(int a, int b, int &x, int &y){
 
 
 int  main(){
-	int a, b, x, y;
-
-	cin >> a >> b;
-
+	int a, b, x, y; cin >> a >> b;
+	
 	int d = gcd(a, b, x, y);
-
 	cout << x << ' ' << y << ' ' << d;
 }

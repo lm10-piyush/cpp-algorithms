@@ -32,26 +32,13 @@ int LIS_bi(int A[], int n){
 
 //************* Using inubilt lower_bound**********
 int LIS(int A[], int n){
-    vector<int> v;
-    v.push_back(A[0]);
-
-    int len = 1;
-
-    for (int i = 1; i < n; ++i){
-        if(A[i] < v[0])
-            v[0] = A[i];
-        else if(A[i] > v[len - 1]){
-            v.push_back(A[i]);
-            len++;
-        }
-
-        else{
-            auto pos = lower_bound(v.begin(),v.end(),A[i]) - v.begin();
-            v[pos] = A[i];
-        }
+    vector<int> dp;
+    for (int i = 0; i < n; ++i) {
+        int pos = lower_bound(dp.begin(), dp.end(), A[i]) - dp.begin();
+        if (pos >= (int)dp.size()) dp.push_back(A[i]);
+        else dp[pos] = A[i];
     }
-    
-    return len;
+    return dp.size();
 }
 
 int main(){

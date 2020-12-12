@@ -46,13 +46,13 @@ int main(){
 /*
 We have 3 choices if current letters don't match : replace, insert, delete.
 
-start from the last position to first b => [N....1], same as a => [M...1],
-i = m, j = n;
+start from the last position to first, b => [N....1], same as a => [M...1],
+i = m, j = n; (remember we are moving back to front)
 if they matched then, just decrement both pointers.
 if they don't matched then for: replace, replace the a[j] with the b[i], +1 operation required then just decrement both pointers 
                                 insert, insert the character at a[j+1], +1 operation required then just drecment only ith pointer
                                       becuz b[i] is matched with a[j+1].
-                                delete, delete the a[j], +1 operation requred, then just decrement the jth pointer, becuz element is deleted. 
+                                delete, delete the a[j], +1 operation required, then just decrement the jth pointer, becuz element is deleted. 
                                 pick the best one => min(replace, insert, delete) + 1
 Recurrence : if s[i] == s[j] then dp[i][j] = dp[i-1][j-1];
             else dp[i][j] = min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1]) + 1; //replace, insert, delete

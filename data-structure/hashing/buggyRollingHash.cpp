@@ -51,7 +51,7 @@ int main(){
             else if (hash2 == hash1) ans.push_back(j);
             continue;
         }
-        hash2 = (((hash2 - (s[j++]-'a'+1)) * inv)%mod + (s[i]-'a'+1)*power) % mod; 
+        hash2 = (((hash2 - (s[j++]-'a'+1)) * inv) % mod + (s[i]-'a'+1)*power) % mod; 
         if (hash2 == hash1) {
             ans.push_back(j);
         }

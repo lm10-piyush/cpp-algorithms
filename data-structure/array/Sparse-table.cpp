@@ -51,7 +51,7 @@ struct STable {
         return ans;
     }  
 
-};
+};  
 
 
 int main(){
@@ -88,4 +88,7 @@ http://algoshots.herokuapp.com/problems/queue-91B/  (greedy solution also)
 
 https://codeforces.com/contest/846/problem/D  O(1) query
 https://codeforces.com/contest/846/submission/91562490
+
+https://codeforces.com/contest/1454/problem/F  (+ binary search)
+https://codeforces.com/contest/1454/submission/101060423
 */

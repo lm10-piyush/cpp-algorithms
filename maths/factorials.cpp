@@ -74,3 +74,6 @@ int main(){
 
 //https://atcoder.jp/contests/abc178/tasks/abc178_c
 //https://atcoder.jp/contests/abc178/submissions/16733179
+
+//https://www.hackerrank.com/challenges/coinage/problem
+//solution : smart brute force

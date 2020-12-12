@@ -12,7 +12,7 @@ https://leetcode.com/problems/subarray-sum-equals-k/
 https://codeforces.com/problemset/problem/1215/B  (Similar prefix, https://codeforces.com/contest/1215/submission/85720559)
 https://leetcode.com/problems/binary-tree-level-order-traversal-ii/  (DFS with stable_sort(), https://pastebin.com/hXEtJcWN)
 https://leetcode.com/problems/binary-tree-level-order-traversal/ (Similar DFS with stable_sort())
-https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/  (Using BFS sol: https://pastebin.com/m2ikvuZ1, it can be done using DFS then apply stable sort)
+https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/  (Using BFS sol: https://pastebin.com/QKHe98Pb, it can be done using DFS then apply stable sort)
 https://leetcode.com/problems/validate-stack-sequences/
 https://www.hackerrank.com/challenges/non-divisible-subset/problem
 https://codeforces.com/contest/1325/problem/D  (Bits, https://codeforces.com/contest/1325/submission/73434657)
@@ -47,7 +47,8 @@ https://codeforces.com/contest/436/problem/A   (Greedy, comparator sorting, http
 https://codeforces.com/contest/1165/problem/E   (Greedy, Contribution, sorting, https://codeforces.com/contest/1165/submission/89827636)
 https://codeforces.com/contest/1399/problem/E1   (Weights Division (easy version), Greedy trees, https://codeforces.com/contest/1399/submission/91700622)
 https://cses.fi/problemset/task/1630      (Tasks and Deadlines, https://pastebin.com/3pGPyhqD)
-https://leetcode.com/problems/largest-number/
+https://leetcode.com/problems/largest-number/   (Largest number, https://pastebin.com/12PVfsVS)
+https://codeforces.com/contest/632/problem/C    (The Smallest String Concatenation, https://codeforces.com/contest/632/submission/94871653)
 
 ********************************************************************************************
 
@@ -63,6 +64,7 @@ https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-08-aug/ch
 https://codeforces.com/contest/246/problem/B (Greedy, to equalize, https://codeforces.com/contest/246/submission/89361857)
 https://codeforces.com/contest/1037/problem/C  (Greedy dp, to equalize, https://codeforces.com/contest/1037/submission/69925262)
 https://cses.fi/problemset/task/1074         (Stick Lengths, equalize, median, https://pastebin.com/DEncycha)
+https://cses.fi/problemset/task/1076       (Sliding Median, gnu_pbds, https://pastebin.com/bmijeLZh)
 
 https://codeforces.com/contest/709/problem/B  (greedy, maths, https://codeforces.com/contest/709/submission/89363892)
 https://leetcode.com/problems/max-points-on-a-line/  (No number of points in straight line, https://pastebin.com/uvMUnffN)
@@ -71,6 +73,7 @@ https://codeforces.com/contest/293/problem/A  (Greedy, game theory, https://code
 https://codeforces.com/contest/494/problem/A  (greedy, brackets balancing, https://codeforces.com/contest/494/submission/89610886)
 https://codeforces.com/contest/495/problem/C   (Treasure, greedy, brackets balancing, https://codeforces.com/contest/495/submission/92209575)
 https://codeforces.com/contest/1153/problem/C   (Serval and Parenthesis Sequence, Brackets balancing, https://codeforces.com/contest/1153/submission/93130884)
+https://codeforces.com/contest/223/problem/A    (Bracket Sequence, brackets balancing, https://codeforces.com/contest/223/submission/95571306)
 https://codeforces.com/contest/520/problem/B  (Greedy, divide, https://codeforces.com/contest/520/submission/89652072)
 https://codeforces.com/contest/1095/problem/C  (Greedy, https://codeforces.com/contest/1095/submission/89653975)
 https://codeforces.com/contest/1397/problem/B   (Greedy, maths, https://codeforces.com/contest/1397/submission/91674081)
@@ -90,6 +93,8 @@ https://codeforces.com/contest/495/problem/B    ( Modular Equations, https://cod
 https://codeforces.com/contest/1407/problem/C     (Chocolate Bunny, https://codeforces.com/contest/1407/problem/C)
 https://codeforces.com/contest/922/problem/C      ( Cave Painting, modulo concept, trick, https://codeforces.com/contest/922/submission/93517948)
 https://codeforces.com/contest/1056/problem/B  (Divide Candies, https://codeforces.com/contest/1056/submission/93879253)
+https://www.codechef.com/PRACTICE/problems/SSO  (https://www.codechef.com/viewsolution/39257973)
+https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/  (https://pastebin.com/hLSLVZuT)
 ****************************************************************************************************************
 
 
@@ -146,6 +151,12 @@ https://codeforces.com/contest/523/problem/D  (Statistics of Recompressing Video
                                               other solutions https://codeforces.com/contest/523/submission/92444126, https://codeforces.com/contest/523/submission/92444192)
 https://www.codechef.com/ICPCIN19/problems/SEGDIR   (Icpc online problem India 2019, 	https://www.codechef.com/viewsolution/37940578) 
 https://leetcode.com/problems/merge-intervals/     (Merge intervals, https://pastebin.com/QDRYDxKs)
+https://cses.fi/problemset/task/1632            (Movie festival 2, https://pastebin.com/sm9rDmqv)
+https://leetcode.com/problems/remove-covered-intervals/    (https://pastebin.com/K6psy6Er)
+https://codeforces.com/contest/1101/problem/C    (Division and Union, https://codeforces.com/contest/1101/submission/94759260)
+https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/  (https://pastebin.com/xqZveaPx)
+https://codeforces.com/contest/137/problem/C  (History, https://codeforces.com/contest/137/submission/96306026, https://codeforces.com/contest/137/submission/96306245)
+https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
 
 /**********************************************************************************************************
 
@@ -164,6 +175,8 @@ https://cses.fi/problemset/task/1163          (Traffic Lights,https://pastebin.c
 https://codeforces.com/contest/1106/problem/D   (Lunar New Year and a Wander, https://codeforces.com/contest/1106/submission/93151637)
 https://codeforces.com/contest/920/problem/E    (E. Connected Components?, complement graph, https://codeforces.com/contest/920/submission/93517563)
 https://codeforces.com/contest/1243/problem/D   (0-1 MST, same as above, https://codeforces.com/contest/1243/submission/94438372)
+https://leetcode.com/problems/k-diff-pairs-in-an-array/   (https://pastebin.com/xMQKa9YJ)
+https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
 ***************************************************************
 https://codeforces.com/contest/858/problem/D      (Polycarp's phone book, heavy implementation of stl and string, https://codeforces.com/contest/858/submission/92433126)
 
@@ -189,3 +202,61 @@ https://cses.fi/problemset/task/1645        (Nearest Smaller Values, simple two 
 
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003381cb#problem (Perfect subarray, Don't use Map it will give TLE, use vector, https://pastebin.com/nvWVgJ3T)
 https://codeforces.com/contest/1426/problem/C         (Increase and Copy, maths, greedy, https://codeforces.com/contest/1426/submission/94132603)
+https://leetcode.com/problems/combination-sum/            (brute force, https://pastebin.com/yHNNnpqM)
+https://cses.fi/problemset/task/1641           (Sum of Three Values, https://cses.fi/paste/9bd0c5500db3f944108165/)
+https://cses.fi/problemset/task/1642           (Sum of Four Values, four somes, using map and break down, https://cses.fi/paste/1d1fd9ab739d34931082f3/)
+https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/practice-problems/algorithm/find-the-cycles/description/  (graph, cycles, https://pastebin.com/5gyyHYkd)
+https://codeforces.com/contest/103/problem/B         (Cthulhu, graphs and cycles, https://codeforces.com/contest/103/submission/94753112)
+https://codeforces.com/contest/148/problem/B       (Escape, Maths, time-speed, https://codeforces.com/contest/148/submission/94766652)
+
+https://codeforces.com/contest/49/problem/C   (Disposition, Read problem carefully, permutation, https://codeforces.com/contest/49/submission/94770326)
+https://codeforces.com/contest/161/problem/B    (Discounts, GREedy, amazing problem, https://codeforces.com/contest/161/submission/94845553)
+https://codeforces.com/contest/818/problem/D    (Multicolored Cars, greedy, sets, trick, https://codeforces.com/contest/818/submission/94869215)
+https://codeforces.com/contest/510/problem/B  (Fox And Two Dots, DFS on matrix with some constraints, https://codeforces.com/contest/510/submission/96392581)
+
+/************************************* EXPECTED VAlue *****************************************
+
+https://codeforces.com/contest/453/problem/A  (Little Pony and Expected Maximum, https://codeforces.com/contest/453/submission/94976965)
+
+
+**********************************************************************************************
+https://leetcode.com/problems/buddy-strings/   (Greedy, implementation)
+https://leetcode.com/problems/remove-duplicate-letters/      (greedy, implementation, stack)
+https://leetcode.com/problems/asteroid-collision/    (Simple stack based problem)
+
+https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/  (Divide and conquer, https://pastebin.com/ZzmStxbv)
+https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/  (Divide and conquer, similar to above, https://pastebin.com/nuLTxV7z)
+https://leetcode.com/problems/sort-list/          (Sort the linked list in O(n.logn), O(1) space, divide and conquer, merge sort, https://pastebin.com/BFQRwCJF)
+
+https://codeforces.com/contest/160/problem/C  (Find Pair, maths, counts, https://codeforces.com/contest/160/submission/95541594)
+https://codeforces.com/contest/193/problem/A  (Cutting Figure, dfs, nice problem, not good solution: https://codeforces.com/contest/193/submission/95511843, see editorial for better understanding)
+https://codeforces.com/contest/81/problem/C   (Average Score, maths, average, https://codeforces.com/contest/81/submission/96021908)
+https://leetcode.com/problems/clone-graph/   (Clone the graph, https://pastebin.com/sSuJ3inh)
+https://codeforces.com/contest/1084/problem/C  (The Fair Nut and String, Combinatorics, Maths trick, Important, https://codeforces.com/contest/1084/submission/96390657)
+https://leetcode.com/problems/bag-of-tokens/  (Bag of Tokens, two pointers, https://pastebin.com/SKVPzvrw)
+https://www.youtube.com/watch?v=hQfGfvPFyqo   (leetcode Divide the array into increasing sequences)
+https://www.codechef.com/LTIME89B/problems/SSO   (bits, bitwise OR, contribution, https://www.codechef.com/viewsolution/39257973)
+https://leetcode.com/problems/bitwise-ors-of-subarrays/solution/
+https://leetcode.com/problems/gas-station/
+https://www.codechef.com/PRACTICE/problems/GASOLINE   (Greedy, GAS, Similar like Leetcode, observation, IMPORTANT trick, https://www.codechef.com/viewsolution/39948882)
+https://leetcode.com/problems/validate-binary-search-tree/   (Check given tree is BST or NOT, https://pastebin.com/u521GJrz)
+https://leetcode.com/problems/kth-smallest-element-in-a-bst/  (just find the inorder traversal, 'cuz it is sorted)
+https://www.codechef.com/LTIME90B/problems/XORCOMP      (Greedy, Bits, corner cases, https://www.codechef.com/viewsolution/39953413)
+https://leetcode.com/problems/smallest-integer-divisible-by-k/  (maths, trick, count, https://pastebin.com/XLk7Zqym)
+https://www.interviewbit.com/problems/inorder-traversal-of-cartesian-tree/  (Cartesian Tree like heap, https://pastebin.com/nMagk8Sk)
+https://www.interviewbit.com/problems/sorted-array-to-balanced-bst/  (simple recursive, https://pastebin.com/9C3dxTn3)
+https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/  (Tree bfs, O(n) space soln: https://pastebin.com/EDYpLtEF, O(1) space soln: https://pastebin.com/F6QYx75j)
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/  (Tree, https://pastebin.com/5uReskTC)
+https://leetcode.com/problems/symmetric-tree/     (Tree, https://pastebin.com/LmZp3FQc)
+https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/   (Another version, https://pastebin.com/N569AAbe)
+https://www.interviewbit.com/problems/maximum-edge-removal/        (Tree, https://pastebin.com/FnQKiXs1)
+https://www.interviewbit.com/problems/remove-half-nodes/     (Tree, https://pastebin.com/KAeVkyBR)
+https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/  (like unique function in c++, https://pastebin.com/WiXzTUFj)
+https://codeforces.com/contest/1454/problem/E   (Trees, cycle, N nodes & N edges, contribution technique, soln: https://codeforces.com/contest/1454/submission/100904774 , Another :tricky solution watch tutorial)
+https://www.codechef.com/SPRT2020/problems/IDXNUMBR   (numbers and maths, counting, https://www.codechef.com/viewsolution/40359198)
+
+
+
+
+
+

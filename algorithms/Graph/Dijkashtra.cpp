@@ -81,4 +81,6 @@ https://pastebin.com/2Zk9QLMq
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/noise-control
 https://pastebin.com/CWadhYFW
 
+https://codeforces.com/contest/938/problem/D     (A bit tricky ques)
+https://codeforces.com/contest/938/submission/95437028
 */

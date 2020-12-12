@@ -51,4 +51,8 @@ int main(){
 
 https://practice.geeksforgeeks.org/contest-problem/tie-the-poles-in-pairs/0/  (problem on catalan number)
 Catalan(n) = (1/(n+1)) * 2nCn 
+
+https://leetcode.com/problems/champagne-tower/
+https://pastebin.com/Kg7wZN4u
+
 */

@@ -30,6 +30,9 @@ int main(){
 //https://leetcode.com/problems/subarray-sum-equals-k/
 //count the total number of subarray-whose sum is k;
 
+//https://cses.fi/problemset/task/1661
+//https://pastebin.com/CSg5n0X8
+
 //https://www.codechef.com/COCA2020/problems/COCA2001
 //https://www.codechef.com/viewsolution/34733651
 
@@ -45,5 +48,8 @@ int main(){
 //https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/   ((a + b) % k = 0) => b = (k - a) % k (NOTE: caution about negative)
 //https://pastebin.com/dzaUHSUP
 
-//https://cses.fi/problemset/task/1662   (pref[r] - pref[l]) % n = 0
+//https://cses.fi/problemset/task/1662   (pref[r] - pref[l]) % n = 0 => pref[r] % n = pref[l] % n
 //https://pastebin.com/C4LxG7H5
+
+//https://cses.fi/problemset/task/1642    (map trick)
+//https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/ (https://pastebin.com/hLSLVZuT)

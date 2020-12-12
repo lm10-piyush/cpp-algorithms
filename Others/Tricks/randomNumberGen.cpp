@@ -26,7 +26,7 @@ struct Random {
 
 struct Randoom {
     mt19937 rng;
-    Random() {
+    Randoom() {
         auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
         rng = mt19937(seed);
     }

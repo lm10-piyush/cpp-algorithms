@@ -23,7 +23,7 @@ int bi_search(vector<int> &v, int x){
       int mid = (lo + hi + 1) >> 1;  //ceil: it is really helpful when lo & hi are adjacent.
       if(v[mid] <= x)
         lo = mid;
-      else hi = mid-1;  //also important
+      else hi = mid-1;  //also important, NOTE: to apply on floating points, hi = mid - (1e-8) 
     }
     return lo;
 }
@@ -80,6 +80,9 @@ int main(){
 //try binary search in this way: while (hi - lo > 1){}, in this way you will the range [lo, lo+1]
 
 /*
+https://codeforces.com/contest/1408/problem/C  (Discrete Acceleration, Binary search on POINTS)
+https://codeforces.com/contest/1408/submission/94390152
+
 https://codeforces.com/contest/1117/problem/C (Tip, displacement is order Independent)
 solN: https://codeforces.com/contest/1117/submission/88736716
 
@@ -106,4 +109,17 @@ https://pastebin.com/5J165eFz
  https://pastebin.com/u7ETqb75
 
 https://pastebin.com/tWQNM2Nj   (binary search on the matrix)
+
+https://cses.fi/problemset/task/1085
+https://pastebin.com/m8svmF50
+
+https://atcoder.jp/contests/hhkb2020/tasks/hhkb2020_c  (BIT, MEX query with binary search)
+https://atcoder.jp/contests/hhkb2020/submissions/17299633
+
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+https://pastebin.com/pUiy846u
+
+
+https://codeforces.com/contest/1454/problem/F  (sparse table + binary search)
+https://codeforces.com/contest/1454/submission/101060423
 */

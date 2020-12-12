@@ -54,4 +54,6 @@ int main(){
 https://codeforces.com/contest/846/problem/D  O(1) query
 https://codeforces.com/contest/846/submission/91562490
 
+https://codeforces.com/contest/52/problem/B   
+( Right Triangles, prefix matrix sum, combinatorics, https://codeforces.com/contest/52/submission/96801646)
 */

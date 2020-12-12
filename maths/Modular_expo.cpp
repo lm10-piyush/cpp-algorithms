@@ -39,3 +39,6 @@ int main(){
 	long long int r=modMul(2,1,1000000007);
 	cout<<r;
 }
+
+//https://codeforces.com/contest/678/problem/D
+//https://codeforces.com/contest/678/submission/94870819

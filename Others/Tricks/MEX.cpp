@@ -53,4 +53,5 @@ concept: If number of distinct elements at 'i' is equal to i+1, ie., cnt[i]==i+1
 
         qury, So just maintain the number of unique elements in the range [l, r] or number of elements less than 'i'.
 
+: we can find MEX using segment tree also via using similar concept by keeping count of number of elements.
 */

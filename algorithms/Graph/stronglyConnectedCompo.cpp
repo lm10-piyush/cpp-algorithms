@@ -73,4 +73,6 @@ int main(){
 https://www.hackerearth.com/practice/algorithms/graphs/strongly-connected-components/practice-problems/algorithm/a-walk-to-remember-qualifier2/description/
 https://pastebin.com/249ArebS
 
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-10-october/challenges/2-directions
+https://pastebin.com/KnethsHB
 */

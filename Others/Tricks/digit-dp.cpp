@@ -49,12 +49,27 @@ int main(){
 }
 
 /*
+https://codeforces.com/blog/entry/77096  (Bottom up dp)
+
+
 just trying all possibilities, using brute force then cache the calls.
-https://atcoder.jp/contests/dp/submissions/14598857
+https://atcoder.jp/contests/dp/tasks/dp_s
 
 https://www.codechef.com/problems/KANYASAI
 soln: https://www.codechef.com/viewsolution/29212253
 
 https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/
 https://pastebin.com/jAiqXvns
+
+https://codeforces.com/contest/1036/problem/C
+https://codeforces.com/contest/1036/submission/95498710  (Top-down solution)
+https://codeforces.com/contest/1036/submission/95501389  (Bottom-up solution)
+https://codeforces.com/contest/1036/submission/95527462  (bottom up memory optimized)
+
+https://leetcode.com/problems/numbers-at-most-n-given-digit-set/
+https://pastebin.com/GYaPuSm9
+
+https://codeforces.com/gym/100886/problem/G
+https://pastebin.com/PZTU54iM
+
 */

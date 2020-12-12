@@ -1,4 +1,6 @@
 ***************************** BASICS********************************************
+DP: says how we can use the already calculated things and then build the ans for bigger ones. Ex: power Exponentation, 0/1 knapsack etc.
+
 IN DP: Dp is all about caching the data(function calls), or you can say, when I can build the bigger solution 
 using smaller solution such that subproblem "overlapp" and also holds the "optimal substructure". It doesn't matter, problem involves
 trying all possiblity or not, you can do it using dp, if above condition holds then you can do it using DP. But mostly you see
@@ -72,6 +74,23 @@ There could be two Push dp and Pull dp. In push-dp we fill the next state from c
 in pull dp, we fill the current state using previous state via only valid moves(s).  
 Bottom up Pull dp: f(current state) = f(previous state) // finding the current state using the previous state.
 Bottom up Push dp: f(next state) = f(current state) // finding the next state using the current state(already known).
+
+To solve dp problem: 1st step should be to prove that it is a dp problem. Find its states (states should not be less or more, these should be accurate),
+the find recurrence relation.
+
+In topdown: just implment the recurence relation and memoise it.
+
+In Bottom up: After finding recurrence relation. Be careful while running loops, you should move from lower states to higher states OR to calculate smaller
+states first then higher states using bigger states (by reccurrence relation). 
+
+********************************************* Process in a Nutshell *******************************************
+To solve dp problem: 1st step should be to prove that it is a dp problem. Find its states (states should not be less or more, these should be accurate),
+then give some meaning or definition to that state, then find recurrence relation or transition between states (smaller problems to bigger).
+
+In topdown: just implment the recurence relation and memoise it.
+
+In Bottom up: After finding recurrence relation. Be careful while running loops, you should move from lower states to higher states OR to calculate smaller
+states first then higher states using bigger states (by reccurrence relation). 
 
 *************************************Memory efficient and time efficient*****************************************
 * Bottom up helps to optimize the dp solution because it is our responsiblity to run it itertively, like ye can apply segment tree, stacks to update
@@ -252,6 +271,7 @@ https://leetcode.com/problems/partition-equal-subset-sum/ (DP, looks like 3D, bu
 https://cses.fi/problemset/task/1745  (Same problem as above(partition-equal-subset-sum) we have to check which sums I can make using the coins)
 https://cses.fi/problemset/task/1093  (Same as above problem with fermat little theorem)
 https://codeforces.com/problemset/problem/859/C  (DP, Game theory)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-31-october/challenges/0-1-alternate-substrings  (0-1 alternate substrings, basic dp count, https://pastebin.com/9y0Mzs4J)
 http://lightoj.com/volume_showproblem.php?problem=1011 (DP with bitmask, solN: https://pastebin.com/j1v4eTZ9)
 https://www.spoj.com/problems/EPALIN/ (DP, edit distance)
 https://cses.fi/problemset/task/1097  (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ)
@@ -298,9 +318,9 @@ https://codeforces.com/problemset/problem/519/D  (DP, map+prefix sum, https://co
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ (DP, top-down, https://pastebin.com/v2sndhee)
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/  (DP, stocks with cooldown, top-down, https://pastebin.com/r7iyur9J)
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ (DP, top-down, https://pastebin.com/k0xYCkHk)
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/ (DP, top-down, https://pastebin.com/h4Zs9UWF)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/ (DP, top-down, https://pastebin.com/h4Zs9UWF, bottom-up https://pastebin.com/SMxTa7Ys)
 https://codeforces.com/problemset/problem/1286/A (DP, greedy, greedy soln: https://codeforces.com/contest/1286/submission/88371451)
-https://leetcode.com/problems/word-break/ (DP, top-down soln: https://pastebin.com/b90ppyvQ)
+https://leetcode.com/problems/word-break/ (DP, top-down soln: https://pastebin.com/b90ppyvQ, bottom-up: https://pastebin.com/tLeuvZN6)
 https://leetcode.com/problems/word-break-ii/  (DP, top-down, backtracking, https://pastebin.com/wRNB3zFW)
 https://leetcode.com/problems/dungeon-game/  (DP + greedy)
 https://leetcode.com/problems/concatenated-words/  (Dp, similar to word break, top-down https://pastebin.com/M8wa2gDu)
@@ -340,3 +360,39 @@ https://codeforces.com/contest/1409/problem/F  (Subsequences of Length Two, dp, 
 
 https://codeforces.com/contest/1197/problem/D (Yet Another Subarray Problem, Yet Another Subarray Problem, https://codeforces.com/contest/1197/submission/93055691)
 https://www.codechef.com/problems/BULBS   (greedy,  like knapsack, smart bruteforce, https://www.codechef.com/viewsolution/38080854)
+
+https://codeforces.com/contest/453/problem/B  (Little Pony and Harmony Chest, DP with bitmask, Gerate the solution array, compression cordinates, top-down: https://codeforces.com/contest/453/submission/95014465, bottom up: https://codeforces.com/contest/453/submission/95014402)
+https://codeforces.com/contest/1427/problem/C  (The Hard Work of Paparazzi, observation greedy trick, https://codeforces.com/contest/1427/submission/95159252)
+https://codeforces.com/contest/1036/problem/C  (Classy Numbers, digit dp, top-down: https://codeforces.com/contest/1036/submission/95498710, bottom up: https://codeforces.com/contest/1036/submission/95501389, bottom up with memory optimized: https://codeforces.com/contest/1036/submission/95527462)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/  (Best Time to Buy and Sell Stock IV, tight time limit and memory, topdown (memory error): https://pastebin.com/0NPep6ic, (bottom-up)(memory error) https://pastebin.com/jhYsEKn7, (bottom up with memory optimised) https://pastebin.com/FcRAMFGR)
+
+/************************************* Expected Value ****************************************************************
+https://atcoder.jp/contests/dp/tasks/dp_j
+https://atcoder.jp/contests/dp/tasks/dp_i                   (probability)
+https://codeforces.com/contest/1187/problem/F
+https://codeforces.com/contest/846/problem/F
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000386edd
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d8565     (Probability)
+https://codingcompetitions.withgoogle.com/kickstart/round/00000000001a0069/0000000000415054#problem
+
+/******************************************************************************************************
+
+https://codeforces.com/contest/1433/problem/F  (Zero remainder sum, modulus, DP on matrix, like knapsack, top-down: https://codeforces.com/contest/1433/submission/96314904, bottom up: https://codeforces.com/contest/1433/submission/96382463)
+https://codeforces.com/contest/1084/problem/C  (The Fair Nut and String, Combinatorics, Maths trick, Important, https://codeforces.com/contest/1084/submission/96390657)
+https://leetcode.com/problems/max-dot-product-of-two-subsequences/  (same as LCS, top-down: https://pastebin.com/8Vh7hXiC, bottom-up https://pastebin.com/eJbKqUgJ)
+https://leetcode.com/problems/stone-game-iv/   (Basic dp, game theory, https://pastebin.com/DMwW7Gzq)
+https://leetcode.com/problems/stone-game/   (Minimax dp, game thoery, Trival solution, soln: return true)
+https://codeforces.com/contest/52/problem/B   ( Right Triangles, prefix matrix sum, combinatorics, https://codeforces.com/contest/52/submission/96801646)
+https://codeforces.com/contest/1034/problem/A   ( Enlarge GCD, maths, seive, https://codeforces.com/contest/1034/submission/96812902)
+https://codeforces.com/contest/1437/problem/C  (Chef Monocarp, sorting dp, greediness, top-down: https://codeforces.com/contest/1437/submission/96932273,  bottom-up: https://codeforces.com/contest/1437/submission/96932623)
+https://www.codechef.com/problems/SUBMEXS   (Chef and Subtree MEXs, Tree-dp, https://www.codechef.com/viewsolution/39248243	)
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-31-october/challenges/maximum-sum-tree/copy-from/1327850404  (Maximum Sum Tree,Tree DP, https://pastebin.com/NtCvEcad)
+https://leetcode.com/problems/binary-tree-maximum-path-sum/  (Tree dp, https://pastebin.com/zbibabtj)
+
+
+
+
+
+
+
+

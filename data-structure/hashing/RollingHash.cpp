@@ -53,6 +53,7 @@ struct PolyHash {
             pow1.push_back(pow1.back() * base % mod);
             pow2.push_back(pow2.back() * base);
         }
+        //1-based indexing used for pref1, pref2
         for (int i = 0; i < n; ++i) {
             assert(base > s[i]);
             pref1[i+1] = (pref1[i] + s[i] * pow1[i]) % mod;
@@ -60,7 +61,7 @@ struct PolyHash {
         }
     }
 
-    //calculating the hash of segment (pos, pos+len] and returning hash by both modules
+    //calculating the hash of segment [pos, pos+len) and returning hash by both modules
     pair<ll, ull> operator()(int pos, int len, int mxpow = 0) {
         ll hash1 = pref1[pos + len] - pref1[pos];
         ll hash2 = pref2[pos + len] - pref2[pos];
@@ -112,4 +113,7 @@ https://pastebin.com/gHP9PJ7Y
 
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-25th-july/challenges/hard-1-cc
 solution: just move over the multiple of n, so solutin will be O(n.sqrt(n))
+
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-31-october/challenges/palindromic-query
+https://pastebin.com/WmJ6SLVq
 */

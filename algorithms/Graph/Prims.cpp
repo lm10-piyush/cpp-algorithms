@@ -39,7 +39,7 @@ int main(){
     int n, m; cin >> n >> m;
     for (int i = 0, v, u, w; i < m; ++i) {
         cin >> u >> v >> w;
-        graph[u].push_back({w, v});
+        graph[u].push_back({w, v}); //weight, node
         graph[v].push_back({w, u});
     }
 
@@ -55,4 +55,6 @@ https://www.spoj.com/problems/MST/
 https://codeforces.com/contest/1243/problem/D   
 (0-1 MSTm set trick, https://codeforces.com/contest/1243/submission/94438372)
 
+https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/algorithm/pilgrims-and-portals/description/
+https://pastebin.com/rZJZf4Fd  (with floyd warshall)
 */

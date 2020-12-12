@@ -103,6 +103,8 @@ https://pastebin.com/jNap9hvZ
 
 https://cses.fi/problemset/task/1646
 
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-10-october/challenges/changing-binary-search-tree/problem
+
 https://codeforces.com/contest/1208/problem/D (restore permutations, BIT, binary serach)
 https://codeforces.com/contest/1208/submission/83283233 
 
@@ -132,5 +134,8 @@ https://pastebin.com/XCc6Hq8X
 
  * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
  * https://pastebin.com/Kdb74mwu   (using fenwick tree)
+
+https://atcoder.jp/contests/hhkb2020/tasks/hhkb2020_c  (MEX query with binary search)
+https://atcoder.jp/contests/hhkb2020/submissions/17299633
 
 */

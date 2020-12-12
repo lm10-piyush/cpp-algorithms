@@ -44,3 +44,4 @@ int main(){
 
 //https://leetcode.com/problems/find-the-duplicate-number/
 //https://leetcode.com/problems/linked-list-cycle-ii/  (similar code with pointers validations)
+//https://leetcode.com/problems/linked-list-cycle/

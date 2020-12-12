@@ -10,7 +10,22 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 
 /****************************** CODE IS HERE ***********************************/
+//another way
+/*
+Call this function: 
+vector <string> v = split(s, ' '); or some other delimeter split(s, ',');
+*/
 
+vector <string> split(string s, char delim) {
+  vector <string> v;
+  stringstream ss(s);
+  while (ss.good()) {
+    string stk;
+    getline(ss, stk, delim);
+    v.push_back(stk);
+  }
+  return v;
+}
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -20,12 +35,20 @@ int main(){
     getline(cin, s);
     stringstream ss(s);
     vector <string> words;
-    while (ss >> s) {
-        words.push_back(s);
+    string lol;
+    while (ss >> lol) {
+        words.push_back(lol);
     }
 
     for (string i: words)
         cout << i << " ";
+    cout << endl;
+
+    /********* More general way*****************/
+    words = split(s, ' ');
+    for (auto i: words) {
+        cout << i << endl;
+    }
 
     //now, you can covert string number to int using stoi(std::string)
 
