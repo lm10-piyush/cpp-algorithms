@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 #define ll long long
 #define mod 1000000007
@@ -82,3 +81,5 @@ int main()
     cout<<endl;
 }
 }
+
+// https://www.spoj.com/problems/PRIME1/

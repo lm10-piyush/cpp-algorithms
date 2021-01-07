@@ -63,16 +63,16 @@ void deleteEnd(Node * &head) {
         curr = curr->next;
     }
     delete curr;
-    curr = NULL;
-    if (prev == NULL) head = NULL;
+    curr = nullptr;
+    if (prev == nullptr) head = nullptr;
     else prev->next = NULL;
 }
 
 
 void reverseList(Node * &head) {
-    if (head == NULL) return;
-    Node *prev = NULL, *curr = head;
-    while (curr != NULL) {
+    if (head == nullptr) return;
+    Node *prev = nullptr, *curr = head;
+    while (curr != nullptr) {
         Node *nxt = curr->next;
         curr->next = prev;
         prev = curr;

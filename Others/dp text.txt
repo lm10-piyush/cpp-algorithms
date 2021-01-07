@@ -374,6 +374,7 @@ https://codeforces.com/contest/846/problem/F
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000386edd
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d8565     (Probability)
 https://codingcompetitions.withgoogle.com/kickstart/round/00000000001a0069/0000000000415054#problem
+https://atcoder.jp/contests/abc184/tasks/abc184_d   (Expected value, https://atcoder.jp/contests/abc184/submissions/18829434)
 
 /******************************************************************************************************
 
@@ -388,9 +389,16 @@ https://codeforces.com/contest/1437/problem/C  (Chef Monocarp, sorting dp, greed
 https://www.codechef.com/problems/SUBMEXS   (Chef and Subtree MEXs, Tree-dp, https://www.codechef.com/viewsolution/39248243	)
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-31-october/challenges/maximum-sum-tree/copy-from/1327850404  (Maximum Sum Tree,Tree DP, https://pastebin.com/NtCvEcad)
 https://leetcode.com/problems/binary-tree-maximum-path-sum/  (Tree dp, https://pastebin.com/zbibabtj)
-
-
-
+https://codeforces.com/problemset/problem/212/E         (IT restraunts, dp, https://codeforces.com/gym/306738/submission/101103248)
+https://atcoder.jp/contests/abc185/tasks/abc185_e  (Sequence Matching, like LCS or Edit distance, top-down sol: https://atcoder.jp/contests/abc185/submissions/18771904, bottom-up : https://atcoder.jp/contests/abc185/submissions/18771958)
+https://www.codechef.com/PBK22020/problems/ITGUY24  (DP, knapsack, combinatorics, smart trick, top down: ***, bottom up: https://www.codechef.com/viewsolution/40679126, bottom up memory efficient: https://www.codechef.com/viewsolution/40679190)
+https://atcoder.jp/contests/abc186/tasks/abc186_d      (prefix sum, contribution,modulous, https://atcoder.jp/contests/abc186/submissions/18877396)
+https://leetcode.com/problems/decode-ways/             (DP, like fibonacci, https://pastebin.com/v9TEsCsb)
+https://leetcode.com/problems/decode-ways-ii/            (DP, hard version, https://pastebin.com/E7CXV4Fa)
+https://codeforces.com/contest/1427/problem/C           (DP, with optimizations, don't need to iterate over all states, https://codeforces.com/contest/1427/submission/95159252)
+https://codeforces.com/contest/505/problem/C           (DP, with optimizations, don't need to iterate over all states, https://codeforces.com/contest/505/submission/102960440)
+https://atcoder.jp/contests/abc183/tasks/abc183_e      (Dp on matrix, optimization with prefix sum, https://atcoder.jp/contests/abc183/submissions/19184557)
+https://atcoder.jp/contests/abc187/tasks/abc187_f     (Dp, smart method to iterate over the subsets of mask, Important, Article: https://cp-algorithms.com/algebra/all-submasks.html, https://atcoder.jp/contests/abc187/submissions/19172462)
 
 
 

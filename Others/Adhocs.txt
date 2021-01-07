@@ -49,7 +49,7 @@ https://codeforces.com/contest/1399/problem/E1   (Weights Division (easy version
 https://cses.fi/problemset/task/1630      (Tasks and Deadlines, https://pastebin.com/3pGPyhqD)
 https://leetcode.com/problems/largest-number/   (Largest number, https://pastebin.com/12PVfsVS)
 https://codeforces.com/contest/632/problem/C    (The Smallest String Concatenation, https://codeforces.com/contest/632/submission/94871653)
-
+https://atcoder.jp/contests/abc187/tasks/abc187_d   (https://atcoder.jp/contests/abc187/submissions/19169194)
 ********************************************************************************************
 
 https://codeforces.com/problemset/problem/1178/D (greedy, maths, Trick, number theory, https://codeforces.com/contest/1178/submission/89284779)
@@ -95,6 +95,8 @@ https://codeforces.com/contest/922/problem/C      ( Cave Painting, modulo concep
 https://codeforces.com/contest/1056/problem/B  (Divide Candies, https://codeforces.com/contest/1056/submission/93879253)
 https://www.codechef.com/PRACTICE/problems/SSO  (https://www.codechef.com/viewsolution/39257973)
 https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/  (https://pastebin.com/hLSLVZuT)
+https://codeforces.com/contest/1225/problem/D       (maths, prime factorization, map, counting, hash, https://codeforces.com/contest/1225/submission/103024338)
+https://codeforces.com/contest/1471/problem/D      (maths, prime factorization, map, counting, hashing, seive, https://codeforces.com/contest/1471/submission/103539935)
 ****************************************************************************************************************
 
 
@@ -138,7 +140,7 @@ https://codeforces.com/contest/884/problem/C    (Bertown Subway, Graphs, permuta
 https://cses.fi/problemset/task/1716             (Distributing Apples, stars and bars, https://pastebin.com/Y9NBBszs)
 
 
-/*************************************************** Intervals************************************************
+/*************************************************** Intervals ************************************************
 https://www.geeksforgeeks.org/maximum-number-of-overlapping-intervals/   (maximum number of overlapping intervals, https://cses.fi/problemset/task/1619)
 https://cses.fi/problemset/task/1629         (Movie Festival, maximum number of movies could be completed)
 https://codeforces.com/contest/1343/problem/D      (Constant Palindrome Sum, Interval overlapp, https://codeforces.com/contest/1343/submission/77692608)
@@ -157,6 +159,7 @@ https://codeforces.com/contest/1101/problem/C    (Division and Union, https://co
 https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/  (https://pastebin.com/xqZveaPx)
 https://codeforces.com/contest/137/problem/C  (History, https://codeforces.com/contest/137/submission/96306026, https://codeforces.com/contest/137/submission/96306245)
 https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
+https://atcoder.jp/contests/abc183/tasks/abc183_d   (Intervals, greedy, sorting, https://atcoder.jp/contests/abc183/submissions/19181807)
 
 /**********************************************************************************************************
 
@@ -254,9 +257,45 @@ https://www.interviewbit.com/problems/remove-half-nodes/     (Tree, https://past
 https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/  (like unique function in c++, https://pastebin.com/WiXzTUFj)
 https://codeforces.com/contest/1454/problem/E   (Trees, cycle, N nodes & N edges, contribution technique, soln: https://codeforces.com/contest/1454/submission/100904774 , Another :tricky solution watch tutorial)
 https://www.codechef.com/SPRT2020/problems/IDXNUMBR   (numbers and maths, counting, https://www.codechef.com/viewsolution/40359198)
-
-
-
-
+https://codeforces.com/contest/1176/problem/E   (Cover it, Graphs, atmost n/2, coloring bfs, https://codeforces.com/contest/1176/problem/E) 
+https://www.codechef.com/PBK02020/problems/ITGUY10  (Bits, important, precompute, https://www.codechef.com/viewsolution/40407274)
+https://leetcode.com/problems/palindrome-partitioning/       (brute force, Easy, backtracking)
+https://leetcode.com/problems/squares-of-a-sorted-array/     (Easy, two pointers, Think O(N) solution)
+https://atcoder.jp/contests/abc184/tasks/abc184_e        (Third Avenue, BFS on Matrix, https://atcoder.jp/contests/abc184/submissions/18795775)
+https://codeforces.com/problemset/problem/1144/F      (Graph Without Long Directed Paths, Coloring , BFS, Graph Without Long Directed Paths)
+https://atcoder.jp/contests/abc184/tasks/abc184_f     (Programming Contest, Meet in the middle, Optimized brute force, https://atcoder.jp/contests/abc184/submissions/18831649)
+https://www.codechef.com/UWCOI21/problems/UWCOI21C    (Organisation, Greedy, STL, set, min-max, https://www.codechef.com/viewsolution/40551441)
+https://www.codechef.com/PBK22020/problems/ITGUY27    (Greedy, maths, Primes, https://www.codechef.com/viewsolution/40584265)
+https://www.hackerrank.com/challenges/coinage/problem   (Combinatorics, maths, smart bruteforce, https://pastebin.com/QGQYLEMM)
+https://www.codechef.com/COOK125A/problems/CIRCHAOS     (Maths, GCD, observation, https://www.codechef.com/viewsolution/40616392)
+https://codeforces.com/contest/1459/problem/C           (Row GCD, GCD, observation, https://codeforces.com/contest/1459/submission/102069651)
+https://www.codechef.com/COOK125A/problems/SEDPASS     (string, bitmasking, medium-hard, trick, xor, https://www.codechef.com/COOK125A/problems/SEDPASS)
+https://www.spoj.com/problems/INS14A/                    (INS14A - BSTRING, sliding window, median, contribution, https://pastebin.com/kavTKd8P)
+https://www.codechef.com/COOK125A/problems/BASKETS       (Adhoc, observation, https://www.codechef.com/viewsolution/40884623)
+https://leetcode.com/problems/reach-a-number/             (Maths, nothing else)
+https://codeforces.com/contest/1217/problem/A              (Maths, maths soln: https://codeforces.com/contest/1217/submission/102724751, binary search soln: https://codeforces.com/contest/1217/submission/102724147)
+https://codeforces.com/contest/1/problem/B              (Maths, base converstion, https://codeforces.com/contest/1/submission/102690508)
+https://codeforces.com/contest/735/problem/D            (Maths, primes, Goldbach theorem, https://codeforces.com/contest/735/submission/102693697)
+https://codeforces.com/contest/559/problem/A           (Maths, Hexagon, triangle, https://codeforces.com/contest/559/submission/102702543)
+https://codeforces.com/contest/322/problem/B           (Maths, https://codeforces.com/contest/322/submission/102712576)
+https://codeforces.com/contest/1217/problem/B            (Maths, rating 1600, https://codeforces.com/contest/1217/submission/102723469)
+https://codeforces.com/contest/343/problem/A           (maths, GCD property, https://codeforces.com/contest/343/submission/102927153)
+https://codeforces.com/contest/1459/problem/C           (maths, GCD property, https://codeforces.com/contest/1459/submission/102069651)
+https://codeforces.com/contest/484/problem/B            (maths, seive, https://codeforces.com/contest/484/submission/102966992)
+https://codeforces.com/contest/1225/problem/C           (maths, nice ans simple problem but confusing at start, https://codeforces.com/contest/1225/submission/102981324)
+https://codeforces.com/contest/346/problem/A            (maths, gcd, https://codeforces.com/contest/346/submission/102987857)
+https://atcoder.jp/contests/abc183/tasks/abc183_c        (Brute force, maths, https://atcoder.jp/contests/abc183/submissions/19181384)
+https://atcoder.jp/contests/abc183/tasks/abc183_b        (Maths, formula, can be done using binary search, https://atcoder.jp/contests/abc183/submissions/19180907)
+https://codeforces.com/contest/1368/problem/D            (Bitmask, greedy, observation, https://codeforces.com/contest/1368/submission/102991883)
+https://codeforces.com/contest/276/problem/D              (maths, bitmask, https://codeforces.com/contest/276/submission/103115729)
+https://codeforces.com/contest/630/problem/G             (maths, combinatorics, https://codeforces.com/contest/630/submission/103131359)
+https://leetcode.com/problems/next-permutation/           (maths, greedy, next_permutation,https://pastebin.com/8enr0KFX )
+https://codeforces.com/contest/1472/problem/A            (maths, greedy, remember the horizontal and vertical directions are independent, https://codeforces.com/contest/1472/submission/103326694)
+https://codeforces.com/contest/958/problem/E1             (Simple maths problem, https://codeforces.com/contest/958/submission/103327715)
+https://codeforces.com/contest/741/problem/A              (maths, graph, cycles, lcm, https://codeforces.com/contest/741/submission/103373228)
+https://codeforces.com/contest/1238/problem/C             (maths / greedy, tricky implementation may be, https://codeforces.com/contest/1238/submission/103381683)
+https://codeforces.com/contest/785/problem/C              (Maths, binary search, greedy, https://codeforces.com/contest/785/submission/103560003)
+https://codeforces.com/contest/1284/problem/C             (Maths, greedy, permuatitions, contribution, https://codeforces.com/contest/1284/submission/103582112)
+https://codeforces.com/contest/603/problem/A              (maths, greedy, observation, https://codeforces.com/contest/603/submission/103585196)
 
 

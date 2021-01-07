@@ -66,3 +66,9 @@ properties:
 
 5) euler totients of 3,4 and 6 are primes, rest of the numbers have composite totients 
 */
+
+/*
+https://www.codechef.com/NQST2020/problems/HEIST101
+https://codeforces.com/contest/1295/problem/D
+
+*/

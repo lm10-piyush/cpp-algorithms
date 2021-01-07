@@ -18,7 +18,7 @@ struct BIT{
     bit.assign(n+2, 0);
   }
   //~~~~~~~~~~~~~update~~~~~~~~~~~~~
-  //if given i is zero based, then ++i
+  //if given i is zero based, then ++i, you can do ++i even if it is not zero based but then you to increase the 'n'
   void upd(int i, int val){
     for (++i; i <= n; i+= i&-i)
       bit[i] += val;
@@ -86,6 +86,12 @@ int main()
 }
 
 /*
+fenwick tree only deals with indices of +ve numbers, that why if our indexing is 0-based then we do +1 or ++, to do it
+1-based in fenwick tree.
+
+
+we can also do range update, concept is same as difference array: upd(l, x), upd(r+1, -x) 
+
 https://www.codechef.com/COCA2020/problems/TWOARM
 https://www.codechef.com/viewsolution/34707170
 
@@ -102,6 +108,9 @@ https://www.spoj.com/problems/KQUERY/
 https://pastebin.com/jNap9hvZ
 
 https://cses.fi/problemset/task/1646
+
+https://atcoder.jp/contests/abc186/tasks/abc186_f  (BIT, on Matrix, chess, paths)
+https://atcoder.jp/contests/abc186/submissions/18982424
 
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-10-october/challenges/changing-binary-search-tree/problem
 
@@ -131,6 +140,7 @@ https://codeforces.com/contest/1311/submission/71993217
 
 https://cses.fi/problemset/task/1137  (Euler tour, trees)
 https://pastebin.com/XCc6Hq8X
+https://pastebin.com/JTQ2UQwB        (Clean code)
 
  * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
  * https://pastebin.com/Kdb74mwu   (using fenwick tree)
@@ -138,4 +148,6 @@ https://pastebin.com/XCc6Hq8X
 https://atcoder.jp/contests/hhkb2020/tasks/hhkb2020_c  (MEX query with binary search)
 https://atcoder.jp/contests/hhkb2020/submissions/17299633
 
+https://atcoder.jp/contests/abc187/tasks/abc187_e  (Euler tour, tree, subtree value sum)
+https://atcoder.jp/contests/abc187/submissions/19168934  (clean code)
 */

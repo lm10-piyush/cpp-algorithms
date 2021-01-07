@@ -125,4 +125,11 @@ https://pastebin.com/YP9JFmVm  (bfs on matrx, problem is in the link)
   
 https://codeforces.com/contest/813/problem/C
 https://codeforces.com/contest/813/submission/94873848
+
+https://codeforces.com/contest/1176/problem/E
+https://codeforces.com/contest/1176/submission/88618605
+
+https://atcoder.jp/contests/abc184/tasks/abc184_e        
+(Third Avenue, BFS on Matrix, https://atcoder.jp/contests/abc184/submissions/18795775)
+
 */

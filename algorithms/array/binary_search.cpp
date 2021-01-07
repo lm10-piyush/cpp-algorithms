@@ -28,6 +28,18 @@ int bi_search(vector<int> &v, int x){
     return lo;
 }
 
+//finding the square root of any number 
+double sqrtD(int n) {
+    double lo = 0, hi = n;
+    const double eps = 1e-7;
+    while (hi - lo >= eps) {
+        double mid = (lo + hi + eps) / 2.0;
+        if (mid * mid <= (double) n) lo = mid;
+        else hi = mid - eps;
+    }
+    return lo;
+}
+
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
@@ -40,6 +52,12 @@ int main(){
 
   return 0;
 }
+
+/*
+  Tip: when you are not able to solve the equation in O(1) then, it probably a good idea to use the binary search to find the ans.
+  
+
+*/
 
 
 //https://www.spoj.com/problems/AGGRCOW/
@@ -122,4 +140,7 @@ https://pastebin.com/pUiy846u
 
 https://codeforces.com/contest/1454/problem/F  (sparse table + binary search)
 https://codeforces.com/contest/1454/submission/101060423
+
+https://atcoder.jp/contests/abc183/tasks/abc183_b     (maths, binary search on floating points)
+https://atcoder.jp/contests/abc183/submissions/19180907
 */

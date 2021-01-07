@@ -14,6 +14,8 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 //DSU on trees using Euler tour
 //We can also implement DSU on trees using Heavy light decomp also.
 
+//Implementation of: https://codeforces.com/contest/600/problem/E
+
 vector <vector <int>> tree;
 vector <int> A, estart, eend; //euler start and end
 vector <ll> tour, subSize, cnt, ans;
@@ -126,7 +128,7 @@ int main(){
 /*
  * Use dfs1() to calculate the subtree size, in and out time of every vertex. It is help to find the bigchild and other things.
 
- * Now apply dfs(): We are building the answers from leaf to root. first find the bigChild (or you can precompute in dfs1() also.), 
+ * Now apply dfs2(): We are building the answers from leaf to root. first find the bigChild (or you can precompute in dfs1() also.), 
    then except on bigChild, apply dfs2() again on small child. When small childs are done, then apply on bigChild. Becuz we are using 
    shared variable currMax, currSum. We are returning back to the parent of bigChild, then those variables already contains the frequency and sum for bigChild, so
    we don't need to compute for bigChild again. Now we are at 'u' which is the parent of bigChild, now iterate over each node in

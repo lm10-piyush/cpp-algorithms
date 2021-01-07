@@ -124,4 +124,6 @@ int main(){
  * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
  * https://pastebin.com/Kdb74mwu   (using fenwick tree)
 
+
+
 */

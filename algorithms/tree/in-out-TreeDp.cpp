@@ -88,12 +88,15 @@ https://codeforces.com/contest/1324/submission/73482716
 https://www.spoj.com/problems/PT07Z/
 solution: is ans = max(ans, in[i] + out[i])
 
-https://codeforces.com/contest/1401/problem/D  (dp contributiion techniq)
+https://codeforces.com/contest/1401/problem/D  (dp contribution techniq)
 https://codeforces.com/contest/1401/submission/90882209
 
 https://codeforces.com/contest/161/problem/D  (with inclusion-exlusion principal)
-https://codeforces.com/contest/161/submission/94856665 
+https://codeforces.com/contest/161/submission/102405695 
 
-https://codeforces.com/contest/1187/problem/E
+https://codeforces.com/contest/1187/problem/E  (dhansu problem)
 https://codeforces.com/contest/1187/submission/95686227
+
+https://cses.fi/problemset/task/1133
+https://pastebin.com/ZdfhdNFh
 */

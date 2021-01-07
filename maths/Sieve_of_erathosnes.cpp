@@ -75,4 +75,7 @@ int main(){
 
  * https://www.codechef.com/problems/COPAR
  * https://www.codechef.com/viewsolution/39257263
+
+ https://codeforces.com/contest/484/problem/B
+ https://codeforces.com/contest/484/submission/102966992
 */

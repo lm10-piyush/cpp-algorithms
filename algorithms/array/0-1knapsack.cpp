@@ -54,3 +54,9 @@ int main(){
 //https://atcoder.jp/contests/dp/tasks/dp_e  (knapsack with W <= 1e9)
 //https://atcoder.jp/contests/dp/submissions/14384195
 
+/*
+Coin change 1: More like combinatorics rather than Knapsack. (https://cses.fi/problemset/result/500193/) soln: (https://pastebin.com/5LjA9Ngy)
+Coin change 2: The concept behind this is same as knapsack (https://cses.fi/problemset/task/1636) soln: (https://pastebin.com/VqCEchsh)
+Same as knapsack problem + combinatorics : https://www.codechef.com/PBK22020/problems/ITGUY24 soln: https://www.codechef.com/viewsolution/40679126, bottom up memory efficient: https://www.codechef.com/viewsolution/40679190
+
+*/

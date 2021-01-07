@@ -22,6 +22,7 @@ vector <string> split(string s, char delim) {
   while (ss.good()) {
     string stk;
     getline(ss, stk, delim);
+    if (stk.empty()) continue;
     v.push_back(stk);
   }
   return v;

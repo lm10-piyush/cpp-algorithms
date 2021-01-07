@@ -17,6 +17,7 @@ using namespace std;
 int n,k,p;
 ll ans=0;
 
+//prime factorization
 vector<long long> factors(long long n){
     vector<long long> v;
     
@@ -39,8 +40,18 @@ int main()
     return 0;
 }
 
+//https://www.spoj.com/problems/FACT0/      (factoring using seive)
+//https://pastebin.com/gwEK1ZfT
+
 //https://codeforces.com/contest/1025/problem/B
 //https://codeforces.com/contest/1025/submission/90256368
 
 //https://codeforces.com/contest/1285/problem/C
 //https://codeforces.com/contest/1285/submission/69926022
+
+
+//https://www.spoj.com/problems/COMDIV/
+//https://pastebin.com/LEw7WvwW
+
+//https://www.spoj.com/problems/DIVSUM/
+//https://pastebin.com/7AQ4yEhX

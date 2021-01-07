@@ -78,3 +78,9 @@ int main(){
 
 //https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/still-maximum/
 //solution: start you solution from very end ie., when every node is detached, then one by one add the edge and ans the query.
+
+//https://codeforces.com/contest/500/problem/B
+//https://codeforces.com/contest/500/submission/102869091
+
+//https://atcoder.jp/contests/abc183/tasks/abc183_f      (DSU + map important ques)
+//https://atcoder.jp/contests/abc183/submissions/19185421

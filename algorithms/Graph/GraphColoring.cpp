@@ -64,3 +64,10 @@ int main(){
 }
 
 //https://cses.fi/problemset/task/1668
+
+/*
+ * A graph which can be colored using 2-colors is called Bipertite graph. If a graph has odd length cycle then it can't be bipertite graph.
+ https://codeforces.com/problemset/problem/1144/F          (Bipertite)
+ https://codeforces.com/contest/1144/submission/101188253
+
+*/
