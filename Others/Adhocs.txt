@@ -160,6 +160,7 @@ https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/  (http
 https://codeforces.com/contest/137/problem/C  (History, https://codeforces.com/contest/137/submission/96306026, https://codeforces.com/contest/137/submission/96306245)
 https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
 https://atcoder.jp/contests/abc183/tasks/abc183_d   (Intervals, greedy, sorting, https://atcoder.jp/contests/abc183/submissions/19181807)
+https://atcoder.jp/contests/abc188/tasks/abc188_e     (map, difference array concep on map, intervals, https://atcoder.jp/contests/abc188/submissions/19358640)
 
 /**********************************************************************************************************
 
@@ -269,7 +270,7 @@ https://www.codechef.com/PBK22020/problems/ITGUY27    (Greedy, maths, Primes, ht
 https://www.hackerrank.com/challenges/coinage/problem   (Combinatorics, maths, smart bruteforce, https://pastebin.com/QGQYLEMM)
 https://www.codechef.com/COOK125A/problems/CIRCHAOS     (Maths, GCD, observation, https://www.codechef.com/viewsolution/40616392)
 https://codeforces.com/contest/1459/problem/C           (Row GCD, GCD, observation, https://codeforces.com/contest/1459/submission/102069651)
-https://www.codechef.com/COOK125A/problems/SEDPASS     (string, bitmasking, medium-hard, trick, xor, https://www.codechef.com/COOK125A/problems/SEDPASS)
+https://www.codechef.com/COOK125A/problems/SEDPASS     (string, hashing, bitmasking, medium-hard, trick, xor, https://www.codechef.com/COOK125A/problems/SEDPASS)
 https://www.spoj.com/problems/INS14A/                    (INS14A - BSTRING, sliding window, median, contribution, https://pastebin.com/kavTKd8P)
 https://www.codechef.com/COOK125A/problems/BASKETS       (Adhoc, observation, https://www.codechef.com/viewsolution/40884623)
 https://leetcode.com/problems/reach-a-number/             (Maths, nothing else)
@@ -297,5 +298,21 @@ https://codeforces.com/contest/1238/problem/C             (maths / greedy, trick
 https://codeforces.com/contest/785/problem/C              (Maths, binary search, greedy, https://codeforces.com/contest/785/submission/103560003)
 https://codeforces.com/contest/1284/problem/C             (Maths, greedy, permuatitions, contribution, https://codeforces.com/contest/1284/submission/103582112)
 https://codeforces.com/contest/603/problem/A              (maths, greedy, observation, https://codeforces.com/contest/603/submission/103585196)
+https://codeforces.com/contest/1423/problem/K            (maths, gcd, divisors, https://codeforces.com/contest/1423/submission/103620509)
+https://codeforces.com/contest/319/problem/A             (maths, don't try it, but yeah something new, https://codeforces.com/contest/319/submission/103630369)
+https://codeforces.com/contest/107/problem/B             (maths, probablility, combinatorics, integer can get overflow, https://codeforces.com/contest/107/submission/103661808)
+https://codeforces.com/contest/1467/problem/B           (greedy, tricky, hills and valleys, https://codeforces.com/contest/1467/submission/103831505)
+https://leetcode.com/problems/word-ladder/               (Array to graph conversion, BFS, precomputing, optimization, maps, tradeoff between rows and columns, https://pastebin.com/n9DAP7A7)
+https://atcoder.jp/contests/arc111/tasks/arc111_b        (Array to graph conversion, DSU, https://atcoder.jp/contests/arc111/submissions/19299363)
+https://atcoder.jp/contests/abc188/tasks/abc188_d        (map, difference array concept, https://atcoder.jp/contests/abc188/submissions/19358640)
+https://atcoder.jp/contests/abc188/tasks/abc188_e        (dp, DAG, graph, https://atcoder.jp/contests/abc188/submissions/19340914)
+https://atcoder.jp/contests/abc180/tasks/abc180_d        (maths, Long long can overflow so be clever, https://atcoder.jp/contests/abc180/submissions/19308299)
+https://www.spoj.com/problems/ABCPATH/                   (dfs on matrix, https://pastebin.com/1p4P5mGK)
+https://codeforces.com/contest/1473/problem/D             (data structure, greedy, tricky, https://codeforces.com/contest/1473/submission/104400460)
+
+
+
+
+
 
 

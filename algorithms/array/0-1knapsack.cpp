@@ -44,9 +44,13 @@ int main(){
 
 //https://cses.fi/problemset/task/1158
 
+
 //Note: above algorithm assumes one item only once, not multiple occurence
 // to allow multiple occurrence you just do, =>pages[i] + dp[i][left]
 //problem: https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items/0/
+
+//https://www.spoj.com/problems/KNAPSACK/
+//https://pastebin.com/FSTqifYA       (memory efficient, only by 2-vectors)
 
 //https://atcoder.jp/contests/dp/tasks/dp_d
 //sol: https://atcoder.jp/contests/dp/submissions/14115284

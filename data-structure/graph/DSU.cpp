@@ -24,15 +24,13 @@ struct DSU {
   //get leader
   int find(int a){
     if(parent[a] == a) return a;
-    return parent[a] =  find(parent[a]);
+    return parent[a] = find(parent[a]);
   }
 
   void dsu_union(int a, int b){
-    int x = find(a);
-    int y = find(b);
+    int x = find(a), y = find(b);
     if(x == y) return;
-    if(size[x] < size[y])
-      swap(x, y);
+    if(size[x] < size[y]) swap(x, y);
     components--; //components decreases with union
     parent[y] = x;
     size[x] += size[y];
@@ -84,3 +82,9 @@ int main(){
 
 //https://atcoder.jp/contests/abc183/tasks/abc183_f      (DSU + map important ques)
 //https://atcoder.jp/contests/abc183/submissions/19185421
+
+/*
+https://atcoder.jp/contests/arc111/tasks/arc111_b
+converting the given problem to a graph problem, then solve it: https://atcoder.jp/contests/arc111/submissions/19299363
+
+*/

@@ -11,18 +11,19 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
+template <typename T>
 struct STable {
     const int Log = 20;
-    vector <vector<int>> sparse;
+    vector <vector<T>> sparse;
     int n;
 
-    STable(vector <int> &A) {
+    STable(vector <T> &A) {
         n = sz(A);
-        sparse.assign(n, vector<int>(Log+1, 0));
+        sparse.assign(n, vector<T>(Log+1, 0));
         build(A);
     }
 
-    void build(vector <int>& A) {
+    void build(vector <T>& A) {
         for (int i = 0; i < n; ++i) sparse[i][0] = A[i];
         for (int j = 1; j <= Log; ++j) {   
             for (int i = 0; i + (1 << j) <= n; ++i) {
@@ -31,8 +32,8 @@ struct STable {
         } 
     }
 
-    int qry(int l, int r) {
-        int ans = 1e9;
+    T qry(int l, int r) {
+        T ans = 1e9;
         for (int i = Log; i >= 0; --i) {
             if (l + (1 << i) - 1 <= r) {
                 ans = min(ans, sparse[l][i]);
@@ -42,16 +43,19 @@ struct STable {
         return ans;
     }  
 
-    //fast qry O(1) only in Idempotent operation
-    int qry1(int l, int r) {
+    //only for idempotent operations like min, max, gcd etc 
+    T qry1(int l, int r) {
         int len = r - l + 1;
         int k = log2(len);
         int x = len - (1 << k); //remaining
-        int ans = min(sparse[l][k], sparse[l+x][k]);
+        T ans = min(sparse[l][k], sparse[l+x][k]);
         return ans;
     }  
 
-};  
+};    
+
+
+    
 
 
 int main(){
@@ -61,7 +65,7 @@ int main(){
     vector <int> A(n);
     for (int &i: A) cin >> i;
 
-    STable st(A);
+    STable <int> st(A);
 
     int q; cin >> q;
     while (q--) {  

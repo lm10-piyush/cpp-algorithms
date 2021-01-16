@@ -14,7 +14,7 @@ struct BIT{
   int n;
   vector <int> bit;
   BIT(int _n){
-    n = _n
+    n = _n;
     bit.assign(n+2, 0);
   }
   //~~~~~~~~~~~~~update~~~~~~~~~~~~~
@@ -109,6 +109,9 @@ https://pastebin.com/jNap9hvZ
 
 https://cses.fi/problemset/task/1646
 
+https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-16-january/challenges/triplets-mania
+https://pastebin.com/epBbY5pK
+
 https://atcoder.jp/contests/abc186/tasks/abc186_f  (BIT, on Matrix, chess, paths)
 https://atcoder.jp/contests/abc186/submissions/18982424
 
@@ -127,6 +130,8 @@ http://lightoj.com/volume_showproblem.php?problem=1085
 
 https://www.codechef.com/MARCH20B/problems/LAZER  (sweep line with fenwick)
 soln: https://www.codechef.com/MARCH20B/problems/LAZER
+
+https://leetcode.com/problems/create-sorted-array-through-instructions/  (same as inversions) 
 
 https://www.spoj.com/problems/RANGESUM/
 SOL: https://pastebin.com/vqBY30V6

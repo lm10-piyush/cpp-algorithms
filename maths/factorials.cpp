@@ -44,6 +44,21 @@ ll nCr(ll a, ll b) {
 }
 
 
+/*
+    This way to calculate is useful when floating point numbers are allowed.
+    n!/(r! * (n-r)!) => ((n-r+1) * (n-r+2)..n) / r!
+    https://codeforces.com/contest/107/problem/B
+    https://codeforces.com/contest/107/submission/103661808
+*/
+ll C(ll n, ll r) {
+    ll ans = 1;
+    for (int i = 0; i < r; ++i) {
+        ans *= (n - i);
+        ans /= (i + 1);
+    }
+    return ans;
+}
+
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);

@@ -11,8 +11,8 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-//NOTE: here we are talking in sense of DFS tree.
-
+//NOTE: here we are talking in sense of DFS tree: parent, child, tree-edge, back-edge etc.
+//DFS tree: https://codeforces.com/blog/entry/68138
 
 vector <vector<int>> g;
 vector <int> lo, tin;
@@ -71,6 +71,10 @@ int main(){
  * lo[u] => minimum time reachable by the descendants of 'u' in the DFS spanning tree.
  * We conver the graph into the tree such that each node in the tree will be whole component of original graph whose
    lo[] value is same.
+ * Observation: low value of the component is same.
+
+ * In line-32, we have done tin[u] < lo[v] instead of lo[u] < lo[v], because lo[u] < lo[v] is incorrect. Because lo[u] < lo[v] will
+   count those edges also which are not bridges, if the back-edge from u is way behind the lo[v] then it will count that edge as bridge which is wrong.
 
  https://onlinejudge.org/external/7/796.pdf
  https://pastebin.com/urXutKaZ

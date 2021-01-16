@@ -53,4 +53,7 @@ https://pastebin.com/wWR4ESDW
 
 https://www.interviewbit.com/problems/container-with-most-water/
 https://pastebin.com/FjxmhBa2
+
+https://leetcode.com/problems/minimum-size-subarray-sum/
+https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
 */

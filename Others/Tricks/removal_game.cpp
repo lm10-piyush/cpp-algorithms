@@ -47,7 +47,7 @@ int main(){
 player1 starts first,
 current player tries to get the best
 
-f(i, j).best => the best amount player with the current turn will get from this range [i..j] will be f(i, j).turn1
+f(i, j).best => the best amount, player with the current turn will get from this range [i..j] will be f(i, j).turn1
  
 best for turn1 f(i, j).better = {
                                     A[i],           if i == j

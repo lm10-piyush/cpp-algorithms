@@ -1,85 +1,59 @@
-#include<bits/stdc++.h>
-#define ll long long
-#define mod 1000000007
-#define mp make_pair
-#define endl "\n"
-#define tab " "
-#define pb push_back
-#define ff first
-#define ss second
-#define watch(x) cout<<(#x)<<" = "<<x<<endl
-#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define pll pair<ll,ll>
-#define pi 3.141592653589793238460
- 
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define endl '\n'
+#define sz(v) (int)v.size() 
+#define all(v) v.begin(), v.end()
+void dbg_out() { cerr << "\b\b]\n"; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+#define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
-void sieve(bool A[],int n){
-    for(int i=0;i<=n;i++)
-        A[i]=true;  
-    
-    A[0]=A[1]=false;
+const int N = 4e4;
+vector <ll> primes;
+bitset <N> is_prime;
 
-    for(int i=2;i*i<=n;i++){
-        if(A[i]==true){
-            for(int j=i*i;j<=n;j+=i)
-                A[j]=false;
+void seive() {
+    is_prime.set();
+    is_prime.reset(0); is_prime.reset(1);
+    for (ll i = 2; i < N; ++i) {
+        if (!is_prime[i]) continue;
+        primes.push_back(i);
+        for (ll j = i * i; j < N; j += i) {
+            is_prime[j] = false;
         }
     }
 }
 
-
-
-
-
-int main()
-{
-    fast;
-    int n=100001;
-    bool* A = new bool[n+1];
-
-    sieve(A,n);
-
-    vector<int> primes; //primes(vector) contains the primes between 2 to 100000
-
-    for(int i=2;i<=n;i++)
-        if(A[i]==true)
-            primes.push_back(i);
-
-    int t;
-    cin>>t;
-    while(t--)
-    {
-    long long l,r; //left and right
-    cin>>l>>r;
-
-    bool* segPrimes = new bool[r-l+1]; // to store relative prime position in (l,r)
-    for(int i=0;i<=(r-l);i++)
-        segPrimes[i]=true;
-    // segPrimes[0]=segPrimes[1]=false;
-
-    if(l==1) segPrimes[0]=false;
-
-    for(int i=0;(long long )primes.at(i)*(long long)primes.at(i)<=r;i++){
-        int currPrime = primes.at(i);
-        int base = (l/currPrime)*(currPrime); // to get the base value, from where to start
-        
-        if(base < l)
-            base += currPrime;
-
-        for(int j=base;j<=r;j+=currPrime){
-            segPrimes[j-l] = false;
-        }
-
-        if(base==currPrime)
-            segPrimes[base - l] = true; 
+void solve() {
+    ll l, r; cin >> l >> r;
+    vector <bool> segment(r - l + 1, true);
+    if (l == 1) segment[0] = false;
+    for (ll i: primes) {
+        if (i * i > r) break;
+        ll base = ((l + i - 1) / i) * i; //this will give a number which is >= l and multiple of i
+        for (ll j = base; j <= r; j += i) segment[j-l] = false;
+        segment[base - l] = (base == i);  
     }
-
-    for(int i=0;i<=(r-l);i++)
-        if(segPrimes[i]==true)
-        cout<<(i+l)<<endl;
-    cout<<endl;
+    for (int i = 0; i < sz(segment); ++i) {
+        if (segment[i])
+            cout << l + i << endl; 
+    }
+    cout << endl;
 }
+
+int main(){
+    ios_base::sync_with_stdio(false); cin.tie(nullptr);
+
+    seive();    
+
+    int t; cin >> t;
+    while (t--) solve();
+
+
+    return 0;
 }
 
-// https://www.spoj.com/problems/PRIME1/
+
+/*
+https://www.spoj.com/problems/PRIME1/
+*/

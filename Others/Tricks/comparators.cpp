@@ -11,10 +11,12 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
+//Custom node
 struct Node {
     int x, y;
     Node() {}
     Node(int a, int b): x(a), y(b){}
+    //this will also work for sort() when you use this in vectors
     friend bool operator<(Node l, Node k) {
         return make_tuple(l.x, l.y) < make_tuple(k.x, k.y);  
     }
@@ -38,7 +40,7 @@ int main(){
         cout << i.first.x << " : " << i.first.y << " " << i.second << endl;
     }
 
-
+    //======================= VECTORS ================================
     cout << endl << "vector: \n";
     vector <Node> x = {{10, 20}, {10, 15}, {12, 5}, {3, 16}};
     sort(all(x));
@@ -47,7 +49,7 @@ int main(){
     cout << "lower_bound (10, 17): " << (lower_bound(all(x), Node(10, 17)) - x.begin()) << endl;
 
     
-
+    //========================== SET ==============================
     cout << endl << "set: \n";
     set <Node> s = {{10, 20}, {10, 15}, {12, 5}, {3, 16}};
     for (auto i: s) {
@@ -58,7 +60,7 @@ int main(){
         cout << "lower_bound (10, 17): (" << fnd->x << " " << fnd->y << ")"<< endl;
 
 
-
+    //================ Pirority Queue ============================
     cout << endl << "priority_queue: \n";
     priority_queue <Node> pq;
     pq.push({10, 20});
@@ -73,3 +75,51 @@ int main(){
 
     return 0;
 }
+
+
+
+/*
+======================================
+Above is a demo of "struct" when you want some custom node as key in set, multiset, map, priority_queue etc, then you need
+to overload the operator< as friend function, then it works. It also works when you need to use struct in vectors and then
+use sort(...) function.
+
+But suppose you want some "struct" and only want to use in vectors (not map, or self arrangement data structure) and then you can
+just use:
+struct Node {
+    int a, b;
+    Node() {}
+    Node(int x, int y) : a(x), b(y){}
+    bool operator<(Node o) {
+        return a < o.a;
+    }
+
+};
+vector <Node> A = {{4, 2}, {1, 10}, {2, 4}};
+sort(A.begin(), A.end());
+
+================================== Another way ==================================
+If you just want to use custom comparator:
+//Custom Node
+struct Node {
+    int a, b;
+    Node() {}
+    Node(int x, int y) : a(x), b(y){}
+};
+
+//Custom comparator
+struct cmp {
+    bool operator()(Node x, Node y) {
+        if (x.a != y.a) return x.a < y.a;
+        return x.b < y.b;
+    }
+};
+
+
+//pass the Node and custome comparator
+set <Node, cmp> s;
+s.insert({3, 2});
+s.insert({2, 3});
+
+*/
+

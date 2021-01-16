@@ -1,6 +1,15 @@
 ***************************** BASICS********************************************
 DP: says how we can use the already calculated things and then build the ans for bigger ones. Ex: power Exponentation, 0/1 knapsack etc.
 
+========================================== IN SHORT ==========================================================
+MainConcept of DP is to build the answer from already calculated small problems, or I can say that by recurrence relation because meaning is same. 
+By writing recurrence means breaking down the problem into similar smaller subproblem. Then in implement that recurrence in efficient manner. You can
+implement it efficiently by Top-down approach (memoization) and Bottom up approch (iterative version). 
+
+So, in the end you can say DP is just a efficient recursion.
+
+===========================================================================================================
+
 IN DP: Dp is all about caching the data(function calls), or you can say, when I can build the bigger solution 
 using smaller solution such that subproblem "overlapp" and also holds the "optimal substructure". It doesn't matter, problem involves
 trying all possiblity or not, you can do it using dp, if above condition holds then you can do it using DP. But mostly you see
@@ -13,10 +22,11 @@ how you are going to pass states from one to another one(transitions), then make
 0) What do you need to find (clear in mind).
 1) optimal substructure.
 2) overlapping subproblem.
-3) DEFINE DP using states.
+3) DEFINE your DP using states like dp[i][j] => max profit achieved by using 1..n numbers and j items are taken.
 4) how you are going to pass states from one to another one(transitions)
 5) make the recurrence relation (final and most important stage).
 6) Code it using TOP down or bottom up.
+7) Optional: You might have to optimize your implementation by DP optimization.
 
 NOTE: when subproblems doesn't overlapp then, it comes under into the divide and conqure paradigm. 
 
@@ -240,7 +250,7 @@ https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https
 https://codeforces.com/contest/977/problem/F (dp, LIS, Maths)
 https://codeforces.com/contest/1353/problem/E (dp + good implementation, K-Gaps)
 https://codeforces.com/contest/1282/problem/B2 (Dp, K-gaps (mod traversal), soln: https://codeforces.com/contest/1282/submission/75436172)
-https://codeforces.com/contest/1077/problem/F1 (dp)
+https://codeforces.com/contest/1077/problem/F1 (dp, Picture with kittens, (not memory optimized)top-down: https://codeforces.com/contest/1077/submission/86706951, better solution with less states: https://codeforces.com/contest/1077/submission/104257710, another way to write recurrence and may be better: https://codeforces.com/contest/1077/submission/104258452)
 https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
 https://atcoder.jp/contests/abc177/tasks/abc177_e  (Dp, sieve, think like graphs, https://atcoder.jp/contests/abc177/submissions/16637688)
 https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
@@ -399,7 +409,11 @@ https://codeforces.com/contest/1427/problem/C           (DP, with optimizations,
 https://codeforces.com/contest/505/problem/C           (DP, with optimizations, don't need to iterate over all states, https://codeforces.com/contest/505/submission/102960440)
 https://atcoder.jp/contests/abc183/tasks/abc183_e      (Dp on matrix, optimization with prefix sum, https://atcoder.jp/contests/abc183/submissions/19184557)
 https://atcoder.jp/contests/abc187/tasks/abc187_f     (Dp, smart method to iterate over the subsets of mask, Important, Article: https://cp-algorithms.com/algebra/all-submasks.html, https://atcoder.jp/contests/abc187/submissions/19172462)
-
+https://atcoder.jp/contests/abc188/tasks/abc188_e        (dp, DAG, graph, https://atcoder.jp/contests/abc188/submissions/19340914)
+https://atcoder.jp/contests/abc188/tasks/abc188_f       (dp, maths, factor, map, important, https://atcoder.jp/contests/abc188/submissions/19355471, https://atcoder.jp/contests/abc188/submissions/19333200)
+https://atcoder.jp/contests/abc180/tasks/abc180_e       (dp, travelling salesman, https://atcoder.jp/contests/abc180/submissions/19308700)
+https://codeforces.com/contest/321/problem/E           (dp, divide and conqure optimization, fast input, https://codeforces.com/contest/321/submission/104367056)
+https://codeforces.com/contest/1077/problem/F2       (dp, optimization with some techinique, Divide and conqure optimization : https://codeforces.com/contest/1077/submission/104366757)
 
 
 

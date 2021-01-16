@@ -98,6 +98,7 @@ int main(){
 /*
  Note: if you solve set(dfs and return the set) here to solve this problem, it will give TLE
  https://cses.fi/problemset/task/1139  (Mo on trees, using Euler tour) 
- https://pastebin.com/HWjZyVhk  
+ https://pastebin.com/HWjZyVhk   (it will give TLE because of collison in unordered_map)
+ https://pastebin.com/rXCKz4Kw   (AC solution with vector and compression)  
 
 */

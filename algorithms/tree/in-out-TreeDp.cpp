@@ -7,7 +7,7 @@ using namespace std;
 
 //IN-OUT dp for height of each node when that node is root.
 //similarly in-out dp is apply at many occasions like score at each node when that node is root.
-//We can also say it RE-rooting..
+//We can also say it RE-rooting..(kind of inclusion-exclusion)
 //problem: find the diameter of the given tree when ith node is root node.
 
 const int maxn = 1e5;
@@ -81,6 +81,8 @@ int main(){
 //https://codeforces.com/contest/120/submission/76465143
 
 /*
+https://www.spoj.com/problems/EAGLE1/  (tree dp, in-out, as above code but here edges are weighted)
+https://pastebin.com/Q6ApmdCn
 
 https://codeforces.com/contest/1324/problem/F
 https://codeforces.com/contest/1324/submission/73482716
