@@ -10,10 +10,10 @@ using namespace std;
 vector<int> piTable;
 
 void kmpPreProcess(string &pattern){
-    piTable.assign((int)pattern.size(), 0);
+    piTable.assign((int)pattern.size(), 0);  //(piTable[i] = x) => longest string which is a suff at i (i-x+1...i) and prefix (1...x)
     for (int i = 1, j = 0; i < (int)pattern.size(); ++i){
         while(j > 0 and pattern[j] != pattern[i])
-            j = piTable[j-1];
+            j = piTable[j-1]; //key step, you know why it works?
         assert(0 <= j and j <= (int)pattern.size());
         
         if(pattern[j] == pattern[i]) j++;
@@ -65,6 +65,21 @@ int main(){
     return 0;
 }
 
+/*
+ * Tip: learn why and how KMP works, dive into its basics will help you.
+ * Let me explain you why it works.
+  : suppose below is given string with some characters (here x = some unknow charcter)
+  : x x x x x x x x x x x x x x
+              j         i
+  : j = 5, i = 10
+  : now suppose, s[i] != s[j], then where should we go and why?
+  : we should go at that index 'k' (k < j) such that s[0...k] == s[i-k ....i], and k should be maximum possible (max k leads to best result).
+  : Ok, now we know where and why should we go, but how efficiently?
+  : key: Notice, s[0...j-1] == s[....i-1] (already matched). ie., s[0, 4] == s[5, 9]
+  : or we can say, k = piTable[j-1], s[0...k] == s[5...9], now start matching after 'k'
+
+*/
+
 //problem: https://codeforces.com/contest/625/problem/B
 //sol: https://codeforces.com/contest/625/submission/82346364
 
@@ -75,3 +90,6 @@ int main(){
 
 //https://www.hackerearth.com/practice/algorithms/string-algorithm/string-searching/practice-problems/algorithm/first-one-6fc38abd-229bcc5f/description/
 //https://pastebin.com/rvd9CMgm
+
+//https://leetcode.com/problems/longest-happy-prefix/
+//https://pastebin.com/BgZijfYu

@@ -71,6 +71,12 @@ int main(){
     return 0;
 }
 
+/*
+ * How much is the contribution of the particular edge in the tree as number of paths passing throught it. It will be
+ (number of nodes in one end) * (number of nodes in the another end)
+
+*/
+
 // https://cses.fi/problemset/task/1132
 
 // https://codeforces.com/problemset/problem/337/D
@@ -84,15 +90,21 @@ int main(){
 https://www.spoj.com/problems/EAGLE1/  (tree dp, in-out, as above code but here edges are weighted)
 https://pastebin.com/Q6ApmdCn
 
-https://codeforces.com/contest/1324/problem/F
-https://codeforces.com/contest/1324/submission/73482716
+https://codeforces.com/contest/1324/problem/F            (maximum white subtree)
+https://codeforces.com/contest/1324/submission/105045087
 
 https://www.spoj.com/problems/PT07Z/
 solution: is ans = max(ans, in[i] + out[i])
 
+https://atcoder.jp/contests/dp/tasks/dp_p                      
+Tree dp, basic counting, https://atcoder.jp/contests/dp/submissions/19922830
+
 https://codeforces.com/contest/1401/problem/D  (dp contribution techniq)
 https://codeforces.com/contest/1401/submission/90882209
 
+https://codeforces.com/problemset/gymProblem/102694/B
+https://pastebin.com/53kX4tqG
+ 
 https://codeforces.com/contest/161/problem/D  (with inclusion-exlusion principal)
 https://codeforces.com/contest/161/submission/102405695 
 
@@ -101,4 +113,9 @@ https://codeforces.com/contest/1187/submission/95686227
 
 https://cses.fi/problemset/task/1133
 https://pastebin.com/ZdfhdNFh
+
+https://cses.fi/problemset/task/1130   (tree edges, cool dp problem, tree matching)
+https://pastebin.com/V85rFfYz
+
+https://codeforces.com/contest/1223/problem/E    (Paint the Tree, extension of above problem, Exchange arguments, dp)
 */

@@ -36,36 +36,36 @@ void insertAtBegining(Node * &head, int val) {
 
 void insertAtEnd(Node * &head, int val) {
     Node *node = new Node(val);
-    if (head == NULL) {
+    if (head == nullptr) {
         head = node;
         return;
     }
     Node *curr = head; 
-    while (curr->next != NULL) {
+    while (curr->next != nullptr) {
         curr = curr->next;
     }
     curr->next = node;
 }
 
 void deleteBegininig(Node * &head) {
-    if (head == NULL) return;
+    if (head == nullptr) return;
     Node *curr = head;
     head = head->next;
     delete curr;
-    curr = NULL;
+    curr = nullptr;
 }
 
 void deleteEnd(Node * &head) {
-    if (head == NULL) return;
-    Node *curr = head, *prev = NULL;
-    while (curr->next != NULL) {
+    if (head == nullptr) return;
+    Node *curr = head, *prev = nullptr;
+    while (curr->next != nullptr) {
         prev = curr;
         curr = curr->next;
     }
     delete curr;
     curr = nullptr;
     if (prev == nullptr) head = nullptr;
-    else prev->next = NULL;
+    else prev->next = nullptr;
 }
 
 
@@ -92,6 +92,30 @@ Node *middle(Node *head) {
     return slow;
 }
 
+Node *mergeTwoLists(Node *l1, Node *l2) {
+	if (l1 == nullptr) return l2;
+	//maintain, the prev, curr1 pointer of l1, and curr2 of l2
+	Node *prev = nullptr, *curr1 = l1, *curr2 = l2;
+	while (curr1 and curr2) {
+		if (curr1->val > curr2->val) {
+			ListNode nxt = curr2->next;
+			curr2->next = curr1;
+			if (prev == nullptr) {
+				l1 = curr2;
+			} else prev->next = curr2;
+			prev = curr2;
+			curr2 = nxt;
+		}
+		else {
+			prev = curr1;
+			curr1 = curr1->next;
+		}
+	}
+	if (l2) {
+		prev->next = curr2;
+	}
+	return l1;
+}
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -154,3 +178,4 @@ int main(){
 // https://leetcode.com/problems/reverse-nodes-in-k-group/  (reverse and some corner casesoln: https://pastebin.com/uXdR0DHa)
 //https://www.interviewbit.com/problems/reverse-alternate-k-nodes/   (reverse, https://pastebin.com/Jw1e0pzZ)
 //https://www.interviewbit.com/problems/kth-node-from-middle/    (reverse, https://pastebin.com/Dm4GsCE6)
+//https://leetcode.com/problems/merge-k-sorted-lists/

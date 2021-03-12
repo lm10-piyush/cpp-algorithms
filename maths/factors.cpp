@@ -40,6 +40,13 @@ int main()
     return 0;
 }
 
+/*
+ * Factors of 'n' exists in pairs, and the middle number is root(n).
+ that means: n = 12, 
+ then factors: (2, 6), (1, 12), (3, 4) in pairs
+
+
+*/
 //https://www.spoj.com/problems/FACT0/      (factoring using seive)
 //https://pastebin.com/gwEK1ZfT
 

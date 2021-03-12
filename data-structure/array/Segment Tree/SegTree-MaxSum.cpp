@@ -113,4 +113,8 @@ Node contains:
 
 https://www.spoj.com/problems/GSS1/   (there is no updates)
 https://cses.fi/problemset/task/1190
+
+https://discuss.codechef.com/t/help-query-to-find-longest-subarray-containing-all-1s/18107  (Blog which might be helpful)
+https://www.hackerearth.com/practice/data-structures/disjoint-data-strutures/basics-of-disjoint-data-structures/practice-problems/algorithm/reunion-of-1s-1b5bd063/description/
+https://pastebin.com/wpv10AfK
 */

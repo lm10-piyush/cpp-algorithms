@@ -26,7 +26,7 @@ int main(){
     		sum -= A[j++];
 
         /*
-        while (curr > mx && i <= j) {
+        while (curr > mx && i <= j) { //increment the pointer
             if (s[i] != ch) curr--;
             j++;
         }
@@ -56,4 +56,14 @@ https://pastebin.com/FjxmhBa2
 
 https://leetcode.com/problems/minimum-size-subarray-sum/
 https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
+
+https://leetcode.com/problems/minimize-deviation-in-array/           
+Greedy, Important, Can be solved using Smart brute force(here two pointer), https://pastebin.com/bi2Tn5W4, 
+Can be solved using Heap, Solution of Heap is intresting how they reduced the two operation into just one)
+
+https://codeforces.com/contest/1380/problem/D                      
+(greedy, two pointer, observation, costs, https://codeforces.com/contest/1380/submission/106140134)
+
+https://leetcode.com/problems/arithmetic-slices/
+https://pastebin.com/CKRbJiVB
 */

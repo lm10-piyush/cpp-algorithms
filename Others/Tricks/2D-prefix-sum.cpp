@@ -33,16 +33,19 @@ int main(){
             if (i and j) dp[i][j] -= dp[i-1][j-1];
         }
     }
- 
+    
+    auto qry = [&](int x1, int y1, int x2, int y2) {
+        int ans = dp[x2][y2];
+        if (x1) ans -= dp[x1-1][y2];
+        if (y1) ans -= dp[x2][y1-1];
+        if (x1 and y1) ans += dp[x1-1][y1-1];
+        return ans;
+    };
  
     while (q--) {
         int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;
         x1--; y1--; x2--; y2--;
-        int ans = dp[x2][y2];
-        if (x1 > 0) ans -= dp[x1-1][y2];
-        if (y1 > 0) ans -= dp[x2][y1-1];
-        if (x1 > 0 and y1 > 0) ans += dp[x1-1][y1-1];
-        cout << ans << endl;
+        cout << qry(x1, y1, x2, y2) << endl;
     }
  
     return 0;

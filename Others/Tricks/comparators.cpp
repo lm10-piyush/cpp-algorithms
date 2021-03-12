@@ -84,6 +84,9 @@ Above is a demo of "struct" when you want some custom node as key in set, multis
 to overload the operator< as friend function, then it works. It also works when you need to use struct in vectors and then
 use sort(...) function.
 
+NOTE: dont't use <= or >= for comparators instead, use : < or >.
+
+========================================================================================
 But suppose you want some "struct" and only want to use in vectors (not map, or self arrangement data structure) and then you can
 just use:
 struct Node {
@@ -91,10 +94,10 @@ struct Node {
     Node() {}
     Node(int x, int y) : a(x), b(y){}
     bool operator<(Node o) {
-        return a < o.a;
+        return make_tuple(a, b) < make_tuple(o.a, o.b);
     }
-
 };
+
 vector <Node> A = {{4, 2}, {1, 10}, {2, 4}};
 sort(A.begin(), A.end());
 

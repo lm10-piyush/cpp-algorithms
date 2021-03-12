@@ -29,3 +29,5 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 11. https://codeforces.com/blog/entry/20935 DP on trees
 
 12. Permutation Tree: https://codeforces.com/blog/entry/78898
+
+13. ICPC archive: https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=0

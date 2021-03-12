@@ -10,9 +10,10 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 const int N = 1e7 + 2;
 vector <int> factor(N); //factor[i] => smallest prime factor i
-vector <int> primes;
 
 void linear_seive() {
+    vector <int> primes;
+    
     for (int i = 2; i < N; ++i) {
         if (factor[i] == 0) {
             factor[i] = i;
@@ -38,6 +39,9 @@ int main(){
 }
 
 /*
+https://cp-algorithms.com/algebra/prime-sieve-linear.html
+https://codeforces.com/blog/entry/54090
+====================
 x => a.b
 a = lp[x]
 x => a.b, lp[b]
@@ -55,7 +59,7 @@ Ex: 30: 2 * 15
 Then, this representation would be always unique.
 This is the main idea of linear seive
 
-===================================================================
+============================= Now move to main idea ======================================
 
 So, we represent number X as: X = lp[X] * b,  where lp[X] => lower prime factor of x.
 Ex: 30 : 2*15

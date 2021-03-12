@@ -32,12 +32,25 @@ int lca(int u, int v) {
         if (level[u] - (1 << i) >= level[v])
             u = parent[u][i];
     }
+    //now both are at same level
     if(u == v) return u;
     for (int i = Log; i >= 0; --i) {
-        if (parent[u][i] != -1 and parent[u][i] != parent[v][i])
+        if (parent[u][i] > 0 and parent[u][i] != parent[v][i])
             u = parent[u][i], v = parent[v][i];
     }
     return parent[u][0];
+}
+
+
+int kthParent(int u, int k) {
+    for (int i = Log; i >= 0; --i) {
+        if (k - (1 << i) >= 0) {
+            u = parent[u][i];
+            k -= 1 << i;
+            if (u <= 0) return -1; //invalid, I consider 0 as invalid also.
+        }
+    }
+    return u;
 }
 
 void build(int n) {
@@ -49,6 +62,8 @@ void build(int n) {
         }
     }
 }
+
+
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -103,5 +118,11 @@ https://pastebin.com/kb3gJTJb
 
 https://codeforces.com/contest/208/problem/E  (E. Blood Cousins, climbing, DSU on trees)
 https://codeforces.com/contest/208/submission/94405990
+
+https://codeforces.com/gym/102694/problem/C     (lca, climbing on tree).
+https://pastebin.com/v0CeVB5x
+
+https://codeforces.com/gym/102694/problem/D     (lca, climbing on tree, maintaining the minimums on range)
+https://pastebin.com/3nLKjQdQ
 
 */

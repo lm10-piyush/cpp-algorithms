@@ -58,8 +58,15 @@ int main(){
 
 /*
 properties:
+0) Most important: It is a multiplicative function, because of that we can calculate phi(n) independently for each prime number 
+  and then combine them. 
+  Why it is a multiplicative function? because we can write: 
+  ph(n) => summation(d) {mobius(d).(n / d)}, where d => divisor on 'n'
+  We know that, mobius(d) and (n/d) => both are multiplicative function, and the above summation is Drichlet convolution.
+  Thats why phi(n) is multiplicative.
+
 1) phi(p^k) = p^k - p^(k-1), p = prime
-2) sum over each divisor of n(phi(n / d)) = n, d => divisor of n
+2) summation {phi(d)} = n, d => divisor of n
 3) count of numbers <= n, such that gcd with n gives d, gcd(n, k) = d.
    then it will be, phi(n / d)
 4) phi(a.b) = phi(a). ph(b). d/phi(d), d = gcd(a, b);

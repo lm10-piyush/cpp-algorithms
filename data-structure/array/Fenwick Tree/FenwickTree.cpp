@@ -18,7 +18,8 @@ struct BIT{
     bit.assign(n+2, 0);
   }
   //~~~~~~~~~~~~~update~~~~~~~~~~~~~
-  //if given i is zero based, then ++i, you can do ++i even if it is not zero based but then you to increase the 'n'
+  //if given i is zero based, then ++i because here only positive indices are used. 
+  //You can do ++i even if it is not zero based but then you have to increase the 'n' also.
   void upd(int i, int val){
     for (++i; i <= n; i+= i&-i)
       bit[i] += val;
@@ -88,7 +89,7 @@ int main()
 /*
 fenwick tree only deals with indices of +ve numbers, that why if our indexing is 0-based then we do +1 or ++, to do it
 1-based in fenwick tree.
-
+NOTE: It is quite common technique to sort the queries (offline) such as with Right end points, according to values etc.
 
 we can also do range update, concept is same as difference array: upd(l, x), upd(r+1, -x) 
 
@@ -108,6 +109,9 @@ https://www.spoj.com/problems/KQUERY/
 https://pastebin.com/jNap9hvZ
 
 https://cses.fi/problemset/task/1646
+
+https://codeforces.com/contest/597/problem/C               
+(dp, combinatorics, fenwick tree, data structure, https://codeforces.com/contest/597/submission/107186179)
 
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-16-january/challenges/triplets-mania
 https://pastebin.com/epBbY5pK
@@ -143,11 +147,17 @@ https://www.codechef.com/viewsolution/37019647
 https://codeforces.com/contest/1311/problem/F  (moving points)
 https://codeforces.com/contest/1311/submission/71993217
 
-https://cses.fi/problemset/task/1137  (Euler tour, trees)
+https://cses.fi/problemset/task/1137  (Euler tour, trees, subtree query)
 https://pastebin.com/XCc6Hq8X
 https://pastebin.com/JTQ2UQwB        (Clean code)
 
- * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
+https://codeforces.com/gym/102694/problem/E      (Euler tour, trees, subtree qry, Big numbers, Logrithms)
+https://pastebin.com/FQatRMZt
+
+https://codeforces.com/gym/102694/problem/F    (Euler tour, trees, subtree qry)
+https://pastebin.com/8HsnPVf4
+
+ * https://cses.fi/problemset/task/1138  (euler tour, path sum query, we have to store two values +x, -x)
  * https://pastebin.com/Kdb74mwu   (using fenwick tree)
 
 https://atcoder.jp/contests/hhkb2020/tasks/hhkb2020_c  (MEX query with binary search)
@@ -155,4 +165,9 @@ https://atcoder.jp/contests/hhkb2020/submissions/17299633
 
 https://atcoder.jp/contests/abc187/tasks/abc187_e  (Euler tour, tree, subtree value sum)
 https://atcoder.jp/contests/abc187/submissions/19168934  (clean code)
+
+ https://codeforces.com/contest/1262/problem/D2         (Can be done with c++ pbds)
+ https://codeforces.com/contest/1262/submission/109781843   (pbds solution)
+
+
 */

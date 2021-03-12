@@ -98,6 +98,7 @@ https://codeforces.com/contest/321/submission/104148552
  To proof it intutively we can see that as 'i' is fixed (number of groups) and 'j' increases then value of k
  will also increase, so k for opt(i, j+1) will lie after or equal to opt(i, j). This holds the monotonicity and
  we can apply the Divide and conqure to calcuate the states. 
+ 
  How does it works?
  Suppose we are talking about some certain 'i'(which is fixed) and now update all the states related to the 'i'.
  Suppose I'm at currently some section [j1...j2] for which I have to calculate the DP dp[i][j1]... dp[i][j2].
@@ -115,4 +116,8 @@ https://codeforces.com/contest/321/problem/E
 
 https://codeforces.com/contest/1077/problem/F2
 https://codeforces.com/contest/1077/submission/104366757
+
+
+https://codeforces.com/contest/673/problem/E
+
 */

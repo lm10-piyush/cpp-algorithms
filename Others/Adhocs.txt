@@ -49,7 +49,8 @@ https://codeforces.com/contest/1399/problem/E1   (Weights Division (easy version
 https://cses.fi/problemset/task/1630      (Tasks and Deadlines, https://pastebin.com/3pGPyhqD)
 https://leetcode.com/problems/largest-number/   (Largest number, https://pastebin.com/12PVfsVS)
 https://codeforces.com/contest/632/problem/C    (The Smallest String Concatenation, https://codeforces.com/contest/632/submission/94871653)
-https://atcoder.jp/contests/abc187/tasks/abc187_d   (https://atcoder.jp/contests/abc187/submissions/19169194)
+https://atcoder.jp/contests/abc187/tasks/abc187_d   (Beware of Runtime error on Sorting, https://atcoder.jp/contests/abc187/submissions/19169194, with comparator: https://atcoder.jp/contests/abc187/submissions/19240722 )
+https://codeforces.com/contest/1223/problem/E        (Paint the Tree, extension of Tree matching problem, Exchange arguments, tree dp)
 ********************************************************************************************
 
 https://codeforces.com/problemset/problem/1178/D (greedy, maths, Trick, number theory, https://codeforces.com/contest/1178/submission/89284779)
@@ -97,6 +98,7 @@ https://www.codechef.com/PRACTICE/problems/SSO  (https://www.codechef.com/viewso
 https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/  (https://pastebin.com/hLSLVZuT)
 https://codeforces.com/contest/1225/problem/D       (maths, prime factorization, map, counting, hash, https://codeforces.com/contest/1225/submission/103024338)
 https://codeforces.com/contest/1471/problem/D      (maths, prime factorization, map, counting, hashing, seive, https://codeforces.com/contest/1471/submission/103539935)
+https://leetcode.com/problems/max-number-of-k-sum-pairs/          (counting pairs, https://pastebin.com/bDq9ezhs)
 ****************************************************************************************************************
 
 
@@ -161,6 +163,11 @@ https://codeforces.com/contest/137/problem/C  (History, https://codeforces.com/c
 https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
 https://atcoder.jp/contests/abc183/tasks/abc183_d   (Intervals, greedy, sorting, https://atcoder.jp/contests/abc183/submissions/19181807)
 https://atcoder.jp/contests/abc188/tasks/abc188_e     (map, difference array concep on map, intervals, https://atcoder.jp/contests/abc188/submissions/19358640)
+https://cses.fi/problemset/task/1140                              (DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
+https://codeforces.com/contest/1223/problem/D                 (DP, like LIS, maintaining sequence, intervals, set tricks, https://codeforces.com/contest/1223/submission/104982087)
+https://codeforces.com/contest/612/problem/D                  (interval, https://codeforces.com/contest/612/submission/107130517)
+https://codeforces.com/contest/976/problem/C                  (intervals, exchange arguments,  sorting, https://codeforces.com/contest/976/submission/107084219)
+https://codeforces.com/contest/1061/problem/D                (Interval, greedy, Trick, Important Greediness)
 
 /**********************************************************************************************************
 
@@ -181,6 +188,7 @@ https://codeforces.com/contest/920/problem/E    (E. Connected Components?, compl
 https://codeforces.com/contest/1243/problem/D   (0-1 MST, same as above, https://codeforces.com/contest/1243/submission/94438372)
 https://leetcode.com/problems/k-diff-pairs-in-an-array/   (https://pastebin.com/xMQKa9YJ)
 https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Intervals, Set trick, https://www.codechef.com/viewsolution/39248384)
+https://codeforces.com/contest/1493/problem/D         (maths, gcd, set/multiset, counting, https://codeforces.com/contest/1493/submission/109326374)
 ***************************************************************
 https://codeforces.com/contest/858/problem/D      (Polycarp's phone book, heavy implementation of stl and string, https://codeforces.com/contest/858/submission/92433126)
 
@@ -220,8 +228,8 @@ https://codeforces.com/contest/510/problem/B  (Fox And Two Dots, DFS on matrix w
 
 /************************************* EXPECTED VAlue *****************************************
 
-https://codeforces.com/contest/453/problem/A  (Little Pony and Expected Maximum, https://codeforces.com/contest/453/submission/94976965)
-
+https://codeforces.com/contest/453/problem/A       (Little Pony and Expected Maximum, https://codeforces.com/contest/453/submission/94976965)
+https://www.codechef.com/problems/THEGAME           (Filling the maze, expected value, Linearity of expectation, https://www.codechef.com/viewsolution/42201336)
 
 **********************************************************************************************
 https://leetcode.com/problems/buddy-strings/   (Greedy, implementation)
@@ -309,9 +317,47 @@ https://atcoder.jp/contests/abc188/tasks/abc188_e        (dp, DAG, graph, https:
 https://atcoder.jp/contests/abc180/tasks/abc180_d        (maths, Long long can overflow so be clever, https://atcoder.jp/contests/abc180/submissions/19308299)
 https://www.spoj.com/problems/ABCPATH/                   (dfs on matrix, https://pastebin.com/1p4P5mGK)
 https://codeforces.com/contest/1473/problem/D             (data structure, greedy, tricky, https://codeforces.com/contest/1473/submission/104400460)
-
-
-
+https://leetcode.com/problems/longest-substring-without-repeating-characters/    (sliding window or two pointers, https://pastebin.com/XKFkT1qF)
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f5b#problem       (binary search, kickstart, cool problem, https://pastebin.com/kvfxMjJB)
+https://leetcode.com/problems/determine-if-two-strings-are-close/          (string, greedy, observation, frequency, "know what operations are doing", https://pastebin.com/aMKe2RGW)
+https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/        (strings, greedy, map, counting, observation, https://pastebin.com/aePN3fjV)
+https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/  (greedy, string, counts, frequency, https://pastebin.com/9QSravgW)   
+https://leetcode.com/problems/count-ways-to-make-array-with-product/               (stars and bars, maths, counting, combinatorics, https://pastebin.com/4VETqNEE)
+https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=671&page=show_problem&problem=5162 (greedy, maths, ICPC world finals)
+https://codeforces.com/contest/1469/problem/D                 (greedy, maths, number theory, https://codeforces.com/contest/1469/submission/105249700)
+https://codeforces.com/contest/1144/problem/E                (Long arithmetic, maths, strings, base change, https://codeforces.com/contest/1144/submission/105569752)
+https://codeforces.com/contest/1294/problem/F               (bfs, diameter, tree, https://codeforces.com/contest/1294/submission/105599159)
+https://codeforces.com/contest/633/problem/D                 (Brute force and implementation, https://codeforces.com/contest/633/submission/105614649)
+https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/          (greedy, strings, https://pastebin.com/jzbU2Fwt)
+https://codeforces.com/gym/102942/problem/E                            (maths, combinatorics, stars and bars, https://pastebin.com/pFJJTq9R)
+https://codeforces.com/contest/448/problem/C                       (divide and conqure, Fences, https://codeforces.com/contest/448/submission/105786332)
+https://codeforces.com/contest/547/problem/B                        (binary search, sparse table, https://codeforces.com/contest/547/submission/105818867)
+https://codeforces.com/contest/1077/problem/E                     (Greedy, solved using Binary search also, https://codeforces.com/contest/1077/submission/105964352)
+https://leetcode.com/problems/minimize-deviation-in-array/           (Greedy, Important, Can be solved using Smart brute force(here two pointer), https://pastebin.com/bi2Tn5W4, Can be solved using Heap, Solution of Heap is intresting how they reduced the two operation into just one)
+https://codeforces.com/contest/463/problem/C                        (Implementation, Grid hashing, https://codeforces.com/contest/463/submission/106081871)
+https://codeforces.com/contest/595/problem/B                          (Maths, counting, divisors, https://codeforces.com/contest/595/submission/106113212)
+https://codeforces.com/contest/1380/problem/D                       (greedy, two pointer, observation, costs, https://codeforces.com/contest/1380/submission/106140134)
+https://www.codechef.com/LTIME92A/problems/GOODGRID                     (Adhoc, grid, observation, https://www.codechef.com/viewsolution/42153576)
+https://codeforces.com/contest/1202/problem/D                    (maths, combinatorics, strings, https://codeforces.com/contest/1202/submission/106277724)
+https://codeforces.com/contest/459/problem/C                     (maths, Like Divide and conqure, https://codeforces.com/contest/459/submission/106295011)
+https://codeforces.com/contest/1288/problem/C                      (maths, combinatorics, https://codeforces.com/contest/1288/submission/88074818)
+https://leetcode.com/problems/largest-merge-of-two-strings/          (easy, greedy, strings, https://pastebin.com/3RQFM9sm)
+https://codeforces.com/contest/1155/problem/C                          (gcd, maths, https://codeforces.com/contest/1155/submission/107115517)
+https://codeforces.com/contest/1155/problem/B                           (observation, https://codeforces.com/contest/1155/submission/107115375)
+https://codeforces.com/contest/1452/problem/C                                 (brackets, string, https://codeforces.com/contest/1452/submission/107169632)
+https://codeforces.com/contest/612/problem/C                              (brackets, strings, https://codeforces.com/contest/612/submission/107129280)
+https://codeforces.com/contest/1076/problem/C                        (maths, quadratic equation, roots, https://codeforces.com/contest/1076/submission/107089979)
+https://codeforces.com/contest/622/problem/D                          (observation, constructive, https://codeforces.com/contest/622/submission/107272809)
+https://www.spoj.com/problems/SUMPRO/                                   (Maths, important, sum of products, https://pastebin.com/LEsCQ89R)
+https://codeforces.com/contest/622/problem/E                           (tree, greedy, sorting,  https://codeforces.com/contest/622/submission/107489187)
+https://codeforces.com/contest/863/problem/D                              (Important problem, reversing query, https://codeforces.com/contest/863/submission/107729268)
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/            (brackets, string, balancing, https://pastebin.com/CLxb5pn9)
+https://codeforces.com/contest/584/problem/D                                  (Maths, goldbach, important problem, https://codeforces.com/contest/584/submission/108155941)
+https://codeforces.com/contest/1034/problem/A                       (Enlarge gcd, maths, gcd, https://codeforces.com/contest/1034/submission/96812902)
+https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/H           (maths, common way to solve maths problems, binary search, solN: https://pastebin.com/mzPenZMn)  
+https://codeforces.com/contest/937/problem/C                                    (Save Energy!, maths, binary search, floating points, Trick Important, https://codeforces.com/contest/937/submission/109316320)
+https://codeforces.com/contest/518/problem/E                               (Greedy, Segments break down, trick, important, Implemenation, https://codeforces.com/contest/518/submission/109504519)
+https://codeforces.com/contest/1262/problem/C                        (brackets, string, bruteforce, https://codeforces.com/contest/1262/submission/109767449)
 
 
 

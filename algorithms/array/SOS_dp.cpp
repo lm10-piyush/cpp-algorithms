@@ -20,7 +20,7 @@ int main(){
     vector <int> A(n);
     for (int &i: A) cin >> i;
     vector <int> F(n, 0);
-    vector <vector<int>> dp(n, vector <int>(lg, 0));
+    vector <vector<int>> dp(n, vector <int>(lg, 0)); //dp[]
 
     for (int mask = 0; mask < n; ++mask){  // for every mask
       for (int i = 0; i < lg; ++i){  //try every bit of mask, it will overlapp
@@ -72,7 +72,7 @@ Some points from above resources:
 
 ***************************************************
 Problem:
-1) https://www.hackerrank.com/contests/all-india-contest-by-coding-club-india/challenges/oreo/problem
+1) https://www.hackerrank.com/contests/all-india-contest-by-coding-club-india/challenges/oreo/problem (now this problem link is expired, but the problem was just given in the CF blog)
 soln : https://pastebin.com/emtb1TK8 SAME AS ABOVE
 
 */

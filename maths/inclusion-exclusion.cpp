@@ -68,7 +68,9 @@ int main(){
 }
 
 /*
+ * I think inclusion exclusion not for the multisets, it is only for sets (atmost one occurrence of each element)
  * https://codeforces.com/blog/entry/64625 
+ * https://cp-algorithms.com/combinatorics/inclusion-exclusion.html     (with proofs and problems)
  
  * Inclusion exclusion principle helps to find the count(number of elements) in set(single or Union of sets) without getting 
    miscounting(less or overcounting).
@@ -84,4 +86,46 @@ int main(){
     As you can see, we are iterating over each subset of A, and sign depends on how many number we are taking at one time (odd : +, even -),
     so we need to do brute force for that (bitmasking).
  
+  * Note: while calculating prime factors, count prime factors only once, that means prime factorization must have only distinct elements.
+  * We can also use the Mobius function, with the inclusion-exlusion also, it works in similar way. Actually mobius function gives values {0, 1, -1} depending
+  upon the input, and we actually do same thing. 
+
+  * Suppose you want to find the count of numbers which are non-coprime with given number 'X' (gcd(X, A[i]) == 1), then calculate the prime factorization of the 'X'
+   X = {p1, p2...pk} write each occurrence only once. (because we are representing them as a set).
+   let, d: set of numbers constructed using differnet combination of {p1, p2...}, or we can say 'd' is set of divisors of X such that each divisor is square free number.
+   d : {d1, d2...}
+   Now, lets define a function F(D) which represents a set of numbers (from the given ones) such that D is the divisor of all those numbers:
+   F(D) = {a1, a2...}, |F(D)| => cardinality of that set.
+   Ex: A = [2, 4, 6, 12, 18, 20], given numbers
+   F(4) => {4, 12, 20}
+   Now, we can the the numbers which are non-coprime with 'X' using inclusion exclusion.
+   F(d1) => {a1, a2....}
+   F(d2) => {b1.....} .. so on.
+   As you can see F(d_i) => shows those number whose divisor is d_i and those numbers are non-coprime to 'X', so we can say that
+   |F(d_i)| => the count of those number, but might get overcounted, lets fix it using inclusion exclusion. 
+   ans => summation (|F(d_i)| * (-1)^(count of prime divisor in d_i))
+   
+   Actually in similicity we can write it as in Mobius function terms also:
+   ans => summation (u(d_i) * |F(d_i)|)
+    we can write even this: ans => summation (u(i) * |F(i)|), i => {1, ..... to any given constrain}
+    Actually mobius function puts the value accordingly and gives the correct answer.
+    u(x) => 0 , when x is not a square free number, so as you can see in just above equation most of the number will get zero.
+    u(x) => -1, when x has odd number of prime divisor and x is square free number
+    u(x) => 1, when x has even divisor and x is square free number
+    
+    So, as you can see, how we replaced (-1)^count(d_i) with mobius function and rest of the part is same.
+
+    ====================================================================================================
+
+
+ http://acm.hdu.edu.cn/showproblem.php?pid=4135
+ https://pastebin.com/BBpBcAfp
+
+ https://codeforces.com/contest/547/problem/C           (with queries)
+ https://codeforces.com/contest/547/submission/105842907
+ https://codeforces.com/contest/547/submission/16880958       (solved using mobius function + inclusion exclusion)
+
+
+ https://www.hackerrank.com/challenges/gcd-product/problem
+
 */

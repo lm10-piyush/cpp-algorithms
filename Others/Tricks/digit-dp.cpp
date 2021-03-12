@@ -27,7 +27,7 @@ ll go(int pos, int rem, int tight) {
     for (int i = 0; i <= limit; ++i) {
         int newtight = tight;
         if (i < limit) newtight = 0;
-        (ans += go(pos+1, (rem + i) % d, newtight)) %= mod;
+        (ans += go(pos+1, (rem + i) % d, newtight)) %= mod; //sum of digits
     }
     return dp[pos][rem][tight] = ans;
 }
@@ -71,5 +71,8 @@ https://pastebin.com/GYaPuSm9
 
 https://codeforces.com/gym/100886/problem/G
 https://pastebin.com/PZTU54iM
+
+https://codeforces.com/contest/628/problem/D
+https://codeforces.com/contest/628/submission/107072882
 
 */

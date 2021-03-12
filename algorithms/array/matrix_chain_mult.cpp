@@ -54,3 +54,14 @@ int main(){
 // (by just using mod) https://www.codechef.com/viewsolution/37387318)
 
 //https://codeforces.com/gym/102644
+
+//https://codeforces.com/contest/1132/problem/F               
+//(dp, like Matrix CM, strings, nice problem, https://codeforces.com/contest/1132/submission/105669314)
+
+/*
+https://codeforces.com/contest/607/problem/B            
+(DP, kind of MCM, palindrome substring, https://codeforces.com/contest/607/submission/105788794)
+
+https://atcoder.jp/contests/dp/tasks/dp_n                   
+(Like matrix chain multiplication, DP, https://atcoder.jp/contests/dp/submissions/19915760)
+*/

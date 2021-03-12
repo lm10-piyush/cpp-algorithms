@@ -65,5 +65,9 @@ B array.
 Now, LCS of A and B would be LIS in A.
 same problem asked in Codenation: https://www.youtube.com/watch?v=56B0HkJfx38
 
+https://cses.fi/problemset/task/1140                             
+(DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
 
+https://codeforces.com/contest/1475/problem/G             
+(DP, LIS, https://codeforces.com/contest/1475/submission/105398683)
 */

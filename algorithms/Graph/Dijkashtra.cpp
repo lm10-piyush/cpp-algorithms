@@ -83,7 +83,7 @@ https://pastebin.com/CWadhYFW
 https://codeforces.com/contest/938/problem/D     (A bit tricky ques, like mutliple source)
 https://codeforces.com/contest/938/submission/95437028
 
-https://codeforces.com/contest/545/problem/E    (Dijkstra's variation)
+https://codeforces.com/contest/545/problem/E    (Dijkstra's variation, Dijkstra spanning tree)
 https://codeforces.com/contest/545/submission/104450165
 
 https://codeforces.com/contest/1473/problem/E      (Dijsktra's variation with 4 possiblities)

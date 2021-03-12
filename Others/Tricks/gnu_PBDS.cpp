@@ -11,11 +11,13 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
+
 #include <ext/pb_ds/assoc_container.hpp> 
 #include <ext/pb_ds/tree_policy.hpp> 
 using namespace __gnu_pbds; 
   
-#define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
+template <typename T> 
+using ordered_set =  tree<T, null_type,less<T>, rb_tree_tag,tree_order_statistics_node_update>;
 
 //NOTE: To implement the multiset you should pair<int,int>(val, index), don't use less_equal, otherwise it causes problems
 //https://cses.fi/problemset/task/1144  try this problem using less_equal<int>, then there would be unexpected behaviours.
@@ -23,7 +25,8 @@ using namespace __gnu_pbds;
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
-    ordered_set oset;
+    
+    ordered_set <int> oset;
 
     int n; cin >> n;
     for (int i = 0, x; i < n; ++i) {
@@ -43,3 +46,9 @@ int main(){
 
     return 0;
 }
+
+/*
+ https://codeforces.com/contest/1262/problem/D2         (Can be done with c++ pbds)
+ https://codeforces.com/contest/1262/submission/109781843   (pbds solution)
+
+*/

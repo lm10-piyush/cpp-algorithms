@@ -60,14 +60,21 @@ int main(){
 /*
  * https://codeforces.com/contest/546/problem/D
  * https://www.spoj.com/problems/FACTCG2/
+ 
  * https://www.codechef.com/problems/SMPLSUM
  * soln: https://www.codechef.com/viewsolution/33189927
+
  * https://codeforces.com/contest/222/problem/C
  * solution: https://codeforces.com/contest/222/submission/80800916
  * https://codeforces.com/contest/1366/problem/D
  * sol: https://codeforces.com/contest/1366/submission/87461823
  * https://atcoder.jp/contests/abc177/tasks/abc177_e
  * https://atcoder.jp/contests/abc177/submissions/16637688
+
+ * https://codeforces.com/contest/566/problem/F  (with LIS, dp, seive)
+ * https://codeforces.com/contest/1350/problem/B  (LIS, dp, seive)
+ * https://codeforces.com/contest/264/problem/B    (LIs, dp, seive, O(nlogn), becuz, n < 1e6, max_element <= 1e7)
+ * https://leetcode.com/problems/largest-divisible-subset/  (DP, LIS, O(n2) solution needed becuz, max_element <= 2e9, n < 6e3) 
 
  *https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/easy-10-cc/problem
  * https://codeforces.com/contest/1034/problem/A         (Nice problem, strick time limit)

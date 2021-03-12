@@ -1,0 +1,50 @@
+<snippet>
+	<content><![CDATA[
+template <typename T>
+struct STable {
+    const int Log = 20;
+    vector <vector<T>> sparse;
+    int n;
+
+    STable(vector <T> &A) {
+        n = sz(A);
+        sparse.assign(n, vector<T>(Log+1, 0));
+        build(A);
+    }
+
+    void build(vector <T>& A) {
+        for (int i = 0; i < n; ++i) sparse[i][0] = A[i];
+        for (int j = 1; j <= Log; ++j) {   
+            for (int i = 0; i + (1 << j) <= n; ++i) {
+                sparse[i][j] = min(sparse[i][j-1], sparse[i+(1 << (j-1))][j-1]);
+            }
+        } 
+    }
+
+    T qry1(int l, int r) {
+        T ans = 1e9;
+        for (int i = Log; i >= 0; --i) {
+            if (l + (1 << i) - 1 <= r) {
+                ans = min(ans, sparse[l][i]);
+                l += 1 << i;
+            }
+        }
+        return ans;
+    }  
+
+    //only for idempotent operations like min, max, gcd etc 
+    T qry(int l, int r) {
+        int len = r - l + 1;
+        int k = log2(len);
+        int x = len - (1 << k); //remaining
+        T ans = min(sparse[l][k], sparse[l+x][k]);
+        return ans;
+    }  
+};    
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_Stable</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

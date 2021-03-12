@@ -80,6 +80,11 @@ int main(){
     dp[i] = min{dp[j] + (h[i] - h[j])^2 + C}, j < i
     But the solution is O(n^2)
     =============================================
+    We can see one important thing: We can represent the cost function as a line, then use some Data structure to store and query 
+    the line efficiently, this is the convex hull trick / Licho tree. If we don't use Lichao tree as a Data structure  instead we 
+    use de-Queue as a data structure then we call this as Convex hull trick. If we use the Lichao tree as D.S then call as Lichao trick
+    but both's intention is kind of same to use the Line efficiently.
+
     We gonna optimize with Convex hull optimization with Lichao tree
     It is a way to optimizing the DP state update.
     The main idea is to represent the cost function as line and store the line some data structure so that we can query efficiently
@@ -88,10 +93,10 @@ int main(){
     (h[i]^2 + C) => constant for current 'i'
     cost : h[j]^2 + dp[j] - 2*h[i]*h[j]
     Now, we are currently at ith
-    you see cost equation as: y = mx + c, m = 2h[j], intercept = h[j]^2 + dp[j]
-    then y = -2*h[j]* x + intercept
+    you see cost equation as: y = mx + c, m = -2h[j], intercept = h[j]^2 + dp[j]
+    then y = -2*h[j]* x + intercept => -2*h[j] * x + (h[j]^2 + dp[j])
     If we put x = h[i]
-    then we get y = -2 * h[j]*h[i] + intercept
+    then we get y = -2 * h[j]*h[i] + intercept => -2 * h[j]*h[i] + (h[j]^2 + dp[j])  
     ==========================================
     This is the concept to put the lines in the data structure then for current 'i' with h[i] height find the best value you can get
     using one of those lines. For this task Li Chao tree is recommended, although you can tree deque also.

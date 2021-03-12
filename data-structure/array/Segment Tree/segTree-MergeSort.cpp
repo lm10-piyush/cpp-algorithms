@@ -42,6 +42,7 @@ struct SegTree {
         return qry(l, r, val, lo, mid, 2*node) + qry(l, r, val, mid+1, hi, 2*node+1);
     }
 
+    //number of elements, greater than val in [l..r], complexity: O(log(n) * log(n))
     int qry(int l, int r, int val) {
         return qry(l, r, val, 0, n-1, 1);
     }
@@ -70,3 +71,6 @@ int main(){
 //https://www.spoj.com/problems/KQUERY/
 //To solve problem like Kquery, I used mergeSort approach with binary search.
 //But here updates would be costly, becuz it is O(n.logn);
+
+//https://atcoder.jp/contests/abc190/tasks/abc190_e
+//https://atcoder.jp/contests/abc190/submissions/19819988

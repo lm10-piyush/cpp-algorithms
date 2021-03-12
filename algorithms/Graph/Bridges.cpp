@@ -65,16 +65,19 @@ int main(){
 }
 
 /*
+ * Concept of Bridges is in undirected graph. 
  * Here is the main concept of back edges. Tarjan Algorithm is used to find the bridges.
  * In most of the problems we need to sort the bridges array and u < v order maitained.
  * Observation: Each component apart by bridges have same low link value.  
  * lo[u] => minimum time reachable by the descendants of 'u' in the DFS spanning tree.
  * We conver the graph into the tree such that each node in the tree will be whole component of original graph whose
    lo[] value is same.
- * Observation: low value of the component is same.
+ * Observation: low value of the component is same (not necessarily, to condense the graph use DSU).
 
  * In line-32, we have done tin[u] < lo[v] instead of lo[u] < lo[v], because lo[u] < lo[v] is incorrect. Because lo[u] < lo[v] will
    count those edges also which are not bridges, if the back-edge from u is way behind the lo[v] then it will count that edge as bridge which is wrong.
+
+ * Note: Be careful, sometimes it looks like this could be done using Bridges conceptt, then think carefully, because there could be concept of articulation point.
 
  https://onlinejudge.org/external/7/796.pdf
  https://pastebin.com/urXutKaZ
@@ -90,4 +93,8 @@ int main(){
 
  https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/  (convert the graph into the tree using lo value.)
  https://pastebin.com/99c5t4eg
+
+ https://codeforces.com/contest/1000/problem/E          (Bridges, condensation of graph, diamter of tree, DSU)
+ https://codeforces.com/contest/1000/submission/104892785 
+ https://codeforces.com/contest/1000/submission/104890623     (Don't do these types of things to condense the graph such as lo[] value, insted use: DSU)
 */

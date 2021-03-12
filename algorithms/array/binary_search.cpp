@@ -14,9 +14,12 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
   it gives: if exactly found: return index.
   otherwise: that index (lo), such that A[lo] < x; 
 
-  NOTE: Mainly we apply binary search the ans for finding Max or Min or Exact ans by assumptions and then verify it then move 
+  NOTE: Mainly we apply binary search the ans for "finding Max or Min or Exact ans" by assumptions and then verify it then moving
         accordingly.
+        Ex: Given a graph with 'n' nodes and 'm' weighted edges, traverse the graph such that maximum weight in the path should be minimum.
+        Then idea is just make Binary search by assuming some upper bound and traverse the graph (dfs). 
 */
+
 int bi_search(vector<int> &v, int x){
     int lo = 0, hi = sz(v)-1;
     while(lo < hi){
@@ -56,7 +59,13 @@ int main(){
 /*
   Tip: when you are not able to solve the equation in O(1) then, it probably a good idea to use the binary search to find the ans.
   
-
+  * number of elements in range(l, r) in array => upper_bound(r) - lower_bound(l); 
+  * some times we need to check: a * b <= n, and a*b might get overwed so we do: a <= n / b
+       then we have to this operation safely: that means:
+       1) if a <= n / b => a <= floor(n / b)
+       2) if a >= n / b => a >= ceil(n / b)
+       https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/A   (problem based on this trick, https://pastebin.com/wMm6Zrku)
+       https://atcoder.jp/contests/abc192/tasks/abc192_d                soln: https://atcoder.jp/contests/abc192/submissions/20358093
 */
 
 
@@ -101,11 +110,38 @@ int main(){
 https://codeforces.com/contest/1408/problem/C  (Discrete Acceleration, Binary search on POINTS)
 https://codeforces.com/contest/1408/submission/94390152
 
+https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/B   (on floating points)
+https://pastebin.com/reaBM9G2
+
+https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/E (on floating points)
+https://pastebin.com/KB8BjiM3
+
+https://codeforces.com/contest/937/problem/C                                    
+(maths, binary search, Trick Important, Floating points, https://codeforces.com/contest/937/submission/109316320)
+
+https://leetcode.com/problems/path-with-minimum-effort/ (binary search on graph, max on path)
+https://pastebin.com/DPBFr5YQ
+
+https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/H  (maths, common way to solve maths problems)
+https://pastebin.com/mzPenZMn
+
+https://www.codechef.com/ICL2016/problems/ICL16A  (binary search on graph)
+https://www.codechef.com/viewsolution/41940310
+
 https://codeforces.com/contest/1117/problem/C (Tip, displacement is order Independent)
 solN: https://codeforces.com/contest/1117/submission/88736716
 
 https://codeforces.com/contest/812/problem/C
 https://codeforces.com/contest/812/submission/91554317
+
+https://codeforces.com/contest/622/problem/C
+https://codeforces.com/contest/622/submission/107269192
+
+https://codeforces.com/contest/1169/problem/C           (nice problem)
+https://codeforces.com/contest/1169/submission/108859224
+
+https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/D    (Overflow can cause problem)
+https://pastebin.com/9B8qtWqQ
 
 https://codeforces.com/contest/1393/problem/C
 https://codeforces.com/contest/1393/submission/89554852
@@ -143,4 +179,10 @@ https://codeforces.com/contest/1454/submission/101060423
 
 https://atcoder.jp/contests/abc183/tasks/abc183_b     (maths, binary search on floating points)
 https://atcoder.jp/contests/abc183/submissions/19180907
+
+https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f5b#problem 
+https://pastebin.com/kvfxMjJB
+
+https://cses.fi/problemset/task/1140                             
+(DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
 */

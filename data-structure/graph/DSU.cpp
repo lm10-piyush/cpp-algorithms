@@ -27,7 +27,7 @@ struct DSU {
     return parent[a] = find(parent[a]);
   }
 
-  void dsu_union(int a, int b){
+  void unite(int a, int b){
     int x = find(a), y = find(b);
     if(x == y) return;
     if(size[x] < size[y]) swap(x, y);
@@ -45,7 +45,7 @@ int main(){
 
     for (int i = 0, x, y; i < m; ++i){
       cin >> x >> y;
-      dsu.dsu_union(x, y);
+      dsu.unite(x, y);
     }
 
     cout << dsu.components;
@@ -59,6 +59,10 @@ int main(){
   soln: By Dsu, same as Kruksal algo for spanning tree. Keep adding edges when cycle found do ans++, and don't
   add that edge to your Dsu.
 
+  Another important use of DSU is to compress the nodes into one component. This is useful trick mostly in bridge tree or
+  (2-edge tree) where we have to consider a bunch of nodes as a single component.
+  EX: https://codeforces.com/contest/1000/problem/E       (brideges, 2-edge component, diameter of Tree, DSU components)
+  https://codeforces.com/contest/1000/submission/104892785
 
 */
 

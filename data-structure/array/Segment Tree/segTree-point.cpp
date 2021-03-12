@@ -12,17 +12,18 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 /****************************** CODE IS HERE ***********************************/
 
 //Range Min
+template <typename T>
 struct SegTree{
-  vector <int> tree;
+  vector <T> tree;
   int n; 
 
-  SegTree(vector<int> &A){
+  SegTree(vector<T> &A){
     n = sz(A);
     tree.assign(4*n, 0);
     build(A, 0, n-1, 1);
   }
 
-  void build(vector<int>&A, int lo, int hi, int node){
+  void build(vector<T>&A, int lo, int hi, int node){
     if(lo == hi){
       tree[node] = A[lo];
       return;
@@ -33,7 +34,7 @@ struct SegTree{
     tree[node] = min(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, int val, int lo, int hi, int node){
+  void upd(int idx, T val, int lo, int hi, int node){
     // no overlapp
     if(hi < idx or lo > idx) return;
     //total overlapp
@@ -48,11 +49,11 @@ struct SegTree{
     tree[node] = min(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, int val){
+  void upd(int idx, T val){   //update at value at index 'idx' to 'val'
     upd(idx, val, 0, n-1, 1);
   }
 
-  int qry(int l, int r, int lo, int hi, int node){
+  T qry(int l, int r, int lo, int hi, int node){
     //no overlapp
     if(hi < l or lo > r) return 1e9;
     //total overlapp
@@ -63,7 +64,7 @@ struct SegTree{
     return min(qry(l, r, lo, mid, 2*node), qry(l, r, mid+1, hi, 2*node+1));
   }
 
-  int qry(int l, int r){
+  T qry(int l, int r){  //query [l...r]
     return qry(l, r, 0, n-1, 1);
   }
 
@@ -73,9 +74,8 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     vector <int> A = {3, 4, 1, 4, 6, 8, 9, 2, 1, 0, 4};
-    SegTree st(A);
-
-    cout << st.qry(0, sz(A)) << endl;
+    SegTree <int> st(A);  //template
+    cout << st.qry(0, sz(A)-1) << endl;
     cout << st.qry(0, 3) << endl;
     cout << st.qry(3, 3) << endl;
     cout << st.qry(5, 5) << endl;
@@ -85,10 +85,16 @@ int main(){
     cout << st.qry(0, sz(A)) << endl;
     cout << st.qry(8, 9) << endl;
 
-
-
   return 0;
 }
+
+/*
+ * Simple way to remember the Segtree is associating the indices and their corresponding segment (represented by 'node')
+ * It is very common trick in Segtree or Fenwick trees to sort the query according to "Right pointer" of query (for offline queries)
+ then update the answer and after that, calculate the answer for the query. This trick is majorly for offline queries.
+
+*/
+
 //https://codeforces.com/blog/entry/57319 (Some trick)
 
 //https://www.spoj.com/problems/RMQSQ/
@@ -117,6 +123,9 @@ int main(){
 //Euler tour + array to tree conversion + path sum query
 //https://www.codechef.com/JULY20B/problems/DRGNDEN or https://www.codechef.com/problems/DRGNDEN/
 //https://www.codechef.com/viewsolution/37019198
+
+//https://codeforces.com/contest/1262/problem/D2         (Can be done with c++ pbds)
+// https://codeforces.com/contest/1262/submission/109781843   (pbds solution)
 
 /*
  * For path sum query in euler tour: just all values in the range of start of root and start of 's' node, and 

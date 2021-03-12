@@ -51,4 +51,5 @@ int main(){
     return 0;
 }
 
-//https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/balanced-brackets-3-4fc590c6/submissions/
+//https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/algorithm/balanced-brackets-3-4fc590c6/
+//https://leetcode.com/problems/valid-parentheses/

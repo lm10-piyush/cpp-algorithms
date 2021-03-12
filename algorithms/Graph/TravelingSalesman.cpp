@@ -35,7 +35,7 @@ int main(){
       int ans = 2e9;
       for (int i = 0; i < n; ++i) {
         if (mask >> i & 1) continue;
-        ans = min(ans, go(i, mask | (1 << i))   + graph[pos][i]);
+        ans = min(ans, go(i, mask | (1 << i)) + graph[pos][i]);
       }
       return res = ans;
     };
@@ -44,7 +44,7 @@ int main(){
     //************** Top down end**************************************************
     
     //************************ Bottom-up approach *****************************
-    vector <vector<int>> dp2(n, vector<int>(1 << n, 2e9));
+    vector <vector<int>> dp2(n, vector<int>(1 << n, 2e9)); //dp[i][mask] => minimum cost incurr to vertices which are in 'mask' and we are currently at node-'i'
     //base case
     for (int i = 0; i < n; ++i) {
       dp2[i][(1 << n)-1] = graph[i][0];
@@ -96,7 +96,8 @@ int main(){
  f(i, mask) = min(cost(i, k) + f(k, mask | (1 << k))); k=> connected unvisited node from i to k
  if base case mask == (1 << n)-1 then f(i, mask) = cost[i][0]
   
- start node doesn't matter
+ start node doesn't matter, thats why we assume it node-1.
+
 
  4
  0 10 15 20

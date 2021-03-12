@@ -58,7 +58,7 @@ void solve(){
     //iterating over 'i', from backwards of original A, `cuz now A is reversed.
     //for each 'i', we count the inversions pair(finding j) for 'i', using BIT
     for (int &i: A){   
-      ans += f.qry(i);
+      ans += f.qry(i); //there should be f.qry(i-1) ??? here when integers are not distinct
       f.upd(i, 1);
     }
 

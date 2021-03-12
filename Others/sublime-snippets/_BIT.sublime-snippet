@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+template <typename T>
+struct BIT {
+    vector <T> bit;
+    int n;
+    BIT(int _n) {
+        n = _n + 1;
+        bit.assign(n+1, 0);
+    }
+    void upd(int i, T x) {
+        for (++i; i <= n; i += i&-i)
+            bit[i] += x;
+    }
+    T qry(int i) {
+        T res = 0;
+        for (++i; i > 0; i -= i&-i)
+            res += bit[i];
+        return res;
+    }
+    T qry(int l, int r) {
+        return qry(r) - qry(l-1);
+    }
+};
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_BIT</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

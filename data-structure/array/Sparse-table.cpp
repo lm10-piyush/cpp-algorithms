@@ -32,7 +32,7 @@ struct STable {
         } 
     }
 
-    T qry(int l, int r) {
+    T qry1(int l, int r) {
         T ans = 1e9;
         for (int i = Log; i >= 0; --i) {
             if (l + (1 << i) - 1 <= r) {
@@ -44,7 +44,7 @@ struct STable {
     }  
 
     //only for idempotent operations like min, max, gcd etc 
-    T qry1(int l, int r) {
+    T qry(int l, int r) {
         int len = r - l + 1;
         int k = log2(len);
         int x = len - (1 << k); //remaining
@@ -95,4 +95,7 @@ https://codeforces.com/contest/846/submission/91562490
 
 https://codeforces.com/contest/1454/problem/F  (+ binary search)
 https://codeforces.com/contest/1454/submission/101060423
+
+https://codeforces.com/contest/547/problem/B           binary search, sparse table, 
+https://codeforces.com/contest/547/submission/105818867
 */

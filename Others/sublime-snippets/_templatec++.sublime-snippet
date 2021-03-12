@@ -1,3 +1,5 @@
+<snippet>
+	<content><![CDATA[
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -25,5 +27,10 @@ int main(){
  * Read problem carefully, sometimes you read it wrong and thought that problem is difficult.
  * Whenever you start practising the only goal should be to improve yourself by:
     learning new ideas, building focus, giving 100% etc.
-
 */
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_template</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

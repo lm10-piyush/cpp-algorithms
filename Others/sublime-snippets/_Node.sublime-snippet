@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+template <typename T>
+struct Node {
+    T x, y;
+    Node() {}
+    Node(T a, T b) {
+        x = a; y = b;
+    }
+    friend bool operator<(Node a, Node b) {
+        return make_tuple(a.x, a.y) < make_tuple(b.x, b.y);  
+    }
+};
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_Node</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

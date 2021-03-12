@@ -3,11 +3,16 @@ DP: says how we can use the already calculated things and then build the ans for
 
 ========================================== IN SHORT ==========================================================
 MainConcept of DP is to build the answer from already calculated small problems, or I can say that by recurrence relation because meaning is same. 
-By writing recurrence means breaking down the problem into similar smaller subproblem. Then in implement that recurrence in efficient manner. You can
-implement it efficiently by Top-down approach (memoization) and Bottom up approch (iterative version). 
+By writing recurrence means breaking down the problem into similar smaller subproblem. Then in implement that recurrence in efficient manner. Here you are bulding the 
+solution from the base states to bigger states. You can implement it efficiently by Top-down approach (memoization) and Bottom up approch (iterative version). 
 
 So, in the end you can say DP is just a efficient recursion.
 
+Tip: If you are not able to think reccurrence, then start from simple cases then solve for bigger one.
+To build recurrence you need: understanding of problem, defining DP[states..] and states, dependencies and there should not be any self dependency that means
+to calculte dp[i][j] we to solve dp[i][j] like: dp[i][j] = dp[i][j] + dp[i-1][j].
+
+DP on DAG is also a intresting way.
 ===========================================================================================================
 
 IN DP: Dp is all about caching the data(function calls), or you can say, when I can build the bigger solution 
@@ -30,6 +35,13 @@ how you are going to pass states from one to another one(transitions), then make
 
 NOTE: when subproblems doesn't overlapp then, it comes under into the divide and conqure paradigm. 
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+TiP: During using Bottom up DP, try to use if else condition to not go at invalid states.
+Ex: https://codeforces.com/contest/673/submission/109453651 
+better: https://codeforces.com/contest/673/submission/109455040
+Little bit more: https://codeforces.com/contest/673/submission/109455202 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 In dp: If you want the best solution for 'i', can you get it using j such that (j < i). 
 Formally, calculating bigger states using smaller ones.
 
@@ -48,7 +60,7 @@ but you can’t define such states, then try to reduce the problem to another on
 ##3Points:
 1) Optimal Substructure.
 2) Overlapping sub-problem (sub-solutions).
-3) How to pass from one state to another.
+3) How to pass from one state to another (transitions).
 
 
 In dp, you have to build the solution from smaller problem to bigger problem.
@@ -131,8 +143,8 @@ Ex: In knapsack, dp[i][j] => using elements from [1...i], the maximum value I ca
 
 
 **************************************** Game Theory **********************************************
-Mostly in game theory we start builiding the solution from the end of the game to start of the game (bottom up),
-So that, one should choose the best option.
+Mostly in game theory, we first see the common winning point can someone prune to other (most 1st player prunes second), we start builiding the 
+solution from the end of the game to start of the game (bottom up), So that, one should choose the best option. 
 
 
 ************************************* NOTE******************************************************
@@ -203,12 +215,16 @@ Forms of DP:
 2) Standard DP 1D/2D on array or strings
 3) Digit DP
 4) DP with bitmask
-5) DP on trees / graphs
+5) DP on trees (tree dp / rerooting) / graphs 
 6) Sum over subsets DP(SOS)
-7) Matrix exponentiation
+7) Matrix exponentiation or Exponentiation DP
 8) Dp in some order (exchange arguments or sorting) when problem depends on the order of them items, becuz in DP, we include the item to the solution or not, so this
    forms a subsequence of the items and as we know subsequence is order dependent. Normally if problem doesn't require the order then we don't need to do 
    sorting with some comparator  https://codeforces.com/blog/entry/63533.
+9) Dp with data structures like Fenwick tree, SegTree
+10) Space saving dp like knapsack with 2-D array
+11) Dp optimizations: Convex hull (Lichao tree), DnC optimization, Knuth morris optimization, FFT optimization
+12) Some non-trival dp tricks by zscoder codeforces
 
 User: LM10_Piyush on Codeforces/ Hackerrank
 DP optimizations: https://codeforces.com/blog/entry/8219
@@ -359,7 +375,7 @@ https://codeforces.com/contest/1401/problem/D    (Maximum Distributed Tree, DP, 
 
 **********************************************************************************************
 https://leetcode.com/problems/minimum-cost-for-tickets/    (Dp, top-down https://pastebin.com/ZrDUftBf)
-https://codeforces.com/contest/1400/problem/D  (Dp, counting, Contribution, https://codeforces.com/contest/1400/submission/91001206)
+https://codeforces.com/contest/1400/problem/D  (Dp, counting, Contribution, map, https://codeforces.com/contest/1400/submission/91001206)
 https://www.hackerearth.com/problem/algorithm/weird-number-e7dc0051/   (Digit-dp, https://pastebin.com/jAiqXvns)
 https://codeforces.com/contest/1400/problem/B  (RPG Protagonist, Smart brute force, becuz there is no greedy way, but have some greedyness, https://codeforces.com/contest/1400/submission/91162502)
 
@@ -385,6 +401,8 @@ https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/00000
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d8565     (Probability)
 https://codingcompetitions.withgoogle.com/kickstart/round/00000000001a0069/0000000000415054#problem
 https://atcoder.jp/contests/abc184/tasks/abc184_d   (Expected value, https://atcoder.jp/contests/abc184/submissions/18829434)
+https://atcoder.jp/contests/abc189/tasks/abc189_f
+https://codeforces.com/contest/518/problem/D              (Easy, expected value, dp, https://codeforces.com/contest/518/submission/109504798)
 
 /******************************************************************************************************
 
@@ -414,6 +432,36 @@ https://atcoder.jp/contests/abc188/tasks/abc188_f       (dp, maths, factor, map,
 https://atcoder.jp/contests/abc180/tasks/abc180_e       (dp, travelling salesman, https://atcoder.jp/contests/abc180/submissions/19308700)
 https://codeforces.com/contest/321/problem/E           (dp, divide and conqure optimization, fast input, https://codeforces.com/contest/321/submission/104367056)
 https://codeforces.com/contest/1077/problem/F2       (dp, optimization with some techinique, Divide and conqure optimization : https://codeforces.com/contest/1077/submission/104366757)
+https://leetcode.com/problems/count-sorted-vowel-strings/          (dp, string in sorted order, not a knapsack but useful, https://pastebin.com/bn9cYjh1)
+https://leetcode.com/problems/burst-balloons/            (dp, IMPortant, range, trick in Defining the DP, important, https://pastebin.com/bUFypJTQ)
+https://leetcode.com/problems/longest-palindromic-subsequence/       (DP, longest palindrome subsequcence, Important, break the problem in this way that such that is always palindromic, https://pastebin.com/xNtbUWDR)
+https://leetcode.com/problems/longest-palindromic-substring/         (DP, longest palindrome substring, Important, https://pastebin.com/GAez0bwr)
+https://codeforces.com/contest/1459/problem/D                        (DP, like knapsack, important, tricky, memory strict, only bottom up possible: https://codeforces.com/contest/1459/submission/104761236 (efficient than 2-vectors), 2-vectors(less efficient): https://codeforces.com/contest/1459/submission/104722194)
+https://codeforces.com/contest/1000/problem/D                     (DP, combinatorics, a bit tricky at first, Observe carefull how STATE is chosen it like LIS, bottom up: https://codeforces.com/contest/1000/submission/104885557, top-down: https://codeforces.com/contest/1000/submission/104884282)
+https://cses.fi/problemset/task/1140                              (DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
+https://codeforces.com/contest/1223/problem/D                 (DP, like LIS, maintaining sequence, intervals, set tricks, https://codeforces.com/contest/1223/submission/104982087)
+https://cses.fi/problemset/task/1130                        (tree dp, tree edges, cool dp problem, tree-matching, https://pastebin.com/V85rFfYz) 
+https://codeforces.com/contest/1223/problem/E        (Paint the Tree, extension of Tree matching problem, Exchange arguments, tree dp)
+https://codeforces.com/contest/1474/problem/D         (dp (simple), observation, greedy, https://codeforces.com/contest/1474/submission/105066577)
+https://codeforces.com/contest/1144/problem/G        (dp, greedy (possible), https://codeforces.com/contest/1144/submission/105457887)
+https://www.spoj.com/problems/DCOWS/                           (Dp, sorting, like knapsack, https://pastebin.com/STciuKfV)
+https://codeforces.com/contest/710/problem/E                (Greedy, dp, Like Dijkstra's, DAG, https://codeforces.com/contest/710/submission/105645950)
+https://codeforces.com/contest/864/problem/E           (Dp, like knapsack, building the answer, sorting, https://codeforces.com/contest/864/submission/105663711)
+https://codeforces.com/contest/577/problem/B               (DP, modulo, maths, https://codeforces.com/contest/577/submission/105778994)
+https://codeforces.com/contest/5/problem/C               (Longest valid parenthesis, brackets, https://codeforces.com/contest/5/submission/105786755)
+https://codeforces.com/contest/607/problem/B            (DP, kind of MCM, palindrome substring, https://codeforces.com/contest/607/submission/105788794)
+https://codeforces.com/contest/1475/problem/G             (DP, LIS, https://codeforces.com/contest/1475/submission/105398683)
+https://codeforces.com/contest/1476/problem/C           (DP, https://codeforces.com/contest/1476/submission/105946375)
+https://codeforces.com/contest/463/problem/D               (Graph, DP, DAG, permutation, LCS, https://codeforces.com/contest/463/submission/106107524)
+https://codeforces.com/contest/510/problem/D              (maths, dp, diaphotine equation, gcd, https://codeforces.com/contest/510/submission/106225574)
+https://leetcode.com/problems/trim-a-binary-search-tree/
+https://atcoder.jp/contests/dp/tasks/dp_n                   (Like matrix chain multiplication, DP, https://atcoder.jp/contests/dp/submissions/19915760)
+https://atcoder.jp/contests/dp/tasks/dp_o                    (Bitmask dp, time-optimization, top-down: https://atcoder.jp/contests/dp/submissions/19916194, bottom up TLE: https://atcoder.jp/contests/dp/submissions/19916456, bottom up optimized: https://atcoder.jp/contests/dp/submissions/19919165, with memory optimized: https://atcoder.jp/contests/dp/submissions/19919492)
+https://atcoder.jp/contests/dp/tasks/dp_p                      (Tree dp, basic counting, https://atcoder.jp/contests/dp/submissions/19922830)
+https://codeforces.com/contest/1065/problem/D                (dp, matrix, chess, https://codeforces.com/contest/1065/submission/107002300)
+https://codeforces.com/contest/1155/problem/D               (dp, like kadane, top down: https://codeforces.com/contest/1155/submission/107114694, bottom up: https://codeforces.com/contest/1155/submission/107166824)
+https://codeforces.com/contest/1452/problem/D               (dp, like fibonacci, https://codeforces.com/contest/1452/submission/107174417)
+https://codeforces.com/contest/597/problem/C               (dp, combinatorics, fenwick tree, data structure, https://codeforces.com/contest/597/submission/107186179)
 
 
 

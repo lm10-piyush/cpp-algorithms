@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+vector <string> split(string s, char delim) {
+  vector <string> v;
+  stringstream ss(s);
+  while (ss.good()) {
+    string stk;
+    getline(ss, stk, delim);
+    if (stk.empty()) continue;
+    v.push_back(stk);
+  }
+  return v;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_split</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

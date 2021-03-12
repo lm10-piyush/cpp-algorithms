@@ -44,3 +44,6 @@ int main(){
 
 	return 0;
 }
+
+//https://codeforces.com/contest/5/problem/C
+//https://codeforces.com/contest/5/submission/105786755

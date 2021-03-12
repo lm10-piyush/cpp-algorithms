@@ -9,9 +9,10 @@ using namespace std;
 //reFac[i] => 1/(i!) % mod => inverse(i!) % mod => power(i!, mod-2) (by fermat-little theorem) 
 
 /*********************************** CODE IS HERE *******************************************/
+
 const int N = 2e5 + 5;
 const int mod = 998244353;
-ll fac[N+3], reFac[N+3];
+vector <ll> fac(N+2), reFac(N+2);
 
 ll power(ll a, ll b){
     ll res = 1;
@@ -35,11 +36,15 @@ void calc() {
         reFac[i-1] = (reFac[i] * i) % mod;
     }
 }
+
 ll modMul(ll a, ll b) {
+    if (a >= mod) a %= mod;
+    if (b >= mod) b %= mod;
     return (a * b) % mod;
 }
 
-ll nCr(ll a, ll b) {
+ll nCr(ll a, ll b) {  //nCr => C(n, r)
+    if (a < 0 or b < 0 or a < b) return 0LL;
     return modMul(fac[a], modMul(reFac[b], reFac[a - b]));
 }
 
@@ -92,3 +97,15 @@ int main(){
 
 //https://www.hackerrank.com/challenges/coinage/problem
 //solution : smart brute force
+
+//https://leetcode.com/problems/count-ways-to-make-array-with-product/               
+//(stars and bars, maths, counting, combinatorics, https://pastebin.com/4VETqNEE)
+
+//https://codeforces.com/gym/102942/problem/E    
+//(maths, combinatorics, stars and bars, https://pastebin.com/pFJJTq9R)
+
+/*
+https://codeforces.com/contest/1288/problem/C                      
+maths, combinatorics, https://codeforces.com/contest/1288/submission/88074818
+
+*/

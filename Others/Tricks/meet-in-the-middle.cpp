@@ -75,4 +75,6 @@ https://www.geeksforgeeks.org/meet-in-the-middle/
 https://atcoder.jp/contests/abc184/tasks/abc184_f
 Solution: just above code.
 
+https://leetcode.com/problems/closest-subsequence-sum/
+https://pastebin.com/XAZut4Ti
 */

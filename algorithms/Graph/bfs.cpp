@@ -106,6 +106,7 @@ int main(){
 * Multiple source BFS means during initilization of queue and dist array or matrix, we put there some other value rather than
 infinity and assuming those nodes as source also, so, there are multiple source nodes.
 
+* We can find the diamter with two bfs also.
 
 Basic problems: https://www.e-olymp.com/en/contests/16661
 problem for bfs2: https://www.e-olymp.com/en/problems/4853
@@ -138,4 +139,8 @@ https://atcoder.jp/contests/abc184/tasks/abc184_e
 
 https://leetcode.com/problems/word-ladder/ 
 Array to graph conversion, BFS, precomputing, optimization, maps, tradeoff between rows and columns, https://pastebin.com/n9DAP7A7
+
+
+ * https://codeforces.com/contest/1294/problem/F      (diameter, two bfs, diameter nodes)
+ * https://codeforces.com/contest/1294/submission/105599159
 */
