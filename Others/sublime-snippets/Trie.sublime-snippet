@@ -1,0 +1,82 @@
+<snippet>
+	<content><![CDATA[
+template <typename T>
+struct Trie {
+    Trie *bit[2];
+    T cnt;   //tracks the count of the prefix
+    const int LOG = 29;
+
+    Trie() {
+        for (auto &i : bit) i = nullptr;
+        cnt = 0;
+    }
+
+    void insert(int x) {
+        Trie *curr = this;
+        for (int i = LOG; i >= 0; --i) {
+            bool b = (x >> i) & 1;
+            if (curr->bit[b] == nullptr)
+                curr->bit[b] = new Trie();
+            curr = curr->bit[b];
+            curr->cnt++;   //count every time the prefix
+        }
+    }
+
+    T search(int x) {
+        Trie *curr = this;
+        for (int i = LOG; i >= 0; --i) {
+            bool b = (x >> i) & 1;
+            if (curr->bit[b] != nullptr && curr->bit[b]->cnt > 0)
+                curr = curr->bit[b];
+            else return 0;
+        }
+        return curr->cnt; //if exists then return number of times
+    }
+
+    void remove(int x) {
+        Trie *curr = this;
+        if (!search(x)) return; //number doesn't exits
+        for (int i = LOG; i >= 0; --i) {
+            bool b = (x >> i) & 1;
+            assert(curr->bit[b] != nullptr);
+            curr = curr->bit[b];
+            curr->cnt--;
+        }
+    }
+    //pair of elements whose xor is minimum
+    T minxor(T x) {
+        T ans = 0;
+        Trie *curr = this;
+        for (int i = LOG; i >= 0; --i) {
+            bool b = (x >> i) & 1;
+            if (curr->bit[b] != nullptr && curr->bit[b]->cnt > 0) {
+                curr = curr->bit[b];
+            } else {
+                ans |= 1LL << i;
+                curr = curr->bit[!b];
+            }
+        }
+        return ans;
+    }
+
+    T maxxor(ll x) {
+        Trie *curr = this;
+        T ans = 0;
+        for (int i = LOG; i >= 0; --i) {
+            bool b = x >> i & 1;
+            if (curr->bit[!b] != nullptr && curr->bit[!b]->cnt > 0) {
+                ans |= 1LL << i;
+                curr = curr->bit[!b];
+            }
+            else curr = curr->bit[b];
+        }
+        return ans;
+    }
+};
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_Trie</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,62 +1,63 @@
 <snippet>
 	<content><![CDATA[
 //Range min
-template <typename T>
+template <typename T, typename X = int>
 struct SegTree{
   vector <T> tree;
   int n; 
 
-  SegTree(vector<T> &A){
+  SegTree(vector<X> &A){
     n = sz(A);
-    tree.assign(4*n, 0);
+    tree.resize(4*n);
     build(A, 0, n-1, 1);
   }
 
-  void build(vector<T>&A, int lo, int hi, int node){
+  T merge(T a, T b) {  //merge Two segments
+    return min(a, b);
+  }
+
+  void build(vector<X> &A, int lo, int hi, int node){
     if(lo == hi){
-      tree[node] = A[lo];
+      tree[node] = T(A[lo]);
       return;
     }
     int mid = (lo + hi) / 2;
     build(A, lo, mid, 2*node);
     build(A, mid+1, hi, 2*node+1);
-    tree[node] = min(tree[2*node], tree[2*node+1]);
+    tree[node] = merge(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, T val, int lo, int hi, int node){
-    // no overlapp
-    if(hi < idx or lo > idx) return;
-    //total overlapp
-    if(lo == hi and hi == idx){
-      tree[node] = val;
+  void upd(int idx, X val, int lo, int hi, int node){
+    if(hi < idx or lo > idx) return;  // no overlapp
+    if(lo == hi and hi == idx){   //total overlapp
+      tree[node] = T(val);
       return;
     }
 
     int mid = (lo + hi) / 2;
     upd(idx, val, lo, mid, 2*node);
     upd(idx, val, mid+1, hi, 2*node+1);
-    tree[node] = min(tree[2*node], tree[2*node+1]);
+    tree[node] = merge(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, T val){   //update at value at index 'idx' to 'val'
+  void upd(int idx, X val){   //update at value at index 'idx' to 'val'
     upd(idx, val, 0, n-1, 1);
   }
 
   T qry(int l, int r, int lo, int hi, int node){
-    //no overlapp
-    if(hi < l or lo > r) return 1e9;
-    //total overlapp
-    if(l <= lo and hi <= r){
+    if(hi < l or lo > r) return 1e9; //No-overlapp
+    if(l <= lo and hi <= r) {     //total overlap
       return tree[node];
     }
     int mid = (lo + hi) / 2;
-    return min(qry(l, r, lo, mid, 2*node), qry(l, r, mid+1, hi, 2*node+1));
+    return merge(qry(l, r, lo, mid, 2*node), qry(l, r, mid+1, hi, 2*node+1));
   }
 
   T qry(int l, int r){  //query [l...r]
     return qry(l, r, 0, n-1, 1);
   }
 };
+
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

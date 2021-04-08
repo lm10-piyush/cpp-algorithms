@@ -2,39 +2,40 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
 /****************************** CODE IS HERE ***********************************/
 
-
-struct Trie{
+template <typename T>
+struct Trie {
   Trie *bit[2];
-  int cnt;   //tracks the count of the prefix 
+  T cnt;   //tracks the count of the prefix
+  const int LOG = 29;
 
-  Trie(){
-    for (auto &i: bit) i = nullptr;
+  Trie() {
+    for (auto &i : bit) i = nullptr;
     cnt = 0;
   }
 
-  void insert(int x){
+  void insert(int x) {
     Trie *curr = this;
-    for (int i = 30; i >= 0; --i){
+    for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
-      if(curr->bit[b] == nullptr)
+      if (curr->bit[b] == nullptr)
         curr->bit[b] = new Trie();
       curr = curr->bit[b];
       curr->cnt++;   //count every time the prefix
     }
   }
 
-  int search(int x){
+  T search(int x) {
     Trie *curr = this;
-    for (int i = 30; i >= 0; --i){
+    for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
       if (curr->bit[b] != nullptr && curr->bit[b]->cnt > 0)
         curr = curr->bit[b];
@@ -43,10 +44,10 @@ struct Trie{
     return curr->cnt; //if exists then return number of times
   }
 
-  void remove(int x){
+  void remove(int x) {
     Trie *curr = this;
-    if(!search(x)) return; //number doesn't exits
-    for (int i = 30; i >= 0; --i){
+    if (!search(x)) return; //number doesn't exits
+    for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
       assert(curr->bit[b] != nullptr);
       curr = curr->bit[b];
@@ -54,65 +55,79 @@ struct Trie{
     }
   }
   //pair of elements whose xor is minimum
-  int minxor(int x){
-    int ans = 0;
+  T minxor(T x) {
+    T ans = 0;
     Trie *curr = this;
-    for (int i = 30; i >= 0; --i){
+    for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
-      if(curr->bit[b] != nullptr && curr->bit[b]->cnt > 0) {
+      if (curr->bit[b] != nullptr && curr->bit[b]->cnt > 0) {
         curr = curr->bit[b];
-      } else{
-        ans |= 1 << i;
+      } else {
+        ans |= 1LL << i;
         curr = curr->bit[!b];
       }
-    }   
+    }
+    return ans;
+  }
+
+  T maxxor(ll x) {
+    Trie *curr = this;
+    T ans = 0;
+    for (int i = LOG; i >= 0; --i) {
+      bool b = x >> i & 1;
+      if (curr->bit[!b] != nullptr && curr->bit[!b]->cnt > 0) {
+        ans |= 1LL << i;
+        curr = curr->bit[!b];
+      }
+      else curr = curr->bit[b];
+    }
     return ans;
   }
 
   //MEX using Trie
   //NOTE: elements must be distinct, or frequecny of each element will be 1 in trie
   // otherwise it does not work properly, So mess this Trie with others
-  int mex() {
-        Trie *curr = this;
-        int ans = 0;
-        for (int i = 29; i >= 0; --i) {
-            if(curr->bit[0] == nullptr) return ans;
-            if (curr->bit[0]->cnt < (1 << i)) {
-                curr = curr->bit[0]; 
-            } else {
-                ans |= 1 << i;
-                if (curr->bit[1] == nullptr) return ans;
-                curr = curr->bit[1];
-            }
-        }
-        return ans;
+  T mex() {
+    Trie *curr = this;
+    T ans = 0;
+    for (int i = LOG; i >= 0; --i) {
+      if (curr->bit[0] == nullptr) return ans;
+      if (curr->bit[0]->cnt < (1LL << i)) {
+        curr = curr->bit[0];
+      } else {
+        ans |= 1LL << i;
+        if (curr->bit[1] == nullptr) return ans;
+        curr = curr->bit[1];
+      }
     }
-
+    return ans;
+  }
 
 };
 
-int main(){
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    Trie t;
+int main() {
+  ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    t.insert(5);
-    t.insert(5);
-    t.insert(1);
-    t.insert(2);
-    t.insert(3);
-    t.insert(6);
-    t.insert(5);
-    t.insert(7);
-    // t.remove(4);
+  Trie <int> t;
 
-    cout << endl << t.search(4) << endl;
-    cout << t.search(5) << endl;
-    cout << t.search(3) << endl;
-    t.remove(5);
-    t.remove(5);
-    t.remove(5);
-    cout << t.search(5) << endl;
+  t.insert(5);
+  t.insert(5);
+  t.insert(1);
+  t.insert(2);
+  t.insert(3);
+  t.insert(6);
+  t.insert(5);
+  t.insert(7);
+  // t.remove(4);
+
+  cout << endl << t.search(4) << endl;
+  cout << t.search(5) << endl;
+  cout << t.search(3) << endl;
+  t.remove(5);
+  t.remove(5);
+  t.remove(5);
+  cout << t.search(5) << endl;
 
   return 0;
 }

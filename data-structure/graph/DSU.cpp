@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -15,22 +15,22 @@ struct DSU {
   vector <int> parent, size;
   int components;
   DSU(int n) {
-    parent.resize(n+1);
-    size.assign(n+1, 1);
+    parent.resize(n + 1);
+    size.assign(n + 1, 1);
     iota(all(parent), 0);
     components = n;
   }
 
   //get leader
-  int find(int a){
-    if(parent[a] == a) return a;
+  int find(int a) {
+    if (parent[a] == a) return a;
     return parent[a] = find(parent[a]);
   }
 
-  void unite(int a, int b){
+  void unite(int a, int b) {
     int x = find(a), y = find(b);
-    if(x == y) return;
-    if(size[x] < size[y]) swap(x, y);
+    if (x == y) return;
+    if (size[x] < size[y]) swap(x, y);
     components--; //components decreases with union
     parent[y] = x;
     size[x] += size[y];
@@ -38,23 +38,28 @@ struct DSU {
 };
 
 
-int main(){
-    ios_base::sync_with_stdio(false); cin.tie(nullptr);
-    int n, m; cin >> n >> m;
-    DSU dsu(n);
+int main() {
+  ios_base::sync_with_stdio(false); cin.tie(nullptr);
+  int n, m; cin >> n >> m;
+  DSU dsu(n);
 
-    for (int i = 0, x, y; i < m; ++i){
-      cin >> x >> y;
-      dsu.unite(x, y);
-    }
+  for (int i = 0, x, y; i < m; ++i) {
+    cin >> x >> y;
+    dsu.unite(x, y);
+  }
 
-    cout << dsu.components;
+  cout << dsu.components;
 
   return 0;
 }
 
 /*
- * Problem: Find the minimum number of edges that should be removed so that there should be no cycle in the 
+ * It is also helpful for those problems when we need to do some linking and getting some leader like linkedlist, but in linkedlist
+   getting leader is a little bit slow, so you can see that whenever have to do linking like Tree or linkedlist and getting leader is
+   is the main role it is super helpful to use DSU. Like this problem: https://codeforces.com/contest/371/problem/D (soln: https://codeforces.com/contest/371/submission/111206598)
+    BTW we can use std::set also.
+
+ * Problem: Find the minimum number of edges that should be removed so that there should be no cycle in the
             given undirected graph.
   soln: By Dsu, same as Kruksal algo for spanning tree. Keep adding edges when cycle found do ans++, and don't
   add that edge to your Dsu.
@@ -91,4 +96,6 @@ int main(){
 https://atcoder.jp/contests/arc111/tasks/arc111_b
 converting the given problem to a graph problem, then solve it: https://atcoder.jp/contests/arc111/submissions/19299363
 
+https://www.codechef.com/LTIME94A/problems/UNICOLOR  (Combine the groups and then calculate answer)
+https://www.codechef.com/viewsolution/44306667
 */

@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -15,7 +15,7 @@ struct Trie {
     Trie *bit[2];
     int cnt;
     Trie() {
-        for (auto &i: bit) i = nullptr;
+        for (auto &i : bit) i = nullptr;
         cnt = 0;
     }
 
@@ -30,7 +30,7 @@ struct Trie {
         }
     }
 
-    ll cnt_min(int x) {
+    ll cnt_min(int x) { //counting number of elements greater than 'x' in trie
         Trie *curr = this;
         ll ans = 0;
         for (int i = 30; i >= 0; --i) {
@@ -40,15 +40,15 @@ struct Trie {
                     curr = curr->bit[b];
                 else return ans;
             } else {
-                if(curr->bit[!b] != nullptr)
+                if (curr->bit[!b] != nullptr)
                     ans += curr->bit[!b]->cnt;
 
                 if (curr->bit[b] != nullptr)
-                    curr= curr->bit[b];
+                    curr = curr->bit[b];
                 else return ans;
             }
         }
-        
+
         return ans;
     }
 };
@@ -57,21 +57,21 @@ struct Trie {
 void solve() {
     int n; cin >> n;
     vector <int> A(n);
-    for (int &i: A) cin >> i;
-    
+    for (int &i : A) cin >> i;
+
     Trie t;
     ll ans = 0;
     for (int i : A) {
         ans += t.cnt_min(i);
         t.insert(i);
     }
-    
+
     cout << ans << endl;
 }
 
 
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int t; cin >> t;

@@ -1,0 +1,31 @@
+http://algoshots.herokuapp.com/
+https://codeforces.com/contest/448/problem/C                     (Divide and conquer, segment of blocks, https://codeforces.com/contest/448/submission/105786332)
+https://codeforces.com/contest/185/problem/B                     (maths, AM-GM, Lagrange Multiplier, https://codeforces.com/contest/185/submission/111122493)
+https://codeforces.com/contest/1438/problem/C                    (Chess boards, bipertite graph, matrix, Trick, important, https://codeforces.com/contest/1438/submission/110885740)
+https://codeforces.com/contest/584/problem/D                     (Maths, goldbach, important problem, https://codeforces.com/contest/584/submission/108155941)
+https://codeforces.com/contest/1034/problem/A                     (Enlarge gcd, seive, gcd, maths, trick, https://codeforces.com/contest/1034/submission/96812902)
+https://codeforces.com/contest/1506/problem/E               (greedy (how to navigate the answer), constructive, important, https://codeforces.com/contest/1506/submission/111018920)
+https://codeforces.com/contest/1367/problem/D                    (greedy (how to navigate the search for answer), string, constructive, https://codeforces.com/contest/1367/submission/110964556)
+https://codeforces.com/contest/478/problem/C                  (maths, greedy, important, O(1) solution, https://codeforces.com/contest/478/submission/111166389)
+https://codeforces.com/contest/371/problem/D                 (Trick, DsU, like linkedlist, We can use std::SET also,  soln: https://codeforces.com/contest/371/submission/111206598)  
+https://atcoder.jp/contests/arc110/tasks/arc110_d                   (combinatorics, Binomial coeff, Really Nice problem, https://atcoder.jp/contests/arc110/submissions/18604093)
+https://www.codechef.com/LTIME94A/problems/CODON             (DP on grah, Nice observation other than DP, https://www.codechef.com/viewsolution/44308432)
+https://codeforces.com/contest/1295/submission/111568254            (maths, Important, trick, Euler totient, https://codeforces.com/contest/1295/submission/111568254)
+https://codeforces.com/contest/1250/problem/J            (Greedy binary search, Standard use, https://codeforces.com/contest/1250/submission/111583703)
+https://codeforces.com/contest/242/problem/C                       (BFS, Graph, map of graph, https://codeforces.com/contest/242/submission/111546417)
+https://codeforces.com/contest/1175/problem/D                     (Really nice, Greedy problem, Important, trick, https://codeforces.com/contest/1175/problem/D)
+https://codeforces.com/contest/1041/problem/E                   (Greedy, constructive, Watch an opening, https://codeforces.com/contest/1041/submission/111803878)
+https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
+
+
+
+
+
+
+
+
+
+
+
+
+

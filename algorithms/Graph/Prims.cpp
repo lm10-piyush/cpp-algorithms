@@ -57,4 +57,7 @@ https://codeforces.com/contest/1243/problem/D
 
 https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/algorithm/pilgrims-and-portals/description/
 https://pastebin.com/rZJZf4Fd  (with floyd warshall)
+
+https://codeforces.com/contest/436/problem/C
+https://codeforces.com/contest/436/submission/111168438
 */

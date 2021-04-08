@@ -221,10 +221,12 @@ Forms of DP:
 8) Dp in some order (exchange arguments or sorting) when problem depends on the order of them items, becuz in DP, we include the item to the solution or not, so this
    forms a subsequence of the items and as we know subsequence is order dependent. Normally if problem doesn't require the order then we don't need to do 
    sorting with some comparator  https://codeforces.com/blog/entry/63533.
-9) Dp with data structures like Fenwick tree, SegTree
+9)  Dp with data structures like Fenwick tree, SegTree
 10) Space saving dp like knapsack with 2-D array
 11) Dp optimizations: Convex hull (Lichao tree), DnC optimization, Knuth morris optimization, FFT optimization
-12) Some non-trival dp tricks by zscoder codeforces
+12) Some Bon-trival dp tricks by zscoder codeforces.
+13) DP on graphs (like Travelling Salesman, Hamiltonion cycle) (https://codeforces.com/blog/entry/337).
+14) DP with stack, Envelop like structure. It is like Dp with some greediness to skip some elements greedily, mostly implemented by Stack like Next Greater element on Left.
 
 User: LM10_Piyush on Codeforces/ Hackerrank
 DP optimizations: https://codeforces.com/blog/entry/8219
@@ -403,6 +405,7 @@ https://codingcompetitions.withgoogle.com/kickstart/round/00000000001a0069/00000
 https://atcoder.jp/contests/abc184/tasks/abc184_d   (Expected value, https://atcoder.jp/contests/abc184/submissions/18829434)
 https://atcoder.jp/contests/abc189/tasks/abc189_f
 https://codeforces.com/contest/518/problem/D              (Easy, expected value, dp, https://codeforces.com/contest/518/submission/109504798)
+https://codeforces.com/contest/697/problem/D              (Trees, expected value, https://codeforces.com/contest/697/submission/110061186)
 
 /******************************************************************************************************
 
@@ -462,6 +465,18 @@ https://codeforces.com/contest/1065/problem/D                (dp, matrix, chess,
 https://codeforces.com/contest/1155/problem/D               (dp, like kadane, top down: https://codeforces.com/contest/1155/submission/107114694, bottom up: https://codeforces.com/contest/1155/submission/107166824)
 https://codeforces.com/contest/1452/problem/D               (dp, like fibonacci, https://codeforces.com/contest/1452/submission/107174417)
 https://codeforces.com/contest/597/problem/C               (dp, combinatorics, fenwick tree, data structure, https://codeforces.com/contest/597/submission/107186179)
+https://codeforces.com/contest/1077/problem/F2           (DP, with segment tree and got MLE, https://codeforces.com/contest/1077/submission/110535196)
+https://codeforces.com/contest/946/problem/D                   (DP, string, precompute + optimize, https://codeforces.com/contest/946/submission/107049436)
+https://codeforces.com/contest/628/problem/D                   (DP on digit, tricky, https://codeforces.com/contest/628/submission/107072882)
+https://atcoder.jp/contests/abc180/tasks/abc180_e               (dp on graphs, travelling salesman, topdown: https://atcoder.jp/contests/abc180/submissions/19308700, bottom up: https://atcoder.jp/contests/abc180/submissions/21348937)
+https://www.codechef.com/LTIME94A/problems/CODON             (DP on grah, Nice observation other than DP, https://www.codechef.com/viewsolution/44308432)
+https://codeforces.com/contest/11/problem/D                (DP on graph, Important DP state, https://codeforces.com/contest/11/submission/111456686)
+https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
+https://leetcode.com/problems/largest-sum-of-averages/                (DP, Quite standard dp state like CF div 3: Kittens and picture problem, https://pastebin.com/66KYCkX8)
+
+
+
+
 
 
 

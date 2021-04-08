@@ -11,64 +11,65 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 /****************************** CODE IS HERE ***********************************/
 
-//Range Min
-template <typename T>
+//Range min
+template <typename T, typename X = int>
 struct SegTree{
   vector <T> tree;
   int n; 
 
-  SegTree(vector<T> &A){
+  SegTree(vector<X> &A){
     n = sz(A);
-    tree.assign(4*n, 0);
+    tree.resize(4*n);
     build(A, 0, n-1, 1);
   }
 
-  void build(vector<T>&A, int lo, int hi, int node){
+  T merge(T a, T b) {  //merge Two segments
+    return min(a, b);
+  }
+
+  void build(vector<X> &A, int lo, int hi, int node){
     if(lo == hi){
-      tree[node] = A[lo];
+      tree[node] = T(A[lo]);
       return;
     }
     int mid = (lo + hi) / 2;
     build(A, lo, mid, 2*node);
     build(A, mid+1, hi, 2*node+1);
-    tree[node] = min(tree[2*node], tree[2*node+1]);
+    tree[node] = merge(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, T val, int lo, int hi, int node){
-    // no overlapp
-    if(hi < idx or lo > idx) return;
-    //total overlapp
-    if(lo == hi and hi == idx){
-      tree[node] = val;
+  void upd(int idx, X val, int lo, int hi, int node){
+    if(hi < idx or lo > idx) return;  // no overlapp
+    if(lo == hi and hi == idx){   //total overlapp
+      tree[node] = T(val);
       return;
     }
 
     int mid = (lo + hi) / 2;
     upd(idx, val, lo, mid, 2*node);
     upd(idx, val, mid+1, hi, 2*node+1);
-    tree[node] = min(tree[2*node], tree[2*node+1]);
+    tree[node] = merge(tree[2*node], tree[2*node+1]);
   }
 
-  void upd(int idx, T val){   //update at value at index 'idx' to 'val'
+  void upd(int idx, X val){   //update at value at index 'idx' to 'val'
     upd(idx, val, 0, n-1, 1);
   }
 
   T qry(int l, int r, int lo, int hi, int node){
-    //no overlapp
-    if(hi < l or lo > r) return 1e9;
-    //total overlapp
-    if(l <= lo and hi <= r){
+    if(hi < l or lo > r) return 1e9; //No-overlapp
+    if(l <= lo and hi <= r) {     //total overlap
       return tree[node];
     }
     int mid = (lo + hi) / 2;
-    return min(qry(l, r, lo, mid, 2*node), qry(l, r, mid+1, hi, 2*node+1));
+    return merge(qry(l, r, lo, mid, 2*node), qry(l, r, mid+1, hi, 2*node+1));
   }
 
   T qry(int l, int r){  //query [l...r]
     return qry(l, r, 0, n-1, 1);
   }
-
 };
+
+
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -89,10 +90,19 @@ int main(){
 }
 
 /*
+ * It can calculate the values of the functions which are Associative, that means: a * (b * c) = (a*b)*c
  * Simple way to remember the Segtree is associating the indices and their corresponding segment (represented by 'node')
  * It is very common trick in Segtree or Fenwick trees to sort the query according to "Right pointer" of query (for offline queries)
  then update the answer and after that, calculate the answer for the query. This trick is majorly for offline queries.
+ * We can prune or navigate the Query function in a way that it looks like Binary search.
+ * We can calculate lengths, number of intersection of segments and many more.
+ 
+ * There is another type of problems also: The update operation is something else and qry operation is something else. Ex: update operation
+   is add 'v' in the range and qry operation is minimum in the range. Another example: update operation is multiplication of 'v' and qry operation is
+   addition of the range. To solve these types of problems we can solve these problems using normal segment tree (without lazy propogation), but we have
+   to make sure that both the operations must be Distributive. Source: https://codeforces.com/edu/course/2/lesson/5/2
 
+ * https://www.youtube.com/watch?v=_zYMsx4iOSc        (must watch, Parvel marvin 2-D queries and Data structure).
 */
 
 //https://codeforces.com/blog/entry/57319 (Some trick)

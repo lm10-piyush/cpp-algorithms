@@ -9,6 +9,7 @@ using namespace std;
 
 auto cmp = [](pair<double, double> a, pair<double, double> b){ return (a.x < a.y);};
 
+//Sweep line
 
 double closestPoints(vector<pair<double, double>> &A){
     int n = A.size();

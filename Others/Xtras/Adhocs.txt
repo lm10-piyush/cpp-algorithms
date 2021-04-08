@@ -230,7 +230,7 @@ https://codeforces.com/contest/510/problem/B  (Fox And Two Dots, DFS on matrix w
 
 https://codeforces.com/contest/453/problem/A       (Little Pony and Expected Maximum, https://codeforces.com/contest/453/submission/94976965)
 https://www.codechef.com/problems/THEGAME           (Filling the maze, expected value, Linearity of expectation, https://www.codechef.com/viewsolution/42201336)
-
+https://codeforces.com/contest/846/problem/F         (Random query, expected value, noice problem, https://codeforces.com/contest/846/submission/111715404)
 **********************************************************************************************
 https://leetcode.com/problems/buddy-strings/   (Greedy, implementation)
 https://leetcode.com/problems/remove-duplicate-letters/      (greedy, implementation, stack)
@@ -358,6 +358,38 @@ https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/H
 https://codeforces.com/contest/937/problem/C                                    (Save Energy!, maths, binary search, floating points, Trick Important, https://codeforces.com/contest/937/submission/109316320)
 https://codeforces.com/contest/518/problem/E                               (Greedy, Segments break down, trick, important, Implemenation, https://codeforces.com/contest/518/submission/109504519)
 https://codeforces.com/contest/1262/problem/C                        (brackets, string, bruteforce, https://codeforces.com/contest/1262/submission/109767449)
+https://codeforces.com/contest/1038/problem/D                      (Greedy, Proof, trick, https://codeforces.com/contest/1038/submission/109462686)
+https://codeforces.com/contest/1501/problem/C                      (Brute force, maths, Important, trick, https://codeforces.com/contest/1501/submission/109952597)
+https://codeforces.com/contest/1062/problem/D                     (maths, like seive, graph type, https://codeforces.com/contest/1062/submission/109975009)
+https://codeforces.com/contest/1497/problem/E1                   (maths, Seive, Prime factorizing, maps, hashing, https://codeforces.com/contest/1497/submission/110259873)
+https://codeforces.com/contest/1438/problem/C                       (Chess boards, bipertite graph, matrix, Trick, important, https://codeforces.com/contest/1438/submission/110885740)
+https://codeforces.com/contest/448/problem/D                    (Binary search, maths, factors, https://codeforces.com/contest/448/submission/110958742)
+https://codeforces.com/contest/185/problem/B                     (maths, AM-GM, Lagrange Multiplier, https://codeforces.com/contest/185/submission/111122493)
+https://codeforces.com/contest/1506/problem/E               (greedy (how to navigate the answer), constructive, important, https://codeforces.com/contest/1506/submission/111018920)
+https://codeforces.com/contest/1367/problem/D                    (greedy (how to navigate the search for answer), string, constructive, https://codeforces.com/contest/1367/submission/110964556)
+https://codeforces.com/contest/478/problem/C                  (maths, greedy, important, O(1) solution, https://codeforces.com/contest/478/submission/111166389)
+https://codeforces.com/contest/1369/problem/C                     (Really greedy, https://codeforces.com/contest/1369/submission/111235036) 
+https://atcoder.jp/contests/arc110/tasks/arc110_d                   (combinatorics, Binomial coeff, Really Nice problem, https://atcoder.jp/contests/arc110/submissions/18604093)
+https://atcoder.jp/contests/arc116/tasks/arc116_c                (Combinatorics, Stars and bars, Classic important, Binomial coeff, https://atcoder.jp/contests/arc116/submissions/21387350)
+https://codeforces.com/contest/1295/submission/111568254            (maths, Important, trick, Euler totient, https://codeforces.com/contest/1295/submission/111568254)
+https://codeforces.com/contest/242/problem/C                       (BFS, Graph, map of graph, https://codeforces.com/contest/242/submission/111546417)
+https://codeforces.com/contest/1175/problem/D                     (Really nice, Greedy problem, Important, trick, https://codeforces.com/contest/1175/problem/D)
+https://codeforces.com/contest/1041/problem/E                   (Greedy, constructive, Watch an opening, https://codeforces.com/contest/1041/submission/111803878)
+https://codeforces.com/contest/845/problem/D              (observation, simple, https://codeforces.com/contest/845/submission/111643450)
+https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
+https://leetcode.com/problems/greatest-sum-divisible-by-three/           (simple maths, greedy)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

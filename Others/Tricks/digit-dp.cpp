@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -27,16 +27,16 @@ ll go(int pos, int rem, int tight) {
     for (int i = 0; i <= limit; ++i) {
         int newtight = tight;
         if (i < limit) newtight = 0;
-        (ans += go(pos+1, (rem + i) % d, newtight)) %= mod; //sum of digits
+        (ans += go(pos + 1, (rem + i) % d, newtight)) %= mod; //sum of digits
     }
     return dp[pos][rem][tight] = ans;
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     string s; cin >> s >> d;
-    for (char i: s) {
+    for (char i : s) {
         num.push_back(i - '0');
     }
     memset(dp, -1, sizeof dp);

@@ -48,6 +48,9 @@ int main(){
     you could flip. Find the longest length of the continuous sequence of 1's.
     This can be done by Two pointers. 
 
+2) The we thinking about using 2-loops, then we can optimize it using 2-pointers when we know the solution is MONOTONIC, so we don't
+need to start again, so right pointer will be as it is or increases its value. 
+
 https://leetcode.com/problems/subarray-product-less-than-k/
 https://pastebin.com/wWR4ESDW
 

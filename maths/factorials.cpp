@@ -108,4 +108,9 @@ int main(){
 https://codeforces.com/contest/1288/problem/C                      
 maths, combinatorics, https://codeforces.com/contest/1288/submission/88074818
 
+https://atcoder.jp/contests/arc110/tasks/arc110_d     (Really Nice problem)
+https://atcoder.jp/contests/arc110/submissions/18604093
+
+https://atcoder.jp/contests/arc116/tasks/arc116_c        (combinatorics, Stars and Bars, Classic)
+https://atcoder.jp/contests/arc116/submissions/21387350
 */

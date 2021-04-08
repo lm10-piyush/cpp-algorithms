@@ -9,7 +9,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 const int N = 1e7 + 2;
-vector <int> factor(N); //factor[i] => smallest prime factor i
+vector <int> factor(N); //factor[i] => smallest prime factor of i
 
 void linear_seive() {
     vector <int> primes;

@@ -8,7 +8,7 @@
 
 4. Fastest integer factorization methods https://stackoverflow.com/questions/2267146/what-is-the-fastest-factorization-algorithm?rq=1 , https://cp-algorithms.com/algebra/factorization.html
 
-5. Site to for resources of algorithms http://e-maxx.ru/algo/ . But it is in russion so, translator is needed.
+5. Site to for resources of algorithms http://e-maxx.ru/algo/ . But it is in russion so, translator is needed. https://cp-algorithms.com/ It is English version of e-maxx
 
 6. Time measurement in c++ by chrono https://www.geeksforgeeks.org/chrono-in-c/ , https://www.geeksforgeeks.org/how-to-measure-time-taken-by-a-program-in-c/ , https://www.geeksforgeeks.org/measure-execution-time-function-cpp/ , https://www.geeksforgeeks.org/measure-execution-time-function-cpp/ , https://www.geeksforgeeks.org/measure-execution-time-with-high-precision-in-c-c/
 
@@ -31,3 +31,5 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 12. Permutation Tree: https://codeforces.com/blog/entry/78898
 
 13. ICPC archive: https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=0
+
+14. https://codeforces.com/blog/entry/405  (Dont use %lld in C++14)

@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+const int N = 1e7 + 2;
+vector <int> factor(N); //factor[i] => smallest prime factor of i
+
+void linear_seive() {
+    vector <int> primes;
+    
+    for (int i = 2; i < N; ++i) {
+        if (factor[i] == 0) {
+            factor[i] = i;
+            primes.push_back(i);
+        }
+        for (int j = 0; j < sz(primes) and primes[j] <= factor[i] and primes[j] * i < N; ++j) {
+            factor[i * primes[j]] = primes[j];
+        }
+    }
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_linearSeive</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
