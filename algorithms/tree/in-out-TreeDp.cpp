@@ -15,46 +15,46 @@ vector<int> graph[maxn + 5];
 int in[maxn + 5], out[maxn + 5];
 int ans[maxn + 5];
 
-void dfs1(int u, int p){
+void dfs1(int u, int p) {
     in[u] = 0;
-    for (int v: graph[u]){
-        if(v == p) continue;
+    for (int v : graph[u]) {
+        if (v == p) continue;
         dfs1(v, u);
-        in[u] = max(in[u], 1+in[v]); //height of the node in the subtree of u
+        in[u] = max(in[u], 1 + in[v]); //height of the node in the subtree of u
     }
 }
 
-void dfs2(int u, int p){
+void dfs2(int u, int p) {
     int mx1(-1), mx2(-1);
-    for (int v: graph[u]){
-        if(v == p) continue;
-        if(in[v] >= mx1) mx2 = mx1, mx1 = in[v];
-        else if(in[v] > mx2) mx2 = in[v];
+    for (int v : graph[u]) {
+        if (v == p) continue;
+        if (in[v] >= mx1) mx2 = mx1, mx1 = in[v];
+        else if (in[v] > mx2) mx2 = in[v];
     }
     //being at 'u' set the value of 'out' of the vertx 'v' which is child of u
-    for (int v: graph[u]){
-        if(v == p) continue;
+    for (int v : graph[u]) {
+        if (v == p) continue;
         int use = mx1;
-        if(use == in[v])
+        if (use == in[v])
             use = mx2;
-        out[v] = max(2+use, 1 + out[u]);
+        out[v] = max(2 + use, 1 + out[u]);
         dfs2(v, u);
     }
 }
 
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    #ifndef ONLINE_JUDGE
-    
+#ifndef ONLINE_JUDGE
+
     // freopen("D:/TestFiles/input.txt","r",stdin);
-    
-    #endif
+
+#endif
     /*********************** CODE IS HERE *****************************************/
 
 
     int n; cin >> n;
-    for (int i = 0, x,y; i < n-1; ++i){
+    for (int i = 0, x, y; i < n - 1; ++i) {
         cin >> x >> y;
         graph[x].push_back(y);
         graph[y].push_back(x);
@@ -63,7 +63,7 @@ int main(){
     dfs1(1, 0);
     dfs2(1, 0);
 
-    for (int i = 1; i <= n; ++i){
+    for (int i = 1; i <= n; ++i) {
         ans[i] = max(in[i], out[i]);
         cout << ans[i] << ' '; //height of the ith node
     }
@@ -96,7 +96,7 @@ https://codeforces.com/contest/1324/submission/105045087
 https://www.spoj.com/problems/PT07Z/
 solution: is ans = max(ans, in[i] + out[i])
 
-https://atcoder.jp/contests/dp/tasks/dp_p                      
+https://atcoder.jp/contests/dp/tasks/dp_p
 Tree dp, basic counting, https://atcoder.jp/contests/dp/submissions/19922830
 
 https://codeforces.com/contest/1401/problem/D  (dp contribution techniq)
@@ -104,9 +104,9 @@ https://codeforces.com/contest/1401/submission/90882209
 
 https://codeforces.com/problemset/gymProblem/102694/B
 https://pastebin.com/53kX4tqG
- 
+
 https://codeforces.com/contest/161/problem/D  (with inclusion-exlusion principal)
-https://codeforces.com/contest/161/submission/102405695 
+https://codeforces.com/contest/161/submission/102405695
 
 https://codeforces.com/contest/1187/problem/E  (dhansu problem)
 https://codeforces.com/contest/1187/submission/95686227
@@ -114,7 +114,7 @@ https://codeforces.com/contest/1187/submission/95686227
 https://cses.fi/problemset/task/1133
 https://pastebin.com/ZdfhdNFh
 
-https://cses.fi/problemset/task/1130   (tree edges, cool dp problem, tree matching)
+https://cses.fi/problemset/task/1130   (tree edges, cool dp problem, tree matching (maximum matching))
 https://pastebin.com/V85rFfYz
 
 https://codeforces.com/contest/1223/problem/E    (Paint the Tree, extension of above problem, Exchange arguments, dp)

@@ -22,7 +22,7 @@ struct Trie {
     cnt = 0;
   }
 
-  void insert(int x) {
+  void insert(T x) {
     Trie *curr = this;
     for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
@@ -33,7 +33,7 @@ struct Trie {
     }
   }
 
-  T search(int x) {
+  T search(T x) {
     Trie *curr = this;
     for (int i = LOG; i >= 0; --i) {
       bool b = (x >> i) & 1;
@@ -44,7 +44,7 @@ struct Trie {
     return curr->cnt; //if exists then return number of times
   }
 
-  void remove(int x) {
+  void remove(T x) {
     Trie *curr = this;
     if (!search(x)) return; //number doesn't exits
     for (int i = LOG; i >= 0; --i) {
@@ -162,7 +162,8 @@ int main() {
 // https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 //https://pastebin.com/XB1j89Fw
 
-
+//https://codeforces.com/contest/1417/problem/E          (Xor inversion)
+// https://codeforces.com/contest/1417/submission/112307613
 
 /*
 Trick for MEX, is number of distince values in [0, i] => i+1, then that means, MEX does not lie in that range
