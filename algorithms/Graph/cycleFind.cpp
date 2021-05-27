@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -27,19 +27,20 @@ bool dfs(int u, int p = -1) {
             cycle.push_back(s.top());
             s.pop();
         }
+        cycle.push_back(u);
         return true;
     }
-    
+
     s.push(u);
     used[u] = true;
-    for (int v: graph[u]) {
+    for (int v : graph[u]) {
         if (v != p and dfs(v, u)) return true;  //when you hit the cycle return back
     }
     s.pop();
     return false;
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n, m; cin >> n >> m;
@@ -51,7 +52,7 @@ int main(){
 
     dfs(1, -1);
 
-    for (int i : cycle) cout << i << ' '; 
+    for (int i : cycle) cout << i << ' ';
 
     return 0;
 }
@@ -67,7 +68,7 @@ https://codeforces.com/contest/1454/submission/100904774
 https://codeforces.com/contest/1454/submission/100904221   (Another way to find the cycle, but little tricky)
 
 https://cses.fi/problemset/task/1669
----------Do it yourself by stack ------------
+https://pastebin.com/iv71xHik         (using stack)
 https://pastebin.com/5QWZAbfh   (2nd way to find the cycle)
 
 

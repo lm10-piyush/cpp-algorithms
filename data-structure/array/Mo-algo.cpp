@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -15,7 +15,7 @@ int blk, roll;
 
 struct Node {
     int i, l, r;
-    Node(){}
+    Node() {}
     Node(int x, int y, int z) {
         l = x; r = y; i = z;
     }
@@ -26,39 +26,39 @@ struct Node {
 };
 
 const int N = 1e6 + 5;
-vector <int> frq(N); //we can use unordered_map(hash Map) to store keys when they are very large 
+vector <int> frq(N); //we can use unordered_map(hash Map) to store keys when they are very large
 
 void add(int x) {
-    if(frq[x] == 0) roll++;
+    if (frq[x] == 0) roll++;
     frq[x]++;
 }
 
 void remove(int x) {
     frq[x]--;
-    if (frq[x] <= 0) { 
+    if (frq[x] <= 0) {
         roll--;
     }
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n; cin >> n;
     vector <int> A(n);
-    for (int &i: A) cin >> i;
+    for (int &i : A) cin >> i;
 
-    blk = ceil(1.0*sqrt(n));
+    blk = ceil(1.0 * sqrt(n));
 
     int q; cin >> q;
     vector <Node> qry(q);
     vector <int> ans(q);
-    for (int i = 0, l, r; i < q; ++i){
+    for (int i = 0, l, r; i < q; ++i) {
         cin >> l >> r; l--, r--;
         qry[i] = Node(l, r, i);
     }
 
     sort(all(qry));
-    
+
     int Mr = 0, Ml = 0;
     add(A[Mr]);
 
@@ -68,13 +68,13 @@ int main(){
 
         while (qry[i].r > Mr)
             add(A[++Mr]);
-        
+
         while (qry[i].l > Ml)
             remove(A[Ml++]);
-        
+
         while (qry[i].r < Mr)
             remove(A[Mr--]);
-        
+
         ans[qry[i].i] = roll;
     }
 
@@ -97,8 +97,8 @@ int main(){
 
 /*
  Note: if you solve set(dfs and return the set) here to solve this problem, it will give TLE
- https://cses.fi/problemset/task/1139  (Mo on trees, using Euler tour) 
+ https://cses.fi/problemset/task/1139  (Mo on trees, using Euler tour)
  https://pastebin.com/HWjZyVhk   (it will give TLE because of collison in unordered_map)
- https://pastebin.com/rXCKz4Kw   (AC solution with vector and compression)  
+ https://pastebin.com/rXCKz4Kw   (AC solution with vector and compression)
 
 */

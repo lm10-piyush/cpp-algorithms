@@ -51,6 +51,8 @@ https://leetcode.com/problems/largest-number/   (Largest number, https://pastebi
 https://codeforces.com/contest/632/problem/C    (The Smallest String Concatenation, https://codeforces.com/contest/632/submission/94871653)
 https://atcoder.jp/contests/abc187/tasks/abc187_d   (Beware of Runtime error on Sorting, https://atcoder.jp/contests/abc187/submissions/19169194, with comparator: https://atcoder.jp/contests/abc187/submissions/19240722 )
 https://codeforces.com/contest/1223/problem/E        (Paint the Tree, extension of Tree matching problem, Exchange arguments, tree dp)
+https://codeforces.com/contest/1203/problem/F1                (exchange arguments, https://codeforces.com/contest/1203/submission/112876239)
+
 ********************************************************************************************
 
 https://codeforces.com/problemset/problem/1178/D (greedy, maths, Trick, number theory, https://codeforces.com/contest/1178/submission/89284779)
@@ -168,7 +170,8 @@ https://codeforces.com/contest/1223/problem/D                 (DP, like LIS, mai
 https://codeforces.com/contest/612/problem/D                  (interval, https://codeforces.com/contest/612/submission/107130517)
 https://codeforces.com/contest/976/problem/C                  (intervals, exchange arguments,  sorting, https://codeforces.com/contest/976/submission/107084219)
 https://codeforces.com/contest/1061/problem/D                (Interval, greedy, Trick, Important Greediness)
-
+https://www.e-olymp.com/en/contests/20844/problems/226454         (basic Union of segments, sweepline, https://pastebin.com/wUGK4PAE)
+https://www.e-olymp.com/en/contests/20844/problems/226456                  (Union of rectangles which are at same base level, https://pastebin.com/BRWq31FC)
 /**********************************************************************************************************
 
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-5th-september/challenges/easy-9-cc  (Greedy, sorting, https://pastebin.com/6vEEaEuJ)
@@ -231,13 +234,14 @@ https://codeforces.com/contest/510/problem/B  (Fox And Two Dots, DFS on matrix w
 https://codeforces.com/contest/453/problem/A       (Little Pony and Expected Maximum, https://codeforces.com/contest/453/submission/94976965)
 https://www.codechef.com/problems/THEGAME           (Filling the maze, expected value, Linearity of expectation, https://www.codechef.com/viewsolution/42201336)
 https://codeforces.com/contest/846/problem/F         (Random query, expected value, noice problem, https://codeforces.com/contest/846/submission/111715404)
+https://codedrills.io/contests/amrita-icpc-practice-session-7/problems/horse-and-barns       (BFS, matrix, combinatorics, expected value, knight, https://pastebin.com/1UjrhAxV)
 **********************************************************************************************
 https://leetcode.com/problems/buddy-strings/   (Greedy, implementation)
 https://leetcode.com/problems/remove-duplicate-letters/      (greedy, implementation, stack)
 https://leetcode.com/problems/asteroid-collision/    (Simple stack based problem)
 
 https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/  (Divide and conquer, https://pastebin.com/ZzmStxbv)
-https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/  (Divide and conquer, similar to above, https://pastebin.com/nuLTxV7z)
+https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/  (Divide and conquer, similar to above, https://pastebin.com/UL8KvGjv)
 https://leetcode.com/problems/sort-list/          (Sort the linked list in O(n.logn), O(1) space, divide and conquer, merge sort, https://pastebin.com/BFQRwCJF)
 
 https://codeforces.com/contest/160/problem/C  (Find Pair, maths, counts, https://codeforces.com/contest/160/submission/95541594)
@@ -378,18 +382,32 @@ https://codeforces.com/contest/1041/problem/E                   (Greedy, constru
 https://codeforces.com/contest/845/problem/D              (observation, simple, https://codeforces.com/contest/845/submission/111643450)
 https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
 https://leetcode.com/problems/greatest-sum-divisible-by-three/           (simple maths, greedy)
+https://codeforces.com/contest/1096/problem/C                       (maths, geometry, https://codeforces.com/contest/1096/submission/106922143)
+https://www.hackerrank.com/contests/cisco-icode-round-2/challenges/sherlock-and-subarray/problem           (monotonic stack, counting, https://pastebin.com/PjPD64HH)
+https://www.hackerrank.com/contests/cisco-icode-round-2/challenges/weird-sorting               (maths, greedy, constructive problem, combinatorics, https://pastebin.com/pe0iTKaB)
+https://codeforces.com/contest/1082/problem/E                           (greedy, dp, observation, make equal, https://codeforces.com/contest/1082/submission/112376243)
+https://codeforces.com/contest/1152/problem/D                      (Important, Problem based on Recursive patterns, can be solved using Recursion or DP)
+https://www.geeksforgeeks.org/minimize-the-sum-calculated-by-repeatedly-removing-any-two-elements-and-inserting-their-sum-to-the-array/
+--Greedy--coin change problem (important, when all the items are multiple of each other then it is optimal to pick the largest one first, because if we can pick largest one then answer is optimal, if we can't pick largest one then try for smaller ones but if we pick the smaller then larger it might not be optimal)
 
+https://leetcode.com/problems/jump-game-iv/                      (BFS, Graph, smart implementation with map, https://pastebin.com/rLM7zVqC)
+https://codeforces.com/contest/1513/problem/D             (MST, Maths, greedy, Construct the graph greedily with maths, https://codeforces.com/contest/1513/submission/113082787)
 
-
-
-
-
-
-
-
-
-
-
+https://codeforces.com/contest/1417/problem/D              (maths, greedy, constructive, sum is conservative, making all equal, https://codeforces.com/contest/1417/submission/113092048)
+https://codeforces.com/contest/1511/problem/E                       (Dp, contribution, important, Grid number of ways, https://codeforces.com/contest/1511/submission/113126475)
+https://codeforces.com/contest/1504/problem/D                      (interactive, chess board, obsrvation, graph like, https://codeforces.com/contest/1504/submission/113153036)
+https://codeforces.com/contest/1486/problem/C2                  (interactive, binary search, https://codeforces.com/contest/1486/submission/107816321)
+https://codeforces.com/contest/1486/problem/D                  (Binary search, greedy common trick of 1, -1, https://codeforces.com/contest/1486/submission/113162907)
+https://codeforces.com/contest/1509/problem/D                 (String, binary string, Obvious observation, https://codeforces.com/contest/1509/submission/113308155)
+https://codeforces.com/contest/1405/problem/E         (pbds or BIT + binary search, Merge sort tree not necessary to use but I've used it here, https://codeforces.com/contest/1405/submission/113355063)
+https://www.codechef.com/PRACTICE/problems/TDISTS                   (observation, tree, maths, https://www.codechef.com/viewsolution/45243670)
+https://codeforces.com/contest/360/problem/A                      (answer build, max in range, construtive problem,https://codeforces.com/contest/360/submission/115964989)
+https://www.geeksforgeeks.org/maximum-value-arri-arrj-j/                    (important ques, mod, greedy, maths)
+https://leetcode.com/discuss/interview-question/1192919/Tekion-Backend-Engineer-2021-(OA-question-Help-needed)/  (math, combinatorics, important, https://pastebin.com/SXbbenFJ)
+https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/                  (Nodes with distance 'k' from given node in O(N) time and O(1) extra space, soln: https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/, code: https://pastebin.com/e3K2Q474)
+https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/          (important, https://pastebin.com/hY6ata2n)
+https://leetcode.com/problems/delete-node-in-a-bst/                                        (Delete the node in BST, https://pastebin.com/QkCcBdWY)
+https://leetcode.com/problems/first-missing-positive/                     (https://pastebin.com/S1qD0LTL)
 
 
 

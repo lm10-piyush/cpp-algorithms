@@ -1,8 +1,8 @@
 ***************************** BASICS********************************************
-DP: says how we can use the already calculated things and then build the ans for bigger ones. Ex: power Exponentation, 0/1 knapsack etc.
+DP: says how we can use the already calculated things and then build the ans for bigger ones, so just break the problem into its smaller sub-problem (recursively) and build the answer for bigger problems from smaller ones. Ex: power Exponentation, 0/1 knapsack etc.
 
 ========================================== IN SHORT ==========================================================
-MainConcept of DP is to build the answer from already calculated small problems, or I can say that by recurrence relation because meaning is same. 
+MainConcept of DP is to build the answer from already calculated small problems, or I can say that by RECURRENCE relation because meaning is same. 
 By writing recurrence means breaking down the problem into similar smaller subproblem. Then in implement that recurrence in efficient manner. Here you are bulding the 
 solution from the base states to bigger states. You can implement it efficiently by Top-down approach (memoization) and Bottom up approch (iterative version). 
 
@@ -13,6 +13,14 @@ To build recurrence you need: understanding of problem, defining DP[states..] an
 to calculte dp[i][j] we to solve dp[i][j] like: dp[i][j] = dp[i][j] + dp[i-1][j].
 
 DP on DAG is also a intresting way.
+
+
+***************************** How to choose state?? ********************************
+What is a state: State means what information defines your problem, suppose your state is index 'i' i.e., dp[i], that means you problems depends on index 'i'. Sometimes you need more information to store to define you problem solution correctly.
+
+How to chose it???  
+Just choose state in such a way, what information is need you to keep track of. There are bunch of information, some of which are independent some are depend, but what information you need to keep track of to solve the problem and it is mandatory. ex: in knapsack we need to keep track of the "current weight of the bag", and "just previous state", so that we can build the answer for current state.
+
 ===========================================================================================================
 
 IN DP: Dp is all about caching the data(function calls), or you can say, when I can build the bigger solution 
@@ -62,6 +70,22 @@ but you can’t define such states, then try to reduce the problem to another on
 2) Overlapping sub-problem (sub-solutions).
 3) How to pass from one state to another (transitions).
 
+++++++++++++++++++++++++++++ Transition ++++++++++++++++++++++++++++++++++++++++++++
+Suppose you have given a situation where we have to do some operations. Analyse the problem create the states. 
+Now how to make transitions, transition means going from one state to another to calculate the answer for bigger problems
+from answer of smaller sub-problems. To do that, just see what operations you have to do, ex: in knapsack we have to pick the item and put it inside the bag OR just skip that item, so we have these two types of operations in knapsack. These 
+operations will give the way how to make transition. 
+
+In knapsack, state: dp[i][sum] :using elements [1..n], and current weight in bag is 'sum' 
+In top-down way: 
+ skip the current item: dp[i+1][sum]
+ use current item: dp[i+1][sum + weight[i]] + value[i]
+
+In bottom up: 
+ skip the current item: dp[i-1][sum]
+ use current item: dp[i-1][sum - weight[i]] + value[i]
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 In dp, you have to build the solution from smaller problem to bigger problem.
 During building the solution, at every moment, I have a choice, should I use the
@@ -74,7 +98,7 @@ SOME examples: https://codeforces.com/blog/entry/43256
 *For finding a state i, we need to first find all smaller states j (j<i). 
 
 So, the process is like this:
-	1) Identify the  states.
+	1) Identify the  states. (state defines current situation)
 	2) Build for the base case.
 	3) After base case, at every moment, you have use the current option
 	or you don't use the current option and use till the previous option, 
@@ -82,6 +106,21 @@ So, the process is like this:
 	4) In dp, it does not depend how deep an state repeats, because if it depends then it must
 	be included in the state. EX: In fibonacci state tree, it does not depend on the depth of the same
 	function call, it only depends on the recursive call.
+
+
+++++++++++++++++++++++++++++++++++++ NOTE +++++++++++++++++++++++++++++++++++++++++++++++
+Important thing in dp state, suppose we have any state, eg: dp[i][sum], now this state is independent of order of
+previous operations, that means it doesn't matter what choices we have make previously, it only matters how to reach to the current state from previous state.
+ex: dp[10][24], it doesn't matter how we have elements used or in which order elements are used to calculate previous states like dp[9][10] or dp[8][4] etc. It only matters how we are reaching to our current state from previous state.
+
+ex: like in Travelling salesman, where state is dp[mask], if mask: 101101101 => it doesn't matter how traversed previous states like: 101100001, 100011101, 100001001 etc, only thing which matters is what how to reach current state from previous one.
+
+If your solution depends on order, then it is not dp, because every time order changes, so does the state, never state repeat. 
+
+So, yeah this is important insight, during formulation of DP.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 *************************************TOP down & Bottm Up *********************************************
 In top-down dp, we don't need to do extra stuff, all things will be done by recursion
@@ -374,6 +413,7 @@ https://codeforces.com/contest/1398/problem/D   ( Colored Rectangles, Dp, top-do
 ************************************** DP with exchange arguments *********************************
 https://ki.staszic.waw.pl/task.php?name=bombki    (Christmas balls, actually boxes, problem is in polish (activate the Google translate), I hope the solution is correct, Top down with map: https://pastebin.com/dhnaZucG)
 https://codeforces.com/contest/1401/problem/D    (Maximum Distributed Tree, DP, contribution techniq, greedy, soln: https://codeforces.com/contest/1401/submission/90882209)
+https://codeforces.com/contest/1203/problem/F2            (Bottom up: https://codeforces.com/contest/1203/submission/112877763, top down: https://codeforces.com/contest/1203/submission/112877029)
 
 **********************************************************************************************
 https://leetcode.com/problems/minimum-cost-for-tickets/    (Dp, top-down https://pastebin.com/ZrDUftBf)
@@ -406,7 +446,7 @@ https://atcoder.jp/contests/abc184/tasks/abc184_d   (Expected value, https://atc
 https://atcoder.jp/contests/abc189/tasks/abc189_f
 https://codeforces.com/contest/518/problem/D              (Easy, expected value, dp, https://codeforces.com/contest/518/submission/109504798)
 https://codeforces.com/contest/697/problem/D              (Trees, expected value, https://codeforces.com/contest/697/submission/110061186)
-
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec28e       (Doubles, max expected value, generate answer, Implementation tricky, https://pastebin.com/jniMaXHH, bottom up: https://pastebin.com/wR7SGCvH)
 /******************************************************************************************************
 
 https://codeforces.com/contest/1433/problem/F  (Zero remainder sum, modulus, DP on matrix, like knapsack, top-down: https://codeforces.com/contest/1433/submission/96314904, bottom up: https://codeforces.com/contest/1433/submission/96382463)
@@ -473,11 +513,18 @@ https://www.codechef.com/LTIME94A/problems/CODON             (DP on grah, Nice o
 https://codeforces.com/contest/11/problem/D                (DP on graph, Important DP state, https://codeforces.com/contest/11/submission/111456686)
 https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
 https://leetcode.com/problems/largest-sum-of-averages/                (DP, Quite standard dp state like CF div 3: Kittens and picture problem, https://pastebin.com/66KYCkX8)
-
-
-
-
-
-
+https://codeforces.com/contest/1096/problem/D                     (DP, https://codeforces.com/contest/1096/submission/106954920)
+https://codeforces.com/contest/1152/problem/D                      (Important, Problem based on Recursive patterns, can be solved using Recursion or DP)
+https://www.codechef.com/APRIL21B/problems/MEXSTR                      (Nice constructive problem, https://www.codechef.com/viewsolution/44966730)
+https://leetcode.com/problems/last-stone-weight-ii/                   (observation, abs(a-b) minimum, https://pastebin.com/BAkcmdA5, https://pastebin.com/gFGTkpia)
+https://leetcode.com/problems/palindrome-partitioning-iii/              (same like Kitten and photos codeforces, https://pastebin.com/AAb7CadN)
+https://leetcode.com/problems/palindrome-partitioning-iv/          (same as above problem, but with some precomputation is required, longest palindrome substring, https://pastebin.com/yUE81XP1)
+https://leetcode.com/problems/palindrome-partitioning-ii/                (Longest palindrome, https://pastebin.com/5FgebtRN)
+https://codeforces.com/contest/1447/problem/D                         (Most profit substring, https://codeforces.com/contest/1447/submission/113043762)
+https://codeforces.com/contest/1511/problem/E                       (Dp, contribution, important, Grid number of ways, https://codeforces.com/contest/1511/submission/113126475)
+https://codeforces.com/contest/1509/problem/C                         (NOTE: we can't solve this greedily, simple dp, sorting, https://codeforces.com/contest/1509/submission/113308769)
+https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/            (maximum submatrix sum, kadane)
+https://codeforces.com/contest/1525/problem/D                                       (dp, 2D, greedy, https://codeforces.com/contest/1525/submission/116551443)          
+https://www.geeksforgeeks.org/number-of-permutation-with-k-inversions/        (DP, permuation, counting, inversion)
 
 

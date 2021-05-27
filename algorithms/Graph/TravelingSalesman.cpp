@@ -11,7 +11,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 /****************************** CODE IS HERE ***********************************/
 
-void Bottom - up() {
+void Bottom_up() {
   int n; cin >> n;
   vector <vector<int>> graph(n, vector<int>(n)); //adjacency matrix with weights
   for (int i = 0; i < n; ++i) {

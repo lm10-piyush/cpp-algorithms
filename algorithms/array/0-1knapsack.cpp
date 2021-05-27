@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -13,27 +13,27 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 
 //In knapsack we have 3states of each item: not-considered, picked (considered), not-picked (considered)
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n, x; cin >> n >> x;
-    vector <int> price(n+1), pages(n+1);
+    vector <int> price(n + 1), pages(n + 1);
     for (int i = 1; i <= n; ++i) //cost/weight
         cin >> price[i];
-    for (int i = 1; i <= n; ++i) 
+    for (int i = 1; i <= n; ++i)
         cin >> pages[i];  //value..
 
     //dp[i][j] => using elements [1..i](subset of elements), maximum value I can get if current weight is 'j'
     //to do the above job correctly, here is the recurrence relation, which is based on "use it" or "not"
     //dp[i][j] = max(dp[i-1][j], pages[i] + dp[i-1][j-price[i]]); //max(dont use current one, use the current one)
-    vector <vector <int>> dp(n+1, vector <int> (x+1, 0));
+    vector <vector <int>> dp(n + 1, vector <int> (x + 1, 0));
 
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= x; ++j) {
-            dp[i][j] = dp[i-1][j]; // not ith book
+            dp[i][j] = dp[i - 1][j]; // not ith book
             int left = j - price[i];
             if (left >= 0)
-                dp[i][j] = max(dp[i][j], pages[i] + dp[i-1][left]); //include the ith book
+                dp[i][j] = max(dp[i][j], pages[i] + dp[i - 1][left]); //include the ith book
         }
     }
 
@@ -47,7 +47,7 @@ int main(){
  Because of items are order independent and it doesnot matter that how many elements we have picked. Only thing depends is
  how much profit we get TILL NOW for a particular weight. To specify TILL NOW we have used: 'i'
 
- Here it does not depends where am I (that means which position I'm currently at). The only thing matters is: how much 
+ Here it does not depends where am I (that means which position I'm currently at). The only thing matters is: how much
  profit can I get till now for a certain weight 'j'. So here we have use 'i' to represent the number of elments we have used
  only to differentiate that how many elements we have used.
 
@@ -59,12 +59,12 @@ When I'm currently at some item say ith item: then it does not matter that how m
 thing that matters is: how much the profit is and how much weight is left. Then step by step BUILD The answer.
 
 =====================Bottom up=========================
-Now lets understand this: dp[i][j] => We have considered, from [1...i], we have picked some elements and the remaining weight is : 'j' 
-and we are currently some element let say: ith element. Then there are two possibilites: currently we have picked this ith element 
-for dp[i][j] to get best answer or not. 
+Now lets understand this: dp[i][j] => We have considered, from [1...i], we have picked some elements and the remaining weight is : 'j'
+and we are currently some element let say: ith element. Then there are two possibilites: currently we have picked this ith element
+for dp[i][j] to get best answer or not.
 1) IF we have picked current item (ith) for dp[i][j], that means in dp[i][j], 'i' is included in (i, j) state.
 So, how much part remain from dp[i][j] if we remove it (ith element): which will be: i-1 and j - weight[i]: dp[i-1][j-weight[i]]
-2) If we have not picked the current element then: dp[i][j] => dp[i-1][j] => weight does not change because we have not picked the current element. 
+2) If we have not picked the current element then: dp[i][j] => dp[i-1][j] => weight does not change because we have not picked the current element.
 
 ==========================================================
 Problems like coin change-2 when order does matter and you don't want to count extra things, then you should iterate the elmenets as outer loop because it helps to create a correct recurrcece.
@@ -98,4 +98,8 @@ https://leetcode.com/problems/count-sorted-vowel-strings/        (not a knapsack
 
 https://codeforces.com/contest/864/problem/E
 https://codeforces.com/contest/864/submission/105663711
+
+--Greedy--coin change problem (important, when all the items are multiple of each other then it is optimal to pick the largest one first,
+because if we can pick largest one then answer is optimal, if we can't pick largest one then try for smaller ones but if we pick the smaller
+then larger it might not be optimal)
 */

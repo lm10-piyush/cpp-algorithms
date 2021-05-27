@@ -176,6 +176,8 @@ https://atcoder.jp/contests/hhkb2020/submissions/17299633
 https://leetcode.com/problems/search-in-rotated-sorted-array/
 https://pastebin.com/pUiy846u
 
+https://codeforces.com/contest/1486/problem/D
+(Binary search, greedy common trick of 1, -1, https://codeforces.com/contest/1486/submission/113162907)
 
 https://codeforces.com/contest/1454/problem/F  (sparse table + binary search)
 https://codeforces.com/contest/1454/submission/101060423

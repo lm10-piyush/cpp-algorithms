@@ -6,18 +6,18 @@
 using namespace std;
 
 //fac[i] => i! % mod (factorial of i)
-//reFac[i] => 1/(i!) % mod => inverse(i!) % mod => power(i!, mod-2) (by fermat-little theorem) 
+//reFac[i] => 1/(i!) % mod => inverse(i!) % mod => power(i!, mod-2) (by fermat-little theorem)
 
 /*********************************** CODE IS HERE *******************************************/
 
 const int N = 2e5 + 5;
 const int mod = 998244353;
-vector <ll> fac(N+2), reFac(N+2);
+vector <ll> fac(N + 2), reFac(N + 2);
 
-ll power(ll a, ll b){
+ll power(ll a, ll b) {
     ll res = 1;
-    while(b){
-        if(b & 1){
+    while (b) {
+        if (b & 1) {
             (res *= a) %= mod;
         }
         (a *= a) %= mod;
@@ -29,11 +29,11 @@ ll power(ll a, ll b){
 void calc() {
     fac[0] = 1;
     for (int i = 1; i <= N; ++i)
-        fac[i] = (fac[i-1] * i) % mod;
+        fac[i] = (fac[i - 1] * i) % mod;
 
-    reFac[N] = power(fac[N], mod-2);
-    for (int i = N; i > 0; --i){
-        reFac[i-1] = (reFac[i] * i) % mod;
+    reFac[N] = power(fac[N], mod - 2);
+    for (int i = N; i > 0; --i) {
+        reFac[i - 1] = (reFac[i] * i) % mod;
     }
 }
 
@@ -65,17 +65,17 @@ ll C(ll n, ll r) {
 }
 
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    
+
     calc();  //build
 
     ll n, m, k; cin >> n >> m >> k;
-    
+
 
     //apply => nCr(n-1, k) * m * (m-1)^k;
     //https://codeforces.com/contest/1081/problem/C
-    ll ans = (((fac[n-1]*reFac[k] % mod) * reFac[n-1-k] % mod) * m % mod)*power(m-1, k);
+    ll ans = (((fac[n - 1] * reFac[k] % mod) * reFac[n - 1 - k] % mod) * m % mod) * power(m - 1, k);
     ans %= mod;
 
     cout << ans;
@@ -83,6 +83,11 @@ int main(){
     return 0;
 }
 
+/*
+ * Wilson theorem: (n - 1)! = -1 mod p, where p is prime.
+   There is proof.
+
+*/
 
 //https://cses.fi/problemset/task/1079
 
@@ -98,14 +103,14 @@ int main(){
 //https://www.hackerrank.com/challenges/coinage/problem
 //solution : smart brute force
 
-//https://leetcode.com/problems/count-ways-to-make-array-with-product/               
+//https://leetcode.com/problems/count-ways-to-make-array-with-product/
 //(stars and bars, maths, counting, combinatorics, https://pastebin.com/4VETqNEE)
 
-//https://codeforces.com/gym/102942/problem/E    
+//https://codeforces.com/gym/102942/problem/E
 //(maths, combinatorics, stars and bars, https://pastebin.com/pFJJTq9R)
 
 /*
-https://codeforces.com/contest/1288/problem/C                      
+https://codeforces.com/contest/1288/problem/C
 maths, combinatorics, https://codeforces.com/contest/1288/submission/88074818
 
 https://atcoder.jp/contests/arc110/tasks/arc110_d     (Really Nice problem)

@@ -83,3 +83,6 @@ int main() {
 }
 
 //https://www.spoj.com/problems/INVCNT/
+
+//https://codeforces.com/contest/1417/problem/E
+// https://codeforces.com/contest/1417/submission/112307613

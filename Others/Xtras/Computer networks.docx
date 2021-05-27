@@ -1,0 +1,23 @@
+Computer Networks
+
+How to do communication between two devices?
+1) Connection, to transfer the data from one device to another.
+2) Protocols, to understand the data.
+In networking, we have connection between two devices like wired or wireless connection to transfer the packets and to understand them we use different protocols like HTTP, TCP, IP. In this way two devices communicate. This is most basic view of networking.
+
+Functionalities in networking: 
+1) Mandatory: compulsory functionalities like error control, flow control,    	multiplexing and demultiplexing (done by transport layer), etc.
+2) Optional: non-compulsory functionalies like encryption and decryption, checkpoint, etc.
+
+There are total 70+ functionalities we combine all of them created to create some models like OSI model, TCP/IP, IEEE.
+
+1) Physical layer: Cabels, topology, transmission modes, ecoding, LAN devices, modulation
+2) Data link: Stop s wait, Go back and selective repeat, MAC protocols, switiching , error control, ethernet frame fromat.
+
+3) Network: IP addressing, Routing protocols, IPv4header, IPv6 header.
+
+4) Transport: TCP, UDP, Headers
+5) Session
+6) Presenation
+7) Application  (DNS, http, stmp etc and their port numbers)
+8) Network security

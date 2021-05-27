@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+struct Random {
+    mt19937 rng;
+    Random() {
+        auto seed = chrono::high_resolution_clock::now().time_since_epoch().count();
+        rng = mt19937(seed);
+    }
+    ll operator ()(ll a, ll b) {
+        return uniform_int_distribution<int> (a, b)(rng);
+    }
+} rd;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_Random</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

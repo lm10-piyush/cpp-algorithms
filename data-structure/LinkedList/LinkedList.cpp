@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -26,11 +26,12 @@ void printNode(Node *head) {
         cout << head->data << ' ';
         head = head->next;
     }
+    cout << endl;
 }
 
 void insertAtBegining(Node * &head, int val) {
     Node *node = new Node(val);
-    node->next = head;  
+    node->next = head;
     head = node;
 }
 
@@ -40,7 +41,7 @@ void insertAtEnd(Node * &head, int val) {
         head = node;
         return;
     }
-    Node *curr = head; 
+    Node *curr = head;
     while (curr->next != nullptr) {
         curr = curr->next;
     }
@@ -82,7 +83,7 @@ void reverseList(Node * &head) {
 }
 
 //middle node of the linked list
-Node *middle(Node *head) {
+Node *middle(Node *head) { //if length is odd then middle, if length is even then ceil one.
     if (head == nullptr) return head;
     Node *slow = head, *fast = head;
     while (fast != nullptr and fast->next != nullptr) {
@@ -92,32 +93,34 @@ Node *middle(Node *head) {
     return slow;
 }
 
-Node *mergeTwoLists(Node *l1, Node *l2) {
-	if (l1 == nullptr) return l2;
-	//maintain, the prev, curr1 pointer of l1, and curr2 of l2
-	Node *prev = nullptr, *curr1 = l1, *curr2 = l2;
-	while (curr1 and curr2) {
-		if (curr1->val > curr2->val) {
-			ListNode nxt = curr2->next;
-			curr2->next = curr1;
-			if (prev == nullptr) {
-				l1 = curr2;
-			} else prev->next = curr2;
-			prev = curr2;
-			curr2 = nxt;
-		}
-		else {
-			prev = curr1;
-			curr1 = curr1->next;
-		}
-	}
-	if (l2) {
-		prev->next = curr2;
-	}
-	return l1;
+
+Node *mergeTwoLists(Node *l1, Node *l2) { //merging l2 into l1.
+    if (l1 == nullptr) return l2;
+    //maintain, the prev, curr1 pointer of l1, and curr2 of l2
+    Node *prev = nullptr, *curr1 = l1, *curr2 = l2;
+    while (curr1 and curr2) {
+        if (curr1->data > curr2->data) {
+            Node *nxt = curr2->next;
+            curr2->next = curr1;
+            if (prev == nullptr) {
+                l1 = curr2;
+            } else prev->next = curr2;
+            prev = curr2;
+            curr2 = nxt;
+        }
+        else {
+            prev = curr1;
+            curr1 = curr1->next;
+        }
+    }
+    if (l2) {
+        prev->next = curr2;
+    }
+    return l1;
 }
 
-int main(){
+
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n; cin >> n; //number of nodes
@@ -141,9 +144,9 @@ int main(){
     //print the nodes
     printNode(head);
     cout << endl;
-    
+
     deleteBegininig(head); //delete begining
-    
+
     //print the nodes
     printNode(head);
     cout << endl;
@@ -179,3 +182,4 @@ int main(){
 //https://www.interviewbit.com/problems/reverse-alternate-k-nodes/   (reverse, https://pastebin.com/Jw1e0pzZ)
 //https://www.interviewbit.com/problems/kth-node-from-middle/    (reverse, https://pastebin.com/Dm4GsCE6)
 //https://leetcode.com/problems/merge-k-sorted-lists/
+// https://leetcode.com/problems/copy-list-with-random-pointer/  (deep copy, O(n2) soln: https://pastebin.com/CL2fpdSy, O(n * log(n)) soln: https://pastebin.com/bJu9Qfyf)

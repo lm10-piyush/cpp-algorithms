@@ -33,3 +33,9 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 13. ICPC archive: https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=0
 
 14. https://codeforces.com/blog/entry/405  (Dont use %lld in C++14)
+
+15. Optimation in C++ which passes Naive solutions (approx 10^9 iterations in 1-2sec): https://codeforces.com/blog/entry/66279, https://codeforces.com/blog/entry/89634?#comment-780234 
+
+16. Hashing the sets and multisets: https://codeforces.com/blog/entry/85900
+
+17. Nice resource for CP topics and problems: https://usaco.guide/dashboard

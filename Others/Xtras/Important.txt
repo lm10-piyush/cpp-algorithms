@@ -16,14 +16,23 @@ https://codeforces.com/contest/242/problem/C                       (BFS, Graph, 
 https://codeforces.com/contest/1175/problem/D                     (Really nice, Greedy problem, Important, trick, https://codeforces.com/contest/1175/problem/D)
 https://codeforces.com/contest/1041/problem/E                   (Greedy, constructive, Watch an opening, https://codeforces.com/contest/1041/submission/111803878)
 https://codeforces.com/contest/1313/problem/C2                 (Monotonic stack, greedy, datastructure, Envelop type structure (like area under histogram), https://codeforces.com/contest/1313/submission/112107300)
-
-
-
-
-
-
-
-
+https://codeforces.com/contest/1152/problem/D                      (Important, Problem based on Recursive patterns, can be solved using Recursion or DP)
+https://codeforces.com/contest/1513/problem/D             (MST, Maths, greedy, Construct the graph greedily with maths, https://codeforces.com/contest/1513/submission/113082787)
+https://codeforces.com/contest/1417/problem/D              (maths, greedy, constructive, sum is conservative, making all equal, https://codeforces.com/contest/1417/submission/113092048)
+https://codeforces.com/contest/1504/problem/D                      (interactive, chess board, obsrvation, graph like, https://codeforces.com/contest/1504/submission/113153036)
+https://codeforces.com/contest/1486/problem/C2                  (interactive, binary search, https://codeforces.com/contest/1486/submission/107816321)
+https://codeforces.com/contest/1486/problem/D                  (Binary search, greedy common trick of 1, -1, https://codeforces.com/contest/1486/submission/113162907)
+https://codeforces.com/contest/1509/problem/D                 (String, binary string, Obvious observation, https://codeforces.com/contest/1509/submission/113308155)
+https://codeforces.com/contest/360/problem/A                      (answer build, max in range, construtive problem,https://codeforces.com/contest/360/submission/115964989)
+https://www.geeksforgeeks.org/maximum-value-arri-arrj-j/                    (important ques, mod, absolute, greedy, maths)
+https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/            (maximum submatrix sum)
+https://leetcode.com/discuss/interview-question/1192919/Tekion-Backend-Engineer-2021-(OA-question-Help-needed)/  (math, combinatorics, important, https://pastebin.com/SXbbenFJ)
+https://www.e-olymp.com/en/contests/20844/problems/226456                  (Interval, Union of rectangles which are at same base level, https://pastebin.com/BRWq31FC)
+https://www.geeksforgeeks.org/number-of-permutation-with-k-inversions/        (DP, permuation, counting, inversion)
+https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/                  (Nodes with distance 'k' from given node in O(N) time and O(1) extra space, soln: https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/, code: https://pastebin.com/e3K2Q474)
+https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/          (important, https://pastebin.com/hY6ata2n)
+https://leetcode.com/problems/delete-node-in-a-bst/                                        (Delete the node in BST, https://pastebin.com/QkCcBdWY)
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec28e       (Doubles, max expected value, generate answer, Implementation tricky, https://pastebin.com/jniMaXHH, bottom up: https://pastebin.com/wR7SGCvH)
 
 
 

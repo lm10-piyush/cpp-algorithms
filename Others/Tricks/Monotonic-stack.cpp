@@ -58,4 +58,7 @@ int main() {
 
    https://leetcode.com/problems/maximal-rectangle/
    https://pastebin.com/MPdHrXqY
+
+   https://www.hackerrank.com/contests/cisco-icode-round-2/challenges/sherlock-and-subarray/problem
+   https://pastebin.com/PjPD64HH
 */
