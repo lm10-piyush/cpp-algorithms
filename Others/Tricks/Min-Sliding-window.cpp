@@ -16,12 +16,12 @@ template <typename T>
 struct Queue {
     stack <pair<T, T>> s1, s2;
 
-    void add(T x) {
+    void push(T x) {
         T mn = (s1.empty() ? x : min(x, s1.top().second));
         s1.push({x, mn});
     }
 
-    void remove() {
+    void pop() {
         if (s2.empty()) {
             while (!s1.empty()) {
                 T x = s1.top().first;
@@ -33,7 +33,7 @@ struct Queue {
         s2.pop(); //remove the element.
     }
 
-    T get() {
+    T top() {
         if (s1.empty() or s2.empty())
             return (s1.empty() ? s2.top().second : s1.top().second);
         return min(s1.top().second, s2.top().second);
@@ -50,12 +50,12 @@ int main() {
 
     Queue <int> q;
     for (int i = 0; i < k; ++i)
-        q.add(A[i]);
-    cout << q.get() << ' ';
+        q.push(A[i]);
+    cout << q.top() << ' ';
     for (int i = k; i < n; ++i) {
-        q.remove();
-        q.add(A[i]);
-        cout << q.get() << ' ';
+        q.pop();
+        q.push(A[i]);
+        cout << q.top() << ' ';
     }
 
 
@@ -77,6 +77,7 @@ int main() {
   (std::set will give the TLE)
 
   https://codeforces.com/contest/1077/problem/F2
+  https://codeforces.com/contest/1077/submission/118180721
 
 
 */

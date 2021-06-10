@@ -115,6 +115,8 @@ ex: dp[10][24], it doesn't matter how we have elements used or in which order el
 
 ex: like in Travelling salesman, where state is dp[mask], if mask: 101101101 => it doesn't matter how traversed previous states like: 101100001, 100011101, 100001001 etc, only thing which matters is what how to reach current state from previous one.
 
+ex: https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/             (dp with bitmask, whenever problem like to find some optimal permutation we use the dp with bitmask like travelling salesman, Bottom up: https://pastebin.com/ic7iufYw, top-down: topdown: https://pastebin.com/hZQdWqDM)
+
 If your solution depends on order, then it is not dp, because every time order changes, so does the state, never state repeat. 
 
 So, yeah this is important insight, during formulation of DP.
@@ -169,7 +171,7 @@ We have 2-ways to do this:
 1) Build the solution by considering the condition, then find the best solution,
    eg: https://codeforces.com/contest/1353/problem/E
 2) Build the solution by not considering the condition then, find the best solution
-   by considering the considering. https://codeforces.com/contest/1077/problem/F1
+   by considering the conditon. https://codeforces.com/contest/1077/problem/F1
 Above two ways, depends on question to question.
 
 
@@ -307,7 +309,9 @@ https://www.hackerrank.com/challenges/robot/problem (segTree with DP, sol: https
 https://codeforces.com/contest/977/problem/F (dp, LIS, Maths)
 https://codeforces.com/contest/1353/problem/E (dp + good implementation, K-Gaps)
 https://codeforces.com/contest/1282/problem/B2 (Dp, K-gaps (mod traversal), soln: https://codeforces.com/contest/1282/submission/75436172)
-https://codeforces.com/contest/1077/problem/F1 (dp, Picture with kittens, (not memory optimized)top-down: https://codeforces.com/contest/1077/submission/86706951, better solution with less states: https://codeforces.com/contest/1077/submission/104257710, another way to write recurrence and may be better: https://codeforces.com/contest/1077/submission/104258452)
+
+https://codeforces.com/contest/1077/problem/F1 (dp, Picture with kittens, NICE implementation: https://codeforces.com/contest/1077/submission/118081962, Same as previous but states are exchanged just to optimze the solution: https://codeforces.com/contest/1077/submission/118169061, (not memory optimized)top-down: https://codeforces.com/contest/1077/submission/86706951, better solution with less states: https://codeforces.com/contest/1077/submission/104257710, another way to write recurrence and may be better: https://codeforces.com/contest/1077/submission/104258452)
+
 https://codeforces.com/contest/566/problem/F (dp, LIS, Maths, Sieve)
 https://atcoder.jp/contests/abc177/tasks/abc177_e  (Dp, sieve, think like graphs, https://atcoder.jp/contests/abc177/submissions/16637688)
 https://codeforces.com/contest/1350/problem/B (DP, LIS, MAths, sieve)
@@ -341,7 +345,7 @@ https://codeforces.com/problemset/problem/859/C  (DP, Game theory)
 https://www.hackerrank.com/contests/all-india-contest-by-mission-helix-a-31-october/challenges/0-1-alternate-substrings  (0-1 alternate substrings, basic dp count, https://pastebin.com/9y0Mzs4J)
 http://lightoj.com/volume_showproblem.php?problem=1011 (DP with bitmask, solN: https://pastebin.com/j1v4eTZ9)
 https://www.spoj.com/problems/EPALIN/ (DP, edit distance)
-https://cses.fi/problemset/task/1097  (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ)
+https://cses.fi/problemset/task/1097                               (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ, It could have multiple ways to write the solution)
 http://lightoj.com/volume_showproblem.php?problem=1031    (DP, Game theory, https://pastebin.com/xUEjseJ6, SAME AS ABOVE PROBLEM)
 https://www.hackerrank.com/challenges/sherlock-and-cost/problem  (Important DP, with some greedyness to avoid overcalculation, sol: https://pastebin.com/7yk2CHDp) 
 https://cses.fi/problemset/task/1746  (Must Do DP, Combinatorics ques, Learn how to push the number of ways, and we fill the number of ways in level wise i = 1,2,3..N)
@@ -368,7 +372,8 @@ https://codeforces.com/contest/466/problem/C  (DP, counts)
 https://codeforces.com/contest/1095/problem/C  (dp, greedy, factors, https://codeforces.com/contest/1095/submission/89653975)
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387174 (DP, soln:  https://pastebin.com/xSYptKBu)
 https://codeforces.com/contest/1324/problem/E (Dp, push DP, bottom up: sol: https://codeforces.com/contest/1324/submission/86696444)
-https://codeforces.com/problemset/problem/1077/F1  (DP, IMPortant, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851, bottom up; https://codeforces.com/contest/1077/submission/87681349)
+https://codeforces.com/contest/1077/problem/F1  (DP, IMPortant, NICE way to implement it: https://codeforces.com/contest/1077/submission/118081962, Same as previous but states are exchanged just to optimze the solution: https://codeforces.com/contest/1077/submission/118169061, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851,   bottom up; https://codeforces.com/contest/1077/submission/87681349, another way to write dp: https://codeforces.com/contest/1077/submission/104258452)
+
 https://codeforces.com/contest/118/problem/D (Dp, IMportant, soln with 5-states https://codeforces.com/contest/118/submission/88017341, soln with 4-states, no need of previous pointer https://codeforces.com/contest/118/submission/88039429, solution with 3-states: https://codeforces.com/contest/118/submission/88041215)
 https://codeforces.com/problemset/problem/71/C (DP, factors, soln: https://codeforces.com/contest/71/submission/88047862)
 https://codeforces.com/problemset/problem/1288/C  (DP, Stars and bars, Combinatorial, https://codeforces.com/contest/1288/submission/88074818)
@@ -414,7 +419,7 @@ https://codeforces.com/contest/1398/problem/D   ( Colored Rectangles, Dp, top-do
 https://ki.staszic.waw.pl/task.php?name=bombki    (Christmas balls, actually boxes, problem is in polish (activate the Google translate), I hope the solution is correct, Top down with map: https://pastebin.com/dhnaZucG)
 https://codeforces.com/contest/1401/problem/D    (Maximum Distributed Tree, DP, contribution techniq, greedy, soln: https://codeforces.com/contest/1401/submission/90882209)
 https://codeforces.com/contest/1203/problem/F2            (Bottom up: https://codeforces.com/contest/1203/submission/112877763, top down: https://codeforces.com/contest/1203/submission/112877029)
-
+https://codeforces.com/contest/1223/problem/E        (Paint the Tree, extension of Tree matching problem, Exchange arguments, tree dp)
 **********************************************************************************************
 https://leetcode.com/problems/minimum-cost-for-tickets/    (Dp, top-down https://pastebin.com/ZrDUftBf)
 https://codeforces.com/contest/1400/problem/D  (Dp, counting, Contribution, map, https://codeforces.com/contest/1400/submission/91001206)
@@ -474,7 +479,8 @@ https://atcoder.jp/contests/abc188/tasks/abc188_e        (dp, DAG, graph, https:
 https://atcoder.jp/contests/abc188/tasks/abc188_f       (dp, maths, factor, map, important, https://atcoder.jp/contests/abc188/submissions/19355471, https://atcoder.jp/contests/abc188/submissions/19333200)
 https://atcoder.jp/contests/abc180/tasks/abc180_e       (dp, travelling salesman, https://atcoder.jp/contests/abc180/submissions/19308700)
 https://codeforces.com/contest/321/problem/E           (dp, divide and conqure optimization, fast input, https://codeforces.com/contest/321/submission/104367056)
-https://codeforces.com/contest/1077/problem/F2       (dp, optimization with some techinique, Divide and conqure optimization : https://codeforces.com/contest/1077/submission/104366757)
+https://codeforces.com/contest/1077/problem/F2       (dp, kitten and photos, optimization with some techinique, Divide and conqure optimization : https://codeforces.com/contest/1077/submission/104366757, Optimization with Queue: https://codeforces.com/contest/1077/submission/118180721)
+
 https://leetcode.com/problems/count-sorted-vowel-strings/          (dp, string in sorted order, not a knapsack but useful, https://pastebin.com/bn9cYjh1)
 https://leetcode.com/problems/burst-balloons/            (dp, IMPortant, range, trick in Defining the DP, important, https://pastebin.com/bUFypJTQ)
 https://leetcode.com/problems/longest-palindromic-subsequence/       (DP, longest palindrome subsequcence, Important, break the problem in this way that such that is always palindromic, https://pastebin.com/xNtbUWDR)
@@ -526,5 +532,18 @@ https://codeforces.com/contest/1509/problem/C                         (NOTE: we 
 https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/            (maximum submatrix sum, kadane)
 https://codeforces.com/contest/1525/problem/D                                       (dp, 2D, greedy, https://codeforces.com/contest/1525/submission/116551443)          
 https://www.geeksforgeeks.org/number-of-permutation-with-k-inversions/        (DP, permuation, counting, inversion)
+https://codeforces.com/contest/1529/problem/D                                (dp, combinatorics, sieve, count of divisors, https://codeforces.com/contest/1529/submission/117532960)
+https://codeforces.com/contest/1529/problem/C                                (tree dp, convex function, with some greediness, https://codeforces.com/contest/1529/submission/117534553)
+https://codeforces.com/contest/1526/problem/C1                              (Important, ans as state, when the state is very high, trick https://codeforces.com/contest/1526/submission/117814100)
+https://atcoder.jp/contests/dp/tasks/dp_e                                      (Important, similar problem, taking ans as state and check is it possible to achive or not, https://atcoder.jp/contests/dp/submissions/14384195)      
+     
+A problem which looks like a Knapsack one, could become completly greedy when we can there is some relation between elements like in greedy minimum coin change problem.
+ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greater than equal to 1111 can be formed by 11 or 111 combo.) 
 
+https://www.codechef.com/LTIME96B/problems/CHESUB                         (like kitten and photos, dp, optimization with prefix max, kadane type, https://www.codechef.com/viewsolution/47301443)
 
+https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/             (dp with bitmast, whenever problem like to find some optimal permutation we use the dp with bitmask like travelling salesman, Bottom up: https://pastebin.com/ic7iufYw, top-down: topdown: https://pastebin.com/hZQdWqDM)
+
+https://atcoder.jp/contests/abc201/tasks/abc201_d                       (DP, game theory, matrix, win, sol1: https://atcoder.jp/contests/abc201/submissions/23117569, soln2: https://atcoder.jp/contests/abc201/submissions/23114814 (same idea as above but clean))
+
+https://codeforces.com/contest/1527/problem/B2                            (nice dp, game theory problem, https://codeforces.com/contest/1527/submission/118138141)

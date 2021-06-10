@@ -353,7 +353,7 @@ https://codeforces.com/contest/612/problem/C                              (brack
 https://codeforces.com/contest/1076/problem/C                        (maths, quadratic equation, roots, https://codeforces.com/contest/1076/submission/107089979)
 https://codeforces.com/contest/622/problem/D                          (observation, constructive, https://codeforces.com/contest/622/submission/107272809)
 https://www.spoj.com/problems/SUMPRO/                                   (Maths, important, sum of products, https://pastebin.com/LEsCQ89R)
-https://codeforces.com/contest/622/problem/E                           (tree, greedy, sorting,  https://codeforces.com/contest/622/submission/107489187)
+https://codeforces.com/contest/622/problem/E                           (tree, ants, greedy, sorting,  https://codeforces.com/contest/622/submission/107489187)
 https://codeforces.com/contest/863/problem/D                              (Important problem, reversing query, https://codeforces.com/contest/863/submission/107729268)
 https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/            (brackets, string, balancing, https://pastebin.com/CLxb5pn9)
 https://codeforces.com/contest/584/problem/D                                  (Maths, goldbach, important problem, https://codeforces.com/contest/584/submission/108155941)
@@ -408,6 +408,19 @@ https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/              
 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/          (important, https://pastebin.com/hY6ata2n)
 https://leetcode.com/problems/delete-node-in-a-bst/                                        (Delete the node in BST, https://pastebin.com/QkCcBdWY)
 https://leetcode.com/problems/first-missing-positive/                     (https://pastebin.com/S1qD0LTL)
+
+A problem which looks like a Knapsack one, could become completly greedy when we can there is some relation between elements like in greedy minimum coin change problem.
+ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greater than equal to 1111 can be formed by 11 or 111 combo.) 
+
+https://codeforces.com/contest/148/problem/A                         (maths, inclusion and exclusion, https://codeforces.com/contest/148/submission/118313285)
+
+https://www.geeksforgeeks.org/minimum-number-swaps-required-sort-array/          (greedy, graph conversion, like permutation)
+https://www.hackerrank.com/challenges/minimum-swaps-2/problem                    (same ques based on above graph ques)
+
+https://pastebin.com/6s0N4TLg                                                   (greedy, bits, tricky, xor)
+
+
+
 
 
 

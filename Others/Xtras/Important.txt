@@ -34,7 +34,25 @@ https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-tr
 https://leetcode.com/problems/delete-node-in-a-bst/                                        (Delete the node in BST, https://pastebin.com/QkCcBdWY)
 https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec28e       (Doubles, max expected value, generate answer, Implementation tricky, https://pastebin.com/jniMaXHH, bottom up: https://pastebin.com/wR7SGCvH)
 
+https://codeforces.com/contest/1526/problem/C1                              (Important, ans as state, when the state is very high, trick https://codeforces.com/contest/1526/submission/117814100)
+https://atcoder.jp/contests/dp/tasks/dp_e                                      (Important, similar problem, taking ans as state and check is it possible to achive or not, https://atcoder.jp/contests/dp/submissions/14384195)      
 
+A problem which looks like a Knapsack one, could become completly greedy when we can there is some relation between elements like in greedy minimum coin change problem.
+ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greater than equal to 1111 can be formed by 11 or 111 combo.) 
 
+https://codeforces.com/contest/1077/problem/F1                       (kitten and photos, dp, states, NICE way to implement it: https://codeforces.com/contest/1077/submission/118081962, Same as previous but states are exchanged just to optimze the solution: https://codeforces.com/contest/1077/submission/118169061, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851, https://codeforces.com/contest/1077/submission/104257710, another way to write it: https://codeforces.com/contest/1077/submission/104258452)
 
+https://codeforces.com/contest/1077/problem/F2                       (Dp, kitten and photos, optimization of range min by Queue, https://codeforces.com/contest/1077/submission/118180721, can be done using DP with DnC)
 
+https://www.codechef.com/LTIME96B/problems/CHESUB                         (like kitten and photos, dp, optimization with prefix max, kadane type, https://www.codechef.com/viewsolution/47301443)
+
+https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/             (dp with bitmask, whenever problem like to find some optimal permutation we use the dp with bitmask like travelling salesman, Bottom up: https://pastebin.com/ic7iufYw, top-down: topdown: https://pastebin.com/hZQdWqDM)
+
+https://cses.fi/problemset/task/1097                               (DP, game theory, SOLN: https://pastebin.com/ZZSeZbrJ, It could have multiple ways to write the solution)
+
+https://codeforces.com/contest/1527/problem/B2                            (nice dp, game theory problem, https://codeforces.com/contest/1527/submission/118138141)
+
+https://codeforces.com/contest/148/problem/A                         (maths, inclusion and exclusion, https://codeforces.com/contest/148/submission/118313285)
+
+https://pastebin.com/6s0N4TLg                                                   (greedy, bits, tricky, xor)
+https://pastebin.com/5rNZpSWs                                                    (sum of xors, + and xor are not distributive, contribution)

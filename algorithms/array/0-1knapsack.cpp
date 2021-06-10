@@ -98,8 +98,13 @@ https://leetcode.com/problems/count-sorted-vowel-strings/        (not a knapsack
 
 https://codeforces.com/contest/864/problem/E
 https://codeforces.com/contest/864/submission/105663711
+https://codeforces.com/contest/1526/problem/C1                              (Important, ans as state, when the state is very high, trick https://codeforces.com/contest/1526/submission/117814100)
+https://atcoder.jp/contests/dp/tasks/dp_e                                      (Important, similar problem, taking ans as state and check is it possible to achive or not, https://atcoder.jp/contests/dp/submissions/14384195)
 
 --Greedy--coin change problem (important, when all the items are multiple of each other then it is optimal to pick the largest one first,
 because if we can pick largest one then answer is optimal, if we can't pick largest one then try for smaller ones but if we pick the smaller
 then larger it might not be optimal)
+
+A problem which looks like a Knapsack one, could become completly greedy when we can there is some relation between elements like in greedy minimum coin change problem.
+ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greater than equal to 1111 can be formed by 11 or 111 combo.)
 */

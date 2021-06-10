@@ -104,6 +104,8 @@ int main() {
 
  * https://www.youtube.com/watch?v=_zYMsx4iOSc        (must watch, Parvel marvin 2-D queries and Data structure).
  * Mostly we use Euler tour for subtree queries, and for heavylight / centroid decompo for path queries.
+
+ * We can find MEX of whole using Segtree with updates, each query will be in O(log n) time? how by maintaining counts of each element in range.
 */
 
 //https://codeforces.com/blog/entry/57319 (Some trick)
@@ -156,10 +158,9 @@ int main() {
 
 /*
  * For path sum query in euler tour: just all values in the range of start of root and start of 's' node, and
-   all the others will be cancelled out automatically.
+   all the others will be cancelled out automatically. This technique is generally used when we have inverse of operation also.
  * https://cses.fi/problemset/task/1138  (euler tour, path sum query)
  * https://pastebin.com/Kdb74mwu   (using fenwick tree)
-
 
 
 */

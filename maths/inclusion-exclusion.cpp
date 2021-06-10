@@ -125,6 +125,8 @@ int main() {
  https://codeforces.com/contest/547/submission/105842907
  https://codeforces.com/contest/547/submission/16880958       (solved using mobius function + inclusion exclusion)
 
+ https://codeforces.com/contest/148/problem/A
+ (maths, inclusion and exclusion, https://codeforces.com/contest/148/submission/118313285)
 
  https://www.hackerrank.com/challenges/gcd-product/problem
 

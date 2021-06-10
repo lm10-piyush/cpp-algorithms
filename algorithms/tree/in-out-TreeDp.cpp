@@ -118,4 +118,6 @@ https://cses.fi/problemset/task/1130   (tree edges, cool dp problem, tree matchi
 https://pastebin.com/V85rFfYz
 
 https://codeforces.com/contest/1223/problem/E    (Paint the Tree, extension of above problem, Exchange arguments, dp)
+
+https://codeforces.com/contest/1529/problem/C    (tree dp, convex function, with some greediness, https://codeforces.com/contest/1529/submission/117534553)
 */
