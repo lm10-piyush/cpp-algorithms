@@ -144,7 +144,7 @@ https://codeforces.com/contest/884/problem/C    (Bertown Subway, Graphs, permuta
 https://cses.fi/problemset/task/1716             (Distributing Apples, stars and bars, https://pastebin.com/Y9NBBszs)
 
 
-/*************************************************** Intervals ************************************************
+/************************************************* Intervals / Jobs scheduling **************************************
 https://www.geeksforgeeks.org/maximum-number-of-overlapping-intervals/   (maximum number of overlapping intervals, https://cses.fi/problemset/task/1619)
 https://cses.fi/problemset/task/1629         (Movie Festival, maximum number of movies could be completed)
 https://codeforces.com/contest/1343/problem/D      (Constant Palindrome Sum, Interval overlapp, https://codeforces.com/contest/1343/submission/77692608)
@@ -166,6 +166,9 @@ https://www.codechef.com/viewsolution/39248384  (Chef Likes Good Sequences, Inte
 https://atcoder.jp/contests/abc183/tasks/abc183_d   (Intervals, greedy, sorting, https://atcoder.jp/contests/abc183/submissions/19181807)
 https://atcoder.jp/contests/abc188/tasks/abc188_e     (map, difference array concep on map, intervals, https://atcoder.jp/contests/abc188/submissions/19358640)
 https://cses.fi/problemset/task/1140                              (DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
+
+https://leetcode.com/problems/maximum-profit-in-job-scheduling/       (Same as above, dp, interval, scheduling, binary serach, optimizing, https://pastebin.com/DrfwJaN2)
+
 https://codeforces.com/contest/1223/problem/D                 (DP, like LIS, maintaining sequence, intervals, set tricks, https://codeforces.com/contest/1223/submission/104982087)
 https://codeforces.com/contest/612/problem/D                  (interval, https://codeforces.com/contest/612/submission/107130517)
 https://codeforces.com/contest/976/problem/C                  (intervals, exchange arguments,  sorting, https://codeforces.com/contest/976/submission/107084219)
@@ -253,7 +256,9 @@ https://leetcode.com/problems/bag-of-tokens/  (Bag of Tokens, two pointers, http
 https://www.youtube.com/watch?v=hQfGfvPFyqo   (leetcode Divide the array into increasing sequences)
 https://www.codechef.com/LTIME89B/problems/SSO   (bits, bitwise OR, contribution, https://www.codechef.com/viewsolution/39257973)
 https://leetcode.com/problems/bitwise-ors-of-subarrays/solution/
-https://leetcode.com/problems/gas-station/
+
+https://leetcode.com/problems/gas-station/        (Greedy important, dhasu, https://pastebin.com/RHsdcyym)
+
 https://www.codechef.com/PRACTICE/problems/GASOLINE   (Greedy, GAS, Similar like Leetcode, observation, IMPORTANT trick, https://www.codechef.com/viewsolution/39948882)
 https://leetcode.com/problems/validate-binary-search-tree/   (Check given tree is BST or NOT, https://pastebin.com/u521GJrz)
 https://leetcode.com/problems/kth-smallest-element-in-a-bst/  (just find the inorder traversal, 'cuz it is sorted)
@@ -287,7 +292,7 @@ https://www.spoj.com/problems/INS14A/                    (INS14A - BSTRING, slid
 https://www.codechef.com/COOK125A/problems/BASKETS       (Adhoc, observation, https://www.codechef.com/viewsolution/40884623)
 https://leetcode.com/problems/reach-a-number/             (Maths, nothing else)
 https://codeforces.com/contest/1217/problem/A              (Maths, maths soln: https://codeforces.com/contest/1217/submission/102724751, binary search soln: https://codeforces.com/contest/1217/submission/102724147)
-https://codeforces.com/contest/1/problem/B              (Maths, base converstion, https://codeforces.com/contest/1/submission/102690508)
+https://codeforces.com/contest/1/problem/B              (Maths, excel, spreadsheets, base converstion, https://codeforces.com/contest/1/submission/102690508)
 https://codeforces.com/contest/735/problem/D            (Maths, primes, Goldbach theorem, https://codeforces.com/contest/735/submission/102693697)
 https://codeforces.com/contest/559/problem/A           (Maths, Hexagon, triangle, https://codeforces.com/contest/559/submission/102702543)
 https://codeforces.com/contest/322/problem/B           (Maths, https://codeforces.com/contest/322/submission/102712576)
@@ -414,14 +419,27 @@ ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greate
 
 https://codeforces.com/contest/148/problem/A                         (maths, inclusion and exclusion, https://codeforces.com/contest/148/submission/118313285)
 
-https://www.geeksforgeeks.org/minimum-number-swaps-required-sort-array/          (greedy, graph conversion, like permutation)
+https://www.geeksforgeeks.org/minimum-number-swaps-required-sort-array/          (It is similar as sort the array or to achieve some other arrangement, greedy, graph conversion, like permutation)
 https://www.hackerrank.com/challenges/minimum-swaps-2/problem                    (same ques based on above graph ques)
 
 https://pastebin.com/6s0N4TLg                                                   (greedy, bits, tricky, xor)
 
+https://pastebin.com/5rNZpSWs                                      (sum of xors, + and xor are not distributive, contribution)
+https://pastebin.com/sRER8yfB                                     (sum of xors of [a, b] with [c, d], contribution)       
+
+https://www.geeksforgeeks.org/find-two-numbers-sum-xor/                        (nice ques, important, bits)
+https://codeforces.com/contest/1536/problem/D                                  (median, greedy, set, observation, https://codeforces.com/contest/1536/submission/118950427)
+
+https://codeforces.com/blog/entry/91768                                   (number of subarrays whose mean is k)
+https://www.hackerearth.com/problem/algorithm/people-circle/             (simulation, mod, string)
+
+https://leetcode.com/problems/generate-parentheses/                       (backtracking, recursion, bruteforce)
+https://leetcode.com/problems/lfu-cache/
+https://www.interviewbit.com/problems/lru-cache/
+
+https://www.hackerearth.com/problem/algorithm/beautiful-numbers-05de0f51-101121ca/    (important, maths, dp, mod kind of, brute force, digits, https://pastebin.com/ynSkQ3Dd)
 
 
-
-
-
-
+https://www.geeksforgeeks.org/k-th-smallest-absolute-difference-two-elements-array/         (important binary search)
+https://www.geeksforgeeks.org/maximum-absolute-difference-value-index-sums/                      (greedy modulo, maths, keypoint the greedy algo only works when we have to find the maximum)
+https://leetcode.com/problems/trapping-rain-water-ii/                                  (Dijkstra, graph, greedy, https://pastebin.com/kkKT4VFt)                     

@@ -13,6 +13,7 @@ To build recurrence you need: understanding of problem, defining DP[states..] an
 to calculte dp[i][j] we to solve dp[i][j] like: dp[i][j] = dp[i][j] + dp[i-1][j].
 
 DP on DAG is also a intresting way.
+Recurrence is totally maths, you can play with them like math equations.
 
 
 ***************************** How to choose state?? ********************************
@@ -374,7 +375,8 @@ https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/00000
 https://codeforces.com/contest/1324/problem/E (Dp, push DP, bottom up: sol: https://codeforces.com/contest/1324/submission/86696444)
 https://codeforces.com/contest/1077/problem/F1  (DP, IMPortant, NICE way to implement it: https://codeforces.com/contest/1077/submission/118081962, Same as previous but states are exchanged just to optimze the solution: https://codeforces.com/contest/1077/submission/118169061, top-down Noob soln: https://codeforces.com/contest/1077/submission/86823851,   bottom up; https://codeforces.com/contest/1077/submission/87681349, another way to write dp: https://codeforces.com/contest/1077/submission/104258452)
 
-https://codeforces.com/contest/118/problem/D (Dp, IMportant, soln with 5-states https://codeforces.com/contest/118/submission/88017341, soln with 4-states, no need of previous pointer https://codeforces.com/contest/118/submission/88039429, solution with 3-states: https://codeforces.com/contest/118/submission/88041215)
+https://codeforces.com/contest/118/problem/D (Dp, IMportant, soln with 5-states https://codeforces.com/contest/118/submission/88017341, soln with 4-states, no need of previous pointer https://codeforces.com/contest/118/submission/88039429, solution with 3-states: https://codeforces.com/contest/118/submission/88041215, Bottom up: https://codeforces.com/contest/118/submission/119487564)
+
 https://codeforces.com/problemset/problem/71/C (DP, factors, soln: https://codeforces.com/contest/71/submission/88047862)
 https://codeforces.com/problemset/problem/1288/C  (DP, Stars and bars, Combinatorial, https://codeforces.com/contest/1288/submission/88074818)
 https://codeforces.com/problemset/problem/339/C  (Dp or DFS, normal problem 3-states, Top-down solN : https://codeforces.com/contest/339/submission/88120178)
@@ -431,6 +433,10 @@ https://www.codechef.com/PRACTICE/problems/CIRMERGE       (Circular Merge, Same 
 https://codeforces.com/contest/846/problem/C   (Four Segments, dp, smart bruteforce, https://codeforces.com/contest/846/submission/91525432)
 https://codeforces.com/contest/1409/problem/F  (Subsequences of Length Two, dp, top-down, https://codeforces.com/contest/1409/submission/91890655)
 
+
+https://leetcode.com/problems/unique-paths/                      (2D, number of paths in a grid, basic dp problem)
+https://leetcode.com/problems/unique-paths-ii/                    (2D, grid, number of paths, dp)
+
 https://codeforces.com/contest/1197/problem/D (Yet Another Subarray Problem, Yet Another Subarray Problem, https://codeforces.com/contest/1197/submission/93055691)
 https://www.codechef.com/problems/BULBS   (greedy,  like knapsack, smart bruteforce, https://www.codechef.com/viewsolution/38080854)
 
@@ -440,7 +446,7 @@ https://codeforces.com/contest/1036/problem/C  (Classy Numbers, digit dp, top-do
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/  (Best Time to Buy and Sell Stock IV, tight time limit and memory, topdown (memory error): https://pastebin.com/0NPep6ic, (bottom-up)(memory error) https://pastebin.com/jhYsEKn7, (bottom up with memory optimised) https://pastebin.com/FcRAMFGR)
 
 /************************************* Expected Value ****************************************************************
-https://atcoder.jp/contests/dp/tasks/dp_j
+https://atcoder.jp/contests/dp/tasks/dp_j                  (dp, recurrence, optimize, expected value,  https://atcoder.jp/contests/dp/submissions/23882426)
 https://atcoder.jp/contests/dp/tasks/dp_i                   (probability)
 https://codeforces.com/contest/1187/problem/F
 https://codeforces.com/contest/846/problem/F
@@ -452,6 +458,8 @@ https://atcoder.jp/contests/abc189/tasks/abc189_f
 https://codeforces.com/contest/518/problem/D              (Easy, expected value, dp, https://codeforces.com/contest/518/submission/109504798)
 https://codeforces.com/contest/697/problem/D              (Trees, expected value, https://codeforces.com/contest/697/submission/110061186)
 https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435c44/00000000007ec28e       (Doubles, max expected value, generate answer, Implementation tricky, https://pastebin.com/jniMaXHH, bottom up: https://pastebin.com/wR7SGCvH)
+
+https://www.codechef.com/problems/RRPLAYER                        (dp, recurrence, solving recurrence, expected value, https://www.codechef.com/viewsolution/48358451) 
 /******************************************************************************************************
 
 https://codeforces.com/contest/1433/problem/F  (Zero remainder sum, modulus, DP on matrix, like knapsack, top-down: https://codeforces.com/contest/1433/submission/96314904, bottom up: https://codeforces.com/contest/1433/submission/96382463)
@@ -547,3 +555,21 @@ https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/             (dp wit
 https://atcoder.jp/contests/abc201/tasks/abc201_d                       (DP, game theory, matrix, win, sol1: https://atcoder.jp/contests/abc201/submissions/23117569, soln2: https://atcoder.jp/contests/abc201/submissions/23114814 (same idea as above but clean))
 
 https://codeforces.com/contest/1527/problem/B2                            (nice dp, game theory problem, https://codeforces.com/contest/1527/submission/118138141)
+
+https://pastebin.com/zyU9bMpQ                                          (Increasing subequence, Nice dp problem, with optimization, Important)
+
+https://leetcode.com/problems/k-inverse-pairs-array/   (Number of arrays with k-inversions, optimization with prefix sum, https://pastebin.com/YDQJrtNP)
+
+https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/          (DP, string, Important)
+
+https://leetcode.com/problems/unique-paths/                                           (number of paths in a grid, basic dp problem)
+
+https://cses.fi/problemset/task/1140                              (DP, like LIS, interval, sorting, binary search, Observe how we have picked the state, https://pastebin.com/XL5i6kkT)
+
+https://leetcode.com/problems/maximum-profit-in-job-scheduling/       (Same as above, dp, interval, scheduling, binary serach, optimizing, https://pastebin.com/DrfwJaN2)
+
+https://leetcode.com/problems/smallest-sufficient-team/                    (bitmask dp, team creation, https://pastebin.com/8H1FW4V6)
+
+https://www.geeksforgeeks.org/minimum-increment-or-decrement-operations-required-to-make-the-array-sorted/
+
+https://www.hackerearth.com/problem/algorithm/beautiful-numbers-05de0f51-101121ca/    (important, maths, dp, mod kind of, brute force, digits, https://pastebin.com/ynSkQ3Dd)

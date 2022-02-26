@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -31,16 +31,16 @@ struct SqrtDecomp {
         int br = r / blk;
         int ans = 0;
         if (bl == br) {
-            for (int i = l; i <= r; ++i) 
+            for (int i = l; i <= r; ++i)
                 ans += A[i];
             return ans;
         }
         int last = (bl + 1) * blk;
         for (int i = l; i < last; ++i)
             ans += A[i];
-        for (int i = bl+1; i < br; ++i)
+        for (int i = bl + 1; i < br; ++i)
             ans += blocks[i];
-        for (int i = blk*br; i <= r; ++i)
+        for (int i = blk * br; i <= r; ++i)
             ans += A[i];
         return ans;
     }
@@ -52,12 +52,12 @@ struct SqrtDecomp {
 };
 
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n; cin >> n;
     vector <int> A(n);
-    for (int &i: A) cin >> i;
+    for (int &i : A) cin >> i;
 
     SqrtDecomp st(A);
 
@@ -74,7 +74,7 @@ int main(){
             pos--;
             st.upd(pos, val);
         }
-    
+
     }
 
     return 0;

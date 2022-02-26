@@ -138,6 +138,10 @@ void solve() {
     //Because current player is 1st player and dp[i+1][j] or dp[i][j-1] belongs to next player's move
     //so current player tries to maximize it, and next player tries to minimize the difference
 
+    //dp[i][j] => maximum difference can be achived
+    //dp[i][j] => belongs to 1st player, since both have same goals
+    //-dp[i][j] => belongs to 2nd player
+
     //dp[i][j] => max difference can be achieved if current player is first player
     //-dp[i][j] => minimum diference can be achieved if current player is second player
 
@@ -249,6 +253,20 @@ else Draw.
 
 Yeah, indirectly we are just increasing or decreasing the score of 1st or 2nd, but main point is the difference.
 You can try below problems.
+
+https://leetcode.com/problems/stone-game/       (greedy solution exits, but try dp here to learn game theory, winning game)
+https://pastebin.com/zYZ7U0xK
+
+https://leetcode.com/problems/stone-game-ii/          (same as removal game, how much 1st player can get)
+
+https://leetcode.com/problems/stone-game-iii/        (winning game)
+https://pastebin.com/gFtUA4gQ
+
+https://leetcode.com/problems/stone-game-vii/       (winning game)
+https://pastebin.com/c324Vani
+
+https://leetcode.com/problems/stone-game-viii/        (winning game, strategy)
+https://pastebin.com/qCibP0bF
 
 https://atcoder.jp/contests/abc201/tasks/abc201_d
 sol1: https://atcoder.jp/contests/abc201/submissions/23117569

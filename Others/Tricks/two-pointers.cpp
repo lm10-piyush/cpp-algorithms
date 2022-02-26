@@ -11,38 +11,39 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 /****************************** CODE IS HERE ***********************************/
 
+
 //Remember, problem should be monotonic to apply this approach.
+
+// find the pairs in the array whose sum is equal to the given sum
+
+//https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
-    int n, k, target; cin >> n >> k >> target;
-    vector<int> A(n);
-    for (int &i : A) cin >> i;
-
-    int sum = 0, target = 0;
-    for (int i = 0, j = 0; i < n; ++i) {
-        sum += A[i];
-        if (i - j + 1 > k)
-            sum -= A[j++];
-
-        /*
-        while (curr > mx && i <= j) { //increment the pointer
-            if (s[i] != ch) curr--;
-            j++;
+    int n, target; cin >> n >> target;
+    vector <int> A(n);
+    for (int &i : A)
+        cin >> i;
+    sort(all(A));
+    for (int i = 0, j = n - 1; i < j; ) {
+        if (A[i] + A[j] == target) {
+            cout << A[i] << ' ' << A[j];
+            break;
         }
-        */
-
-
-        if ((i - j + 1 == k) && sum == target)
-            ans++;
+        else if (A[i] + A[j] < target)
+            i++;
+        else j--;
     }
 
-    cout << ans;
+    /*
+    One more approach to solve the above problem by hashing, it takes only O(n) time and O(n) space.
 
+    */
 
     return 0;
 }
+
 
 /*
 1) One of the famous question could be, you have a binary string, also given a number 'm' which tells you that atmost 'm'bits

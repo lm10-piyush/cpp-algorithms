@@ -22,6 +22,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 int bi_search(vector<int> &v, int x) {
   int lo = 0, hi = sz(v) - 1;
+  //helps to find the upper found.
   while (lo < hi) {
     int mid = (lo + hi + 1) >> 1;  //ceil: it is really helpful when lo & hi are adjacent.
     if (v[mid] <= x)
@@ -107,6 +108,8 @@ int main() {
 //try binary search in this way: while (hi - lo > 1){}, in this way you will the range [lo, lo+1]
 
 /*
+https://www.geeksforgeeks.org/k-th-smallest-absolute-difference-two-elements-array/         (important binary search)
+
 https://codeforces.com/contest/1408/problem/C  (Discrete Acceleration, Binary search on POINTS)
 https://codeforces.com/contest/1408/submission/94390152
 

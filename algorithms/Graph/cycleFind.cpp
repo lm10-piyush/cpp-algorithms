@@ -19,6 +19,7 @@ vector <bool> used(N, false);
 vector <int> cycle;
 stack <int> s;
 
+//Cycle finding in the Undirected graph
 bool dfs(int u, int p = -1) {
     if (used[u]) {  //hit the visited node, that means cycle found
         cycle = {u};
@@ -39,6 +40,7 @@ bool dfs(int u, int p = -1) {
     s.pop();
     return false;
 }
+
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -62,6 +64,8 @@ Find the cycle in the given undirected graph
 This is for finding the 1-cycle only, if want to find more than just remove the return true, false statements and after the pop
 operation from stack you have to also push it in the stack to find more cycles.
 https://www.geeksforgeeks.org/print-all-the-cycles-in-an-undirected-graph/  (Same solution)
+
+IF you want to just check cycle exists or not you can do also do tha using DSU.
 
 https://codeforces.com/contest/1454/problem/E
 https://codeforces.com/contest/1454/submission/100904774

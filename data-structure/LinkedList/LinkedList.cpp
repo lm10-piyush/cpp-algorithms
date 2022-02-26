@@ -113,7 +113,7 @@ Node *mergeTwoLists(Node *l1, Node *l2) { //merging l2 into l1.
             curr1 = curr1->next;
         }
     }
-    if (l2) {
+    if (curr2) {
         prev->next = curr2;
     }
     return l1;
@@ -165,6 +165,7 @@ int main() {
 }
 
 //https://leetcode.com/problems/linked-list-cycle/  (Cycle finding by Floywarshall tortoise, hare)
+// https://www.interviewbit.com/problems/list-cycle/     (finding cycle and its start)
 //https://leetcode.com/problems/reverse-linked-list/  (reverse the linked list)
 //https://leetcode.com/problems/reverse-linked-list-ii/  (https://pastebin.com/Ddu1hKAL)
 //https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/  (Divide and conquer)
