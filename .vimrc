@@ -62,7 +62,9 @@ inoremap {}     {}
 imap jk         <Esc>
 
 "============== Basic requirements ends here ===============
+"https://github.com/junegunn/vim-plug
 "To install the plugins: Move to command mode and run:=> :PlugInstall
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
