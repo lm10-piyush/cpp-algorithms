@@ -196,7 +196,7 @@ https://leetcode.com/problems/search-in-rotated-sorted-array/
 https://pastebin.com/pUiy846u
 
 https://codeforces.com/contest/1486/problem/D
-(Binary search, greedy common trick of 1, -1, https://codeforces.com/contest/1486/submission/113162907)
+(Binary search, convert the problem into another problem, greedy common trick of 1, -1, https://codeforces.com/contest/1486/submission/113162907)
 
 https://codeforces.com/contest/1454/problem/F  (sparse table + binary search)
 https://codeforces.com/contest/1454/submission/101060423
@@ -212,4 +212,8 @@ https://cses.fi/problemset/task/1140
 
 https://codeforces.com/contest/1288/problem/D         (Bitmask + binary search)
 https://codeforces.com/contest/1288/submission/106519133
+
+https://codeforces.com/contest/1680/problem/C 
+(Binary search, convert problem into another problem so that we can apply binary search, two pointers, https://codeforces.com/contest/1680/submission/157201982)
+
 */
