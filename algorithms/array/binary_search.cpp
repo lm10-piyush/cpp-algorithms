@@ -20,6 +20,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
         Then idea is just make Binary search by assuming some upper bound and traverse the graph (dfs).
 */
 
+//Calcualtes upperbound
 int bi_search(vector<int> &v, int x) {
   int lo = 0, hi = sz(v) - 1;
   //helps to find the upper found.
@@ -28,6 +29,19 @@ int bi_search(vector<int> &v, int x) {
     if (v[mid] <= x)
       lo = mid;
     else hi = mid - 1; //also important, NOTE: to apply on floating points, hi = mid - (1e-8)
+  }
+  return lo;
+}
+
+//calculates lowerbound
+int bi_search_lowerBound(vector <int> &v, int x) {
+  int lo = 0, hi = sz(v) - 1;
+  //helps to find lower bound
+  while (lo < hi) {
+    int mid  = (lo + hi) >> 1;
+    if (v[mid] <= x)
+      hi = mid;
+    else lo = mid + 1;
   }
   return lo;
 }
