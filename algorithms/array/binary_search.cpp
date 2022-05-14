@@ -20,7 +20,8 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
         Then idea is just make Binary search by assuming some upper bound and traverse the graph (dfs).
 */
 
-//Calcualtes upperbound
+//Calcualtes upperbound, here upperbounds means, if there are mulitple Values same as 'X' then it would pick the index
+//with the highest value. It is different from upper_bound() fundtion of STL, STL one goes one beyond the max index.
 int bi_search(vector<int> &v, int x) {
   int lo = 0, hi = sz(v) - 1;
   //helps to find the upper found.
@@ -33,7 +34,8 @@ int bi_search(vector<int> &v, int x) {
   return lo;
 }
 
-//calculates lowerbound
+//Calcualtes lowerbound, here upperbounds means, if there are mulitple Values same as 'X' then it would pick the index
+//with the lowest value.
 int bi_search_lowerBound(vector <int> &v, int x) {
   int lo = 0, hi = sz(v) - 1;
   //helps to find lower bound
@@ -74,8 +76,8 @@ int main() {
 /*
   Tip: when you are not able to solve the equation in O(1) then, it probably a good idea to use the binary search to find the ans.
 
-  * number of elements in range(l, r) in array => upper_bound(r) - lower_bound(l);
-  * some times we need to check: a * b <= n, and a*b might get overwed so we do: a <= n / b
+* number of elements in range(l, r) in array => upper_bound(r) - lower_bound(l); //here upper_bound is same as STL one.
+  * some times we need to check: a * b <= n, and a*b might get overflowed so we do: a <= n / b
        then we have to this operation safely: that means:
        1) if a <= n / b => a <= floor(n / b)
        2) if a >= n / b => a >= ceil(n / b)
