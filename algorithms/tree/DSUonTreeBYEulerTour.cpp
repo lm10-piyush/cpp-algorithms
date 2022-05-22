@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -25,9 +25,9 @@ ll currMax, currSum; //max frequency, sum (shared variable and vector cnt is als
 
 void dfs1(int u, int p = -1) {
     estart[u] = ++tt;
-    tour[estart[u]] = u; 
+    tour[estart[u]] = u;
     subSize[u] = 1;
-    for (int v: tree[u]) {
+    for (int v : tree[u]) {
         if (p == v) continue;
         dfs1(v, u);
         subSize[u] += subSize[v];
@@ -37,7 +37,7 @@ void dfs1(int u, int p = -1) {
 
 void dfs2(int u, int p = -1, bool keep = true) {
     int mx = 0, bigChild = 0;
-    for (int v: tree[u]) {
+    for (int v : tree[u]) {
         if (v == p) continue;
         if (subSize[v] > mx) {
             mx = subSize[v];
@@ -45,7 +45,7 @@ void dfs2(int u, int p = -1, bool keep = true) {
         }
     }
     //first make calls on small childs
-    for (int v: tree[u]) {
+    for (int v : tree[u]) {
         if (v == p or v == bigChild) continue;
         dfs2(v, u, false);
     }
@@ -53,7 +53,7 @@ void dfs2(int u, int p = -1, bool keep = true) {
     if (bigChild) {
         dfs2(bigChild, u, true);
     }
-    
+
     //Now, currMax, currSum contains the max frequency and sum of the subtree bigChild of 'u'.
     //becuz the effects of bigChild is not rolledback.
 
@@ -65,12 +65,12 @@ void dfs2(int u, int p = -1, bool keep = true) {
         currSum += A[u];
     }
 
-    for (int v: tree[u]) {
+    for (int v : tree[u]) {
         if (v == p or v == bigChild) continue;
         //iterate on every node on subtree of 'u' except subtree of bigChild
         for (int i = estart[v]; i <= eend[v]; ++i) {
             cnt[A[tour[i]]]++;
-            
+
             if (cnt[A[tour[i]]] > currMax) {
                 currMax = cnt[A[tour[i]]];
                 currSum = A[tour[i]];
@@ -80,7 +80,7 @@ void dfs2(int u, int p = -1, bool keep = true) {
             }
         }
     }
-    
+
     //now get the ans.. for current node
     ans[u] = currSum;
 
@@ -94,18 +94,18 @@ void dfs2(int u, int p = -1, bool keep = true) {
 
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n; cin >> n;
-    tree.assign(n+1, {});
-    ans.assign(n+1, 0);
-    cnt.assign(n+1, 0);
-    A.resize(n+1);
-    estart.resize(n+1);
-    eend.resize(n+1);
-    tour.resize(n); 
-    subSize.assign(n+1, 0);
+    tree.assign(n + 1, {});
+    ans.assign(n + 1, 0);
+    cnt.assign(n + 1, 0);
+    A.resize(n + 1);
+    estart.resize(n + 1);
+    eend.resize(n + 1);
+    tour.resize(n);
+    subSize.assign(n + 1, 0);
 
     for (int i = 1; i <= n; ++i) {
         cin >> A[i];
@@ -126,18 +126,18 @@ int main(){
 
 
 /*
- * Use dfs1() to calculate the subtree size, in and out time of every vertex. It is help to find the bigchild and other things.
+ * Use dfs1() to calculate the subtree size, in and out time of every vertex. It is helpful to find the bigchild and other things.
 
- * Now apply dfs2(): We are building the answers from leaf to root. first find the bigChild (or you can precompute in dfs1() also.), 
-   then except on bigChild, apply dfs2() again on small child. When small childs are done, then apply on bigChild. Becuz we are using 
+ * Now apply dfs2(): We are building the answers from leaf to root. first find the bigChild (or you can precompute in dfs1() also.),
+   then except on bigChild, apply dfs2() again on small child. When small childs are done, then apply on bigChild. Becuz we are using
    shared variable currMax, currSum. We are returning back to the parent of bigChild, then those variables already contains the frequency and sum for bigChild, so
    we don't need to compute for bigChild again. Now we are at 'u' which is the parent of bigChild, now iterate over each node in
    subtree of 'u' except the subtree of bigChild(becuz it is already computed). To iterate over the nodes we are using the euler
-   time. 
+   time.
  * Now if the current node is not the bigChild then rollback the effects.
  * Main trick is to avoid recomputation on the bigChild and SAVE TIME.
  complexity = O(nlog(n)).
- 
+
  * https://codeforces.com/blog/entry/44351  (blog)
 
   https://codeforces.com/contest/600/problem/E
@@ -151,7 +151,7 @@ int main(){
 
   https://codeforces.com/contest/246/problem/E
   https://codeforces.com/contest/246/submission/94248509
- 
+
  https://codeforces.com/contest/208/problem/E  (E. Blood Cousins, climbing, DSU on trees)
  https://codeforces.com/contest/208/submission/94405990
 

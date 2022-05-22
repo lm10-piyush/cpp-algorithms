@@ -60,6 +60,32 @@ struct BITmin {
 
 
 
+//Better generic implementation
+template <typename T>
+struct BIT2 {
+  vector <T> bit;
+  int n;
+  BIT2(int _n) {
+    n = _n + 1;
+    bit.assign(n + 1, 0);
+  }
+  void upd(int i, T x) {
+    for (++i; i <= n; i += i & -i)
+      bit[i] += x;
+  }
+  T qry(int i) {
+    T res = 0;
+    for (++i; i > 0; i -= i & -i)
+      res += bit[i];
+    return res;
+  }
+  T qry(int l, int r) {
+    return qry(r) - qry(l - 1);
+  }
+};
+
+
+
 
 int main()
 {
@@ -81,6 +107,8 @@ int main()
     bitmin.upd(i, B[i]);
   for (int i = 0; i < n; ++i)
     cout << bitmin.qry(i) << " \n"[i == n - 1];
+
+  BIT2 <long long> ft(n);
 
 
   return 0;

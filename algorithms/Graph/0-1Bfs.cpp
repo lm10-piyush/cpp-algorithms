@@ -2,10 +2,10 @@
 using namespace std;
 #define ll long long
 #define endl '\n'
-#define sz(v) (int)v.size() 
+#define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
 void dbg_out() { cerr << "\b\b]\n"; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr << H << ", "; dbg_out(T...);}
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
 
@@ -14,7 +14,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T){ cerr 
 //0-1 BFS
 const int inf = 1e9;
 
-vector <vector<pair<int,int>>> g;
+vector <vector<pair<int, int>>> g;
 vector <int> dist;
 vector <bool> used;
 
@@ -26,24 +26,24 @@ void bfs01(int s) {
         int u = dq.front(); dq.pop_front();
         if (used[u]) continue; //we dont need this becuz in line-31 we are doing same if we don't insert visited node.
         used[u] = true;
-        for (auto v: g[u]) {
+        for (auto v : g[u]) { // adjacent nodes
             if (used[v.first]) continue;
             if (dist[v.first] > dist[u] + v.second) {
                 dist[v.first] = dist[u] + v.second;
                 if (v.second) dq.push_back(v.first); //weight-1
                 else dq.push_front(v.first);  //weight-0
             }
-        }   
+        }
     }
 }
 
-int main(){
+int main() {
     ios_base::sync_with_stdio(false); cin.tie(nullptr);
 
     int n, m; cin >> n >> m;
-    g.assign(n+1, {});
-    dist.assign(n+1, inf);
-    used.assign(n+1, false);
+    g.assign(n + 1, {});
+    dist.assign(n + 1, inf);
+    used.assign(n + 1, false);
 
     for (int i = 0, u, v, w; i < m; ++i) {
         cin >> u >> v >> w;

@@ -25,6 +25,7 @@ void dfs1(int u, int p) {
 }
 
 void dfs2(int u, int p) {
+    //mx1, mx2 => two best heights of child nodes of current node 'u'
     int mx1(-1), mx2(-1);
     for (int v : graph[u]) {
         if (v == p) continue;

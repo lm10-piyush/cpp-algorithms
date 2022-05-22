@@ -39,3 +39,5 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 16. Hashing the sets and multisets: https://codeforces.com/blog/entry/85900
 
 17. Nice resource for CP topics and problems: https://usaco.guide/dashboard
+
+18. Subtree using small-to-large merging: https://codeforces.com/blog/entry/103064

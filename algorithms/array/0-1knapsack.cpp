@@ -44,11 +44,17 @@ int main() {
 }
 
 /*
- Because of items are order independent and it doesnot matter that how many elements we have picked. Only thing depends is
- how much profit we get TILL NOW for a particular weight. To specify TILL NOW we have used: 'i'
+Here, we are traversing the items in any order and picking up some particular items(don't know which item) which get us best answer.
+
+Here, one of the most important thing is move in the order of unexplored items to explored items, so order doesn't matter much how we are
+traversing them. Just for a good understanding we can store that how much items are explored so far, so that we can make reccurrence and base case
+more clearly,for that we can use 'i': that means that many elements are explored so far(current item included), and how much weight have right now due to those
+picked items, to track that weight we use 'j'. To move in order from unexplored to explored way, we usually move from [1...i], in this way we always
+unexplored to explored way.
+
 
  Here it does not depends where am I (that means which position I'm currently at). The only thing matters is: how much
- profit can I get till now for a certain weight 'j'. So here we have use 'i' to represent the number of elments we have used
+ profit can I get till now for a certain weight 'j'. So here we have used 'i' to represent the number of elments we have used
  only to differentiate that how many elements we have used.
 
  So, if we only 2 1-D arrays then the solution also works, because it only depends that how much profit we get till now. Then consider
@@ -59,15 +65,18 @@ When I'm currently at some item say ith item: then it does not matter that how m
 thing that matters is: how much the profit is and how much weight is left. Then step by step BUILD The answer.
 
 =====================Bottom up=========================
-Now lets understand this: dp[i][j] => We have considered, from [1...i], we have picked some elements and the remaining weight is : 'j'
-and we are currently some element let say: ith element. Then there are two possibilites: currently we have picked this ith element
+Now lets understand this: dp[i][j] => We have considered(explored), from [1...i], we have picked some elements and the available weight for those items is
+: 'j', and dp[i][j] stores the best answer(dp[i][j] is currently unknown). And we are currently at: ith element. Then there are two possibilites: currently we have included this ith element ALREADY
 for dp[i][j] to get best answer or not.
-1) IF we have picked current item (ith) for dp[i][j], that means in dp[i][j], 'i' is included in (i, j) state.
+1) IF we have included the current item (ith) for dp[i][j] ALREADY, that means in dp[i][j], 'i' is included in (i, j) state.
 So, how much part remain from dp[i][j] if we remove it (ith element): which will be: i-1 and j - weight[i]: dp[i-1][j-weight[i]]
 2) If we have not picked the current element then: dp[i][j] => dp[i-1][j] => weight does not change because we have not picked the current element.
 
+base case: dp[0][any weight] = 0
+
+Note: According to problems, the definition/meaning of dp[i][j] might change, but it will look similar to above one.
 ==========================================================
-Problems like coin change-2 when order does matter and you don't want to count extra things, then you should iterate the elmenets as outer loop because it helps to create a correct recurrcece.
+Problems like coin change-2 when order does matter(unexplored to explored) and you don't want to count extra things, then you should iterate the elmenets as outer loop because it helps to create a correct recurrcece.
 but problems like coint change-1 then you should you them inner loop (it helps to counts all possible).
 */
 

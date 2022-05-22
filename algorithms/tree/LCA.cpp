@@ -29,7 +29,9 @@ void dfs(int u, int p) {
 }
 
 int lca(int u, int v) {
+    //maintaining level[u] >= level[v]
     if (level[u] < level[v]) swap(u, v);
+    //bring them on same level by bringing 'u' up
     for (int i = Log; i >= 0; --i) {
         if (level[u] - (1 << i) >= level[v])
             u = parent[u][i];
