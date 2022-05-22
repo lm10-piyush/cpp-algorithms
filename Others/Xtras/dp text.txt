@@ -355,7 +355,7 @@ https://atcoder.jp/contests/dp/tasks/dp_i  (DP, Probability, Binomial Coeff, htt
 https://www.hackerrank.com/challenges/sam-and-substrings/problem  (DP, Contribution Technique, Implemetation, SOL: https://pastebin.com/bth2PuZZ)
 https://practice.geeksforgeeks.org/contest-problem/tie-the-poles-in-pairs/0/  (DP, Catalan Number)
 https://leetcode.com/problems/perfect-squares/  (Dp, same as coins)
-https://www.codechef.com/COCA2020/problems/COCA2006  (DP, similar as stars and bars, Simple TLE idea: https://pastebin.com/epFrZCdE, Now same idea with optimization:https://pastebin.com/QRTK24B4)
+https://www.codechef.com/COCA2020/problems/COCA2006  (DP, similar as stars and bars, Simple TLE idea: https://pastebin.com/epFrZCdE, Now same idea with optimization:https://pastebin.com/QRTK24B4, important problem)
                                           NOTE: To do these type of combinatorics problems move in level wise i.e., i=>[1...N]
 https://codeforces.com/problemset/problem/1081/C  (DP, combinatorics, soln: https://codeforces.com/contest/1081/submission/85494616)
 https://www.codechef.com/AFZQ2019/problems/REVT  (DP, Combo, https://www.codechef.com/viewsolution/34902660)
