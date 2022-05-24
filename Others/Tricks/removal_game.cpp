@@ -169,13 +169,15 @@ void solve() {
             else dp[i][j] = max(A[i] + (-dp[i + 1][j]), A[j] + (-dp[i][j - 1])); //current_element_score + next_player_move()
         }
     }
-
+    //dp[0][n-1] => best maximum difference 1st player can make.
+    
+    //To get the what total points 1st player will make..
     ll sum = 0;
     for (auto i : A)
         sum += i;
 
     ll ans = (sum + dp[0][n - 1]) / 2;
-    cout << ans;
+    cout << ans; //this is the value 1st player will get
 
 
 }
