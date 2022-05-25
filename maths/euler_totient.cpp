@@ -8,6 +8,7 @@ void dbg_out() { cerr << "\b\b]\n"; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
+//Theory: https://cp-algorithms.com/algebra/phi-function.html
 
 /****************************** CODE IS HERE ***********************************/
 
