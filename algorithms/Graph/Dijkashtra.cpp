@@ -72,6 +72,9 @@ void solve() {
 
 https://www.spoj.com/problems/EZDIJKST/
 
+https://codeforces.com/problemset/problem/20/C
+https://codeforces.com/contest/20/submission/158643367 (Clean Dijkstra implementation)
+
 (on Matrix)
 https://drive.google.com/file/d/13B-hxGLizYhJcndlJReAN7xGBPLKfb6B/view?usp=sharing  (On matrix, with struct Node, multiple source)
 https://pastebin.com/2Zk9QLMq
@@ -98,5 +101,6 @@ https://pastebin.com/vWKJ6LT5
 
 https://codeforces.com/contest/1486/problem/E            (Paired payment, Dijkstra with mulitple states)
 https://codeforces.com/contest/1486/submission/114533907
+
 
 */
