@@ -112,6 +112,9 @@ int main() {
 
 //https://www.spoj.com/problems/RMQSQ/
 
+//https://codeforces.com/contest/1691/problem/D                     (segtree, Next greater element, observational)
+// https://codeforces.com/contest/1691/submission/159468637
+
 //problem: https://codeforces.com/contest/339/problem/D
 //soln: https://codeforces.com/contest/339/submission/78825205
 

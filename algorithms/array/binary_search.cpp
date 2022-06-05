@@ -213,7 +213,11 @@ https://cses.fi/problemset/task/1140
 https://codeforces.com/contest/1288/problem/D         (Bitmask + binary search)
 https://codeforces.com/contest/1288/submission/106519133
 
-https://codeforces.com/contest/1680/problem/C 
+https://codeforces.com/contest/1680/problem/C
 (Binary search, convert problem into another problem so that we can apply binary search, two pointers, https://codeforces.com/contest/1680/submission/157201982)
 
+
+https://leetcode.com/problems/divide-chocolate/                                (nice, standard, binary search problem, https://pastebin.com/UEhTKry1)
+
+https://leetcode.com/problems/split-array-largest-sum/                               (standard binary search, but could be done by DP, https://pastebin.com/yBFtfuzz)
 */

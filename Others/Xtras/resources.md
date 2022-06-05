@@ -4,7 +4,7 @@
 
 2. Problems in hashing in c++ because they use std::hash to find the hash of the key, which use uses rand() function to produce a hash. And rand() is very frequent in to repeat the numbers. So, we use point 1 define technique to generate the unique hash every time and made our solution more accurate and unhackable https://codeforces.com/blog/entry/62393 .
 
-3. INT_MAX, LLONG_MAX, UINT_MAX, ULLONG_MAX (different varients to get maximums). But don't use them instead use 		1e9, -1e9 or 1e18, -1e18.
+3. INT_MAX, LLONG_MAX, UINT_MAX, ULLONG_MAX (different varients to get maximums). But don't use them instead use 1e9, -1e9 or 1e18, -1e18.
 
 4. Fastest integer factorization methods https://stackoverflow.com/questions/2267146/what-is-the-fastest-factorization-algorithm?rq=1 , https://cp-algorithms.com/algebra/factorization.html
 
@@ -41,3 +41,5 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 17. Nice resource for CP topics and problems: https://usaco.guide/dashboard
 
 18. Subtree using small-to-large merging: https://codeforces.com/blog/entry/103064
+
+19. Learning resources: https://github.com/Errichto/youtube/wiki/Learning-resources
