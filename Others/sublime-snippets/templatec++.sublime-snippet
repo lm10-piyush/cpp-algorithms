@@ -2,7 +2,7 @@
 	<content><![CDATA[
 #include <bits/stdc++.h>
 using namespace std;
-#define ll unsigned long long
+#define ll long long
 #define endl '\n'
 #define sz(v) (int)v.size()
 #define all(v) v.begin(), v.end()
