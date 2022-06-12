@@ -220,4 +220,6 @@ https://codeforces.com/contest/1680/problem/C
 https://leetcode.com/problems/divide-chocolate/                                (nice, standard, binary search problem, https://pastebin.com/UEhTKry1)
 
 https://leetcode.com/problems/split-array-largest-sum/                               (standard binary search, but could be done by DP, https://pastebin.com/yBFtfuzz)
+
+https://codeforces.com/contest/1661/problem/C                                    (binary search, maths, https://codeforces.com/contest/1661/submission/160255976)
 */
