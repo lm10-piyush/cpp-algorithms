@@ -8,7 +8,7 @@ void dbg_out() { cerr << "\b\b]\n"; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << H << ", "; dbg_out(T...);}
 #define watch(...) cerr << "[" << #__VA_ARGS__ << "]: [", dbg_out(__VA_ARGS__)
 
-//It is not a monotonic queue.
+//It is a monotonic queue.
 //here calculating the maximum in a window/queue using two stacks.
 //https://cp-algorithms.com/data_structures/stack_queue_modification.html
 
