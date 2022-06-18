@@ -1,4 +1,4 @@
-#h6 ---------------------------- RESOURCES --------------------------------------    
+# Resources 
 
 1. Don't use rand() function to generate the random numbers. It is not that much good to generate random 	numbers. Instead use this https://codeforces.com/blog/entry/61587 ,	https://www.geeksforgeeks.org/random-header-c-set-1generators/ .
 
