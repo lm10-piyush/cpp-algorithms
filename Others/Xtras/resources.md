@@ -22,8 +22,7 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 8. Sites for competitive programming https://blog.codingblocks.com/2019/sites-and-tools-for-competitive-programming/
  and setting an enviroment for c++ with some tricks  https://blog.codingblocks.com/2019/setting-up-a-c-competitive-programming-environment/ , https://codeforces.com/blog/entry/53909
 
-9.  https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise)
-	https://cses.fi/problemset/ for problems  (problem set)
+9.  https://codeforces.com/blog/entry/55274 (A blog with all ques with topic wise) https://cses.fi/problemset/ for problems  (problem set)
 10. Segment tree ques: https://codeforces.com/blog/entry/22616  
 
 11. https://codeforces.com/blog/entry/20935 DP on trees
@@ -32,7 +31,7 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 
 13. ICPC archive: https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=0
 
-14. https://codeforces.com/blog/entry/405  (Dont use %lld in C++14)
+14. Dont use %lld in C++14: https://codeforces.com/blog/entry/405  
 
 15. Optimation in C++ which passes Naive solutions (approx 10^9 iterations in 1-2sec): https://codeforces.com/blog/entry/66279, https://codeforces.com/blog/entry/89634?#comment-780234 
 
@@ -43,3 +42,9 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 18. Subtree using small-to-large merging: https://codeforces.com/blog/entry/103064
 
 19. Learning resources: https://github.com/Errichto/youtube/wiki/Learning-resources
+
+20. General Ideas: https://codeforces.com/blog/entry/48417 
+
+21. Codechef resources: https://discuss.codechef.com/t/data-structures-and-algorithms/6599
+
+23. Codeforces EDU section: https://codeforces.com/edu/courses
