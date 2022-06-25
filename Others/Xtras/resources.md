@@ -48,3 +48,5 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 21. Codechef resources: https://discuss.codechef.com/t/data-structures-and-algorithms/6599
 
 23. Codeforces EDU section: https://codeforces.com/edu/courses
+
+24. Slope trick: https://codeforces.com/blog/entry/103222
