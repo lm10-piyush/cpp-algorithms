@@ -222,4 +222,6 @@ https://leetcode.com/problems/divide-chocolate/                                (
 https://leetcode.com/problems/split-array-largest-sum/                               (standard binary search, but could be done by DP, https://pastebin.com/yBFtfuzz)
 
 https://codeforces.com/contest/1661/problem/C                                    (binary search, maths, https://codeforces.com/contest/1661/submission/160255976)
+
+https://leetcode.com/problems/find-k-th-smallest-pair-distance/
 */
