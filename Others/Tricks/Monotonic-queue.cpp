@@ -60,5 +60,6 @@ https://www.hackerrank.com/challenges/queries-with-fixed-length/problem
 https://leetcode.com/problems/sliding-window-maximum/
 https://cses.fi/problemset/task/1660
 
+https://www.facebook.com/codingcompetitions/hacker-cup/2020/round-1/problems/A1   (segments, monotonic, geometry, https://pastebin.com/SU8NduPw)
 */
 
