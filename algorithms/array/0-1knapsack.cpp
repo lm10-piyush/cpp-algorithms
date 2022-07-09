@@ -116,4 +116,6 @@ then larger it might not be optimal)
 
 A problem which looks like a Knapsack one, could become completly greedy when we can there is some relation between elements like in greedy minimum coin change problem.
 ex: https://codeforces.com/contest/1526/problem/B  (here all the elements greater than equal to 1111 can be formed by 11 or 111 combo.)
+
+https://codeforces.com/contest/1633/problem/D                                         (knapsack, observation, https://codeforces.com/contest/1633/submission/163009961)
 */
