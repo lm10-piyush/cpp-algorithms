@@ -106,6 +106,8 @@ int main() {
  * Mostly we use Euler tour for subtree queries, and for heavylight / centroid decompo for path queries.
 
  * We can find MEX of whole using Segtree with updates, each query will be in O(log n) time? how by maintaining counts of each element in range.
+
+ * Segtree: https://usaco.guide/plat/segtree-ext?lang=cpp
 */
 
 //https://codeforces.com/blog/entry/57319 (Some trick)

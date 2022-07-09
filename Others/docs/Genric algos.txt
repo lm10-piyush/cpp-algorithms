@@ -1,0 +1,9 @@
+There are major 4 types of algorithmic paradigms:
+1. Backtracking.
+2. Greedy.
+3. Divide and Conquer/Binary search.
+4. Dynamic Programming
+
+Some extra paradigms:
+1. Sweep line.
+2. Sweep plane.

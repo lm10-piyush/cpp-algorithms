@@ -37,7 +37,13 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 
 16. Hashing the sets and multisets: https://codeforces.com/blog/entry/85900
 
-17. Nice resource for CP topics and problems: https://usaco.guide/dashboard
+17. Nice USACO resource for CP topics and problems: https://usaco.guide/dashboard
+	1. General Section: https://usaco.guide/general/using-this-guide?lang=cpp
+	2. Bronz section: https://usaco.guide/bronze/time-comp?lang=cpp
+	3. Silver section: https://usaco.guide/silver/prefix-sums?lang=cpp
+	4. Gold section: https://usaco.guide/gold/divisibility?lang=cpp
+	5. Platinum: https://usaco.guide/plat/segtree-ext?lang=cpp
+	6. Advanced: https://usaco.guide/plat/segtree-ext?lang=cpp
 
 18. Subtree using small-to-large merging: https://codeforces.com/blog/entry/103064
 
@@ -50,3 +56,7 @@ some others but already covered above: https://codeforces.com/blog/entry/13520 ,
 23. Codeforces EDU section: https://codeforces.com/edu/courses
 
 24. Slope trick: https://codeforces.com/blog/entry/103222
+
+25. Competitive programming knowledge: https://www.topcoder.com/thrive/tracks?track=Competitive%20Programming&ref=nav
+
+26. Codeforlces Catalog: https://codeforces.com/catalog
