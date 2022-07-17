@@ -120,5 +120,5 @@ int main() {
 
 /*
  * Another simpler implementation: https://usaco.guide/problems/cses-1694-download-speed/solution
-
+ * https://codeforces.com/blog/entry/104960
 */
